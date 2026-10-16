@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Array in Table</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f9f9;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #fcfcfc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Live Scoring</h2>
+    
+    <table id="data-table">
+        <thead>
+            <tr>
+                <!-- Update these headers to match your object keys -->
+                <th>Week</th>
+                <th>GameID</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Status</th>
+                <th>Home Score</th>
+                <th>Away Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JavaScript will insert rows here -->
+        </tbody>
+    </table>
+
+    <!-- Link your JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
