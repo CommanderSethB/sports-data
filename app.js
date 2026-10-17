@@ -22,11 +22,17 @@ async function gameList() {
                 gameID: currentGame.gameID, 
                 date: currentGame.date, 
                 time: currentGame.time, 
-                homeTeam: currentGame.homeTeam, 
-                awayTeam: currentGame.awayTeam, 
+                homeTeam: currentGame.homeTeam,
+                homeTeamName: currentGame.homeTeamName, 
+                awayTeam: currentGame.awayTeam,
+                awayTeamName: currentGame.awayTeamName, 
                 status: currentGame.status, 
                 homeScore: currentGame.homeScore, 
-                awayScore: currentGame.awayScore
+                awayScore: currentGame.awayScore,
+                homeOdds: currentGame.homeOdds,
+                awayOdds: currentGame.awayOdds,
+                spread: currentGame.spread,
+                overUnder: currentGame.overUnder
             });
         }
     } catch (error) {

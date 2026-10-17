@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Array in Table</title>
+    <title>Game Data</title>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
             margin: 40px;
         }
         table {
-            width: 50%;
+            width: 90%;
             border-collapse: collapse;
             margin-top: 20px;
         }
@@ -28,10 +28,7 @@
         }
     </style>
 </head>
-<body>
-
-    <h2>Live Scoring</h2>
-    
+<body>    
     <table id="data-table">
         <thead>
             <tr>
@@ -40,11 +37,17 @@
                 <th>GameID</th>
                 <th>Date</th>
                 <th>Time</th>
-                <th>Home Team</th>
-                <th>Away Team</th>
+                <th>Home Team ID</th>
+                <th>Home Team Name</th>
+                <th>Away Team ID</th>
+                <th>Away Team Name</th>
                 <th>Status</th>
                 <th>Home Score</th>
                 <th>Away Score</th>
+                <th>Home Odds</th>
+                <th>Away Odds</th>
+                <th>Spread</th>
+                <th>Over/Under</th>
             </tr>
         </thead>
         <tbody>
