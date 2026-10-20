@@ -3,9 +3,72 @@ const NUM_WEEKS = 18;
 const REGSEASON_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?seasontype=2&dates=";
 const TEAMS_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
 const BOXSCORE_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=";
+const INJURY_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/injuries";
 
 updateGames();
+updateInjuryReport();
 
+async function updateInjuryReport() {
+    // Blank array
+    var result = [];
+
+    try {
+        // Setup JSON
+        var url = INJURY_URL;
+        const response = await fetch(url);
+        const data = await response.json();
+
+        // Process data
+        for(var team = 0; team < data.injuries.length; team++) {
+            var teamID = data.injuries[team].id;
+
+            for(var injury = 0; injury < data.injuries[team].injuries.length; injury++) {
+                var currentInjury = data.injuries[team].injuries[injury];
+                var playerLink = currentInjury.athlete.links[0].href;
+                var splitString = playerLink.split("/");
+                var playerID = splitString[7];
+                var playerName = currentInjury.athlete.displayName;
+                var injuryStatus = convertInjuryStatus(currentInjury.type.name);
+                var playerScore = convertInjuryStatusToScore(currentInjury.type.name);
+
+                result.push({teamID: teamID, playerID: playerID, playerName: playerName, injuryStatus: injuryStatus, playerScore: playerScore});
+            }
+        }
+    } catch (err) {
+        console.error(err);
+    }
+
+    var fs = require('fs');
+    fs.writeFile('injuryReport.json', JSON.stringify(result), (err) => {
+        if(err) console.log(err);
+    });
+}
+
+function convertInjuryStatus(inj_status){
+    switch(inj_status){
+      case "INJURY_STATUS_ACTIVE": return "Active";
+      case "INJURY_STATUS_OUT": return "Out";
+      case "INJURY_STATUS_QUESTIONABLE": return "Questionable";
+      case "INJURY_STATUS_IR": return "IR";
+      case "INJURY_STATUS_DOUBTFUL": return "Doubtful";
+      case "INJURY_STATUS_SUSPENSION": return "Suspended";
+      case "INJURY_STATUS_PROBABLE": return "Probable";
+      default: return inj_status;
+    }
+  }
+  
+function convertInjuryStatusToScore(inj_status){
+    switch(inj_status){
+        case "INJURY_STATUS_ACTIVE": return 1.0;
+        case "INJURY_STATUS_OUT": return 0.0;
+        case "INJURY_STATUS_QUESTIONABLE": return 0.5;
+        case "INJURY_STATUS_IR": return -0.5;
+        case "INJURY_STATUS_DOUBTFUL": return 0.25;
+        case "INJURY_STATUS_SUSPENSION": return -0.5;
+        case "INJURY_STATUS_PROBABLE": return 0.75;
+        default: return inj_status;
+    }
+}
 
 async function updateGames() {
     // Create result array
