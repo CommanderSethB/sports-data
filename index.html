@@ -1,181 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sports Hub Dashboard</title>
-  <style>
-    :root {
-      --bg-dark: #0f172a;
-      --card-bg: #1e293b;
-      --accent-neon: #ccff00; /* Athletic Neon Lime */
-      --accent-orange: #ff5722; /* Energetic Orange */
-      --text-light: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-glow: rgba(204, 255, 0, 0.3);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Impact', 'Segoe UI', Roboto, sans-serif;
-      background-color: var(--bg-dark);
-      /* Subtle stadium turf / arena mesh background pattern */
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.08) 0%, transparent 70%),
-        linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)),
-        repeating-linear-gradient(45deg, #1e293b 0, #1e293b 1px, transparent 0, transparent 50%);
-      background-size: 100% 100%, 100% 100%, 20px 20px;
-      color: var(--text-light);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    .sports-card {
-      background-color: var(--card-bg);
-      padding: 40px 30px;
-      border-radius: 20px;
-      border: 2px solid #334155;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--border-glow);
-      width: 100%;
-      max-width: 450px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Top decorative sports stripe */
-    .sports-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, var(--accent-neon), var(--accent-orange));
-    }
-
-    .badge {
-      display: inline-block;
-      background-color: var(--accent-orange);
-      color: #fff;
-      font-size: 0.75rem;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 4px 12px;
-      border-radius: 50px;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-style: italic;
-      margin-bottom: 6px;
-      color: #ffffff;
-      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    }
-
-    p {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--text-muted);
-      margin-bottom: 30px;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .button-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    /* Sports Link Buttons */
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-decoration: none;
-      background-color: #0f172a;
-      color: var(--accent-neon);
-      padding: 16px 24px;
-      border-radius: 12px;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 2px solid var(--accent-neon);
-      cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-    }
-
-    .btn:hover {
-      background-color: var(--accent-neon);
-      color: #0f172a;
-      transform: scale(1.03) skewX(-3deg);
-      box-shadow: 0 0 15px rgba(204, 255, 0, 0.5);
-    }
-
-    /* Orange variant button */
-    .btn-alt {
-      color: var(--accent-orange);
-      border-color: var(--accent-orange);
-    }
-
-    .btn-alt:hover {
-      background-color: var(--accent-orange);
-      color: #ffffff;
-      box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
-    }
-
-    .icon {
-      font-size: 1.3rem;
-    }
-
-    .arrow {
-      font-size: 1rem;
-      font-family: sans-serif;
-      transition: transform 0.2s ease;
-    }
-
-    .btn:hover .arrow {
-      transform: translateX(5px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
 </head>
 <body>
-
-  <div class="sports-card">
-    <span class="badge"> Game Day Central</span>
-    <h1>Sports Hub</h1>
-    <p>Select a playbook section to open:</p>
-
-    <div class="button-grid">
-      <!-- Sports page links -->
-      <a href="liveScoring.html" class="btn">
-        <span class="icon">Game Data</span>
-        <span class="arrow">➔</span>
-      </a>
-
-      <a href="playerStats.html" class="btn">
-        <span class="icon">Player Stats</span>
-        <span class="arrow">➔</span>
-      </a>
-
-      <a href="injuryReport.html" class="btn">
-        <span class="icon">Injury Report</span>
-        <span class="arrow">➔</span>
-      </a>
-    </div>
-  </div>
+    <h1>Select a Table to View</h1>
+    
+    <!-- Pass different table arguments through the URL -->
+    <ul>
+        <li><a href="dataTable.html?table=liveScoring">Game Data</a></li>
+        <li><a href="dataTable.html?table=playerStats">Player Stats</a></li>
+        <li><a href="dataTable.html?table=injuryReport">Injury Report</a></li>
+        <li><a href="dataTable.html?table=teamList">Team List</a></li>
+        <li><a href="dataTable.html?table=depthCharts">Depth Charts</a></li>
+    </ul>
 </body>
+</html>

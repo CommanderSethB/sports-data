@@ -4,9 +4,12 @@ const REGSEASON_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/fo
 const TEAMS_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
 const BOXSCORE_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=";
 const INJURY_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/injuries";
+const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/";
 
-updateGames();
-updateInjuryReport();
+//updateGames();
+//updateInjuryReport();
+//updateTeams();
+updateDepthCharts();
 
 async function updateInjuryReport() {
     // Blank array
@@ -39,7 +42,7 @@ async function updateInjuryReport() {
     }
 
     var fs = require('fs');
-    fs.writeFile('injuryReport.json', JSON.stringify(result), (err) => {
+    fs.writeFile('./data/injuryReport.json', JSON.stringify(result), (err) => {
         if(err) console.log(err);
     });
 }
@@ -116,19 +119,39 @@ async function updateGames() {
                 }
 
                 // Add the current game details to the result array
-                gameList.push({week: weekName, gameID: gameID, date: gameDate, time: gameTime, homeTeam: homeTeam, homeTeamName: homeTeamName, awayTeam: awayTeam, awayTeamName: awayTeamName, status: gameStatus, homeScore: homeScore, awayScore: awayScore, homeOdds: homeOdds, awayOdds: awayOdds, spread: spread, overUnder: overUnder});
+                gameList.push({
+                    "Week": weekName, 
+                    "Game ID": gameID, 
+                    "Game Date": gameDate, 
+                    "Game Time": gameTime, 
+                    "Home Team": homeTeamName, 
+                    "Home ID": homeTeam, 
+                    "Away Team": awayTeamName, 
+                    "Away ID": awayTeam, 
+                    "Status": gameStatus, 
+                    "Home Score": homeScore, 
+                    "Away Score": awayScore, 
+                    "Home ML": homeOdds, 
+                    "Away ML": awayOdds, 
+                    "Spread": spread, 
+                    "Over/Under": overUnder
+                });
 
                 // If game status is Final, record the game stats
                 if(gameStatus === "Final") {
+                    // Set url to current game
                     var boxscoreURL = BOXSCORE_BASE_URL + gameID;
 
                     try {
+                        // Grab JSON and setup data element
                         const boxscoreResponse = await fetch(boxscoreURL);
                         const boxscoreData = await boxscoreResponse.json();
 
+                        // Shortcut to player list
                         var boxScoreTeams = boxscoreData.boxscore.players;
 
                         for(var boxScoreTeam = 0; boxScoreTeam < boxScoreTeams.length; boxScoreTeam++) {
+                            // JSON is formatted to separate by teams, so this section goes through each team in the current game
                             var currentBoxScoreTeam = boxScoreTeams[boxScoreTeam];
 
                             var boxScorePlayerList = [];
@@ -382,7 +405,7 @@ async function updateGames() {
     }
 
     var fs = require('fs');
-    fs.writeFile('liveScoring.json', JSON.stringify(gameList), (err) => {
+    fs.writeFile('./data/liveScoring.json', JSON.stringify(gameList), (err) => {
         if(err) console.log(err);
     });
 
@@ -390,13 +413,14 @@ async function updateGames() {
 
     var newStatList = combinePlayerStats(statList);
 
-    fs.writeFile('playerStats.json', JSON.stringify(newStatList), (err) => {
+    fs.writeFile('./data/playerStats.json', JSON.stringify(newStatList), (err) => {
         if(err) console.log(err);
     });
 }
 
 function combinePlayerStats(statList) {
-    var newStatList = [];
+    // Create new list to store combined stats
+    var newStatList = [];   
 
     // Iterate through statList to get unique playerIDs
     var playerList = [];
@@ -532,64 +556,64 @@ function combinePlayerStats(statList) {
         if(punts === 0) { puntYardsPerAttempt = 0.0; } else { puntYardsPerAttempt = parseInt(puntYards)/parseInt(punts); }
 
         newStatList.push({
-            playerID: playerList[i],
-            teamID: teamID, 
-            passCompletions: passCompletions,
-            passAttempts: passAttempts,
-            passYards: passYards,
-            passYardsPerAttempt: passYardsPerAttempt.toFixed(1),
-            passTouchdowns: passTouchdowns,
-            passInterceptions: passInterceptions,
-            passSacks: passSacks,
-            passSackYards: passSackYards,
-            passerRating: passerRating,
-            rushAttempts: rushAttempts,
-            rushYards: rushYards,
-            rushYardsPerAttempt: rushYardsPerAttempt.toFixed(1),
-            rushTouchdowns: rushTouchdowns,
-            longestRush: longestRush,
-            receptions: receptions,
-            receivingYards: receivingYards,
-            receivingYardsPerReception: receivingYardsPerReception.toFixed(1),
-            receivingTouchdowns: receivingTouchdowns,
-            longestReception: longestReception,
-            receivingTargets: receivingTargets,
-            fumbles: fumbles,
-            fumblesLost: fumblesLost,
-            fumblesRecovered: fumblesRecovered,
-            tackles: tackles,
-            tacklesSolo: tacklesSolo,
-            sacks: sacks,
-            tacklesForLoss: tacklesForLoss,
-            passesDefended: passesDefended,
-            quarterbackHits: quarterbackHits,
-            defensiveTouchdowns: defensiveTouchdowns,
-            interceptions: interceptions,
-            interceptionReturnYards: interceptionReturnYards,
-            interceptionReturnTouchdowns: interceptionReturnTouchdowns,
-            kickoffReturns: kickoffReturns,
-            kickoffReturnYards: kickoffReturnYards,
-            kickoffReturnYardsPerAttempt: kickoffReturnYardsPerAttempt.toFixed(1),
-            longestKickoffReturn: longestKickoffReturn,
-            kickoffReturnTouchdowns: kickoffReturnTouchdowns,
-            puntReturns: puntReturns,
-            puntReturnYards: puntReturnYards,
-            puntReturnYardsPerAttempt: puntReturnYardsPerAttempt.toFixed(1),
-            longestPuntReturn: longestPuntReturn,
-            puntReturnTouchdowns: puntReturnTouchdowns,
-            fieldGoalsMade: fieldGoalsMade,
-            fieldGoalsAttempted: fieldGoalsAttempted,
-            fieldGoalPercentage: fieldGoalPercentage.toFixed(4),
-            longestFieldGoal: longestFieldGoal,
-            extraPointsMade: extraPointsMade,
-            extraPointsAttempted: extraPointsAttempted,
-            kickingPoints: kickingPoints,
-            punts: punts,
-            puntYards: puntYards,
-            puntYardsPerAttempt: puntYardsPerAttempt.toFixed(1),
-            puntTouchbacks: puntTouchbacks,
-            puntsInside20: puntsInside20,
-            longestPunt: longestPunt
+            "Player ID": playerList[i],
+            "Team ID": teamID, 
+            "Completions": passCompletions,
+            "Attempts": passAttempts,
+            "Pass Yds": passYards,
+            "Pass Yds/Att": passYardsPerAttempt.toFixed(1),
+            "Pass TD": passTouchdowns,
+            "Int Pass": passInterceptions,
+            "Sacked": passSacks,
+            "Yards Lost": passSackYards,
+            "Rating": passerRating,
+            "Rsh": rushAttempts,
+            "Rsh Yds": rushYards,
+            "Rsh Yds/Att": rushYardsPerAttempt.toFixed(1),
+            "Rsh TD": rushTouchdowns,
+            "Rsh Long": longestRush,
+            "Rec": receptions,
+            "Tgt": receivingTargets,
+            "Rec Yds": receivingYards,
+            "YPC": receivingYardsPerReception.toFixed(1),
+            "Rec TD": receivingTouchdowns,
+            "Rec Long": longestReception,
+            "Fumble": fumbles,
+            "Lost": fumblesLost,
+            "Recovered": fumblesRecovered,
+            "Tkl": tackles,
+            "Solo Tkl": tacklesSolo,
+            "Sacks": sacks,
+            "TFL": tacklesForLoss,
+            "PD": passesDefended,
+            "QB Hit": quarterbackHits,
+            "Def TD": defensiveTouchdowns,
+            "Int": interceptions,
+            "Int Yds": interceptionReturnYards,
+            "Int TD": interceptionReturnTouchdowns,
+            "KO Ret": kickoffReturns,
+            "KO Ret Yds": kickoffReturnYards,
+            "KO Ret Yds/Att": kickoffReturnYardsPerAttempt.toFixed(1),
+            "KO Ret Long": longestKickoffReturn,
+            "KO Ret TD": kickoffReturnTouchdowns,
+            "Pt Ret": puntReturns,
+            "Pt Ret Yds": puntReturnYards,
+            "Pt Ret Yds/Att": puntReturnYardsPerAttempt.toFixed(1),
+            "Pt Ret Long": longestPuntReturn,
+            "Pt Ret TD": puntReturnTouchdowns,
+            "FGM": fieldGoalsMade,
+            "FGA": fieldGoalsAttempted,
+            "FG%": fieldGoalPercentage.toFixed(4),
+            "FG Long": longestFieldGoal,
+            "XPM": extraPointsMade,
+            "XPA": extraPointsAttempted,
+            "Kick Points": kickingPoints,
+            "Punts": punts,
+            "Pt Yds": puntYards,
+            "Pt Yds/Att": puntYardsPerAttempt.toFixed(1),
+            "Touchbacks": puntTouchbacks,
+            "In20": puntsInside20,
+            "Pt Long": longestPunt
         });
     }
 
@@ -637,18 +661,79 @@ async function updateTeams() {
             var teamID = currentTeam.id;
             var teamName = currentTeam.displayName;
             var teamAbbreviation = currentTeam.abbreviation;
-            var teamColor = currentTeam.color;
+            var teamColor = "#" + currentTeam.color;
             var teamLogo = currentTeam.logos[0].href;
 
             // Add the current team details to the result array
-            teamList.push({teamID: teamID, teamAbbreviation: teamAbbreviation, teamName: teamName, teamColor: teamColor, teamLogo: teamLogo});
+            teamList.push({"ID": teamID, "Abbr": teamAbbreviation, "Name": teamName, "Color": teamColor, "Logo": teamLogo});
         }
     } catch (error) {
         console.error("Error fetching data");
     }
 
     var fs = require('fs');
-    fs.writeFile('teamList.json', JSON.stringify(teamList), (err) => {
+    fs.writeFile('./data/teamList.json', JSON.stringify(teamList), (err) => {
+        if(err) console.log(err);
+    });
+}
+
+async function updateDepthCharts() {
+    // Get teamID list
+    var fs = require('fs');
+    const rawData = await fs.readFileSync('./data/teamList.json', 'utf-8');
+    const teamList = JSON.parse(rawData);     
+
+    // Setup depth chart array
+    var depthCharts = [];
+
+    // Iterate through team ids
+    for(const team in teamList) {
+        // Setup URL
+        var teamID = teamList[team].ID;
+        var url = DEPTH_CHART_URL + SEASON + "/teams/" + teamID + "/depthcharts";
+
+        // Fetch the JSON
+        const response = await fetch(url);
+        const data = await response.json();
+
+        // Iterate through units (Currently 0 = defense, 1 = special teams, 2 = offense)
+        for(var i = 0; i < data.items.length; i++){
+            // Shortcut to positions in unit
+            var unit = data.items[i].positions;
+
+            // Iterate through each position
+            for(const pos in unit) {
+                // Get position name
+                var position = unit[pos].position.abbreviation;
+
+                // Initialize JSON object for row
+                var row = { 'Team': teamID, 'Position': position, 'First': null, 'Second': null, 'Third': null, 'Fourth': null, 'Fifth': null };
+
+                for(var ath = 0; ath < unit[pos].athletes.length; ath++){
+                    // Grab reference link, parse to get ID from link
+                    var currentAthleteLink = unit[pos].athletes[ath].athlete['$ref'];
+                    var playerID = currentAthleteLink.split("/")[11].split('?')[0];
+
+                    // Set rank header
+                    switch(ath) {
+                        case 0: var rank = "First"; break;
+                        case 1: var rank = "Second"; break;
+                        case 2: var rank = "Third"; break;
+                        case 3: var rank = "Fourth"; break;
+                        case 4: var rank = "Fifth"; break;
+                        default: var rank = "X";
+                    }
+
+                    // Players should be sorted by rank. Add JSON key for current rank with value of playerID
+                    row[rank] = playerID;
+                }
+
+                depthCharts.push(row);
+            }
+        }
+    }
+
+    await fs.writeFile('./data/depthCharts.json', JSON.stringify(depthCharts), (err) => {
         if(err) console.log(err);
     });
 }
