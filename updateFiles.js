@@ -1,14 +1,15 @@
 const SEASON = 2026;
 const NUM_WEEKS = 18;
+const STAT_END_WEEK = 6;
 const REGSEASON_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?seasontype=2&dates=";
 const TEAMS_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
 const BOXSCORE_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=";
 const INJURY_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/injuries";
 const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/";
 
-//updateGames();
-//updateInjuryReport();
-//updateTeams();
+updateGames();
+updateInjuryReport();
+updateTeams();
 updateDepthCharts();
 
 async function updateInjuryReport() {
@@ -58,7 +59,7 @@ function convertInjuryStatus(inj_status){
       case "INJURY_STATUS_PROBABLE": return "Probable";
       default: return inj_status;
     }
-  }
+}
   
 function convertInjuryStatusToScore(inj_status){
     switch(inj_status){
@@ -138,7 +139,7 @@ async function updateGames() {
                 });
 
                 // If game status is Final, record the game stats
-                if(gameStatus === "Final") {
+                if(week <= STAT_END_WEEK) {
                     // Set url to current game
                     var boxscoreURL = BOXSCORE_BASE_URL + gameID;
 
@@ -156,6 +157,7 @@ async function updateGames() {
 
                             var boxScorePlayerList = [];
                             var teamID = currentBoxScoreTeam.team.id;
+                            var oppID = boxScoreTeams[1-boxScoreTeam].team.id;
 
                             // Iterate through stats for team to get all player IDs
                             for(var stat = 0; stat < currentBoxScoreTeam.statistics.length; stat++) {
@@ -333,7 +335,8 @@ async function updateGames() {
 
                                 statList.push({
                                     playerID: currentPlayerID,
-                                    teamID: teamID, 
+                                    teamID: teamID,
+                                    oppID: oppID, 
                                     passCompletions: passCompletions,
                                     passAttempts: passAttempts,
                                     passYards: passYards,
@@ -404,21 +407,27 @@ async function updateGames() {
         }
     }
 
+    // Write live scoring data to file
     var fs = require('fs');
     fs.writeFile('./data/liveScoring.json', JSON.stringify(gameList), (err) => {
         if(err) console.log(err);
     });
 
+    // Sort stats
     statList.sort((a, b) => a.playerID - b.playerID);
 
-    var newStatList = combinePlayerStats(statList);
-
-    fs.writeFile('./data/playerStats.json', JSON.stringify(newStatList), (err) => {
+    // Write box score stat data
+    fs.writeFile('./data/boxScores.json', JSON.stringify(statList), (err) => {
         if(err) console.log(err);
     });
+
+    // Combine stats by team/player and update data pages
+    updatePlayerStats(statList);
+    updateTeamStats(statList, gameList);
+    updateTeamAllowedStats(statList, gameList);
 }
 
-function combinePlayerStats(statList) {
+function updatePlayerStats(statList) {
     // Create new list to store combined stats
     var newStatList = [];   
 
@@ -433,6 +442,7 @@ function combinePlayerStats(statList) {
     // Total stats for each player
     for(var i = 0; i < playerList.length; i++) {
         var teamID = null;
+        var gamesPlayed = 0;
         var passCompletions = 0;
         var passAttempts = 0;
         var passYards = 0;
@@ -494,6 +504,7 @@ function combinePlayerStats(statList) {
         for(var j = 0; j < statList.length; j++) {
             if(statList[j].playerID === playerList[i]) {
                 teamID = statList[j].teamID;
+                gamesPlayed += 1;
                 passCompletions += parseInt(statList[j].passCompletions);
                 passAttempts += parseInt(statList[j].passAttempts);
                 passYards += parseInt(statList[j].passYards);
@@ -557,9 +568,10 @@ function combinePlayerStats(statList) {
 
         newStatList.push({
             "Player ID": playerList[i],
-            "Team ID": teamID, 
-            "Completions": passCompletions,
-            "Attempts": passAttempts,
+            "Team ID": teamID,
+            "GP": gamesPlayed, 
+            "Com": passCompletions,
+            "Att": passAttempts,
             "Pass Yds": passYards,
             "Pass Yds/Att": passYardsPerAttempt.toFixed(1),
             "Pass TD": passTouchdowns,
@@ -617,7 +629,11 @@ function combinePlayerStats(statList) {
         });
     }
 
-    return newStatList;
+    // Write total season player stats
+    var fs = require('fs');
+    fs.writeFile('./data/playerStats.json', JSON.stringify(newStatList), (err) => {
+        if(err) console.log(err);
+    });
 }
 
 function calculatePasserRating(cmp, att, yds, tds, int)
@@ -663,14 +679,19 @@ async function updateTeams() {
             var teamAbbreviation = currentTeam.abbreviation;
             var teamColor = "#" + currentTeam.color;
             var teamLogo = currentTeam.logos[0].href;
+            var division = getDivsion(teamID);
 
             // Add the current team details to the result array
-            teamList.push({"ID": teamID, "Abbr": teamAbbreviation, "Name": teamName, "Color": teamColor, "Logo": teamLogo});
+            teamList.push({"ID": teamID, "Abbr": teamAbbreviation, "Name": teamName, "Color": teamColor, "Logo": teamLogo, "Division": division});
         }
     } catch (error) {
         console.error("Error fetching data");
     }
 
+    // Sort team list
+    teamList.sort((a, b) => a.teamID - b.teamID);
+
+    // Write list to file
     var fs = require('fs');
     fs.writeFile('./data/teamList.json', JSON.stringify(teamList), (err) => {
         if(err) console.log(err);
@@ -736,4 +757,481 @@ async function updateDepthCharts() {
     await fs.writeFile('./data/depthCharts.json', JSON.stringify(depthCharts), (err) => {
         if(err) console.log(err);
     });
+}
+
+function updateTeamStats(statList, gameData) {
+    // Create new list to store combined stats
+    var newStatList = [];   
+
+    // Iterate through statList to get unique teamIDs
+    var teamList = [];
+    for(var i = 0; i < statList.length; i++) {
+        if(!teamList.includes(statList[i].teamID)) {
+            teamList.push(statList[i].teamID);
+        }
+    }
+
+    // Total stats for each team
+    for(var i = 0; i < teamList.length; i++) {
+        var gamesPlayed = 0;
+        var pointsFor = 0;
+        var pointsAgainst = 0;
+        var passCompletions = 0;
+        var passAttempts = 0;
+        var passYards = 0;
+        var passYardsPerAttempt = 0;
+        var passTouchdowns = 0;
+        var passInterceptions = 0;
+        var passSacks = 0;
+        var passSackYards = 0;
+        var passerRating = 0;
+        var rushAttempts = 0;
+        var rushYards = 0;
+        var rushYardsPerAttempt = 0;
+        var rushTouchdowns = 0;
+        var longestRush = 0;
+        var receptions = 0;
+        var receivingYards = 0;
+        var receivingYardsPerReception = 0;
+        var receivingTouchdowns = 0;
+        var longestReception = 0;
+        var receivingTargets = 0;
+        var fumbles = 0;
+        var fumblesLost = 0;
+        var fumblesRecovered = 0;
+        var tackles = 0;
+        var tacklesSolo = 0;
+        var sacks = 0;
+        var tacklesForLoss = 0;
+        var passesDefended = 0;
+        var quarterbackHits = 0;
+        var defensiveTouchdowns = 0;
+        var interceptions = 0;
+        var interceptionReturnYards = 0;
+        var interceptionReturnTouchdowns = 0;
+        var kickoffReturns = 0;
+        var kickoffReturnYards = 0;
+        var kickoffReturnYardsPerAttempt = 0;
+        var longestKickoffReturn = 0;
+        var kickoffReturnTouchdowns = 0;
+        var puntReturns = 0;
+        var puntReturnYards = 0;
+        var puntReturnYardsPerAttempt = 0;
+        var longestPuntReturn = 0;
+        var puntReturnTouchdowns = 0;
+        var fieldGoalsMade = 0;
+        var fieldGoalsAttempted = 0;
+        var fieldGoalPercentage = 0;
+        var longestFieldGoal = 0;
+        var extraPointsAttempted = 0;
+        var extraPointsMade = 0;
+        var kickingPoints = 0;
+        var punts = 0;
+        var puntYards = 0;
+        var puntYardsPerAttempt = 0;
+        var puntTouchbacks = 0;
+        var puntsInside20 = 0;
+        var longestPunt = 0;
+
+        // Iterate through statList
+        for(var j = 0; j < statList.length; j++) {
+            if(statList[j].teamID === teamList[i]) {
+                passCompletions += parseInt(statList[j].passCompletions);
+                passAttempts += parseInt(statList[j].passAttempts);
+                passYards += parseInt(statList[j].passYards);
+                passTouchdowns += parseInt(statList[j].passTouchdowns);
+                passInterceptions += parseInt(statList[j].passInterceptions);
+                passSacks += parseInt(statList[j].passSacks);
+                passSackYards += parseInt(statList[j].passSackYards);
+                rushAttempts += parseInt(statList[j].rushAttempts);
+                rushYards += parseInt(statList[j].rushYards);
+                rushTouchdowns += parseInt(statList[j].rushTouchdowns);
+                if(parseInt(statList[j].longestRush) > parseInt(longestRush)) longestRush = statList[j].longestRush;
+                receptions += parseInt(statList[j].receptions);
+                receivingYards += parseInt(statList[j].receivingYards);
+                receivingTouchdowns += parseInt(statList[j].receivingTouchdowns);
+                receivingTargets += parseInt(statList[j].receivingTargets);
+                if(parseInt(statList[j].longestReception) > parseInt(longestReception)) longestReception = statList[j].longestReception;
+                fumbles += parseInt(statList[j].fumbles);
+                fumblesLost += parseInt(statList[j].fumblesLost);
+                fumblesRecovered += parseInt(statList[j].fumblesRecovered);
+                tackles += parseInt(statList[j].tackles);
+                tacklesSolo += parseInt(statList[j].tacklesSolo);
+                sacks += parseInt(statList[j].sacks);
+                tacklesForLoss += parseInt(statList[j].tacklesForLoss);
+                passesDefended += parseInt(statList[j].passesDefended);
+                quarterbackHits += parseInt(statList[j].quarterbackHits);
+                defensiveTouchdowns += parseInt(statList[j].defensiveTouchdowns);
+                interceptions += parseInt(statList[j].interceptions);
+                interceptionReturnYards += parseInt(statList[j].interceptionReturnYards);
+                interceptionReturnTouchdowns += parseInt(statList[j].interceptionReturnTouchdowns);
+                kickoffReturns += parseInt(statList[j].kickoffReturns);
+                kickoffReturnYards += parseInt(statList[j].kickoffReturnYards);
+                kickoffReturnTouchdowns += parseInt(statList[j].kickoffReturnTouchdowns);
+                if(parseInt(statList[j].longestKickoffReturn) > parseInt(longestKickoffReturn)) longestKickoffReturn = statList[j].longestKickoffReturn;
+                puntReturns += parseInt(statList[j].puntReturns);
+                puntReturnYards += parseInt(statList[j].puntReturnYards);
+                puntReturnTouchdowns += parseInt(statList[j].puntReturnTouchdowns);
+                if(parseInt(statList[j].longestPuntReturn) > parseInt(longestPuntReturn)) longestPuntReturn = statList[j].longestPuntReturn;
+                fieldGoalsMade += parseInt(statList[j].fieldGoalsMade);
+                fieldGoalsAttempted += parseInt(statList[j].fieldGoalsAttempted);
+                if(parseInt(statList[j].longestFieldGoal) > parseInt(longestFieldGoal)) longestFieldGoal = statList[j].longestFieldGoal;
+                extraPointsMade += parseInt(statList[j].extraPointsMade);
+                extraPointsAttempted += parseInt(statList[j].extraPointsAttempted);
+                kickingPoints += parseInt(statList[j].kickingPoints);
+                punts += parseInt(statList[j].punts);
+                puntYards += parseInt(statList[j].puntYards);
+                puntTouchbacks += parseInt(statList[j].puntTouchbacks);
+                puntsInside20 += parseInt(statList[j].puntsInside20);
+                if(parseInt(statList[j].longestPunt) > parseInt(longestPunt)) longestPunt = statList[j].longestPunt;
+            }
+        }
+
+        passerRating = calculatePasserRating(parseInt(passCompletions), parseInt(passAttempts), parseInt(passYards), parseInt(passTouchdowns), parseInt(passInterceptions));
+
+        if(passAttempts === 0) { passYardsPerAttempt = 0.0; } else { passYardsPerAttempt = parseInt(passYards)/parseInt(passAttempts); }
+        if(rushAttempts === 0) { rushYardsPerAttempt = 0.0; } else { rushYardsPerAttempt = parseInt(rushYards)/parseInt(rushAttempts); }
+        if(receptions === 0) { receivingYardsPerReception = 0.0; } else { receivingYardsPerReception = parseInt(receivingYards)/parseInt(receptions); }
+        if(kickoffReturns === 0) { kickoffReturnYardsPerAttempt = 0.0; } else { kickoffReturnYardsPerAttempt = parseInt(kickoffReturnYards)/parseInt(kickoffReturns); }
+        if(puntReturns === 0) { puntReturnYardsPerAttempt = 0.0; } else { puntReturnYardsPerAttempt = parseInt(puntReturnYards)/parseInt(puntReturns); }
+        if(fieldGoalsAttempted === 0) { fieldGoalPercentage = 0.0; } else { fieldGoalPercentage = parseInt(fieldGoalsMade)/parseInt(fieldGoalsAttempted); }
+        if(punts === 0) { puntYardsPerAttempt = 0.0; } else { puntYardsPerAttempt = parseInt(puntYards)/parseInt(punts); }
+
+        // Iterate through games
+        for(var j = 0; j < gameData.length; j++){
+            // Create week string for splitting and evaluating week number
+            var weekString = new String(gameData[j]['Week']);
+
+            // If week is in the range of weeks to record stats for && current team is the home team:
+            // Increment gamesPlayed, add home score to pointsFor, add away score to pointsAgainst
+            if( parseInt(weekString.split(' ')[1]) <= STAT_END_WEEK && gameData[j]['Home ID'] === teamList[i]) {
+                gamesPlayed += 1;
+                pointsFor += parseInt(gameData[j]['Home Score']);
+                pointsAgainst += parseInt(gameData[j]['Away Score']);
+            // Else if week is in range && current team is the away team:
+            // Increment gamesPlayed, add away score to pointsFor, add home score to pointsAgainst
+            } else if ( parseInt(weekString.split(' ')[1]) <= STAT_END_WEEK && gameData[j]['Away ID'] === teamList[i]) {
+                gamesPlayed += 1;
+                pointsFor += parseInt(gameData[j]['Away Score']);
+                pointsAgainst += parseInt(gameData[j]['Home Score']);
+            }
+        }
+
+        // Push stats to array
+        newStatList.push({
+            "Team ID": teamList[i],
+            "GP": gamesPlayed,
+            "PF": pointsFor,
+            "PA": pointsAgainst,
+            "Com": passCompletions,
+            "Att": passAttempts,
+            "Pass Yds": passYards,
+            "Pass Yds/Att": passYardsPerAttempt.toFixed(1),
+            "Pass TD": passTouchdowns,
+            "Int Pass": passInterceptions,
+            "Sacked": passSacks,
+            "Yards Lost": passSackYards,
+            "Rating": passerRating,
+            "Rsh": rushAttempts,
+            "Rsh Yds": rushYards,
+            "Rsh Yds/Att": rushYardsPerAttempt.toFixed(1),
+            "Rsh TD": rushTouchdowns,
+            "Rsh Long": longestRush,
+            "Rec": receptions,
+            "Tgt": receivingTargets,
+            "Rec Yds": receivingYards,
+            "YPC": receivingYardsPerReception.toFixed(1),
+            "Rec TD": receivingTouchdowns,
+            "Rec Long": longestReception,
+            "Fumble": fumbles,
+            "Lost": fumblesLost,
+            "Recovered": fumblesRecovered,
+            "Tkl": tackles,
+            "Solo Tkl": tacklesSolo,
+            "Sacks": sacks,
+            "TFL": tacklesForLoss,
+            "PD": passesDefended,
+            "QB Hit": quarterbackHits,
+            "Def TD": defensiveTouchdowns,
+            "Int": interceptions,
+            "Int Yds": interceptionReturnYards,
+            "Int TD": interceptionReturnTouchdowns,
+            "KO Ret": kickoffReturns,
+            "KO Ret Yds": kickoffReturnYards,
+            "KO Ret Yds/Att": kickoffReturnYardsPerAttempt.toFixed(1),
+            "KO Ret Long": longestKickoffReturn,
+            "KO Ret TD": kickoffReturnTouchdowns,
+            "Pt Ret": puntReturns,
+            "Pt Ret Yds": puntReturnYards,
+            "Pt Ret Yds/Att": puntReturnYardsPerAttempt.toFixed(1),
+            "Pt Ret Long": longestPuntReturn,
+            "Pt Ret TD": puntReturnTouchdowns,
+            "FGM": fieldGoalsMade,
+            "FGA": fieldGoalsAttempted,
+            "FG%": fieldGoalPercentage.toFixed(4),
+            "FG Long": longestFieldGoal,
+            "XPM": extraPointsMade,
+            "XPA": extraPointsAttempted,
+            "Kick Points": kickingPoints,
+            "Punts": punts,
+            "Pt Yds": puntYards,
+            "Pt Yds/Att": puntYardsPerAttempt.toFixed(1),
+            "Touchbacks": puntTouchbacks,
+            "In20": puntsInside20,
+            "Pt Long": longestPunt
+        });
+    }
+
+    // Sort by team ID
+    newStatList.sort((a, b) => a['Team ID'] - b['Team ID']);
+
+    // Write team stats to file
+    var fs = require('fs');
+    fs.writeFile('./data/teamStats.json', JSON.stringify(newStatList), (err) => {
+        if(err) console.log(err);
+    });
+}
+
+function updateTeamAllowedStats(statList, gameData) {
+    // Create new list to store combined stats
+    var newStatList = [];   
+
+    // Iterate through statList to get unique teamIDs
+    var teamList = [];
+    for(var i = 0; i < statList.length; i++) {
+        if(!teamList.includes(statList[i].oppID)) {
+            teamList.push(statList[i].oppID);
+        }
+    }
+
+    // Total stats for each team. For the sake of this function, all of these are stats allowed
+    for(var i = 0; i < teamList.length; i++) {
+        var gamesPlayed = 0;
+        var pointsFor = 0;
+        var pointsAgainst = 0;
+        var passCompletions = 0;
+        var passAttempts = 0;
+        var passYards = 0;
+        var passYardsPerAttempt = 0;
+        var passTouchdowns = 0;
+        var passInterceptions = 0;
+        var passSacks = 0;
+        var passSackYards = 0;
+        var passerRating = 0;
+        var rushAttempts = 0;
+        var rushYards = 0;
+        var rushYardsPerAttempt = 0;
+        var rushTouchdowns = 0;
+        var longestRush = 0;
+        var receptions = 0;
+        var receivingYards = 0;
+        var receivingYardsPerReception = 0;
+        var receivingTouchdowns = 0;
+        var longestReception = 0;
+        var receivingTargets = 0;
+        var fumbles = 0;
+        var fumblesLost = 0;
+        var fumblesRecovered = 0;
+        var tackles = 0;
+        var tacklesSolo = 0;
+        var sacks = 0;
+        var tacklesForLoss = 0;
+        var passesDefended = 0;
+        var quarterbackHits = 0;
+        var defensiveTouchdowns = 0;
+        var interceptions = 0;
+        var interceptionReturnYards = 0;
+        var interceptionReturnTouchdowns = 0;
+        var kickoffReturns = 0;
+        var kickoffReturnYards = 0;
+        var kickoffReturnYardsPerAttempt = 0;
+        var longestKickoffReturn = 0;
+        var kickoffReturnTouchdowns = 0;
+        var puntReturns = 0;
+        var puntReturnYards = 0;
+        var puntReturnYardsPerAttempt = 0;
+        var longestPuntReturn = 0;
+        var puntReturnTouchdowns = 0;
+        var fieldGoalsMade = 0;
+        var fieldGoalsAttempted = 0;
+        var fieldGoalPercentage = 0;
+        var longestFieldGoal = 0;
+        var extraPointsAttempted = 0;
+        var extraPointsMade = 0;
+        var kickingPoints = 0;
+        var punts = 0;
+        var puntYards = 0;
+        var puntYardsPerAttempt = 0;
+        var puntTouchbacks = 0;
+        var puntsInside20 = 0;
+        var longestPunt = 0;
+
+        // Iterate through statList
+        for(var j = 0; j < statList.length; j++) {
+            if(statList[j].oppID === teamList[i]) {
+                passCompletions += parseInt(statList[j].passCompletions);
+                passAttempts += parseInt(statList[j].passAttempts);
+                passYards += parseInt(statList[j].passYards);
+                passTouchdowns += parseInt(statList[j].passTouchdowns);
+                passInterceptions += parseInt(statList[j].passInterceptions);
+                passSacks += parseInt(statList[j].passSacks);
+                passSackYards += parseInt(statList[j].passSackYards);
+                rushAttempts += parseInt(statList[j].rushAttempts);
+                rushYards += parseInt(statList[j].rushYards);
+                rushTouchdowns += parseInt(statList[j].rushTouchdowns);
+                if(parseInt(statList[j].longestRush) > parseInt(longestRush)) longestRush = statList[j].longestRush;
+                receptions += parseInt(statList[j].receptions);
+                receivingYards += parseInt(statList[j].receivingYards);
+                receivingTouchdowns += parseInt(statList[j].receivingTouchdowns);
+                receivingTargets += parseInt(statList[j].receivingTargets);
+                if(parseInt(statList[j].longestReception) > parseInt(longestReception)) longestReception = statList[j].longestReception;
+                fumbles += parseInt(statList[j].fumbles);
+                fumblesLost += parseInt(statList[j].fumblesLost);
+                fumblesRecovered += parseInt(statList[j].fumblesRecovered);
+                tackles += parseInt(statList[j].tackles);
+                tacklesSolo += parseInt(statList[j].tacklesSolo);
+                sacks += parseInt(statList[j].sacks);
+                tacklesForLoss += parseInt(statList[j].tacklesForLoss);
+                passesDefended += parseInt(statList[j].passesDefended);
+                quarterbackHits += parseInt(statList[j].quarterbackHits);
+                defensiveTouchdowns += parseInt(statList[j].defensiveTouchdowns);
+                interceptions += parseInt(statList[j].interceptions);
+                interceptionReturnYards += parseInt(statList[j].interceptionReturnYards);
+                interceptionReturnTouchdowns += parseInt(statList[j].interceptionReturnTouchdowns);
+                kickoffReturns += parseInt(statList[j].kickoffReturns);
+                kickoffReturnYards += parseInt(statList[j].kickoffReturnYards);
+                kickoffReturnTouchdowns += parseInt(statList[j].kickoffReturnTouchdowns);
+                if(parseInt(statList[j].longestKickoffReturn) > parseInt(longestKickoffReturn)) longestKickoffReturn = statList[j].longestKickoffReturn;
+                puntReturns += parseInt(statList[j].puntReturns);
+                puntReturnYards += parseInt(statList[j].puntReturnYards);
+                puntReturnTouchdowns += parseInt(statList[j].puntReturnTouchdowns);
+                if(parseInt(statList[j].longestPuntReturn) > parseInt(longestPuntReturn)) longestPuntReturn = statList[j].longestPuntReturn;
+                fieldGoalsMade += parseInt(statList[j].fieldGoalsMade);
+                fieldGoalsAttempted += parseInt(statList[j].fieldGoalsAttempted);
+                if(parseInt(statList[j].longestFieldGoal) > parseInt(longestFieldGoal)) longestFieldGoal = statList[j].longestFieldGoal;
+                extraPointsMade += parseInt(statList[j].extraPointsMade);
+                extraPointsAttempted += parseInt(statList[j].extraPointsAttempted);
+                kickingPoints += parseInt(statList[j].kickingPoints);
+                punts += parseInt(statList[j].punts);
+                puntYards += parseInt(statList[j].puntYards);
+                puntTouchbacks += parseInt(statList[j].puntTouchbacks);
+                puntsInside20 += parseInt(statList[j].puntsInside20);
+                if(parseInt(statList[j].longestPunt) > parseInt(longestPunt)) longestPunt = statList[j].longestPunt;
+            }
+        }
+
+        passerRating = calculatePasserRating(parseInt(passCompletions), parseInt(passAttempts), parseInt(passYards), parseInt(passTouchdowns), parseInt(passInterceptions));
+
+        if(passAttempts === 0) { passYardsPerAttempt = 0.0; } else { passYardsPerAttempt = parseInt(passYards)/parseInt(passAttempts); }
+        if(rushAttempts === 0) { rushYardsPerAttempt = 0.0; } else { rushYardsPerAttempt = parseInt(rushYards)/parseInt(rushAttempts); }
+        if(receptions === 0) { receivingYardsPerReception = 0.0; } else { receivingYardsPerReception = parseInt(receivingYards)/parseInt(receptions); }
+        if(kickoffReturns === 0) { kickoffReturnYardsPerAttempt = 0.0; } else { kickoffReturnYardsPerAttempt = parseInt(kickoffReturnYards)/parseInt(kickoffReturns); }
+        if(puntReturns === 0) { puntReturnYardsPerAttempt = 0.0; } else { puntReturnYardsPerAttempt = parseInt(puntReturnYards)/parseInt(puntReturns); }
+        if(fieldGoalsAttempted === 0) { fieldGoalPercentage = 0.0; } else { fieldGoalPercentage = parseInt(fieldGoalsMade)/parseInt(fieldGoalsAttempted); }
+        if(punts === 0) { puntYardsPerAttempt = 0.0; } else { puntYardsPerAttempt = parseInt(puntYards)/parseInt(punts); }
+
+        // Iterate through games
+        for(var j = 0; j < gameData.length; j++){
+            // Create week string for splitting and evaluating week number
+            var weekString = new String(gameData[j]['Week']);
+
+            // If week is in the range of weeks to record stats for && current team is the home team:
+            // Increment gamesPlayed, add home score to pointsFor, add away score to pointsAgainst
+            if( parseInt(weekString.split(' ')[1]) <= STAT_END_WEEK && gameData[j]['Home ID'] === teamList[i]) {
+                gamesPlayed += 1;
+                pointsFor += parseInt(gameData[j]['Away Score']);
+                pointsAgainst += parseInt(gameData[j]['Home Score']);
+            // Else if week is in range && current team is the away team:
+            // Increment gamesPlayed, add away score to pointsFor, add home score to pointsAgainst
+            } else if ( parseInt(weekString.split(' ')[1]) <= STAT_END_WEEK && gameData[j]['Away ID'] === teamList[i]) {
+                gamesPlayed += 1;
+                pointsFor += parseInt(gameData[j]['Home Score']);
+                pointsAgainst += parseInt(gameData[j]['Away Score']);
+            }
+        }
+
+        // Push stats to array
+        newStatList.push({
+            "Team ID": teamList[i],
+            "GP": gamesPlayed,
+            "PF": pointsFor,
+            "PA": pointsAgainst,
+            "Com": passCompletions,
+            "Att": passAttempts,
+            "Pass Yds": passYards,
+            "Pass Yds/Att": passYardsPerAttempt.toFixed(1),
+            "Pass TD": passTouchdowns,
+            "Int Pass": passInterceptions,
+            "Sacked": passSacks,
+            "Yards Lost": passSackYards,
+            "Rating": passerRating,
+            "Rsh": rushAttempts,
+            "Rsh Yds": rushYards,
+            "Rsh Yds/Att": rushYardsPerAttempt.toFixed(1),
+            "Rsh TD": rushTouchdowns,
+            "Rsh Long": longestRush,
+            "Rec": receptions,
+            "Tgt": receivingTargets,
+            "Rec Yds": receivingYards,
+            "YPC": receivingYardsPerReception.toFixed(1),
+            "Rec TD": receivingTouchdowns,
+            "Rec Long": longestReception,
+            "Fumble": fumbles,
+            "Lost": fumblesLost,
+            "Recovered": fumblesRecovered,
+            "Tkl": tackles,
+            "Solo Tkl": tacklesSolo,
+            "Sacks": sacks,
+            "TFL": tacklesForLoss,
+            "PD": passesDefended,
+            "QB Hit": quarterbackHits,
+            "Def TD": defensiveTouchdowns,
+            "Int": interceptions,
+            "Int Yds": interceptionReturnYards,
+            "Int TD": interceptionReturnTouchdowns,
+            "KO Ret": kickoffReturns,
+            "KO Ret Yds": kickoffReturnYards,
+            "KO Ret Yds/Att": kickoffReturnYardsPerAttempt.toFixed(1),
+            "KO Ret Long": longestKickoffReturn,
+            "KO Ret TD": kickoffReturnTouchdowns,
+            "Pt Ret": puntReturns,
+            "Pt Ret Yds": puntReturnYards,
+            "Pt Ret Yds/Att": puntReturnYardsPerAttempt.toFixed(1),
+            "Pt Ret Long": longestPuntReturn,
+            "Pt Ret TD": puntReturnTouchdowns,
+            "FGM": fieldGoalsMade,
+            "FGA": fieldGoalsAttempted,
+            "FG%": fieldGoalPercentage.toFixed(4),
+            "FG Long": longestFieldGoal,
+            "XPM": extraPointsMade,
+            "XPA": extraPointsAttempted,
+            "Kick Points": kickingPoints,
+            "Punts": punts,
+            "Pt Yds": puntYards,
+            "Pt Yds/Att": puntYardsPerAttempt.toFixed(1),
+            "Touchbacks": puntTouchbacks,
+            "In20": puntsInside20,
+            "Pt Long": longestPunt
+        });
+    }
+
+    // Sort by team ID
+    newStatList.sort((a, b) => a['Team ID'] - b['Team ID']);
+
+    // Write team stats to file
+    var fs = require('fs');
+    fs.writeFile('./data/teamAllowedStats.json', JSON.stringify(newStatList), (err) => {
+        if(err) console.log(err);
+    });
+}
+
+function getDivsion(teamID) {
+    // Setup and load divisions json
+    var fs = require('fs');
+    const rawData = fs.readFileSync('./data/divisions.json', 'utf-8');
+    const divisions = JSON.parse(rawData);
+
+    var team = divisions.find(x => x['ID'] === teamID);
+
+    return team['Conference'] + " " + team['Division'];
 }

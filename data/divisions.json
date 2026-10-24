@@ -1,0 +1,229 @@
+[
+  {
+    "ID": "22",
+    "Abbr": "ARI",
+    "Name": "Arizona Cardinals",
+    "Conference": "NFC",
+    "Division": "West"
+  },
+  {
+    "ID": "1",
+    "Abbr": "ATL",
+    "Name": "Atlanta Falcons",
+    "Conference": "NFC",
+    "Division": "South"
+  },
+  {
+    "ID": "33",
+    "Abbr": "BAL",
+    "Name": "Baltimore Ravens",
+    "Conference": "AFC",
+    "Division": "North"
+  },
+  {
+    "ID": "2",
+    "Abbr": "BUF",
+    "Name": "Buffalo Bills",
+    "Conference": "AFC",
+    "Division": "East"
+  },
+  {
+    "ID": "29",
+    "Abbr": "CAR",
+    "Name": "Carolina Panthers",
+    "Conference": "NFC",
+    "Division": "South"
+  },
+  {
+    "ID": "3",
+    "Abbr": "CHI",
+    "Name": "Chicago Bears",
+    "Conference": "NFC",
+    "Division": "North"
+  },
+  {
+    "ID": "4",
+    "Abbr": "CIN",
+    "Name": "Cincinnati Bengals",
+    "Conference": "AFC",
+    "Division": "North"
+  },
+  {
+    "ID": "5",
+    "Abbr": "CLE",
+    "Name": "Cleveland Browns",
+    "Conference": "AFC",
+    "Division": "North"
+  },
+  {
+    "ID": "6",
+    "Abbr": "DAL",
+    "Name": "Dallas Cowboys",
+    "Conference": "NFC",
+    "Division": "East"
+  },
+  {
+    "ID": "7",
+    "Abbr": "DEN",
+    "Name": "Denver Broncos",
+    "Conference": "AFC",
+    "Division": "West"
+  },
+  {
+    "ID": "8",
+    "Abbr": "DET",
+    "Name": "Detroit Lions",
+    "Conference": "NFC",
+    "Division": "North"
+  },
+  {
+    "ID": "9",
+    "Abbr": "GB",
+    "Name": "Green Bay Packers",
+    "Conference": "NFC",
+    "Division": "North"
+  },
+  {
+    "ID": "34",
+    "Abbr": "HOU",
+    "Name": "Houston Texans",
+    "Conference": "AFC",
+    "Division": "South"
+  },
+  {
+    "ID": "11",
+    "Abbr": "IND",
+    "Name": "Indianapolis Colts",
+    "Conference": "AFC",
+    "Division": "South"
+  },
+  {
+    "ID": "30",
+    "Abbr": "JAX",
+    "Name": "Jacksonville Jaguars",
+    "Conference": "AFC",
+    "Division": "South"
+  },
+  {
+    "ID": "12",
+    "Abbr": "KC",
+    "Name": "Kansas City Chiefs",
+    "Conference": "AFC",
+    "Division": "West"
+  },
+  {
+    "ID": "13",
+    "Abbr": "LV",
+    "Name": "Las Vegas Raiders",
+    "Conference": "AFC",
+    "Division": "West"
+  },
+  {
+    "ID": "24",
+    "Abbr": "LAC",
+    "Name": "Los Angeles Chargers",
+    "Conference": "AFC",
+    "Division": "West"
+  },
+  {
+    "ID": "14",
+    "Abbr": "LAR",
+    "Name": "Los Angeles Rams",
+    "Conference": "NFC",
+    "Division": "West"
+  },
+  {
+    "ID": "15",
+    "Abbr": "MIA",
+    "Name": "Miami Dolphins",
+    "Conference": "AFC",
+    "Division": "East"
+  },
+  {
+    "ID": "16",
+    "Abbr": "MIN",
+    "Name": "Minnesota Vikings",
+    "Conference": "NFC",
+    "Division": "North"
+  },
+  {
+    "ID": "17",
+    "Abbr": "NE",
+    "Name": "New England Patriots",
+    "Conference": "AFC",
+    "Division": "East"
+  },
+  {
+    "ID": "18",
+    "Abbr": "NO",
+    "Name": "New Orleans Saints",
+    "Conference": "NFC",
+    "Division": "South"
+  },
+  {
+    "ID": "19",
+    "Abbr": "NYG",
+    "Name": "New York Giants",
+    "Conference": "NFC",
+    "Division": "East"
+
+  },
+  {
+    "ID": "20",
+    "Abbr": "NYJ",
+    "Name": "New York Jets",
+    "Conference": "AFC",
+    "Division": "East"
+
+  },
+  {
+    "ID": "21",
+    "Abbr": "PHI",
+    "Name": "Philadelphia Eagles",
+    "Conference": "NFC",
+    "Division": "East"
+
+  },
+  {
+    "ID": "23",
+    "Abbr": "PIT",
+    "Name": "Pittsburgh Steelers",
+    "Conference": "AFC",
+    "Division": "North"
+  },
+  {
+    "ID": "25",
+    "Abbr": "SF",
+    "Name": "San Francisco 49ers",
+    "Conference": "NFC",
+    "Division": "West"
+  },
+  {
+    "ID": "26",
+    "Abbr": "SEA",
+    "Name": "Seattle Seahawks",
+    "Conference": "NFC",
+    "Division": "West"
+  },
+  {
+    "ID": "27",
+    "Abbr": "TB",
+    "Name": "Tampa Bay Buccaneers",
+    "Conference": "NFC",
+    "Division": "South"
+  },
+  {
+    "ID": "10",
+    "Abbr": "TEN",
+    "Name": "Tennessee Titans",
+    "Conference": "AFC",
+    "Division": "South"
+  },
+  {
+    "ID": "28",
+    "Abbr": "WSH",
+    "Name": "Washington Commanders",
+    "Conference": "NFC",
+    "Division": "East"
+  }
+]
