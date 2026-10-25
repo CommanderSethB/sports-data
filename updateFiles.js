@@ -7,10 +7,13 @@ const BOXSCORE_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/foo
 const INJURY_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/injuries";
 const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/";
 
-updateGames();
-updateInjuryReport();
-updateTeams();
-updateDepthCharts();
+//updateGames();
+//updateInjuryReport();
+//updateTeams();
+//updateDepthCharts();
+//updateSchedules();
+//generateStandings();
+updateSBP();
 
 async function updateInjuryReport() {
     // Blank array
@@ -119,6 +122,18 @@ async function updateGames() {
                     var overUnder = null;
                 }
 
+                // Get Winning team
+                if(currentGame.competitions[0].competitors[0].winner) { 
+                    var winningTeam = homeTeam; 
+                } else if(currentGame.competitions[0].competitors[1].winner) {
+                    var winningTeam = awayTeam;
+                } else if(currentGame.competitions[0].competitors[0].score === currentGame.competitions[0].competitors[1].score && gameStatus === "Final") {
+                    var winningTeam = "Tie";
+                } else {
+                    var winningTeam = null;
+                }
+                
+
                 // Add the current game details to the result array
                 gameList.push({
                     "Week": weekName, 
@@ -131,7 +146,8 @@ async function updateGames() {
                     "Away ID": awayTeam, 
                     "Status": gameStatus, 
                     "Home Score": homeScore, 
-                    "Away Score": awayScore, 
+                    "Away Score": awayScore,
+                    "Winner": winningTeam, 
                     "Home ML": homeOdds, 
                     "Away ML": awayOdds, 
                     "Spread": spread, 
@@ -679,7 +695,7 @@ async function updateTeams() {
             var teamAbbreviation = currentTeam.abbreviation;
             var teamColor = "#" + currentTeam.color;
             var teamLogo = currentTeam.logos[0].href;
-            var division = getDivsion(teamID);
+            var division = getDivision(teamID);
 
             // Add the current team details to the result array
             teamList.push({"ID": teamID, "Abbr": teamAbbreviation, "Name": teamName, "Color": teamColor, "Logo": teamLogo, "Division": division});
@@ -1225,7 +1241,7 @@ function updateTeamAllowedStats(statList, gameData) {
     });
 }
 
-function getDivsion(teamID) {
+function getDivision(teamID) {
     // Setup and load divisions json
     var fs = require('fs');
     const rawData = fs.readFileSync('./data/divisions.json', 'utf-8');
@@ -1234,4 +1250,652 @@ function getDivsion(teamID) {
     var team = divisions.find(x => x['ID'] === teamID);
 
     return team['Conference'] + " " + team['Division'];
+}
+
+function getConference(teamID) {
+    // Setup and load divisions json
+    var fs = require('fs');
+    const rawData = fs.readFileSync('./data/divisions.json', 'utf-8');
+    const divisions = JSON.parse(rawData);
+
+    var team = divisions.find(x => x['ID'] === teamID);
+
+    return team['Conference'];
+}
+
+async function updateSchedules(){
+    // Result array
+    var schedules = [];
+
+    // Setup file system, get gameData file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/liveScoring.json', 'utf-8');
+    var gameData = JSON.parse(rawData);
+
+    // Get teamList
+    rawData = fs.readFileSync('./data/teamList.json');
+    var teamList = JSON.parse(rawData);
+
+    // Iterate through teamList to initialize json array
+    for (var team in teamList) { 
+        schedules.push({
+            "Team ID": teamList[team].ID,
+            "Week 1": null,
+            "Week 2": null,
+            "Week 3": null,
+            "Week 4": null,
+            "Week 5": null,
+            "Week 6": null,
+            "Week 7": null,
+            "Week 8": null,
+            "Week 9": null,
+            "Week 10": null,
+            "Week 11": null,
+            "Week 12": null,
+            "Week 13": null,
+            "Week 14": null,
+            "Week 15": null,
+            "Week 16": null,
+            "Week 17": null,
+            "Week 18": null
+        }); 
+    }
+
+    // Iterate through gameList, push game data to each included teams schedule
+    for(const game in gameData){
+        homeTeam = schedules.find(x => x['Team ID'] === gameData[game]['Home ID']);
+        awayTeam = schedules.find(x => x['Team ID'] === gameData[game]['Away ID']);
+        homeTeam[gameData[game]['Week']] = gameData[game];
+        awayTeam[gameData[game]['Week']] = gameData[game];
+    }
+
+    // Write to schedule file
+    fs.writeFile('./data/schedules.json', JSON.stringify(schedules), (err) => {
+        if(err) console.log(err);
+    });
+}
+
+function getStreak(teamID) {
+    // Load schedule file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/schedules.json', 'utf-8');
+    var schedules = JSON.parse(rawData);
+
+    // Variables
+    var streakType = 'W';
+    var streakLength = 0;
+
+    // Get team schedule
+    var teamIndex = schedules.find(x => x['Team ID'] === teamID);
+
+    // Iterate through schedule
+    for(var week in teamIndex) {
+        // Week string
+        var weekNum = parseInt(week.split(' ')[1]);
+
+        try{
+            if(weekNum <= STAT_END_WEEK) {
+                if(teamIndex[week]['Winner'] === teamID) {
+                    if(streakType === "W") { 
+                        streakLength += 1; 
+                    } else {
+                        streakType = "W";
+                        streakLength = 1;
+                    }
+                } else if(teamIndex[week]['Winner'] === "Tie") {
+                    if(streakType === "T") { 
+                        streakLength += 1; 
+                    } else {
+                        streakType = "T";
+                        streakLength = 1;
+                    }
+                } else if(teamIndex[week]['Winner'] === null) {
+
+                } else {
+                    if(streakType === "L") { 
+                        streakLength += 1;
+                    } else {
+                        streakType = "L";
+                        streakLength = 1;
+                    }
+                }
+            }
+        } catch (err) {
+
+        }    
+    }
+
+    // Return streak in a W/L/T# format
+    return streakType + streakLength;
+}
+
+async function generateStandings() {
+    // Result standings array
+    var standings = [];
+
+    // Setup file system and retrieve team list
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/teamList.json', 'utf-8');
+    var teamList = JSON.parse(rawData);
+
+    // Set standings data
+    for(var team in teamList) {
+        // Create overall record variables
+        var win = getLiveScoringItem(teamList[team]['ID'], "wins", "all");
+        var los = getLiveScoringItem(teamList[team]['ID'], "loss", "all");
+        var tie = getLiveScoringItem(teamList[team]['ID'], "ties", "all");
+        var rec = win + "-" + los + "-" + tie;
+        if(!(win + los + tie === 0)) {
+            var recDec = (win + tie/2)/(win + los + tie);
+        } else { var recDec = 0; }
+        var gp = win + los + tie;
+
+        // Home record variables
+        win = getLiveScoringItem(teamList[team]['ID'], "wins", "home");
+        los = getLiveScoringItem(teamList[team]['ID'], "loss", "home");
+        tie = getLiveScoringItem(teamList[team]['ID'], "ties", "home");
+        var recHome = win + "-" + los + "-" + tie;
+        if(!(win + los + tie === 0)) {
+            var recDecHome = (win + tie/2)/(win + los + tie);
+        } else { var recDecHome = 0; }
+
+        // Away record variables
+        win = getLiveScoringItem(teamList[team]['ID'], "wins", "away");
+        los = getLiveScoringItem(teamList[team]['ID'], "loss", "away");
+        tie = getLiveScoringItem(teamList[team]['ID'], "ties", "away");
+        var recAway = win + "-" + los + "-" + tie;
+        if(!(win + los + tie === 0)) {
+            var recDecAway = (win + tie/2)/(win + los + tie);
+        } else { var recDecAway = 0; }
+
+        // Division record variables
+        win = getLiveScoringItem(teamList[team]['ID'], "wins", "div");
+        los = getLiveScoringItem(teamList[team]['ID'], "loss", "div");
+        tie = getLiveScoringItem(teamList[team]['ID'], "ties", "div");
+        var recDiv = win + "-" + los + "-" + tie;
+        if(!(win + los + tie === 0)) {
+            var recDecDiv = (win + tie/2)/(win + los + tie);
+        } else { var recDecDiv = 0; }
+
+        // Conference record variables
+        win = getLiveScoringItem(teamList[team]['ID'], "wins", "conf");
+        los = getLiveScoringItem(teamList[team]['ID'], "loss", "conf");
+        tie = getLiveScoringItem(teamList[team]['ID'], "ties", "conf");
+        var recConf = win + "-" + los + "-" + tie;
+        if(!(win + los + tie === 0)) {
+            var recDecConf = (win + tie/2)/(win + los + tie);
+        } else { var recDecConf = 0; }
+
+        // Points variables
+        var pf = getLiveScoringItem(teamList[team]['ID'], "pf", "all");
+        var pa = getLiveScoringItem(teamList[team]['ID'], "pa", "all");
+        var diff = pf - pa;
+
+        // Push data
+        standings.push({
+            "Team ID": teamList[team]['ID'],
+            "Team Name": teamList[team]['Name'],
+            "Division": teamList[team]['Division'],
+            "GP": gp,
+            "Record": rec,
+            "Rec%": recDec.toFixed(4),
+            "Home": recHome,
+            "Home%": recDecHome.toFixed(4),
+            "Away": recAway, 
+            "Away%": recDecAway.toFixed(4),
+            "Div": recDiv,
+            "Div%": recDecDiv.toFixed(4),
+            "Conf": recConf,
+            "Conf%": recDecConf.toFixed(4),
+            "PF": pf,
+            "PA": pa,
+            "Diff": diff.toFixed(0),
+            "Streak": getStreak(teamList[team]['ID'])
+        });
+    }
+
+    // Sort teamList by division then teamID for now. Eventually by division, then tiebreaker function
+    standings.sort((a, b) => a['Division'].localeCompare(b['Division']) || tieBreak(a, b));
+
+    // Write to schedule file
+    fs.writeFile('./data/standings.json', JSON.stringify(standings), (err) => {
+        if(err) console.log(err);
+    });
+}
+
+function tieBreak(teamA, teamB) {
+    return teamA['Team ID'] - teamB['Team ID'];
+}
+
+function getLiveScoringItem(teamID, item, type = "all") {
+    // Setup game data file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/liveScoring.json', 'utf-8');
+    var gameData = JSON.parse(rawData);
+    var dataPoint = 0;
+
+    // Iterate through game data
+    for(var game in gameData) {
+        // Get game week, split to just number
+        var weekString = new String(gameData[game]['Week']);
+        var week = weekString.split(' ')[1];
+
+        // Check if game is in stat range
+        if(parseInt(week) <= STAT_END_WEEK) {
+
+            // Check if team played in game
+            if(gameData[game]['Home ID'] === teamID || gameData[game]['Away ID'] === teamID) {
+                if(item === "wins" && type === "all") {                             // Total wins
+                    if(gameData[game]['Winner'] === teamID) { dataPoint += 1; }
+                } else if (item === "loss" && type === "all") {                     // Total losses
+                    if(!(gameData[game]['Winner'] === teamID)) { dataPoint += 1; }
+                } else if (item === "ties" && type === "all") {                     // Total ties
+                    if(gameData[game]['Winner'] === "Tie") { dataPoint += 1; }
+                } else if (item === "pf" && type === "all") {                       // Total points for
+                    if(gameData[game]['Home ID'] === teamID) {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    } else {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    }
+                } else if (item === "pa" && type === "all") {                       // Total points against
+                    if(gameData[game]['Home ID'] === teamID) {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    } else {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    }
+                } else if (item === "wins" && type === "home") {                    // Home wins
+                    if(gameData[game]['Winner'] === teamID && gameData[game]['Home ID'] === teamID) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "loss" && type === "home") {                    // Home losses
+                    if(!(gameData[game]['Winner'] === teamID) && gameData[game]['Home ID'] === teamID) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "ties" && type === "home") {                    // Home ties
+                    if(gameData[game]['Winner'] === "Tie" && gameData[game]['Home ID'] === teamID) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "pf" && type === "home") {                      // Home points for
+                    if(gameData[game]['Home ID'] === teamID) {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    }
+                } else if (item === "pa" && type === "home") {                      // Home points against
+                    if(gameData[game]['Home ID'] === teamID) {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    }
+                } else if (item === "wins" && type === "away") {                    // Away wins
+                    if(gameData[game]['Winner'] === teamID && gameData[game]['Away ID'] === teamID) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "loss" && type === "away") {                    // Away losses
+                    if(!(gameData[game]['Winner'] === teamID) && gameData[game]['Away ID'] === teamID) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "ties" && type === "away") {                    // Away ties
+                    if(gameData[game]['Winner'] === "Tie" && gameData[game]['Away ID'] === teamID) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "pf" && type === "away") {                      // Away points for
+                    if(gameData[game]['Away ID'] === teamID) {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    }
+                } else if (item === "pa" && type === "away") {                      // Away points against
+                    if(gameData[game]['Away ID'] === teamID) {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    }
+                } else if (item === "wins" && type === "conf") {                    // Conference wins
+                    if(gameData[game]['Winner'] === teamID && getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID'])) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "loss" && type === "conf") {                    // Conference losses
+                    if(!(gameData[game]['Winner'] === teamID) && getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID'])) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "ties" && type === "conf") {                    // Conference ties
+                    if(gameData[game]['Winner'] === "Tie" && getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID'])) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "pf" && type === "conf") {                      // Conference points for
+                    if(gameData[game]['Home ID'] === teamID && getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    } else if(gameData[game]['Away ID'] === teamID && getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    }
+                } else if (item === "pa" && type === "conf") {                      // Conference points against
+                    if(gameData[game]['Away ID'] === teamID && getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    } else if(gameData[game]['Home ID'] === teamID && getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    }
+                } else if (item === "wins" && type === "div") {                     // Division wins
+                    if(gameData[game]['Winner'] === teamID && getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID'])) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "loss" && type === "div") {                     // Division losses
+                    if(!(gameData[game]['Winner'] === teamID) && getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID'])) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "ties" && type === "div") {                     // Division ties
+                    if(gameData[game]['Winner'] === "Tie" && getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID'])) {
+                        dataPoint += 1;
+                    }
+                } else if (item === "pf" && type === "div") {                       // Division points for
+                    if(gameData[game]['Home ID'] === teamID && getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    } else if(gameData[game]['Away ID'] === teamID && getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    }
+                } else if (item === "pa" && type === "div") {                       // Division points against
+                    if(gameData[game]['Away ID'] === teamID && getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Home Score']);
+                    } else if(gameData[game]['Home ID'] === teamID && getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID'])) {
+                        dataPoint += parseInt(gameData[game]['Away Score']);
+                    }
+                }
+            }
+        }
+    }
+
+    return dataPoint;
+}
+
+function getHealthScore(teamID) {
+    // Setup file
+    var fs = require('fs');
+
+    // Get depth charts
+    rawData = fs.readFileSync('./data/depthCharts.json', 'utf-8');
+    var depthCharts = JSON.parse(rawData);
+
+    // player list to store players as we come across them
+    var playerList = [];
+
+    // Iterate through depth charts
+    for(var position in depthCharts) {
+        // if current position line is in our team
+        if(depthCharts[position]['Team'] === teamID) {
+            var positionWeight = getPositionWeight(depthCharts[position]['Position']);
+
+            // First string
+            // If player position is not empty
+            if(!(depthCharts[position]['First'] === null)) {
+                // Player variables
+                var player = playerList.find(x => x['Player ID'] === depthCharts[position]['First']);
+
+                // If player is not in playerList, add them
+                if(player === undefined) {
+                    playerList.push({
+                        "Player ID": depthCharts[position]['First'],
+                        "Impact Score": positionWeight,
+                        "Injury Score": getPlayerInjuryScore(depthCharts[position]['First'])                        
+                    });
+                // Else if play is already in list, add position weight to impact score
+                } else {
+                    player['Impact Score'] += positionWeight;
+                }
+            }
+
+            // Second string
+            // If player position is not empty
+            if(!(depthCharts[position]['Second'] === null)) {
+                // Player variables
+                var player = playerList.find(x => x['Player ID'] === depthCharts[position]['Second']);
+
+                // If player is not in playerList, add them
+                if(player === undefined) {
+                    playerList.push({
+                        "Player ID": depthCharts[position]['Second'],
+                        "Impact Score": positionWeight * 0.8,
+                        "Injury Score": getPlayerInjuryScore(depthCharts[position]['First'])
+                    });
+                // Else if play is already in list, add position weight to impact score
+                } else {
+                    player['Impact Score'] += (positionWeight * 0.8);
+                }
+            }
+
+            // Third string
+            // If player position is not empty
+            if(!(depthCharts[position]['Third'] === null)) {
+                // Player variables
+                var player = playerList.find(x => x['Player ID'] === depthCharts[position]['Third']);
+
+                // If player is not in playerList, add them
+                if(player === undefined) {
+                    playerList.push({
+                        "Player ID": depthCharts[position]['Third'],
+                        "Impact Score": positionWeight * 0.6,
+                        "Injury Score": getPlayerInjuryScore(depthCharts[position]['First'])
+                    });
+                // Else if play is already in list, add position weight to impact score
+                } else {
+                    player['Impact Score'] += (positionWeight * 0.6);
+                }
+            }
+
+            // Fourth string
+            // If player position is not empty
+            if(!(depthCharts[position]['Fourth'] === null)) {
+                // Player variables
+                var player = playerList.find(x => x['Player ID'] === depthCharts[position]['Fourth']);
+
+                // If player is not in playerList, add them
+                if(player === undefined) {
+                    playerList.push({
+                        "Player ID": depthCharts[position]['Fourth'],
+                        "Impact Score": positionWeight * 0.4,
+                        "Injury Score": getPlayerInjuryScore(depthCharts[position]['First'])
+                    });
+                // Else if play is already in list, add position weight to impact score
+                } else {
+                    player['Impact Score'] += (positionWeight * 0.4);
+                }
+            }
+
+            // Fifth string
+            // If player position is not empty
+            if(!(depthCharts[position]['Fifth'] === null)) {
+                // Player variables
+                var player = playerList.find(x => x['Player ID'] === depthCharts[position]['Fifth']);
+
+                // If player is not in playerList, add them
+                if(player === undefined) {
+                    playerList.push({
+                        "Player ID": depthCharts[position]['Fifth'],
+                        "Impact Score": positionWeight * 0.2,
+                        "Injury Score": getPlayerInjuryScore(depthCharts[position]['First'])
+                    });
+                // Else if play is already in list, add position weight to impact score
+                } else {
+                    player['Impact Score'] += (positionWeight * 0.2);
+                }
+            }
+        }
+    }
+
+    // Iterate through player list, get injury scores, calculate health scores, keep running total for team
+    var teamImpactScore = 0.0;
+    var teamInjuryScore = 0.0;
+
+    for(var player in playerList) {
+        teamImpactScore += playerList[player]['Impact Score'];
+        teamInjuryScore += (playerList[player]['Impact Score'] * playerList[player]['Injury Score']);
+    }
+
+    return (teamInjuryScore / teamImpactScore).toFixed(4);
+}
+
+function getPositionWeight(pos) {  
+    switch(pos){
+        case "LDE":  return 0.80; // LDE
+        case "NT:":  return 0.85; // NT
+        case "RDE":  return 0.95; // RDE
+        case "WLB":  return 0.90; // WLB
+        case "MLB":  return 1.00; // MLB
+        case "SLB":  return 0.85; // SLB
+        case "LCB":  return 0.90; // LCB
+        case "SS":  return 0.80; // SS
+        case "FS":  return 0.85; // FS
+        case "RCB":  return 0.85; // RCB
+        case "NB": return 0.75; // NB
+        case "K": return 0.50; // PK
+        case "P": return 0.50;  // P
+        case "H": return 0.25;  // H
+        case "PR": return 0.65; // PR
+        case "KR": return 0.70; // KR
+        case "LS": return 0.50; // LS
+        case "WR": return 0.85; // WR
+        case "LT": return 0.95; // LT
+        case "LG": return 0.80; // LG
+        case "C": return 0.85; // C
+        case "RG": return 0.80; // RG
+        case "RT": return 0.90; // RT
+        case "QB": return 1.00; // QB
+        case "TE": return 0.75; // TE
+        case "RB": return 0.80; // RB
+        default: return 0.5;
+  }
+}
+
+function getPlayerInjuryScore(playerID) {
+    // Setup file
+    var fs = require('fs');
+    
+    // Get injury report
+    var rawData = fs.readFileSync('./data/injuryReport.json', 'utf-8');
+    var injuryReport = JSON.parse(rawData);
+
+    // Get injury score
+    var injuryScoreIndex = injuryReport.find(x => x.playerID === playerID);
+
+    // If undefined, return 1.0 (healthy)
+    if(injuryScoreIndex === undefined) { 
+        return 1.0;
+    } else {
+        return parseFloat(injuryScoreIndex.playerScore).toFixed(1);
+    }
+}
+
+function aPercentB(a, b) {
+    // Returns what percentage a is of the combined a+b    
+    var sum = parseFloat(a) + parseFloat(b);
+    
+    if(sum === 0) return 0.0;
+    return (a/sum).toFixed(4);
+}
+
+function predictionPercentage(teamA, teamB) {
+    // If teamA is the same as teamB, no need to do calculations. return null
+    if(teamA === teamB) return 0.0;
+    
+    // Load team stats file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+    var teamStats = JSON.parse(rawData);
+    
+    // Team for stats
+    var teamADict = teamStats.find(x => x['Team ID'] === teamA);
+    var teamAGamesPlayed = parseInt(teamADict['GP']);
+    var teamAPointsFor = parseInt(teamADict['PF']) / teamAGamesPlayed;
+    var teamAFG = parseInt(teamADict['FGM']);
+    var teamATDPts = (teamAPointsFor - (teamAFG * 3)) / teamAGamesPlayed;
+    var teamATA = (parseInt(teamADict['Int']) + (parseInt(teamADict['Recovered']) - (parseInt(teamADict['Fumble']) - parseInt(teamADict['Lost']))))/teamAGamesPlayed;
+    var teamAMom = getMomentum(getStreak(teamA), teamAGamesPlayed);
+    var teamAHealthScore = getHealthScore(teamA);
+
+    var teamBDict = teamStats.find(x => x['Team ID'] === teamB);
+    var teamBGamesPlayed = parseInt(teamBDict['GP']);
+    var teamBPointsFor = parseInt(teamBDict['PF']) / teamBGamesPlayed;
+    var teamBFG = parseInt(teamBDict['FGM']);
+    var teamBTDPts = (teamBPointsFor - (teamBFG * 3)) / teamBGamesPlayed;
+    var teamBTA = (parseInt(teamBDict['Int']) + (parseInt(teamBDict['Recovered']) - (parseInt(teamBDict['Fumble']) - parseInt(teamBDict['Lost']))))/teamBGamesPlayed;
+    var teamBMom = getMomentum(getStreak(teamB), teamBGamesPlayed);
+    var teamBHealthScore = getHealthScore(teamB);
+
+    // Load team allowed stats file
+    rawData = fs.readFileSync('./data/teamAllowedStats.json', 'utf-8');
+    teamStats = JSON.parse(rawData);
+
+    // Team allowed stats
+    teamADict = teamStats.find(x => x['Team ID'] === teamA);
+    var teamAPointsAll = parseInt(teamADict['PF']) / teamAGamesPlayed;
+    var teamAFGAll = parseInt(teamADict['FGM']);
+    var teamATDPtsAll = (teamAPointsAll - (teamAFGAll * 3)) / teamAGamesPlayed;
+    var teamATAAll = (parseInt(teamADict['Int']) + (parseInt(teamADict['Recovered']) - (parseInt(teamADict['Fumble']) - parseInt(teamADict['Lost']))))/teamAGamesPlayed;
+
+    teamBDict = teamStats.find(x => x['Team ID'] === teamA);
+    var teamBPointsAll = parseInt(teamBDict['PF']) / teamBGamesPlayed;
+    var teamBFGAll = parseInt(teamBDict['FGM']);
+    var teamBTDPtsAll = (teamBPointsAll - (teamBFGAll * 3)) / teamBGamesPlayed;
+    var teamBTAAll = (parseInt(teamBDict['Int']) + (parseInt(teamBDict['Recovered']) - (parseInt(teamBDict['Fumble']) - parseInt(teamBDict['Lost']))))/teamBGamesPlayed;
+
+    // Percentages
+    var pointsForPercent = aPercentB(teamAPointsFor, teamBPointsFor);
+    var pointsAllPercent = 1.0 - aPercentB(teamAPointsAll, teamBPointsAll);
+    var takeawayPercent = aPercentB(teamATA, teamBTA);
+    var turnoverPercent = 1.0 - aPercentB(teamATAAll, teamBTAAll);
+    var touchdownPercent = aPercentB(teamATDPts, teamBTDPts);
+    var touchdownAllPercent = 1.0 - aPercentB(teamATDPtsAll, teamBTDPtsAll);
+    var momentumPercent = aPercentB(teamAMom, teamBMom);
+    var healthPercent = aPercentB(teamAHealthScore, teamBHealthScore);  
+
+    // Final variables
+    var percentSum = parseFloat(pointsForPercent) + parseFloat(pointsAllPercent) + parseFloat(takeawayPercent) + parseFloat(touchdownPercent) + parseFloat(turnoverPercent) + parseFloat(touchdownAllPercent) + parseFloat(momentumPercent) + parseFloat(healthPercent);
+
+    // Return average of percentages
+    return (percentSum/8).toFixed(4);
+}
+
+function getMomentum(winStreak, gp) {    
+    // Start with baseline 0.5
+    var base = 0.5;
+
+    // If Win streak => Positive multiple, if Loss => negative multiplier, tie is 0
+    if(winStreak.substring(0, 1) === "W") { var multiplier = 0.5; }
+    else if(winStreak.substring(0, 1) === "L") { var multiplier = -0.5; }
+    else {var multiplier = 0.0; }
+
+    // Percentage of games played that streak is
+    var value = parseInt(winStreak.substring(1)) / gp;
+
+    return base + (multiplier * value);
+}
+
+function updateSBP() {
+    // Load team list
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/teamList.json', 'utf-8');
+    var teamList = JSON.parse(rawData);
+
+    // Result array
+    var sbp = [];
+    var max = 0.0;
+
+    // Iterate both directions through teamList
+    for(var teamY in teamList) {
+        // Insert teamY to start results
+        sbp.push({"Team ID": teamList[teamY]['ID']});
+
+        // Sum variable for total score
+        var sum = 0.0;
+
+        for(var teamX in teamList) {
+            var pct = parseFloat(predictionPercentage(teamList[teamY]['ID'], teamList[teamX]['ID']));
+            sbp[teamY][teamList[teamX]['ID']] = pct;
+            sum += pct;
+        }
+
+        // Set total in array, and check for and update max for later use
+        sbp[teamY]['Total'] = sum;
+        if(sum > max) max = sum;
+    }
+
+    for(var team in sbp){
+        sbp[team]['SBP'] = (parseFloat(sbp[team]['Total']) / parseFloat(max)).toFixed(4);
+    }
+
+    // Write to schedule file
+    fs.writeFile('./data/sbp.json', JSON.stringify(sbp), (err) => {
+        if(err) console.log(err);
+    });
 }
