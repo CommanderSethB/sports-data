@@ -1,6 +1,19 @@
 const SEASON = 2026;
 const NUM_WEEKS = 18;
 const STAT_END_WEEK = 6;
+const PE_POWER = 2.37;
+const TOF_POWER = 2.37;
+
+// These should add to 1.0
+const RATING_WEIGHT_REC = 0.3;      // 0.30
+const RATING_WEIGHT_PE = 0.1;       // 0.40
+const RATING_WEIGHT_TOF = 0.05;     // 0.45
+const RATING_WEIGHT_TDP = 0.1;      // 0.55
+const RATING_WEIGHT_SBP = 0.15;     // 0.70
+const RATING_WEIGHT_SOS = 0.1;      // 0.80
+const RATING_WEIGHT_MOM = 0.1;      // 0.90
+const RATING_WEIGHT_HEALTH = 0.1;   // 1.00
+
 const REGSEASON_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?seasontype=2&dates=";
 const TEAMS_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
 const BOXSCORE_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=";
@@ -13,7 +26,8 @@ const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/lea
 //updateDepthCharts();
 //updateSchedules();
 //generateStandings();
-updateSBP();
+//updateSBP();
+updatePowerRankings();
 
 async function updateInjuryReport() {
     // Blank array
@@ -1776,12 +1790,12 @@ function getPlayerInjuryScore(playerID) {
     }
 }
 
-function aPercentB(a, b) {
-    // Returns what percentage a is of the combined a+b    
-    var sum = parseFloat(a) + parseFloat(b);
+function aPercentB(a, b, power = 1) {
+    // Returns what percentage a is of the combined a+b, can be raised to a power    
+    var sum = Math.pow(parseFloat(a), power) + Math.pow(parseFloat(b), power);
     
     if(sum === 0) return 0.0;
-    return (a/sum).toFixed(4);
+    return (Math.pow(a, power)/sum).toFixed(4);
 }
 
 function predictionPercentage(teamA, teamB) {
@@ -1797,8 +1811,7 @@ function predictionPercentage(teamA, teamB) {
     var teamADict = teamStats.find(x => x['Team ID'] === teamA);
     var teamAGamesPlayed = parseInt(teamADict['GP']);
     var teamAPointsFor = parseInt(teamADict['PF']) / teamAGamesPlayed;
-    var teamAFG = parseInt(teamADict['FGM']);
-    var teamATDPts = (teamAPointsFor - (teamAFG * 3)) / teamAGamesPlayed;
+    var teamATDPts = getTeamTDPtsPercentage(teamA, "for");
     var teamATA = (parseInt(teamADict['Int']) + (parseInt(teamADict['Recovered']) - (parseInt(teamADict['Fumble']) - parseInt(teamADict['Lost']))))/teamAGamesPlayed;
     var teamAMom = getMomentum(getStreak(teamA), teamAGamesPlayed);
     var teamAHealthScore = getHealthScore(teamA);
@@ -1806,8 +1819,7 @@ function predictionPercentage(teamA, teamB) {
     var teamBDict = teamStats.find(x => x['Team ID'] === teamB);
     var teamBGamesPlayed = parseInt(teamBDict['GP']);
     var teamBPointsFor = parseInt(teamBDict['PF']) / teamBGamesPlayed;
-    var teamBFG = parseInt(teamBDict['FGM']);
-    var teamBTDPts = (teamBPointsFor - (teamBFG * 3)) / teamBGamesPlayed;
+    var teamBTDPts = getTeamTDPtsPercentage(teamB, "for");
     var teamBTA = (parseInt(teamBDict['Int']) + (parseInt(teamBDict['Recovered']) - (parseInt(teamBDict['Fumble']) - parseInt(teamBDict['Lost']))))/teamBGamesPlayed;
     var teamBMom = getMomentum(getStreak(teamB), teamBGamesPlayed);
     var teamBHealthScore = getHealthScore(teamB);
@@ -1819,14 +1831,12 @@ function predictionPercentage(teamA, teamB) {
     // Team allowed stats
     teamADict = teamStats.find(x => x['Team ID'] === teamA);
     var teamAPointsAll = parseInt(teamADict['PF']) / teamAGamesPlayed;
-    var teamAFGAll = parseInt(teamADict['FGM']);
-    var teamATDPtsAll = (teamAPointsAll - (teamAFGAll * 3)) / teamAGamesPlayed;
+    var teamATDPtsAll = getTeamTDPtsPercentage(teamA, "allowed");
     var teamATAAll = (parseInt(teamADict['Int']) + (parseInt(teamADict['Recovered']) - (parseInt(teamADict['Fumble']) - parseInt(teamADict['Lost']))))/teamAGamesPlayed;
 
-    teamBDict = teamStats.find(x => x['Team ID'] === teamA);
+    teamBDict = teamStats.find(x => x['Team ID'] === teamB);
     var teamBPointsAll = parseInt(teamBDict['PF']) / teamBGamesPlayed;
-    var teamBFGAll = parseInt(teamBDict['FGM']);
-    var teamBTDPtsAll = (teamBPointsAll - (teamBFGAll * 3)) / teamBGamesPlayed;
+    var teamBTDPtsAll = getTeamTDPtsPercentage(teamB, "allowed");
     var teamBTAAll = (parseInt(teamBDict['Int']) + (parseInt(teamBDict['Recovered']) - (parseInt(teamBDict['Fumble']) - parseInt(teamBDict['Lost']))))/teamBGamesPlayed;
 
     // Percentages
@@ -1841,9 +1851,10 @@ function predictionPercentage(teamA, teamB) {
 
     // Final variables
     var percentSum = parseFloat(pointsForPercent) + parseFloat(pointsAllPercent) + parseFloat(takeawayPercent) + parseFloat(touchdownPercent) + parseFloat(turnoverPercent) + parseFloat(touchdownAllPercent) + parseFloat(momentumPercent) + parseFloat(healthPercent);
+    var finalPercent = percentSum / 8;
 
     // Return average of percentages
-    return (percentSum/8).toFixed(4);
+    return finalPercent.toFixed(4);
 }
 
 function getMomentum(winStreak, gp) {    
@@ -1881,12 +1892,12 @@ function updateSBP() {
 
         for(var teamX in teamList) {
             var pct = parseFloat(predictionPercentage(teamList[teamY]['ID'], teamList[teamX]['ID']));
-            sbp[teamY][teamList[teamX]['ID']] = pct;
+            sbp[teamY][teamList[teamX]['ID']] = pct.toFixed(4);
             sum += pct;
         }
 
         // Set total in array, and check for and update max for later use
-        sbp[teamY]['Total'] = sum;
+        sbp[teamY]['Total'] = sum.toFixed(4);
         if(sum > max) max = sum;
     }
 
@@ -1898,4 +1909,213 @@ function updateSBP() {
     fs.writeFile('./data/sbp.json', JSON.stringify(sbp), (err) => {
         if(err) console.log(err);
     });
+}
+
+function getTeamSBP(team) {
+    // Load SBP list
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/sbp.json', 'utf-8');
+    var sbp = JSON.parse(rawData);
+
+    // Get team from sbp list
+    var teamDict = sbp.find(x => x['Team ID'] === team);
+
+    // Return value
+    return teamDict['SBP'];
+}
+
+function getTeamTDPtsPercentage(team, type = "for") {
+    // This function returns the points obtained from touchdowns (for/allowed) as a percentage of total points (for/allowed)
+    // This function is not *super* robust as it ignores safeties. To be implemented later
+    // Result variable
+    var pct = 0.0;
+
+    // Setup file
+    var fs = require('fs');
+
+    // If type = for, we want to use the teams scoring stats
+    if(type === "for") {
+        // Load file
+        var rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+        var stats = JSON.parse(rawData);
+
+        // Pull team from stats
+        var teamDict = stats.find(x => x['Team ID'] === team);
+
+        // Get total points and points from field goals
+        var pointsFor = parseInt(teamDict['PF']);
+        var fieldGoals = parseInt(teamDict['FGM']);
+        
+    // If type = allowed, we need to use allowed stats
+    } else if(type === "allowed") {
+        // Load file
+        var rawData = fs.readFileSync('./data/teamAllowedStats.json', 'utf-8');
+        var stats = JSON.parse(rawData);
+
+        // Pull team from stats
+        var teamDict = stats.find(x => x['Team ID'] === team);
+
+        // Get total points and points from field goals
+        var pointsFor = parseInt(teamDict['PF']);
+        var fieldGoals = parseInt(teamDict['FGM']);
+    }
+
+    // Subtract field goal points from total points, then divide by total points
+    pct = (pointsFor - (fieldGoals * 3)) / pointsFor;
+
+    return pct.toFixed(4);
+}
+
+function pythagoreanExpectation(team) {
+    // This function returns the expected win percentage based off of points scored and points allowed
+    // Originally built as a baseball statistic where runs scored and runs allowed were squared. 
+    // Football Outsiders came up with the exponent of 2.37 to match historical NFL data
+    
+    // Setup file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+    var stats = JSON.parse(rawData);
+
+    // Get team
+    var teamDict = stats.find(x => x['Team ID'] === team);
+
+    // Get pointsFor, pointsAllowed
+    var pointsFor = parseInt(teamDict['PF']);
+    var pointsAllowed = parseInt(teamDict['PA']);
+
+    // Final value is percentage pointsFor is of total, with all numbers raised to PE_POWER
+    return aPercentB(pointsFor, pointsAllowed, PE_POWER);
+}
+
+function getTeamTurnoverFactor(team) {
+    // This function is similar to the pythagorean expectation, but uses turnovers and takeaways
+    
+    // Setup file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+    var stats = JSON.parse(rawData);
+
+    // Get team
+    var teamDict = stats.find(x => x['Team ID'] === team);
+
+    // Get pointsFor, pointsAllowed
+    var takeaways = parseInt(teamDict['Int']) + (parseInt(teamDict['Recovered']) - (parseInt(teamDict['Fumble']) - parseInt(teamDict['Lost'])));
+    var turnovers = parseInt(teamDict['Int Pass']) + parseInt(teamDict['Lost']);
+
+    // Final value is percentage pointsFor is of total, with all numbers raised to PE_POWER
+    return aPercentB(takeaways, turnovers, TOF_POWER);
+}
+
+function getTeamStrengthOfSchedule(team) {
+    // Load schedule file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/schedules.json', 'utf-8');
+    var schedules = JSON.parse(rawData);
+
+    // Strength of schedule sum and count
+    var sum = 0.0;
+    var count = 0;
+
+    // Get team schedule
+    var teamDict = schedules.find(x => x['Team ID'] === team);
+
+    // Iterate through schedule
+    for(var week in teamDict) {
+        // If week is null, then bye week
+        if(!(teamDict[week] === null)){
+            // Only count games that are finished
+            if(teamDict[week]['Status'] === "Final") {
+                // If team is home team, get away id, else get home id
+                if(teamDict[week]['Home ID'] === team) {
+                    var opp = teamDict[week]['Away ID'];
+                } else {
+                    var opp = teamDict[week]['Home ID'];
+                }
+
+                // Increment game counter
+                count++;
+
+                // Add SBP to sum
+                sum += parseFloat(getTeamSBP(opp));            
+            }
+        }
+    }
+
+    // Calculate average
+    var avg = sum / count;
+
+    return avg.toFixed(4);
+}
+
+function updatePowerRankings() {
+    // Load standings file
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/standings.json', 'utf-8');
+    var standings = JSON.parse(rawData);
+
+    // Power Rankings array
+    var powerRankings = [];
+
+    // Iteatre through teams and calculate their rating
+    for(var currentTeam in standings) {
+        // Get calcualtion percentages
+        var record = parseFloat(standings[currentTeam]['Rec%']);
+        var pyth = parseFloat(pythagoreanExpectation(standings[currentTeam]['Team ID']));
+        var turnoverFactor = parseFloat(getTeamTurnoverFactor(standings[currentTeam]['Team ID']));
+        var touchdownFactor = parseFloat(getTeamTDPtsPercentage(standings[currentTeam]['Team ID']));
+        var sbp = parseFloat(getTeamSBP(standings[currentTeam]['Team ID']));
+        var sos = parseFloat(getTeamStrengthOfSchedule(standings[currentTeam]['Team ID']));
+        var momentum = parseFloat(getMomentum(standings[currentTeam]['Streak'], standings[currentTeam]['GP']));
+        var health = parseFloat(getHealthScore(standings[currentTeam]['Team ID']));
+
+        // Sum up weighted values
+        var rating = 
+            record * RATING_WEIGHT_REC + 
+            pyth * RATING_WEIGHT_PE + 
+            turnoverFactor * RATING_WEIGHT_TOF + 
+            touchdownFactor * RATING_WEIGHT_TDP + 
+            sbp * RATING_WEIGHT_SBP + 
+            sos * RATING_WEIGHT_SOS + 
+            momentum * RATING_WEIGHT_MOM + 
+            health * RATING_WEIGHT_HEALTH;
+
+        // Push to array
+        powerRankings.push({
+            'Rk': null,
+            'Team Name': standings[currentTeam]['Team Name'],
+            'Record': record.toFixed(4),
+            'Pyth%': pyth.toFixed(4),
+            'SBP': sbp.toFixed(4),
+            'TO Fact': turnoverFactor.toFixed(4),
+            'TD Fact': touchdownFactor.toFixed(4),
+            'SOS': sos.toFixed(4),
+            'Mom': momentum.toFixed(4),
+            'Health': health.toFixed(4),
+            'Rating': rating.toFixed(4)            
+        });
+    }
+
+    // Sort Rankings
+    powerRankings.sort((a, b) => b['Rating'] - a['Rating']);
+
+    // Add rank numbers
+    for(var t = 0; t < powerRankings.length; t++) {
+        // If top team, set rk to 1
+        if(t === 0)
+        {
+            powerRankings[t]['Rk'] = 1;
+        // If team is tied with the team before it, team rk = team before it rk
+        } else if(powerRankings[t]['Rating'] === powerRankings[t-1]['Rating']) {
+            powerRankings[t]['Rk'] = powerRankings[t-1]['Rk'];
+        // Else team rk = t + 1
+        } else {
+            powerRankings[t]['Rk'] = t + 1;
+        }
+    }
+
+    // Write to rankings file
+    fs.writeFile('./data/powerRankings.json', JSON.stringify(powerRankings), (err) => {
+        if(err) console.log(err);
+    });
+    
 }
