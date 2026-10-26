@@ -20,14 +20,19 @@ const BOXSCORE_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/foo
 const INJURY_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/injuries";
 const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/";
 
-//updateGames();
-//updateInjuryReport();
-//updateTeams();
-//updateDepthCharts();
-//updateSchedules();
-//generateStandings();
-//updateSBP();
-updatePowerRankings();
+main();
+
+async function main(){
+    await updateGames();
+    await updateInjuryReport();
+    await updateTeams();
+    await updateDepthCharts();
+    await updateSchedules();
+    await generateStandings();
+    await updateSBP();
+    await updatePowerRankings();
+    await buildWeekView();
+}
 
 async function updateInjuryReport() {
     // Blank array
@@ -60,7 +65,7 @@ async function updateInjuryReport() {
     }
 
     var fs = require('fs');
-    fs.writeFile('./data/injuryReport.json', JSON.stringify(result), (err) => {
+    fs.writeFileSync('./data/injuryReport.json', JSON.stringify(result), (err) => {
         if(err) console.log(err);
     });
 }
@@ -439,7 +444,7 @@ async function updateGames() {
 
     // Write live scoring data to file
     var fs = require('fs');
-    fs.writeFile('./data/liveScoring.json', JSON.stringify(gameList), (err) => {
+    fs.writeFileSync('./data/liveScoring.json', JSON.stringify(gameList), (err) => {
         if(err) console.log(err);
     });
 
@@ -447,7 +452,7 @@ async function updateGames() {
     statList.sort((a, b) => a.playerID - b.playerID);
 
     // Write box score stat data
-    fs.writeFile('./data/boxScores.json', JSON.stringify(statList), (err) => {
+    fs.writeFileSync('./data/boxScores.json', JSON.stringify(statList), (err) => {
         if(err) console.log(err);
     });
 
@@ -661,7 +666,7 @@ function updatePlayerStats(statList) {
 
     // Write total season player stats
     var fs = require('fs');
-    fs.writeFile('./data/playerStats.json', JSON.stringify(newStatList), (err) => {
+    fs.writeFileSync('./data/playerStats.json', JSON.stringify(newStatList), (err) => {
         if(err) console.log(err);
     });
 }
@@ -723,7 +728,7 @@ async function updateTeams() {
 
     // Write list to file
     var fs = require('fs');
-    fs.writeFile('./data/teamList.json', JSON.stringify(teamList), (err) => {
+    fs.writeFileSync('./data/teamList.json', JSON.stringify(teamList), (err) => {
         if(err) console.log(err);
     });
 }
@@ -784,7 +789,7 @@ async function updateDepthCharts() {
         }
     }
 
-    await fs.writeFile('./data/depthCharts.json', JSON.stringify(depthCharts), (err) => {
+    await fs.writeFileSync('./data/depthCharts.json', JSON.stringify(depthCharts), (err) => {
         if(err) console.log(err);
     });
 }
@@ -1017,7 +1022,7 @@ function updateTeamStats(statList, gameData) {
 
     // Write team stats to file
     var fs = require('fs');
-    fs.writeFile('./data/teamStats.json', JSON.stringify(newStatList), (err) => {
+    fs.writeFileSync('./data/teamStats.json', JSON.stringify(newStatList), (err) => {
         if(err) console.log(err);
     });
 }
@@ -1250,7 +1255,7 @@ function updateTeamAllowedStats(statList, gameData) {
 
     // Write team stats to file
     var fs = require('fs');
-    fs.writeFile('./data/teamAllowedStats.json', JSON.stringify(newStatList), (err) => {
+    fs.writeFileSync('./data/teamAllowedStats.json', JSON.stringify(newStatList), (err) => {
         if(err) console.log(err);
     });
 }
@@ -1324,7 +1329,7 @@ async function updateSchedules(){
     }
 
     // Write to schedule file
-    fs.writeFile('./data/schedules.json', JSON.stringify(schedules), (err) => {
+    fs.writeFileSync('./data/schedules.json', JSON.stringify(schedules), (err) => {
         if(err) console.log(err);
     });
 }
@@ -1472,7 +1477,7 @@ async function generateStandings() {
     standings.sort((a, b) => a['Division'].localeCompare(b['Division']) || tieBreak(a, b));
 
     // Write to schedule file
-    fs.writeFile('./data/standings.json', JSON.stringify(standings), (err) => {
+    fs.writeFileSync('./data/standings.json', JSON.stringify(standings), (err) => {
         if(err) console.log(err);
     });
 }
@@ -1906,7 +1911,7 @@ function updateSBP() {
     }
 
     // Write to schedule file
-    fs.writeFile('./data/sbp.json', JSON.stringify(sbp), (err) => {
+    fs.writeFileSync('./data/sbp.json', JSON.stringify(sbp), (err) => {
         if(err) console.log(err);
     });
 }
@@ -2114,8 +2119,82 @@ function updatePowerRankings() {
     }
 
     // Write to rankings file
-    fs.writeFile('./data/powerRankings.json', JSON.stringify(powerRankings), (err) => {
+    fs.writeFileSync('./data/powerRankings.json', JSON.stringify(powerRankings), (err) => {
         if(err) console.log(err);
     });
-    
+}
+
+function predictedScore(teamA, teamB) {
+    return null;
+}
+
+function buildWeekView(weekNum = STAT_END_WEEK+1) {
+    // Load game data 
+    var fs = require('fs');
+    var rawData = fs.readFileSync('./data/liveScoring.json', 'utf-8');
+    var gameData = JSON.parse(rawData);
+
+    // Set weekName variable
+    var weekName = "Week " + weekNum;
+
+    // Count variable to show gamenumber
+    var count = 0;
+
+    // Week schedule array
+    var weekSchedule = [];
+
+    // Iterate through gameData
+    for(var game in gameData) {
+        // Check if game is in the correct week
+        if(gameData[game]['Week'] === weekName)
+        {
+            // Increment count variable
+            count++; 
+
+            // Determine predicted winner
+            var awayWinPct = parseFloat(predictionPercentage(gameData[game]['Away ID'], gameData[game]['Home ID']));
+            var homeWinPct = 1.0 - awayWinPct;
+            if(awayWinPct > homeWinPct) var predictedWinner = gameData[game]['Away Team'];
+            else if(awayWinPct < homeWinPct) var predictedWinner = gameData[game]['Home Team'];
+            else var predictedWinner = "Tie";
+
+            // Detemine actual winner
+            var awayScore = parseInt(gameData[game]['Away Score']);
+            var homeScore = parseInt(gameData[game]['Home Score']);
+            if(!(gameData[game]['Status'] === "Final")) var actualWinner = null;
+            else if(awayScore > homeScore) var actualWinner = gameData[game]['Away Team'];
+            else if(awayScore < homeScore) var actualWinner = gameData[game]['Home Team'];
+            else var actualWinner = "Tie";
+
+            // Correct prediction?
+            if(actualWinner === null) var predCorrect = null;
+            else if(actualWinner === predictedWinner) var predCorrect = "WIN";
+            else var predCorrect = "LOSE";
+
+            // Push Away team section
+            weekSchedule.push({
+                'Game': "Game " + count,
+                'Team': gameData[game]['Away Team'],
+                'Win%': awayWinPct.toFixed(4),
+                'PredScore': predictedScore(gameData[game]['Away ID'], gameData[game]['Home ID']),
+                'FinalScore': awayScore,
+                'Winner': actualWinner
+            });
+
+            // Push Home team section
+            weekSchedule.push({
+                'Game': "Game " + count,
+                'Team': gameData[game]['Home Team'],
+                'Win%': homeWinPct.toFixed(4),
+                'PredScore': predictedScore(gameData[game]['Home ID'], gameData[game]['Away ID']),
+                'FinalScore': homeScore,
+                'Winner': predCorrect
+            });
+        }
+    }
+
+    // Write to wek schedule file
+    fs.writeFileSync('./data/weekSchedule.json', JSON.stringify(weekSchedule), (err) => {
+        if(err) console.log(err);
+    });
 }
