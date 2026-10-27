@@ -1,11 +1,11 @@
-// 1. Read the table type directly from the current page's URL (e.g., data.html?table=analytics)
+// 1. Read the table type directly from the current page's URL (e.g., data.html?table=analytics)[cite: 3]
 const urlParams = new URLSearchParams(window.location.search);
-const tableType = urlParams.get('table') || 'liveScoring'; // Fallback to 'liveScoring' if no parameter exists
+const tableType = urlParams.get('table') || 'liveScoring'; // Fallback to 'liveScoring' if no parameter exists[cite: 3]
 
 // --- APPROACH B: Datasets loaded from an external FILE ---
 async function fetchDatasetFromFile(type) {
     try {
-        // Automatically maps 'users' -> './data/users.json', etc.
+        // Automatically maps 'users' -> './data/users.json', etc.[cite: 3]
         const response = await fetch(`./data/${type}.json`);
         
         if (!response.ok) {
@@ -16,7 +16,7 @@ async function fetchDatasetFromFile(type) {
     } catch (error) {
         console.warn(`Could not load file for "${type}". Falling back to function generator.`, error);
         
-        // Fallback gracefully to the function dataset if the file doesn't exist
+        // Fallback gracefully to the function dataset if the file doesn't exist[cite: 3]
         if (functionDatasets[type]) {
             return functionDatasets[type]();
         }
@@ -24,7 +24,7 @@ async function fetchDatasetFromFile(type) {
     }
 }
 
-// 2. Generic function to render the table into the DOM
+// 2. Generic function to render the table into the DOM[cite: 3]
 function renderTable(data, type) {
     const container = document.getElementById('table-container');
     
@@ -34,9 +34,9 @@ function renderTable(data, type) {
     }
 
     const table = document.createElement('table');
-    table.border = "1";
+    // Border attribute removed in favor of clean CSS styling
     
-    // Create header row dynamically from object keys
+    // Create header row dynamically from object keys[cite: 3]
     const headers = Object.keys(data[0]);
     const headerRow = document.createElement('tr');
     headers.forEach(headerText => {
@@ -46,17 +46,17 @@ function renderTable(data, type) {
     });
     table.appendChild(headerRow);
 
-    // Create data rows
+    // Create data rows[cite: 3]
     data.forEach(item => {
         const row = document.createElement('tr');
         headers.forEach(header => {
             const td = document.createElement('td');
-            td.style.textAlign = "center"; // Center regular cell text and images
+            td.style.textAlign = "center"; // Center regular cell text and images[cite: 3]
             
-            // Check if this is the teamList table
+            // Check if this is the teamList table[cite: 3]
             if (type === "teamList" && item[header]) {
                 if (header === "Logo") {
-                    // Convert teamLogo to an image element[cite: 1]
+                    // Convert teamLogo to an image element[cite: 1, 3]
                     const img = document.createElement('img');
                     img.src = item[header];
                     img.alt = "Team Logo";
@@ -64,18 +64,18 @@ function renderTable(data, type) {
                     img.style.height = "auto";
                     td.appendChild(img);
                 } else if (header === "Color") {
-                    // Convert teamColor to a color preview box + hex text
+                    // Convert teamColor to a color preview box + hex text[cite: 3]
                     const colorContainer = document.createElement('div');
                     colorContainer.style.display = "flex";
                     colorContainer.style.alignItems = "center";
-                    colorContainer.style.justifyContent = "center"; // Center the contents inside the cell
+                    colorContainer.style.justifyContent = "center"; // Center the contents inside the cell[cite: 3]
                     colorContainer.style.gap = "8px";
 
                     const colorBox = document.createElement('div');
-                    colorBox.style.width = "50px";
-                    colorBox.style.height = "20px";
+                    colorBox.style.width = "40px";
+                    colorBox.style.height = "16px";
                     
-                    // Ensure the color string has a '#' prefix for the browser
+                    // Ensure the color string has a '#' prefix for the browser[cite: 3]
                     const rawColor = item[header];
                     const validColor = rawColor && !rawColor.startsWith('#') ? `#${rawColor}` : rawColor;
                     
@@ -84,7 +84,7 @@ function renderTable(data, type) {
                     colorBox.style.borderRadius = "4px";
 
                     const textSpan = document.createElement('span');
-                    textSpan.textContent = rawColor; // Show the original text
+                    textSpan.textContent = rawColor; // Show the original text[cite: 3]
 
                     colorContainer.appendChild(colorBox);
                     td.appendChild(colorContainer);
@@ -100,29 +100,24 @@ function renderTable(data, type) {
         table.appendChild(row);
     });
 
-    // Inject into container
+    // Inject into container[cite: 3]
     container.innerHTML = ``;
     container.appendChild(table);
 }
 
-// 3. Main initialization function
+// 3. Main initialization function[cite: 3]
 async function initTableBuilder() {
     const container = document.getElementById('table-container');
     container.innerHTML = `<h2>Loading ${tableType} data...</h2>`;
 
     let data;
 
-    // CHOOSE YOUR METHOD HERE:
-    
-    // Option 1: Load purely from a function
-    // data = functionDatasets[tableType] ? functionDatasets[tableType]() : [];
-
-    // Option 2: Load from a file (with automatic function fallback)
+    // Option 2: Load from a file (with automatic function fallback)[cite: 3]
     data = await fetchDatasetFromFile(tableType);
 
-    // Render the final table
+    // Render the final table[cite: 3]
     renderTable(data, tableType);
 }
 
-// Run everything
+// Run everything[cite: 3]
 initTableBuilder();

@@ -3,13 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Dynamic Table View</title>
+    <style>
+        /* Sports-themed styling */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f8;
+            color: #1a1a1a;
+            margin: 24px;
+            padding: 0;
+        }
+
+        h2 {
+            color: #0b2341; /* Athletic Navy */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        #table-container {
+            overflow-x: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 12px;
+            border-top: 4px solid #1b4332; /* Turf Green accent bar */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #1b4332; /* Deep Turf Green */
+            color: #ffffff;
+            padding: 12px 16px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            border-bottom: 3px solid #2d6a4f;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+            color: #333333;
+        }
+
+        /* Zebra striping for heavy stat tables */
+        tr:nth-child(even) {
+            background-color: #f8f9fa; 
+        }
+
+        /* Athletic hover state */
+        tr:hover {
+            background-color: #e8f5e9; /* Light turf green tint */
+            transition: background-color 0.15s ease-in-out;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Container where the table will be built -->
+    <!-- Container where the table will be built[cite: 2] -->
     <div id="table-container"></div>
 
-    <!-- Just load the external script -->
+    <!-- Just load the external script[cite: 2] -->
     <script src="loadTable.js"></script>
 
 </body>
