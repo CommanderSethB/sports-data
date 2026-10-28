@@ -1,6 +1,15 @@
 // 1. Read the table type directly from the current page's URL (e.g., data.html?table=analytics)[cite: 3]
 const urlParams = new URLSearchParams(window.location.search);
 const tableType = urlParams.get('table') || 'liveScoring'; // Fallback to 'liveScoring' if no parameter exists[cite: 3]
+document.title = getTitle(urlParams.get('table'));
+
+function getTitle(tableName) {
+    let title = tableName.charAt(0).toUpperCase() + tableName.slice(1);
+    
+    title = title.split(/(?=[A-Z])/).join(" ");
+
+    return title;
+}
 
 // --- APPROACH B: Datasets loaded from an external FILE ---
 async function fetchDatasetFromFile(type) {

@@ -1956,10 +1956,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-185",
-    "Away ML": "+154",
-    "Spread": "BUF -3.5",
-    "Over/Under": 53.5
+    "Home ML": "-175",
+    "Away ML": "+145",
+    "Spread": "BUF -3",
+    "Over/Under": 54.5
   },
   {
     "Week": "Week 8",
@@ -1974,8 +1974,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-625",
-    "Away ML": "+455",
+    "Home ML": "-500",
+    "Away ML": "+380",
     "Spread": "CIN -10",
     "Over/Under": 46.5
   },
@@ -1992,9 +1992,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-285",
-    "Away ML": "+230",
-    "Spread": "DAL -6",
+    "Home ML": "-355",
+    "Away ML": "+280",
+    "Spread": "DAL -7",
     "Over/Under": 54.5
   },
   {
@@ -2010,8 +2010,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-166",
-    "Away ML": "+140",
+    "Home ML": "-170",
+    "Away ML": "+142",
     "Spread": "DET -3",
     "Over/Under": 46.5
   },
@@ -2028,9 +2028,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-110",
-    "Away ML": "-110",
-    "Spread": "LV -1.5",
+    "Home ML": "-122",
+    "Away ML": "+102",
+    "Spread": "NYJ -1.5",
     "Over/Under": 45.5
   },
   {
@@ -2046,8 +2046,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-180",
-    "Away ML": "+150",
+    "Home ML": "-185",
+    "Away ML": "+154",
     "Spread": "PIT -3.5",
     "Over/Under": 39.5
   },
@@ -2067,7 +2067,7 @@
     "Home ML": "-135",
     "Away ML": "+114",
     "Spread": "TB -2.5",
-    "Over/Under": 46.5
+    "Over/Under": 45.5
   },
   {
     "Week": "Week 8",
@@ -2082,9 +2082,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-395",
-    "Away ML": "+310",
-    "Spread": "JAX -7.5",
+    "Home ML": "-425",
+    "Away ML": "+330",
+    "Spread": "JAX -9.5",
     "Over/Under": 46.5
   },
   {
@@ -2100,10 +2100,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-290",
-    "Away ML": "+235",
+    "Home ML": "-298",
+    "Away ML": "+240",
     "Spread": "LAR -6.5",
-    "Over/Under": 44.5
+    "Over/Under": 45.5
   },
   {
     "Week": "Week 8",
@@ -2118,10 +2118,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+105",
-    "Away ML": "-125",
+    "Home ML": "-102",
+    "Away ML": "-118",
     "Spread": "KC -1.5",
-    "Over/Under": 41.5
+    "Over/Under": 40.5
   },
   {
     "Week": "Week 8",
@@ -2136,10 +2136,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+310",
-    "Away ML": "-395",
-    "Spread": "NE -7.5",
-    "Over/Under": 44.5
+    "Home ML": "+250",
+    "Away ML": "-310",
+    "Spread": "NE -7",
+    "Over/Under": 43.5
   },
   {
     "Week": "Week 8",
@@ -2154,9 +2154,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-205",
-    "Away ML": "+170",
-    "Spread": "WSH -4.5",
+    "Home ML": "-218",
+    "Away ML": "+180",
+    "Spread": "WSH -5.5",
     "Over/Under": 40.5
   },
   {
@@ -2172,9 +2172,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-170",
-    "Away ML": "+142",
-    "Spread": "SEA -3.5",
+    "Home ML": "-166",
+    "Away ML": "+140",
+    "Spread": "SEA -3",
     "Over/Under": 46.5
   },
   {
@@ -2190,10 +2190,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-148",
+    "Away ML": "+124",
+    "Spread": "BAL -2.5",
+    "Over/Under": 48.5
   },
   {
     "Week": "Week 9",
@@ -2208,10 +2208,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+140",
+    "Away ML": "-166",
+    "Spread": "CIN -3",
+    "Over/Under": 49.5
   },
   {
     "Week": "Week 9",
@@ -2226,10 +2226,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+180",
+    "Away ML": "-218",
+    "Spread": "DAL -3.5",
+    "Over/Under": 51.5
   },
   {
     "Week": "Week 9",
@@ -2244,10 +2244,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-500",
+    "Away ML": "+380",
+    "Spread": "KC -9.5",
+    "Over/Under": 43.5
   },
   {
     "Week": "Week 9",
@@ -2262,10 +2262,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+295",
+    "Away ML": "-375",
+    "Spread": "DET -7",
+    "Over/Under": 47.5
   },
   {
     "Week": "Week 9",
@@ -2280,10 +2280,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-135",
+    "Away ML": "+114",
+    "Spread": "NO -2.5",
+    "Over/Under": 43.5
   },
   {
     "Week": "Week 9",
@@ -2298,10 +2298,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+102",
+    "Away ML": "-122",
+    "Spread": "NYG -1.5",
+    "Over/Under": 40.5
   },
   {
     "Week": "Week 9",
@@ -2316,10 +2316,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+185",
+    "Away ML": "-225",
+    "Spread": "LAR -5.5",
+    "Over/Under": 48.5
   },
   {
     "Week": "Week 9",
@@ -2334,10 +2334,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+114",
+    "Away ML": "-135",
+    "Spread": "DEN -2.5",
+    "Over/Under": 44.5
   },
   {
     "Week": "Week 9",
@@ -2352,10 +2352,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+130",
+    "Away ML": "-155",
+    "Spread": "HOU -3",
+    "Over/Under": 42.5
   },
   {
     "Week": "Week 9",
@@ -2370,10 +2370,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-175",
+    "Away ML": "+145",
+    "Spread": "NE -3",
+    "Over/Under": 47.5
   },
   {
     "Week": "Week 9",
@@ -2388,10 +2388,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-520",
+    "Away ML": "+390",
+    "Spread": "SF -9.5",
+    "Over/Under": 48.5
   },
   {
     "Week": "Week 9",
@@ -2406,10 +2406,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-650",
+    "Away ML": "+470",
+    "Spread": "SEA -10.5",
+    "Over/Under": 44.5
   },
   {
     "Week": "Week 9",
@@ -2424,10 +2424,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-265",
+    "Away ML": "+215",
+    "Spread": "CHI -6",
+    "Over/Under": 47.5
   },
   {
     "Week": "Week 9",
@@ -2442,10 +2442,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+120",
+    "Away ML": "-142",
+    "Spread": "BUF -2.5",
+    "Over/Under": 47.5
   },
   {
     "Week": "Week 10",

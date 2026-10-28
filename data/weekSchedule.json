@@ -2,7 +2,7 @@
   {
     "Game": "Game 1",
     "Team": "Carolina Panthers",
-    "Win%": "0.4754",
+    "Win%": "0.4763",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -10,7 +10,7 @@
   {
     "Game": "Game 1",
     "Team": "Green Bay Packers",
-    "Win%": "0.5246",
+    "Win%": "0.5237",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -50,7 +50,7 @@
   {
     "Game": "Game 4",
     "Team": "Arizona Cardinals",
-    "Win%": "0.4900",
+    "Win%": "0.4899",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -58,7 +58,7 @@
   {
     "Game": "Game 4",
     "Team": "Dallas Cowboys",
-    "Win%": "0.5100",
+    "Win%": "0.5101",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -82,7 +82,7 @@
   {
     "Game": "Game 6",
     "Team": "Las Vegas Raiders",
-    "Win%": "0.4944",
+    "Win%": "0.5022",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -90,7 +90,7 @@
   {
     "Game": "Game 6",
     "Team": "New York Jets",
-    "Win%": "0.5056",
+    "Win%": "0.4978",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -98,7 +98,7 @@
   {
     "Game": "Game 7",
     "Team": "Cleveland Browns",
-    "Win%": "0.4610",
+    "Win%": "0.4615",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -106,7 +106,7 @@
   {
     "Game": "Game 7",
     "Team": "Pittsburgh Steelers",
-    "Win%": "0.5390",
+    "Win%": "0.5385",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -114,7 +114,7 @@
   {
     "Game": "Game 8",
     "Team": "Atlanta Falcons",
-    "Win%": "0.4783",
+    "Win%": "0.4795",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -122,7 +122,7 @@
   {
     "Game": "Game 8",
     "Team": "Tampa Bay Buccaneers",
-    "Win%": "0.5217",
+    "Win%": "0.5205",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -130,7 +130,7 @@
   {
     "Game": "Game 9",
     "Team": "Indianapolis Colts",
-    "Win%": "0.4000",
+    "Win%": "0.3991",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -138,7 +138,7 @@
   {
     "Game": "Game 9",
     "Team": "Jacksonville Jaguars",
-    "Win%": "0.6000",
+    "Win%": "0.6009",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -178,7 +178,7 @@
   {
     "Game": "Game 12",
     "Team": "New England Patriots",
-    "Win%": "0.5200",
+    "Win%": "0.5083",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -186,7 +186,7 @@
   {
     "Game": "Game 12",
     "Team": "Miami Dolphins",
-    "Win%": "0.4800",
+    "Win%": "0.4917",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -210,7 +210,7 @@
   {
     "Game": "Game 14",
     "Team": "Chicago Bears",
-    "Win%": "0.5058",
+    "Win%": "0.5059",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null
@@ -218,7 +218,7 @@
   {
     "Game": "Game 14",
     "Team": "Seattle Seahawks",
-    "Win%": "0.4942",
+    "Win%": "0.4941",
     "PredScore": null,
     "FinalScore": 0,
     "Winner": null

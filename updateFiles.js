@@ -33,14 +33,23 @@ main();
 
 async function main() {
     try {
+        console.log("Updating live scoring data...");
         await updateGames();
+        console.log("Updating injury report...");
         await updateInjuryReport();
+        console.log("Updating team list...");
         await updateTeams();
+        console.log("Updating depth charts...");
         await updateDepthCharts();
+        console.log("Updating schedules...");
         await updateSchedules();
+        console.log("Updating standings...");
         await generateStandings();
+        console.log("Updating prediction percentages...");
         await updateSBP();
+        console.log("Updating power rankings...");
         await updatePowerRankings();
+        console.log("Building weekly view...");
         buildWeekView();
         console.log("All files updated successfully!");
     } catch (err) {
@@ -1504,6 +1513,7 @@ function updatePowerRankings() {
 
         powerRankings.push({
             'Rk': null,
+            'Mv': null,
             'Team Name': standings[currentTeam]['Team Name'],
             'Record': record.toFixed(4),
             'Pyth%': pyth.toFixed(4),
@@ -1521,16 +1531,44 @@ function updatePowerRankings() {
 
     // Assign ranking numbers, handling ties properly
     for (let t = 0; t < powerRankings.length; t++) {
+        let currentRk = 0;
+        
         if (t === 0) {
-            powerRankings[t]['Rk'] = 1;
+            currentRk = 1;
+
         } else if (powerRankings[t]['Rating'] === powerRankings[t-1]['Rating']) {
-            powerRankings[t]['Rk'] = powerRankings[t-1]['Rk'];
+            currentRk = powerRankings[t-1]['Rk'];
         } else {
-            powerRankings[t]['Rk'] = t + 1;
+            currentRk = t + 1;
         }
+
+        powerRankings[t]['Rk'] = currentRk;
+        powerRankings[t]['Mv'] = updateTeamWeeklyRankingFile(powerRankings[t]['Team Name'], currentRk);
     }
 
     fs.writeFileSync('./data/powerRankings.json', JSON.stringify(powerRankings, null, 2));
+}
+
+function updateTeamWeeklyRankingFile(teamName, currentRk) {
+    let rawData = fs.readFileSync('./data/weeklyRankings.json', 'utf-8');
+    let weeklyRankings = JSON.parse(rawData);
+
+    let team = weeklyRankings.find(x => x['Team Name'] === teamName);
+    team[STAT_END_WEEK] = currentRk;
+
+    let movement = 0;
+
+    try {
+        movement = parseInt(team[STAT_END_WEEK-1]) - parseInt(currentRk);
+    } catch (err) {
+        movement = 0;
+    }
+
+    let finalMovement = movement > 0 ? "+" + movement : movement < 0 ? movement : "---";
+
+    fs.writeFileSync('./data/weeklyRankings.json', JSON.stringify(weeklyRankings, null, 2));
+
+    return finalMovement;
 }
 
 function getTeamTurnoverFactor(team) {
