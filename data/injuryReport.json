@@ -878,8 +878,8 @@
     "teamID": "3",
     "playerID": "4361748",
     "playerName": "Anthony Johnson Jr.",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "injuryStatus": "IR",
+    "playerScore": -0.5
   },
   {
     "teamID": "3",
@@ -1226,6 +1226,13 @@
   },
   {
     "teamID": "5",
+    "playerID": "4578085",
+    "playerName": "Jared Verse",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "5",
     "playerID": "4876017",
     "playerName": "Carson Schwesinger",
     "injuryStatus": "Active",
@@ -1389,13 +1396,6 @@
     "teamID": "5",
     "playerID": "3915535",
     "playerName": "Denzel Ward",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "3040471",
-    "playerName": "Maliek Collins",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4201,6 +4201,13 @@
   },
   {
     "teamID": "20",
+    "playerID": "4685248",
+    "playerName": "David Bailey",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "20",
     "playerID": "14958",
     "playerName": "Demario Davis",
     "injuryStatus": "Active",
@@ -4364,13 +4371,6 @@
     "teamID": "20",
     "playerID": "4361767",
     "playerName": "Will McDonald IV",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "20",
-    "playerID": "4570470",
-    "playerName": "Nahshon Wright",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -5076,6 +5076,13 @@
   },
   {
     "teamID": "27",
+    "playerID": "4567750",
+    "playerName": "Emeka Egbuka",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "27",
     "playerID": "4428522",
     "playerName": "Tykee Smith",
     "injuryStatus": "Active",
@@ -5106,13 +5113,6 @@
     "teamID": "27",
     "playerID": "4380507",
     "playerName": "Luke Goedeke",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "27",
-    "playerID": "4567750",
-    "playerName": "Emeka Egbuka",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
@@ -5426,6 +5426,13 @@
   },
   {
     "teamID": "28",
+    "playerID": "3121422",
+    "playerName": "Terry McLaurin",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "28",
     "playerID": "5081432",
     "playerName": "Antonio Williams",
     "injuryStatus": "Active",
@@ -5479,13 +5486,6 @@
     "playerName": "Jeremy McNichols",
     "injuryStatus": "Active",
     "playerScore": 1
-  },
-  {
-    "teamID": "28",
-    "playerID": "3121422",
-    "playerName": "Terry McLaurin",
-    "injuryStatus": "Out",
-    "playerScore": 0
   },
   {
     "teamID": "28",

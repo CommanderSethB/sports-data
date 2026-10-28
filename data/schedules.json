@@ -143,7 +143,7 @@
       "Home ML": "-135",
       "Away ML": "+114",
       "Spread": "TB -2.5",
-      "Over/Under": 45.5
+      "Over/Under": 44.5
     },
     "Week 9": {
       "Week": "Week 9",
@@ -1401,7 +1401,7 @@
       "Home ML": "-135",
       "Away ML": "+114",
       "Spread": "NO -2.5",
-      "Over/Under": 43.5
+      "Over/Under": 42.5
     },
     "Week 10": {
       "Week": "Week 10",
@@ -3240,8 +3240,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-425",
-      "Away ML": "+330",
+      "Home ML": "-485",
+      "Away ML": "+370",
       "Spread": "JAX -9.5",
       "Over/Under": 46.5
     },
@@ -4188,8 +4188,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+185",
-      "Away ML": "-225",
+      "Home ML": "+195",
+      "Away ML": "-238",
       "Spread": "LAR -5.5",
       "Over/Under": 48.5
     },
@@ -5414,7 +5414,7 @@
       "Home ML": "-135",
       "Away ML": "+114",
       "Spread": "NO -2.5",
-      "Over/Under": 43.5
+      "Over/Under": 42.5
     },
     "Week 10": {
       "Week": "Week 10",
@@ -6340,8 +6340,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-218",
-      "Away ML": "+180",
+      "Home ML": "-238",
+      "Away ML": "+195",
       "Spread": "WSH -5.5",
       "Over/Under": 40.5
     },
@@ -8203,7 +8203,7 @@
       "Home ML": "-135",
       "Away ML": "+114",
       "Spread": "TB -2.5",
-      "Over/Under": 45.5
+      "Over/Under": 44.5
     },
     "Week 9": {
       "Week": "Week 9",
@@ -8493,8 +8493,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-218",
-      "Away ML": "+180",
+      "Home ML": "-238",
+      "Away ML": "+195",
       "Spread": "WSH -5.5",
       "Over/Under": 40.5
     },
@@ -8511,8 +8511,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+185",
-      "Away ML": "-225",
+      "Home ML": "+195",
+      "Away ML": "-238",
       "Spread": "LAR -5.5",
       "Over/Under": 48.5
     },
@@ -9113,8 +9113,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-425",
-      "Away ML": "+330",
+      "Home ML": "-485",
+      "Away ML": "+370",
       "Spread": "JAX -9.5",
       "Over/Under": 46.5
     },

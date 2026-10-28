@@ -87,7 +87,7 @@ async function updateInjuryReport() {
     }
 
     // Save injury data to disk with 2-space indentation formatting
-    fs.writeFileSync('./data/injuryReport.json', JSON.stringify(result, null, 2));
+    fs.writeFileSync('./NFL/data/injuryReport.json', JSON.stringify(result, null, 2));
 }
 
 function convertInjuryStatus(inj_status) {
@@ -215,11 +215,11 @@ async function updateGames() {
     // Await all queued boxscore requests to run and complete concurrently
     await Promise.all(boxscorePromises);
 
-    fs.writeFileSync('./data/liveScoring.json', JSON.stringify(gameList, null, 2));
+    fs.writeFileSync('./NFL/data/liveScoring.json', JSON.stringify(gameList, null, 2));
 
     // Sort stats by player ID before writing
     statList.sort((a, b) => a.playerID - b.playerID);
-    fs.writeFileSync('./data/boxScores.json', JSON.stringify(statList, null, 2));
+    fs.writeFileSync('./NFL/data/boxScores.json', JSON.stringify(statList, null, 2));
 
     // Aggregate statistics downstream
     updatePlayerStats(statList);
@@ -556,7 +556,7 @@ function updatePlayerStats(statList) {
         });
     }
 
-    fs.writeFileSync('./data/playerStats.json', JSON.stringify(newStatList, null, 2));
+    fs.writeFileSync('./NFL/data/playerStats.json', JSON.stringify(newStatList, null, 2));
 }
 
 function calculatePasserRating(cmp, att, yds, tds, int) {
@@ -605,14 +605,14 @@ async function updateTeams() {
     }
 
     teamList.sort((a, b) => a.ID - b.ID);
-    fs.writeFileSync('./data/teamList.json', JSON.stringify(teamList, null, 2));
+    fs.writeFileSync('./NFL/data/teamList.json', JSON.stringify(teamList, null, 2));
 }
 
 /**
  * Fetches depth charts concurrently for all teams.
  */
 async function updateDepthCharts() {
-    let rawData = fs.readFileSync('./data/teamList.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/teamList.json', 'utf-8');
     let teamList = JSON.parse(rawData);     
 
     let depthCharts = [];
@@ -656,7 +656,7 @@ async function updateDepthCharts() {
     });
 
     await Promise.all(promises);
-    fs.writeFileSync('./data/depthCharts.json', JSON.stringify(depthCharts, null, 2));
+    fs.writeFileSync('./NFL/data/depthCharts.json', JSON.stringify(depthCharts, null, 2));
 }
 
 /**
@@ -834,7 +834,7 @@ function updateTeamStats(statList, gameData) {
     }
 
     newStatList.sort((a, b) => a['Team ID'] - b['Team ID']);
-    fs.writeFileSync('./data/teamStats.json', JSON.stringify(newStatList, null, 2));
+    fs.writeFileSync('./NFL/data/teamStats.json', JSON.stringify(newStatList, null, 2));
 }
 
 /**
@@ -1012,18 +1012,18 @@ function updateTeamAllowedStats(statList, gameData) {
     }
 
     newStatList.sort((a, b) => a['Team ID'] - b['Team ID']);
-    fs.writeFileSync('./data/teamAllowedStats.json', JSON.stringify(newStatList, null, 2));
+    fs.writeFileSync('./NFL/data/teamAllowedStats.json', JSON.stringify(newStatList, null, 2));
 }
 
 function getDivision(teamID) {
-    let rawData = fs.readFileSync('./data/divisions.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/divisions.json', 'utf-8');
     let divisions = JSON.parse(rawData);
     let team = divisions.find(x => x['ID'] === teamID);
     return `${team['Conference']} ${team['Division']}`;
 }
 
 function getConference(teamID) {
-    let rawData = fs.readFileSync('./data/divisions.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/divisions.json', 'utf-8');
     let divisions = JSON.parse(rawData);
     let team = divisions.find(x => x['ID'] === teamID);
     return team['Conference'];
@@ -1033,10 +1033,10 @@ function getConference(teamID) {
  * Maps game outcomes across team schedules.
  */
 async function updateSchedules() {
-    let rawData = fs.readFileSync('./data/liveScoring.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/liveScoring.json', 'utf-8');
     let gameData = JSON.parse(rawData);
 
-    rawData = fs.readFileSync('./data/teamList.json', 'utf-8');
+    rawData = fs.readFileSync('./NFL/data/teamList.json', 'utf-8');
     let teamList = JSON.parse(rawData);
 
     let schedules = [];
@@ -1058,11 +1058,11 @@ async function updateSchedules() {
         if (awayTeam) awayTeam[gameData[game]['Week']] = gameData[game];
     }
 
-    fs.writeFileSync('./data/schedules.json', JSON.stringify(schedules, null, 2));
+    fs.writeFileSync('./NFL/data/schedules.json', JSON.stringify(schedules, null, 2));
 }
 
 function getStreak(teamID) {
-    let rawData = fs.readFileSync('./data/schedules.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/schedules.json', 'utf-8');
     let schedules = JSON.parse(rawData);
 
     let streakType = 'W';
@@ -1101,7 +1101,7 @@ function getStreak(teamID) {
  */
 async function generateStandings() {
     let standings = [];
-    let rawData = fs.readFileSync('./data/teamList.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/teamList.json', 'utf-8');
     let teamList = JSON.parse(rawData);
 
     for (let team in teamList) {
@@ -1168,7 +1168,7 @@ async function generateStandings() {
     }
 
     standings.sort((a, b) => a['Division'].localeCompare(b['Division']) || tieBreak(a, b));
-    fs.writeFileSync('./data/standings.json', JSON.stringify(standings, null, 2));
+    fs.writeFileSync('./NFL/data/standings.json', JSON.stringify(standings, null, 2));
 }
 
 function tieBreak(teamA, teamB) {
@@ -1176,7 +1176,7 @@ function tieBreak(teamA, teamB) {
 }
 
 function getLiveScoringItem(teamID, item, type = "all") {
-    let rawData = fs.readFileSync('./data/liveScoring.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/liveScoring.json', 'utf-8');
     let gameData = JSON.parse(rawData);
     let dataPoint = 0;
 
@@ -1234,7 +1234,7 @@ function getLiveScoringItem(teamID, item, type = "all") {
  * Calculates team health scores based on depth chart positions and player injury reports.
  */
 function getHealthScore(teamID) {
-    let rawData = fs.readFileSync('./data/depthCharts.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/depthCharts.json', 'utf-8');
     let depthCharts = JSON.parse(rawData);
     let playerList = [];
 
@@ -1309,7 +1309,7 @@ function getPositionWeight(pos) {
 }
 
 function getPlayerInjuryScore(playerID) {
-    let rawData = fs.readFileSync('./data/injuryReport.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/injuryReport.json', 'utf-8');
     let injuryReport = JSON.parse(rawData);
     let injuryScoreIndex = injuryReport.find(x => x.playerID === playerID);
 
@@ -1329,7 +1329,7 @@ function aPercentB(a, b, power = 1) {
 function predictionPercentage(teamA, teamB) {
     if (teamA === teamB) return 0.0;
     
-    let rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/teamStats.json', 'utf-8');
     let teamStats = JSON.parse(rawData);
     
     let teamADict = teamStats.find(x => x['Team ID'] === teamA);
@@ -1348,7 +1348,7 @@ function predictionPercentage(teamA, teamB) {
     let teamBMom = getMomentum(getStreak(teamB), teamBGamesPlayed);
     let teamBHealthScore = getHealthScore(teamB);
 
-    rawData = fs.readFileSync('./data/teamAllowedStats.json', 'utf-8');
+    rawData = fs.readFileSync('./NFL/data/teamAllowedStats.json', 'utf-8');
     teamStats = JSON.parse(rawData);
 
     teamADict = teamStats.find(x => x['Team ID'] === teamA);
@@ -1391,7 +1391,7 @@ function getMomentum(winStreak, gp) {
  * Generates Strength Based Power (SBP) ratings for teams based on match predictor percentages.
  */
 function updateSBP() {
-    let rawData = fs.readFileSync('./data/teamList.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/teamList.json', 'utf-8');
     let teamList = JSON.parse(rawData);
 
     let sbp = [];
@@ -1415,11 +1415,11 @@ function updateSBP() {
         sbp[team]['SBP'] = max === 0 ? (0.0).toFixed(4) : (parseFloat(sbp[team]['Total']) / max).toFixed(4);
     }
 
-    fs.writeFileSync('./data/sbp.json', JSON.stringify(sbp, null, 2));
+    fs.writeFileSync('./NFL/data/sbp.json', JSON.stringify(sbp, null, 2));
 }
 
 function getTeamSBP(team) {
-    let rawData = fs.readFileSync('./data/sbp.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/sbp.json', 'utf-8');
     let sbp = JSON.parse(rawData);
     let teamDict = sbp.find(x => x['Team ID'] === team);
     return teamDict ? teamDict['SBP'] : 0.0;
@@ -1428,9 +1428,9 @@ function getTeamSBP(team) {
 function getTeamTDPtsPercentage(team, type = "for") {
     let rawData;
     if (type === "for") {
-        rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+        rawData = fs.readFileSync('./NFL/data/teamStats.json', 'utf-8');
     } else {
-        rawData = fs.readFileSync('./data/teamAllowedStats.json', 'utf-8');
+        rawData = fs.readFileSync('./NFL/data/teamAllowedStats.json', 'utf-8');
     }
     
     let stats = JSON.parse(rawData);
@@ -1446,7 +1446,7 @@ function getTeamTDPtsPercentage(team, type = "for") {
 }
 
 function pythagoreanExpectation(team) {
-    let rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/teamStats.json', 'utf-8');
     let stats = JSON.parse(rawData);
     let teamDict = stats.find(x => x['Team ID'] === team);
     if (!teamDict) return (0.0).toFixed(4);
@@ -1458,7 +1458,7 @@ function pythagoreanExpectation(team) {
 }
 
 function getTeamStrengthOfSchedule(team) {
-    let rawData = fs.readFileSync('./data/schedules.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/schedules.json', 'utf-8');
     let schedules = JSON.parse(rawData);
 
     let sum = 0.0;
@@ -1486,7 +1486,7 @@ function getTeamStrengthOfSchedule(team) {
  * Calculates comprehensive power rankings using weighted team metrics.
  */
 function updatePowerRankings() {
-    let rawData = fs.readFileSync('./data/standings.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/standings.json', 'utf-8');
     let standings = JSON.parse(rawData);
     let powerRankings = [];
 
@@ -1546,11 +1546,11 @@ function updatePowerRankings() {
         powerRankings[t]['Mv'] = updateTeamWeeklyRankingFile(powerRankings[t]['Team Name'], currentRk);
     }
 
-    fs.writeFileSync('./data/powerRankings.json', JSON.stringify(powerRankings, null, 2));
+    fs.writeFileSync('./NFL/data/powerRankings.json', JSON.stringify(powerRankings, null, 2));
 }
 
 function updateTeamWeeklyRankingFile(teamName, currentRk) {
-    let rawData = fs.readFileSync('./data/weeklyRankings.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/weeklyRankings.json', 'utf-8');
     let weeklyRankings = JSON.parse(rawData);
 
     let team = weeklyRankings.find(x => x['Team Name'] === teamName);
@@ -1566,13 +1566,13 @@ function updateTeamWeeklyRankingFile(teamName, currentRk) {
 
     let finalMovement = movement > 0 ? "+" + movement : movement < 0 ? movement : "---";
 
-    fs.writeFileSync('./data/weeklyRankings.json', JSON.stringify(weeklyRankings, null, 2));
+    fs.writeFileSync('./NFL/data/weeklyRankings.json', JSON.stringify(weeklyRankings, null, 2));
 
     return finalMovement;
 }
 
 function getTeamTurnoverFactor(team) {
-    let rawData = fs.readFileSync('./data/teamStats.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/teamStats.json', 'utf-8');
     let stats = JSON.parse(rawData);
     let teamDict = stats.find(x => x['Team ID'] === team);
     if (!teamDict) return 0.5;
@@ -1591,7 +1591,7 @@ function predictedScore(teamA, teamB) {
  * Builds the game view layout and prediction matrix for a given match week.
  */
 function buildWeekView(weekNum = STAT_END_WEEK + 1) {
-    let rawData = fs.readFileSync('./data/liveScoring.json', 'utf-8');
+    let rawData = fs.readFileSync('./NFL/data/liveScoring.json', 'utf-8');
     let gameData = JSON.parse(rawData);
     let weekName = `Week ${weekNum}`;
     let count = 0;
@@ -1641,5 +1641,5 @@ function buildWeekView(weekNum = STAT_END_WEEK + 1) {
         }
     }
 
-    fs.writeFileSync('./data/weekSchedule.json', JSON.stringify(weekSchedule, null, 2));
+    fs.writeFileSync('./NFL/data/weekSchedule.json', JSON.stringify(weekSchedule, null, 2));
 }
