@@ -8,10 +8,10 @@
     "SBP": "1.0000",
     "TO Fact": "0.8724",
     "TD Fact": "0.5680",
-    "SOS": "0.8682",
+    "SOS": "0.8669",
     "Mom": "1.0000",
-    "Health": "0.9688",
-    "Rating": "0.9117"
+    "Health": "0.9525",
+    "Rating": "0.9100"
   },
   {
     "Rk": 2,
@@ -19,13 +19,13 @@
     "Team Name": "Kansas City Chiefs",
     "Record": "0.8333",
     "Pyth%": "0.6852",
-    "SBP": "0.9436",
-    "TO Fact": "0.7529",
-    "TD Fact": "0.7902",
-    "SOS": "0.8540",
+    "SBP": "0.9639",
+    "TO Fact": "0.8379",
+    "TD Fact": "0.7692",
+    "SOS": "0.8479",
     "Mom": "0.4167",
-    "Health": "0.9023",
-    "Rating": "0.7940"
+    "Health": "0.8867",
+    "Rating": "0.7970"
   },
   {
     "Rk": 3,
@@ -33,13 +33,13 @@
     "Team Name": "San Francisco 49ers",
     "Record": "0.8571",
     "Pyth%": "0.6956",
-    "SBP": "0.9112",
+    "SBP": "0.9181",
     "TO Fact": "0.3004",
     "TD Fact": "0.9086",
-    "SOS": "0.8978",
+    "SOS": "0.8960",
     "Mom": "0.4286",
-    "Health": "0.9160",
-    "Rating": "0.7935"
+    "Health": "0.9128",
+    "Rating": "0.7940"
   },
   {
     "Rk": 4,
@@ -47,13 +47,13 @@
     "Team Name": "Buffalo Bills",
     "Record": "0.8333",
     "Pyth%": "0.5831",
-    "SBP": "0.8941",
+    "SBP": "0.8900",
     "TO Fact": "0.2767",
     "TD Fact": "0.8020",
-    "SOS": "0.8820",
+    "SOS": "0.8766",
     "Mom": "0.6667",
-    "Health": "0.9468",
-    "Rating": "0.7860"
+    "Health": "0.8701",
+    "Rating": "0.7772"
   },
   {
     "Rk": 5,
@@ -61,13 +61,13 @@
     "Team Name": "Pittsburgh Steelers",
     "Record": "0.7143",
     "Pyth%": "0.5608",
-    "SBP": "0.9721",
+    "SBP": "0.9716",
     "TO Fact": "0.7448",
     "TD Fact": "0.6863",
-    "SOS": "0.8790",
+    "SOS": "0.8778",
     "Mom": "0.7143",
-    "Health": "0.9694",
-    "Rating": "0.7783"
+    "Health": "0.9449",
+    "Rating": "0.7757"
   },
   {
     "Rk": 6,
@@ -75,13 +75,13 @@
     "Team Name": "Cincinnati Bengals",
     "Record": "0.6667",
     "Pyth%": "0.6652",
-    "SBP": "0.9572",
+    "SBP": "0.9580",
     "TO Fact": "0.5903",
     "TD Fact": "0.8160",
-    "SOS": "0.9175",
+    "SOS": "0.9164",
     "Mom": "0.6667",
-    "Health": "0.9519",
-    "Rating": "0.7748"
+    "Health": "0.9483",
+    "Rating": "0.7745"
   },
   {
     "Rk": 7,
@@ -89,13 +89,13 @@
     "Team Name": "Denver Broncos",
     "Record": "0.7143",
     "Pyth%": "0.5125",
-    "SBP": "0.9507",
+    "SBP": "0.9503",
     "TO Fact": "0.7233",
     "TD Fact": "0.7500",
-    "SOS": "0.8864",
+    "SOS": "0.8904",
     "Mom": "0.7143",
-    "Health": "0.9248",
-    "Rating": "0.7719"
+    "Health": "0.9026",
+    "Rating": "0.7700"
   },
   {
     "Rk": 8,
@@ -103,13 +103,13 @@
     "Team Name": "Detroit Lions",
     "Record": "0.6667",
     "Pyth%": "0.5642",
-    "SBP": "0.9649",
+    "SBP": "0.9644",
     "TO Fact": "0.8379",
     "TD Fact": "0.8370",
-    "SOS": "0.8747",
+    "SOS": "0.8736",
     "Mom": "0.6667",
-    "Health": "0.8992",
-    "Rating": "0.7708"
+    "Health": "0.8724",
+    "Rating": "0.7680"
   },
   {
     "Rk": 9,
@@ -117,13 +117,13 @@
     "Team Name": "Chicago Bears",
     "Record": "0.7143",
     "Pyth%": "0.6331",
-    "SBP": "0.9181",
-    "TO Fact": "0.4438",
-    "TD Fact": "0.8167",
-    "SOS": "0.8824",
+    "SBP": "0.9140",
+    "TO Fact": "0.3833",
+    "TD Fact": "0.8667",
+    "SOS": "0.8816",
     "Mom": "0.6429",
-    "Health": "0.9562",
-    "Rating": "0.7673"
+    "Health": "0.9390",
+    "Rating": "0.7669"
   },
   {
     "Rk": 10,
@@ -131,13 +131,13 @@
     "Team Name": "Jacksonville Jaguars",
     "Record": "0.6667",
     "Pyth%": "0.7172",
-    "SBP": "0.9656",
+    "SBP": "0.9662",
     "TO Fact": "0.8379",
     "TD Fact": "0.8052",
     "SOS": "0.8957",
     "Mom": "0.4167",
-    "Health": "0.9488",
-    "Rating": "0.7651"
+    "Health": "0.9399",
+    "Rating": "0.7643"
   },
   {
     "Rk": 11,
@@ -145,13 +145,13 @@
     "Team Name": "Cleveland Browns",
     "Record": "0.7143",
     "Pyth%": "0.4450",
-    "SBP": "0.9033",
+    "SBP": "0.9005",
     "TO Fact": "0.5000",
     "TD Fact": "0.6842",
-    "SOS": "0.9058",
+    "SOS": "0.9052",
     "Mom": "0.6429",
-    "Health": "0.9597",
-    "Rating": "0.7385"
+    "Health": "0.9010",
+    "Rating": "0.7322"
   },
   {
     "Rk": 12,
@@ -159,13 +159,13 @@
     "Team Name": "Seattle Seahawks",
     "Record": "0.5714",
     "Pyth%": "0.6683",
-    "SBP": "0.9084",
+    "SBP": "0.9090",
     "TO Fact": "0.4023",
     "TD Fact": "0.7500",
-    "SOS": "0.8811",
+    "SOS": "0.8849",
     "Mom": "0.5714",
-    "Health": "0.9182",
-    "Rating": "0.7067"
+    "Health": "0.9169",
+    "Rating": "0.7070"
   },
   {
     "Rk": 13,
@@ -173,12 +173,12 @@
     "Team Name": "New York Giants",
     "Record": "0.6429",
     "Pyth%": "0.5073",
-    "SBP": "0.8708",
+    "SBP": "0.8715",
     "TO Fact": "0.2552",
     "TD Fact": "0.7607",
-    "SOS": "0.8844",
+    "SOS": "0.8838",
     "Mom": "0.5714",
-    "Health": "0.9179",
+    "Health": "0.9170",
     "Rating": "0.7004"
   },
   {
@@ -187,13 +187,13 @@
     "Team Name": "Green Bay Packers",
     "Record": "0.5714",
     "Pyth%": "0.4959",
-    "SBP": "0.8993",
+    "SBP": "0.8988",
     "TO Fact": "0.7233",
     "TD Fact": "0.7708",
-    "SOS": "0.9220",
+    "SOS": "0.9199",
     "Mom": "0.4286",
-    "Health": "0.8980",
-    "Rating": "0.6940"
+    "Health": "0.8774",
+    "Rating": "0.6917"
   },
   {
     "Rk": 15,
@@ -201,13 +201,13 @@
     "Team Name": "New England Patriots",
     "Record": "0.5714",
     "Pyth%": "0.5662",
-    "SBP": "0.8565",
-    "TO Fact": "0.1184",
-    "TD Fact": "0.8313",
-    "SOS": "0.9260",
+    "SBP": "0.8584",
+    "TO Fact": "0.1379",
+    "TD Fact": "0.8500",
+    "SOS": "0.9198",
     "Mom": "0.4286",
-    "Health": "0.9295",
-    "Rating": "0.6740"
+    "Health": "0.9474",
+    "Rating": "0.6783"
   },
   {
     "Rk": 16,
@@ -215,13 +215,13 @@
     "Team Name": "Baltimore Ravens",
     "Record": "0.5714",
     "Pyth%": "0.5071",
-    "SBP": "0.8890",
+    "SBP": "0.8860",
     "TO Fact": "0.5000",
     "TD Fact": "0.7870",
-    "SOS": "0.8710",
+    "SOS": "0.8695",
     "Mom": "0.3571",
-    "Health": "0.9086",
-    "Rating": "0.6729"
+    "Health": "0.8463",
+    "Rating": "0.6660"
   },
   {
     "Rk": 17,
@@ -229,83 +229,83 @@
     "Team Name": "Los Angeles Rams",
     "Record": "0.4286",
     "Pyth%": "0.5396",
-    "SBP": "0.9077",
+    "SBP": "0.9085",
     "TO Fact": "0.1921",
     "TD Fact": "0.8941",
-    "SOS": "0.8862",
+    "SOS": "0.8810",
     "Mom": "0.5714",
-    "Health": "0.9266",
-    "Rating": "0.6561"
+    "Health": "0.9251",
+    "Rating": "0.6556"
   },
   {
     "Rk": 18,
-    "Mv": "+7",
-    "Team Name": "Atlanta Falcons",
-    "Record": "0.4286",
-    "Pyth%": "0.4931",
-    "SBP": "0.8847",
-    "TO Fact": "0.3359",
-    "TD Fact": "0.7895",
-    "SOS": "0.8997",
-    "Mom": "0.5714",
-    "Health": "0.9492",
-    "Rating": "0.6484"
-  },
-  {
-    "Rk": 19,
-    "Mv": "+7",
-    "Team Name": "Dallas Cowboys",
-    "Record": "0.4286",
-    "Pyth%": "0.5289",
-    "SBP": "0.8750",
-    "TO Fact": "0.2098",
-    "TD Fact": "0.8095",
-    "SOS": "0.8890",
-    "Mom": "0.5714",
-    "Health": "0.9376",
-    "Rating": "0.6440"
-  },
-  {
-    "Rk": 20,
-    "Mv": -8,
+    "Mv": -6,
     "Team Name": "Carolina Panthers",
     "Record": "0.5000",
     "Pyth%": "0.4745",
-    "SBP": "0.8567",
+    "SBP": "0.8562",
     "TO Fact": "0.2471",
     "TD Fact": "0.7925",
-    "SOS": "0.8967",
+    "SOS": "0.8939",
     "Mom": "0.4167",
-    "Health": "0.9489",
-    "Rating": "0.6438"
+    "Health": "0.9259",
+    "Rating": "0.6411"
+  },
+  {
+    "Rk": 19,
+    "Mv": "+6",
+    "Team Name": "Atlanta Falcons",
+    "Record": "0.4286",
+    "Pyth%": "0.4931",
+    "SBP": "0.8769",
+    "TO Fact": "0.2767",
+    "TD Fact": "0.7895",
+    "SOS": "0.8995",
+    "Mom": "0.5714",
+    "Health": "0.9164",
+    "Rating": "0.6409"
+  },
+  {
+    "Rk": 20,
+    "Mv": "+6",
+    "Team Name": "Dallas Cowboys",
+    "Record": "0.4286",
+    "Pyth%": "0.5289",
+    "SBP": "0.8736",
+    "TO Fact": "0.2098",
+    "TD Fact": "0.8095",
+    "SOS": "0.8883",
+    "Mom": "0.5714",
+    "Health": "0.8996",
+    "Rating": "0.6399"
   },
   {
     "Rk": 21,
-    "Mv": -3,
-    "Team Name": "Las Vegas Raiders",
-    "Record": "0.4286",
-    "Pyth%": "0.4564",
-    "SBP": "0.9326",
-    "TO Fact": "0.8379",
-    "TD Fact": "0.7869",
-    "SOS": "0.8580",
-    "Mom": "0.2143",
-    "Health": "0.9633",
-    "Rating": "0.6383"
-  },
-  {
-    "Rk": 22,
-    "Mv": "+7",
+    "Mv": "+8",
     "Team Name": "Tampa Bay Buccaneers",
     "Record": "0.2857",
     "Pyth%": "0.5416",
-    "SBP": "0.9203",
+    "SBP": "0.9185",
     "TO Fact": "0.5514",
     "TD Fact": "0.7037",
-    "SOS": "0.9234",
+    "SOS": "0.9227",
     "Mom": "0.5714",
-    "Health": "0.9575",
-    "Rating": "0.6211"
+    "Health": "0.9158",
+    "Rating": "0.6166"
+  },
+  {
+    "Rk": 22,
+    "Mv": -4,
+    "Team Name": "Las Vegas Raiders",
+    "Record": "0.4286",
+    "Pyth%": "0.4564",
+    "SBP": "0.8954",
+    "TO Fact": "0.7233",
+    "TD Fact": "0.7213",
+    "SOS": "0.8608",
+    "Mom": "0.2143",
+    "Health": "0.9213",
+    "Rating": "0.6165"
   },
   {
     "Rk": 23,
@@ -313,13 +313,13 @@
     "Team Name": "Houston Texans",
     "Record": "0.2857",
     "Pyth%": "0.4823",
-    "SBP": "0.9178",
+    "SBP": "0.9180",
     "TO Fact": "0.8379",
     "TD Fact": "0.7273",
-    "SOS": "0.8841",
+    "SOS": "0.8836",
     "Mom": "0.4286",
-    "Health": "0.9462",
-    "Rating": "0.6121"
+    "Health": "0.9287",
+    "Rating": "0.6104"
   },
   {
     "Rk": 24,
@@ -327,13 +327,13 @@
     "Team Name": "Washington Commanders",
     "Record": "0.2500",
     "Pyth%": "0.3481",
-    "SBP": "0.9373",
+    "SBP": "0.9366",
     "TO Fact": "0.9639",
     "TD Fact": "0.7727",
-    "SOS": "0.8557",
+    "SOS": "0.8569",
     "Mom": "0.4167",
-    "Health": "0.9131",
-    "Rating": "0.5944"
+    "Health": "0.8833",
+    "Rating": "0.5915"
   },
   {
     "Rk": 25,
@@ -341,13 +341,13 @@
     "Team Name": "New York Jets",
     "Record": "0.2857",
     "Pyth%": "0.4465",
-    "SBP": "0.8912",
+    "SBP": "0.8921",
     "TO Fact": "0.7529",
     "TD Fact": "0.7153",
-    "SOS": "0.8897",
+    "SOS": "0.8885",
     "Mom": "0.3571",
-    "Health": "0.9142",
-    "Rating": "0.5893"
+    "Health": "0.9097",
+    "Rating": "0.5889"
   },
   {
     "Rk": 26,
@@ -355,13 +355,13 @@
     "Team Name": "New Orleans Saints",
     "Record": "0.2857",
     "Pyth%": "0.3948",
-    "SBP": "0.8514",
+    "SBP": "0.8521",
     "TO Fact": "0.1874",
     "TD Fact": "0.8519",
-    "SOS": "0.9306",
+    "SOS": "0.9237",
     "Mom": "0.4286",
-    "Health": "0.9674",
-    "Rating": "0.5801"
+    "Health": "0.9670",
+    "Rating": "0.5795"
   },
   {
     "Rk": 27,
@@ -369,13 +369,13 @@
     "Team Name": "Arizona Cardinals",
     "Record": "0.2857",
     "Pyth%": "0.2881",
-    "SBP": "0.8555",
+    "SBP": "0.8524",
     "TO Fact": "0.5903",
     "TD Fact": "0.6408",
-    "SOS": "0.8895",
+    "SOS": "0.8909",
     "Mom": "0.4286",
-    "Health": "0.9108",
-    "Rating": "0.5593"
+    "Health": "0.8468",
+    "Rating": "0.5526"
   },
   {
     "Rk": 28,
@@ -383,13 +383,13 @@
     "Team Name": "Miami Dolphins",
     "Record": "0.1667",
     "Pyth%": "0.2466",
-    "SBP": "0.8400",
+    "SBP": "0.8380",
     "TO Fact": "0.0891",
     "TD Fact": "0.7857",
-    "SOS": "0.9393",
+    "SOS": "0.9379",
     "Mom": "0.5833",
-    "Health": "0.9589",
-    "Rating": "0.5318"
+    "Health": "0.9107",
+    "Rating": "0.5266"
   },
   {
     "Rk": 29,
@@ -397,13 +397,13 @@
     "Team Name": "Philadelphia Eagles",
     "Record": "0.2857",
     "Pyth%": "0.3187",
-    "SBP": "0.7887",
+    "SBP": "0.7890",
     "TO Fact": "0.0689",
     "TD Fact": "0.8819",
-    "SOS": "0.9009",
+    "SOS": "0.9001",
     "Mom": "0.1429",
-    "Health": "0.8960",
-    "Rating": "0.5215"
+    "Health": "0.8805",
+    "Rating": "0.5199"
   },
   {
     "Rk": 30,
@@ -411,13 +411,13 @@
     "Team Name": "Indianapolis Colts",
     "Record": "0.2857",
     "Pyth%": "0.4086",
-    "SBP": "0.7799",
+    "SBP": "0.7802",
     "TO Fact": "0.0361",
     "TD Fact": "0.6299",
-    "SOS": "0.9294",
+    "SOS": "0.9317",
     "Mom": "0.2857",
-    "Health": "0.8895",
-    "Rating": "0.5188"
+    "Health": "0.8811",
+    "Rating": "0.5182"
   },
   {
     "Rk": 31,
@@ -425,13 +425,13 @@
     "Team Name": "Tennessee Titans",
     "Record": "0.1429",
     "Pyth%": "0.2949",
-    "SBP": "0.8458",
+    "SBP": "0.8455",
     "TO Fact": "0.1621",
     "TD Fact": "0.7222",
-    "SOS": "0.8630",
+    "SOS": "0.8625",
     "Mom": "0.4286",
-    "Health": "0.9509",
-    "Rating": "0.5038"
+    "Health": "0.9312",
+    "Rating": "0.5017"
   },
   {
     "Rk": 32,
@@ -439,12 +439,12 @@
     "Team Name": "Los Angeles Chargers",
     "Record": "0.0000",
     "Pyth%": "0.2268",
-    "SBP": "0.7127",
+    "SBP": "0.7147",
     "TO Fact": "0.1840",
     "TD Fact": "0.7000",
-    "SOS": "0.9141",
+    "SOS": "0.9102",
     "Mom": "0.0000",
-    "Health": "0.9008",
-    "Rating": "0.3903"
+    "Health": "0.9207",
+    "Rating": "0.3922"
   }
 ]

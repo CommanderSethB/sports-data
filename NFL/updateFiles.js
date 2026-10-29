@@ -8,6 +8,7 @@ const NUM_WEEKS = 18;
 const STAT_END_WEEK = 7;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
+const HOME_FIELD = 3;
 
 // Weight distribution for Power Rankings calculation (must add up to 1.0)
 const RATING_WEIGHT_REC = 0.3;      // 0.30 - Record weight
@@ -1584,7 +1585,27 @@ function getTeamTurnoverFactor(team) {
 }
 
 function predictedScore(teamA, teamB) {
-    return null;
+    let rawData = fs.readFileSync('./NFL/data/teamStats.json', 'utf-8');
+    let stats = JSON.parse(rawData);
+    let teamDict = stats.find(x => x['Team ID'] === teamA);
+    let pointsForA = parseInt(teamDict['PF']);
+    let gamesPlayedA = parseInt(teamDict['GP']);
+    let ppgA = parseFloat(pointsForA / gamesPlayedA);
+
+    rawData = fs.readFileSync('./NFL/data/teamAllowedStats.json', 'utf-8');
+    stats = JSON.parse(rawData);
+    teamDict = stats.find(x => x['Team ID'] === teamB);
+    let pointsAllB = parseInt(teamDict['PF']);
+    let gamesPlayedB = parseInt(teamDict['GP']);
+    let ppgAllB = parseFloat(pointsAllB / gamesPlayedB);
+
+    let predPct = parseFloat(predictionPercentage(teamA, teamB));
+
+    let healthScore = parseFloat(getHealthScore(teamA));
+
+    let predictedPoints = ((ppgA + ppgAllB)/2) * predPct * healthScore * 2;
+
+    return predictedPoints.toFixed(0);
 }
 
 /**
@@ -1607,8 +1628,8 @@ function buildWeekView(weekNum = STAT_END_WEEK + 1) {
             if (awayWinPct > homeWinPct) predictedWinner = gameData[game]['Away Team'];
             else if (awayWinPct < homeWinPct) predictedWinner = gameData[game]['Home Team'];
 
-            let awayScore = parseInt(gameData[game]['Away Score']);
-            let homeScore = parseInt(gameData[game]['Home Score']);
+            let awayScore = gameData[game]['Status'] === "Final" ? parseInt(gameData[game]['Away Score']) : null;
+            let homeScore = gameData[game]['Status'] === "Final" ? parseInt(gameData[game]['Home Score']) : null
             let actualWinner = null;
             if (gameData[game]['Status'] === "Final") {
                 if (awayScore > homeScore) actualWinner = gameData[game]['Away Team'];
@@ -1622,23 +1643,44 @@ function buildWeekView(weekNum = STAT_END_WEEK + 1) {
             }
 
             weekSchedule.push({
-                'Game': `Game ${count}`,
                 'Team': gameData[game]['Away Team'],
                 'Win%': awayWinPct.toFixed(4),
                 'PredScore': predictedScore(gameData[game]['Away ID'], gameData[game]['Home ID']),
                 'FinalScore': awayScore,
-                'Winner': actualWinner
+                'Winner': actualWinner,
+                'ML': gameData[game]['Away ML'],
+                'Spread': teamSpread(gameData[game]['Away Team'], gameData[game]['Spread']),
+                'Over/Under': "O/U"
             });
 
             weekSchedule.push({
                 'Team': gameData[game]['Home Team'],
                 'Win%': homeWinPct.toFixed(4),
-                'PredScore': predictedScore(gameData[game]['Home ID'], gameData[game]['Away ID']),
+                'PredScore': parseInt(predictedScore(gameData[game]['Home ID'], gameData[game]['Away ID'])) + HOME_FIELD,
                 'FinalScore': homeScore,
-                'Winner': predCorrect
+                'Winner': predCorrect,
+                'ML': gameData[game]['Home ML'],
+                'Spread': teamSpread(gameData[game]['Home Team'], gameData[game]['Spread']),
+                'Over/Under': gameData[game]['Over/Under']
             });
         }
     }
 
     fs.writeFileSync('./NFL/data/weekSchedule.json', JSON.stringify(weekSchedule, null, 2));
+}
+
+function getTeamAbbreviation(teamName) {
+    let rawData = fs.readFileSync('./NFL/data/teamList.json', 'utf-8');
+    let teamList = JSON.parse(rawData);
+
+    return teamList.find(x => x['Name'] === teamName)['Abbr'];
+}
+
+function teamSpread(team, spread) {
+    if(spread === null) return null;
+
+    let splitSpread = spread.split(" ");
+
+    if(splitSpread[0] === getTeamAbbreviation(team)) return spread;
+    return getTeamAbbreviation(team) + " " + splitSpread[1].replace("-", "+");
 }

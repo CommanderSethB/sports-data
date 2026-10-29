@@ -35,14 +35,49 @@
             text-align: center;
             color: #555555;
             margin-top: 0;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
+        /* League Subsection Styling */
+        .league-section {
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .league-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        h2.league-title {
+            color: #0b2341;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2.league-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: #1b4332;
+            border-radius: 2px;
+        }
+
         /* Clean list styling converted into a grid/card structure */
-        ul {
+        ul.grid-list {
             list-style-type: none;
             padding: 0;
             margin: 0;
@@ -51,7 +86,7 @@
             gap: 12px;
         }
 
-        li a {
+        ul.grid-list li a {
             display: block;
             background-color: #f8f9fa;
             color: #1b4332; /* Turf green text */
@@ -66,7 +101,7 @@
         }
 
         /* Athletic hover state */
-        li a:hover {
+        ul.grid-list li a:hover {
             background-color: #1b4332;
             color: #ffffff;
             border-color: #1b4332;
@@ -81,11 +116,33 @@
         <h1>Sports Hub</h1>
         <p class="subtitle">Select a Destination</p>
         
-        <!-- Pass different table arguments through the URL[cite: 4] -->
-        <ul>
-            <li><a href="./NFL/powerRankings.html">NFL Power Rankings</a></li>
-            <li><a href="./NFL/weekSchedule.html">NFL Predictions</a></li>
-        </ul>
+        <!-- NFL Section -->
+        <section class="league-section">
+            <h2 class="league-title">NFL</h2>
+            <ul class="grid-list">
+                <li><a href="./NFL/powerRankings.html">Power Rankings</a></li>
+                <li><a href="./NFL/weekSchedule.html">Predictions</a></li>
+            </ul>
+        </section>
+
+        <!-- NBA Section -->
+        <section class="league-section">
+            <h2 class="league-title">NBA</h2>
+            <ul class="grid-list">
+                <li><a href="./NBA/powerRankings.html">Power Rankings</a></li>
+                <li><a href="./NBA/weekSchedule.html">Predictions</a></li>
+            </ul>
+        </section>
+
+        <!-- MLB Section -->
+        <section class="league-section">
+            <h2 class="league-title">MLB</h2>
+            <ul class="grid-list">
+                <li><a href="./MLB/powerRankings.html">Power Rankings</a></li>
+                <li><a href="./MLB/weekSchedule.html">Predictions</a></li>
+            </ul>
+        </section>
+
     </div>
 
 </body>
