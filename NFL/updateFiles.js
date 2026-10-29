@@ -1631,7 +1631,6 @@ function buildWeekView(weekNum = STAT_END_WEEK + 1) {
             });
 
             weekSchedule.push({
-                'Game': `Game ${count}`,
                 'Team': gameData[game]['Home Team'],
                 'Win%': homeWinPct.toFixed(4),
                 'PredScore': predictedScore(gameData[game]['Home ID'], gameData[game]['Away ID']),

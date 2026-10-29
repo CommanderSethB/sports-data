@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NFL Predictions</title>
+    <style>
+        /* Sports-themed styling */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f8;
+            color: #1a1a1a;
+            margin: 24px;
+            padding: 0;
+        }
+
+        h2 {
+            color: #0b2341; /* Athletic Navy */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        #table-container {
+            overflow-x: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 12px;
+            border-top: 4px solid #1b4332; /* Turf Green accent bar */
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border: 2px solid #2d6a4f;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #1b4332; /* Deep Turf Green */
+            color: #ffffff;
+            padding: 12px 16px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            border-bottom: 3px solid #2d6a4f;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+            color: #333333;
+        }
+
+        /* Thicker border below every 2nd row */
+        tbody tr:nth-child(2n) td {
+            border-bottom: 3px solid #2d6a4f;
+        }
+
+        /* Zebra striping for heavy stat tables */
+        tr:nth-child(even) {
+            background-color: #f8f9fa; 
+        }
+
+        /* Athletic hover state */
+        tr:hover {
+            background-color: #e8f8ea; /* Light turf green tint */
+            transition: background-color 0.15s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Power Rankings</h2>
+    <!-- Container where the table will be built -->
+    <div id="table-container"></div>
+
+    <script>
+        // Function to fetch JSON and build the table dynamically
+        async function loadTableData() {
+            try {
+                // Replace 'data.json' with the path to your actual JSON file
+                const response = await fetch('./data/weekSchedule.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load JSON data');
+                }
+                const data = await response.json();
+
+                if (!data || data.length === 0) {
+                    document.getElementById('table-container').innerHTML = '<p style="text-align:center;">No data available.</p>';
+                    return;
+                }
+
+                // Create table elements
+                const table = document.createElement('table');
+                const thead = document.createElement('thead');
+                const tbody = document.createElement('tbody');
+
+                // Get keys from the first object to use as table headers
+                const headers = Object.keys(data[0]);
+                const headerRow = document.createElement('tr');
+                
+                headers.forEach(headerText => {
+                    const th = document.createElement('th');
+                    // Format header text (capitalize, remove underscores, etc.)
+                    th.textContent = headerText.replace(/_/g, ' ');
+                    headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+
+                // Populate table rows with JSON data
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+                    headers.forEach(header => {
+                        const td = document.createElement('td');
+                        td.textContent = item[header] !== undefined ? item[header] : '';
+                        row.appendChild(td);
+                    });
+                    tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+
+                // Insert the table into the container
+                const container = document.getElementById('table-container');
+                container.innerHTML = '';
+                container.appendChild(table);
+
+            } catch (error) {
+                console.log('Error loading data:', error);
+                document.getElementById('table-container').innerHTML = 
+                    `<p style="text-align:center; color: red;">Could not load data. Make sure you are running this through a local server (like Live Server) so fetch() can access your JSON file.</p>`;
+            }
+        }
+
+        // Run the function when the page loads
+        loadTableData();
+    </script>
+
+</body>
+</html>
