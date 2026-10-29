@@ -15,7 +15,7 @@ function getTitle(tableName) {
 // --- APPROACH B: Datasets loaded from an external FILE ---
 async function fetchDatasetFromFile(type, sport) {
     try {
-        const fileLocation = "./" + sport + "/data/" + type + ".json";
+        const fileLocation = "./" + sport.toUpper() + "/data/" + type + ".json";
         // Automatically maps 'users' -> './data/users.json', etc.[cite: 3]
         const response = await fetch(fileLocation);
         
