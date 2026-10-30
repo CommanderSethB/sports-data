@@ -1,8 +1,9 @@
 [
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5593,
-    "Date": "February 4, 2026",
+    "Date": "2026-02-04T23:00:00.000Z",
     "Type": "Exb",
     "Race Name": "Cook Out Clash at Bowman Gray",
     "Track": "Bowman Gray Stadium",
@@ -22,9 +23,10 @@
     "Caut Laps": 17
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5594,
-    "Date": "February 12, 2026",
+    "Date": "2026-02-13T00:00:00.000Z",
     "Type": "Exb",
     "Race Name": "America 250 Florida Duel at DAYTONA",
     "Track": "Daytona International Speedway",
@@ -44,9 +46,10 @@
     "Caut Laps": 9
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5595,
-    "Date": "February 12, 2026",
+    "Date": "2026-02-13T01:45:00.000Z",
     "Type": "Exb",
     "Race Name": "America 250 Florida Duel at DAYTONA",
     "Track": "Daytona International Speedway",
@@ -66,9 +69,10 @@
     "Caut Laps": 0
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5667,
-    "Date": "February 13, 2026",
+    "Date": "2026-02-14T00:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Fresh From Florida 250",
     "Track": "Daytona International Speedway",
@@ -88,9 +92,10 @@
     "Caut Laps": 31
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5634,
-    "Date": "February 14, 2026",
+    "Date": "2026-02-14T22:00:00.000Z",
     "Type": "Pts",
     "Race Name": "United Rentals 300",
     "Track": "Daytona International Speedway",
@@ -110,9 +115,10 @@
     "Caut Laps": 36
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5596,
-    "Date": "February 15, 2026",
+    "Date": "2026-02-15T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "DAYTONA 500",
     "Track": "Daytona International Speedway",
@@ -132,31 +138,10 @@
     "Caut Laps": 32
   },
   {
-    "Series": "NOAPS",
-    "Race ID": 5635,
-    "Date": "February 21, 2026",
-    "Type": "Pts",
-    "Race Name": "Bennett Transportation & Logistics 250",
-    "Track": "Atlanta Motor Speedway",
-    "Scheduled Distance": 251.02,
-    "Actual Distance": 251.02,
-    "Scheduled Laps": 163,
-    "Actual Laps": 163,
-    "Stg 1": 45,
-    "Stg 2": 45,
-    "Stg 3": 73,
-    "Entries": 38,
-    "Pole": 4327,
-    "Pole Spd": 174.318,
-    "Lead Chg": 24,
-    "Leaders": 11,
-    "Caut": 7,
-    "Caut Laps": 46
-  },
-  {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5668,
-    "Date": "February 21, 2026",
+    "Date": "2026-02-21T18:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Fr8 Racing 208",
     "Track": "Atlanta Motor Speedway",
@@ -176,9 +161,33 @@
     "Caut Laps": 18
   },
   {
+    "Series ID": 2,
+    "Series": "NOAPS",
+    "Race ID": 5635,
+    "Date": "2026-02-21T22:00:00.000Z",
+    "Type": "Pts",
+    "Race Name": "Bennett Transportation & Logistics 250",
+    "Track": "Atlanta Motor Speedway",
+    "Scheduled Distance": 251.02,
+    "Actual Distance": 251.02,
+    "Scheduled Laps": 163,
+    "Actual Laps": 163,
+    "Stg 1": 45,
+    "Stg 2": 45,
+    "Stg 3": 73,
+    "Entries": 38,
+    "Pole": 4327,
+    "Pole Spd": 174.318,
+    "Lead Chg": 24,
+    "Leaders": 11,
+    "Caut": 7,
+    "Caut Laps": 46
+  },
+  {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5597,
-    "Date": "February 22, 2026",
+    "Date": "2026-02-22T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Autotrader 400",
     "Track": "Atlanta Motor Speedway",
@@ -198,31 +207,10 @@
     "Caut Laps": 67
   },
   {
-    "Series": "NOAPS",
-    "Race ID": 5636,
-    "Date": "February 28, 2026",
-    "Type": "Pts",
-    "Race Name": "Focused Health 250",
-    "Track": "Circuit of The Americas",
-    "Scheduled Distance": 156,
-    "Actual Distance": 156,
-    "Scheduled Laps": 65,
-    "Actual Laps": 65,
-    "Stg 1": 20,
-    "Stg 2": 20,
-    "Stg 3": 25,
-    "Entries": 38,
-    "Pole": 4481,
-    "Pole Spd": 88.398,
-    "Lead Chg": 16,
-    "Leaders": 8,
-    "Caut": 4,
-    "Caut Laps": 12
-  },
-  {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5669,
-    "Date": "February 28, 2026",
+    "Date": "2026-02-28T17:00:00.000Z",
     "Type": "Pts",
     "Race Name": "OnlyBulls Green Flag 150 at St. Petersburg",
     "Track": "Grand Prix of St. Petersburg",
@@ -242,9 +230,33 @@
     "Caut Laps": 17
   },
   {
+    "Series ID": 2,
+    "Series": "NOAPS",
+    "Race ID": 5636,
+    "Date": "2026-02-28T20:00:00.000Z",
+    "Type": "Pts",
+    "Race Name": "Focused Health 250",
+    "Track": "Circuit of The Americas",
+    "Scheduled Distance": 156,
+    "Actual Distance": 156,
+    "Scheduled Laps": 65,
+    "Actual Laps": 65,
+    "Stg 1": 20,
+    "Stg 2": 20,
+    "Stg 3": 25,
+    "Entries": 38,
+    "Pole": 4481,
+    "Pole Spd": 88.398,
+    "Lead Chg": 16,
+    "Leaders": 8,
+    "Caut": 4,
+    "Caut Laps": 12
+  },
+  {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5598,
-    "Date": "March 1, 2026",
+    "Date": "2026-03-01T20:30:00.000Z",
     "Type": "Pts",
     "Race Name": "DuraMAX Texas Grand Prix Powered by RelaDyne",
     "Track": "Circuit of The Americas",
@@ -264,9 +276,10 @@
     "Caut Laps": 10
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5637,
-    "Date": "March 7, 2026",
+    "Date": "2026-03-08T00:30:00.000Z",
     "Type": "Pts",
     "Race Name": "GOVX 200",
     "Track": "Phoenix Raceway",
@@ -286,9 +299,10 @@
     "Caut Laps": 37
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5599,
-    "Date": "March 8, 2026",
+    "Date": "2026-03-08T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Straight Talk Wireless 500",
     "Track": "Phoenix Raceway",
@@ -308,9 +322,10 @@
     "Caut Laps": 86
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5638,
-    "Date": "March 14, 2026",
+    "Date": "2026-03-14T21:30:00.000Z",
     "Type": "Pts",
     "Race Name": "The LiUNA",
     "Track": "Las Vegas Motor Speedway",
@@ -330,9 +345,10 @@
     "Caut Laps": 42
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5600,
-    "Date": "March 15, 2026",
+    "Date": "2026-03-15T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Pennzoil 400 presented by Jiffy Lube",
     "Track": "Las Vegas Motor Speedway",
@@ -352,9 +368,10 @@
     "Caut Laps": 20
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5685,
-    "Date": "March 20, 2026",
+    "Date": "2026-03-20T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Buckle Up South Carolina 200",
     "Track": "Darlington Raceway",
@@ -374,9 +391,10 @@
     "Caut Laps": 47
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5641,
-    "Date": "March 21, 2026",
+    "Date": "2026-03-21T21:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Sport Clips Haircuts VFW Help a Hero 200",
     "Track": "Darlington Raceway",
@@ -396,9 +414,10 @@
     "Caut Laps": 25
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5603,
-    "Date": "March 22, 2026",
+    "Date": "2026-03-22T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Goodyear 400",
     "Track": "Darlington Raceway",
@@ -418,9 +437,10 @@
     "Caut Laps": 26
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5640,
-    "Date": "March 28, 2026",
+    "Date": "2026-03-28T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "NFPA 250",
     "Track": "Martinsville Speedway",
@@ -440,9 +460,10 @@
     "Caut Laps": 97
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5602,
-    "Date": "March 29, 2026",
+    "Date": "2026-03-29T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Cook Out 400",
     "Track": "Martinsville Speedway",
@@ -462,9 +483,10 @@
     "Caut Laps": 54
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5673,
-    "Date": "April 3, 2026",
+    "Date": "2026-04-03T20:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Black's Tire 200",
     "Track": "Rockingham Speedway",
@@ -484,9 +506,10 @@
     "Caut Laps": 28
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5643,
-    "Date": "April 4, 2026",
+    "Date": "2026-04-04T18:30:00.000Z",
     "Type": "Pts",
     "Race Name": "North Carolina Education Lottery 250 Presented by Black's Tire",
     "Track": "Rockingham Speedway",
@@ -506,9 +529,10 @@
     "Caut Laps": 44
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5672,
-    "Date": "April 10, 2026",
+    "Date": "2026-04-10T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Tennessee Army National Guard 250",
     "Track": "Bristol Motor Speedway",
@@ -528,9 +552,10 @@
     "Caut Laps": 76
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5642,
-    "Date": "April 11, 2026",
+    "Date": "2026-04-11T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Suburban Propane 300",
     "Track": "Bristol Motor Speedway",
@@ -550,9 +575,10 @@
     "Caut Laps": 59
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5604,
-    "Date": "April 12, 2026",
+    "Date": "2026-04-12T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Food City 500",
     "Track": "Bristol Motor Speedway",
@@ -572,9 +598,10 @@
     "Caut Laps": 72
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5661,
-    "Date": "April 18, 2026",
+    "Date": "2026-04-18T22:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Kansas Lottery 300",
     "Track": "Kansas Speedway",
@@ -594,9 +621,10 @@
     "Caut Laps": 37
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5607,
-    "Date": "April 19, 2026",
+    "Date": "2026-04-19T17:00:00.000Z",
     "Type": "Pts",
     "Race Name": "AdventHealth 400",
     "Track": "Kansas Speedway",
@@ -616,9 +644,10 @@
     "Caut Laps": 20
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5644,
-    "Date": "April 25, 2026",
+    "Date": "2026-04-25T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "AG-PRO 300",
     "Track": "Talladega Superspeedway",
@@ -638,9 +667,10 @@
     "Caut Laps": 15
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5605,
-    "Date": "April 26, 2026",
+    "Date": "2026-04-26T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Jack Link's 500",
     "Track": "Talladega Superspeedway",
@@ -660,9 +690,10 @@
     "Caut Laps": 30
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5674,
-    "Date": "May 1, 2026",
+    "Date": "2026-05-02T00:00:00.000Z",
     "Type": "Pts",
     "Race Name": "SpeedyCash.com 250",
     "Track": "Texas Motor Speedway",
@@ -682,9 +713,10 @@
     "Caut Laps": 39
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5645,
-    "Date": "May 2, 2026",
+    "Date": "2026-05-02T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Andy's Frozen Custard 340",
     "Track": "Texas Motor Speedway",
@@ -704,9 +736,10 @@
     "Caut Laps": 36
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5606,
-    "Date": "May 3, 2026",
+    "Date": "2026-05-03T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Würth 400 presented by LIQUI MOLY",
     "Track": "Texas Motor Speedway",
@@ -726,9 +759,10 @@
     "Caut Laps": 40
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5683,
-    "Date": "May 8, 2026",
+    "Date": "2026-05-08T20:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Bully Hill Vineyards 176 at The Glen",
     "Track": "Watkins Glen International",
@@ -748,9 +782,10 @@
     "Caut Laps": 15
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5656,
-    "Date": "May 9, 2026",
+    "Date": "2026-05-09T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Mission 200 at The Glen",
     "Track": "Watkins Glen International",
@@ -770,9 +805,10 @@
     "Caut Laps": 13
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5621,
-    "Date": "May 10, 2026",
+    "Date": "2026-05-10T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Go Bowling at The Glen",
     "Track": "Watkins Glen International",
@@ -792,9 +828,10 @@
     "Caut Laps": 12
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5690,
-    "Date": "May 15, 2026",
+    "Date": "2026-05-15T21:00:00.000Z",
     "Type": "Pts",
     "Race Name": "ECOSAVE 200",
     "Track": "Dover Motor Speedway",
@@ -814,9 +851,10 @@
     "Caut Laps": 28
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5653,
-    "Date": "May 16, 2026",
+    "Date": "2026-05-16T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "BetRivers 200",
     "Track": "Dover Motor Speedway",
@@ -836,9 +874,10 @@
     "Caut Laps": 54
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5609,
-    "Date": "May 17, 2026",
+    "Date": "2026-05-17T17:00:00.000Z",
     "Type": "Exb",
     "Race Name": "NASCAR All-Star Race",
     "Track": "Dover Motor Speedway",
@@ -858,9 +897,10 @@
     "Caut Laps": 14
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5646,
-    "Date": "May 23, 2026",
+    "Date": "2026-05-23T21:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Charbroil 300",
     "Track": "Charlotte Motor Speedway",
@@ -880,9 +920,10 @@
     "Caut Laps": 54
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5677,
-    "Date": "May 23, 2026",
+    "Date": "2026-05-24T01:00:00.000Z",
     "Type": "Pts",
     "Race Name": "North Carolina Education Lottery 200",
     "Track": "Charlotte Motor Speedway",
@@ -902,9 +943,10 @@
     "Caut Laps": 53
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5610,
-    "Date": "May 24, 2026",
+    "Date": "2026-05-24T22:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Coca-Cola 600",
     "Track": "Charlotte Motor Speedway",
@@ -924,9 +966,10 @@
     "Caut Laps": 75
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5678,
-    "Date": "May 29, 2026",
+    "Date": "2026-05-30T00:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Allegiance 200",
     "Track": "Nashville Superspeedway",
@@ -946,9 +989,10 @@
     "Caut Laps": 48
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5647,
-    "Date": "May 30, 2026",
+    "Date": "2026-05-30T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Sports Illustrated Resorts 250",
     "Track": "Nashville Superspeedway",
@@ -968,9 +1012,10 @@
     "Caut Laps": 15
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5611,
-    "Date": "May 31, 2026",
+    "Date": "2026-05-31T23:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Cracker Barrel 400",
     "Track": "Nashville Superspeedway",
@@ -990,9 +1035,10 @@
     "Caut Laps": 77
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5679,
-    "Date": "June 6, 2026",
+    "Date": "2026-06-06T17:30:00.000Z",
     "Type": "Pts",
     "Race Name": "DQS Solutions & Staffing 250 powered by Precision Vehicle Logistics",
     "Track": "Michigan International Speedway",
@@ -1012,9 +1058,10 @@
     "Caut Laps": 34
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5612,
-    "Date": "June 7, 2026",
+    "Date": "2026-06-07T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "FireKeepers Casino 400",
     "Track": "Michigan International Speedway",
@@ -1034,9 +1081,10 @@
     "Caut Laps": 54
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5649,
-    "Date": "June 13, 2026",
+    "Date": "2026-06-13T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "MillerTech Battery 250 presented by KOA",
     "Track": "Pocono Raceway",
@@ -1056,9 +1104,10 @@
     "Caut Laps": 39
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5614,
-    "Date": "June 14, 2026",
+    "Date": "2026-06-14T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Great American Getaway 400 presented by VISITPA",
     "Track": "Pocono Raceway",
@@ -1078,9 +1127,10 @@
     "Caut Laps": 23
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5680,
-    "Date": "June 19, 2026",
+    "Date": "2026-06-19T23:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Navy 250",
     "Track": "San Diego Street Course",
@@ -1100,9 +1150,10 @@
     "Caut Laps": 13
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5648,
-    "Date": "June 20, 2026",
+    "Date": "2026-06-20T21:00:00.000Z",
     "Type": "Pts",
     "Race Name": "United Rentals Driven to Serve 250",
     "Track": "San Diego Street Course",
@@ -1122,9 +1173,10 @@
     "Caut Laps": 17
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5613,
-    "Date": "June 21, 2026",
+    "Date": "2026-06-21T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Anduril 250",
     "Track": "San Diego Street Course",
@@ -1144,9 +1196,10 @@
     "Caut Laps": 11
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5652,
-    "Date": "June 27, 2026",
+    "Date": "2026-06-27T21:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Pit Boss/FoodMaxx 250",
     "Track": "Sonoma Raceway",
@@ -1166,9 +1219,10 @@
     "Caut Laps": 11
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5617,
-    "Date": "June 28, 2026",
+    "Date": "2026-06-28T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Toyota / Save Mart 350",
     "Track": "Sonoma Raceway",
@@ -1188,9 +1242,10 @@
     "Caut Laps": 8
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5651,
-    "Date": "July 4, 2026",
+    "Date": "2026-07-04T20:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Cuervo 300",
     "Track": "Chicagoland Speedway",
@@ -1210,9 +1265,10 @@
     "Caut Laps": 40
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5616,
-    "Date": "July 5, 2026",
+    "Date": "2026-07-05T21:00:00.000Z",
     "Type": "Pts",
     "Race Name": "eero 400",
     "Track": "Chicagoland Speedway",
@@ -1232,31 +1288,10 @@
     "Caut Laps": 43
   },
   {
-    "Series": "NOAPS",
-    "Race ID": 5650,
-    "Date": "July 11, 2026",
-    "Type": "Pts",
-    "Race Name": "Focused Health 250",
-    "Track": "Atlanta Motor Speedway",
-    "Scheduled Distance": 251.02,
-    "Actual Distance": 264.88,
-    "Scheduled Laps": 163,
-    "Actual Laps": 172,
-    "Stg 1": 45,
-    "Stg 2": 45,
-    "Stg 3": 82,
-    "Entries": 38,
-    "Pole": 4327,
-    "Pole Spd": 173.554,
-    "Lead Chg": 19,
-    "Leaders": 11,
-    "Caut": 13,
-    "Caut Laps": 76
-  },
-  {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5681,
-    "Date": "July 11, 2026",
+    "Date": "2026-07-11T17:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Liuna 150 at Lime Rock Park",
     "Track": "Lime Rock Park",
@@ -1276,9 +1311,33 @@
     "Caut Laps": 39
   },
   {
+    "Series ID": 2,
+    "Series": "NOAPS",
+    "Race ID": 5650,
+    "Date": "2026-07-11T23:00:00.000Z",
+    "Type": "Pts",
+    "Race Name": "Focused Health 250",
+    "Track": "Atlanta Motor Speedway",
+    "Scheduled Distance": 251.02,
+    "Actual Distance": 264.88,
+    "Scheduled Laps": 163,
+    "Actual Laps": 172,
+    "Stg 1": 45,
+    "Stg 2": 45,
+    "Stg 3": 82,
+    "Entries": 38,
+    "Pole": 4327,
+    "Pole Spd": 173.554,
+    "Lead Chg": 19,
+    "Leaders": 11,
+    "Caut": 13,
+    "Caut Laps": 76
+  },
+  {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5615,
-    "Date": "July 12, 2026",
+    "Date": "2026-07-12T23:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Quaker State 400 Available at Walmart",
     "Track": "Atlanta Motor Speedway",
@@ -1298,9 +1357,10 @@
     "Caut Laps": 49
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5676,
-    "Date": "July 18, 2026",
+    "Date": "2026-07-18T16:30:00.000Z",
     "Type": "Pts",
     "Race Name": "FaithFest 250 presented by Mercer Transportation",
     "Track": "North Wilkesboro Speedway",
@@ -1320,9 +1380,10 @@
     "Caut Laps": 34
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5618,
-    "Date": "July 19, 2026",
+    "Date": "2026-07-19T23:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Window World 450",
     "Track": "North Wilkesboro Speedway",
@@ -1342,9 +1403,10 @@
     "Caut Laps": 43
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5682,
-    "Date": "July 24, 2026",
+    "Date": "2026-07-25T00:00:00.000Z",
     "Type": "Pts",
     "Race Name": "TSport 200 presented by Warn Industries",
     "Track": "Lucas Oil Indianapolis Raceway Park",
@@ -1364,9 +1426,10 @@
     "Caut Laps": 25
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5654,
-    "Date": "July 25, 2026",
+    "Date": "2026-07-25T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Pennzoil 250 presented by Take 5 Oil Change",
     "Track": "Indianapolis Motor Speedway",
@@ -1386,9 +1449,10 @@
     "Caut Laps": 13
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5619,
-    "Date": "July 26, 2026",
+    "Date": "2026-07-26T18:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Brickyard 400 presented by PPG",
     "Track": "Indianapolis Motor Speedway",
@@ -1408,9 +1472,10 @@
     "Caut Laps": 27
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5655,
-    "Date": "August 8, 2026",
+    "Date": "2026-08-08T21:00:00.000Z",
     "Type": "Pts",
     "Race Name": "HyVee Perks 250",
     "Track": "Iowa Speedway",
@@ -1430,9 +1495,10 @@
     "Caut Laps": 72
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5620,
-    "Date": "August 9, 2026",
+    "Date": "2026-08-09T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Iowa Corn 350 Powered by Ethanol",
     "Track": "Iowa Speedway",
@@ -1452,9 +1518,10 @@
     "Caut Laps": 45
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5684,
-    "Date": "August 14, 2026",
+    "Date": "2026-08-14T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Black's Tire 250 presented by BTS Rewards",
     "Track": "Richmond Raceway",
@@ -1474,9 +1541,10 @@
     "Caut Laps": 24
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5622,
-    "Date": "August 15, 2026",
+    "Date": "2026-08-15T23:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Cook Out 400",
     "Track": "Richmond Raceway",
@@ -1496,9 +1564,10 @@
     "Caut Laps": 31
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5687,
-    "Date": "August 22, 2026",
+    "Date": "2026-08-22T17:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Team EJP 175",
     "Track": "New Hampshire Motor Speedway",
@@ -1518,9 +1587,10 @@
     "Caut Laps": 56
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5627,
-    "Date": "August 23, 2026",
+    "Date": "2026-08-23T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Dollar Tree 301",
     "Track": "New Hampshire Motor Speedway",
@@ -1540,9 +1610,10 @@
     "Caut Laps": 51
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5657,
-    "Date": "August 28, 2026",
+    "Date": "2026-08-28T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Winn-Dixie 250 Powered by Coca-Cola ",
     "Track": "Daytona International Speedway",
@@ -1562,9 +1633,10 @@
     "Caut Laps": 25
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5623,
-    "Date": "August 29, 2026",
+    "Date": "2026-08-29T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Coke Zero Sugar 400",
     "Track": "Daytona International Speedway",
@@ -1584,9 +1656,10 @@
     "Caut Laps": 23
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5658,
-    "Date": "September 5, 2026",
+    "Date": "2026-09-05T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Fleetio 200",
     "Track": "Darlington Raceway",
@@ -1606,9 +1679,10 @@
     "Caut Laps": 38
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5624,
-    "Date": "September 6, 2026",
+    "Date": "2026-09-06T21:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Cook Out Southern 500",
     "Track": "Darlington Raceway",
@@ -1628,9 +1702,10 @@
     "Caut Laps": 44
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5659,
-    "Date": "September 12, 2026",
+    "Date": "2026-09-12T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Nu Way 225 Powered by Bobcat and Sauced by Blues Hog",
     "Track": "World Wide Technology Raceway",
@@ -1650,9 +1725,10 @@
     "Caut Laps": 37
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5625,
-    "Date": "September 13, 2026",
+    "Date": "2026-09-13T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Enjoy Illinois 300",
     "Track": "World Wide Technology Raceway",
@@ -1672,9 +1748,10 @@
     "Caut Laps": 87
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5686,
-    "Date": "September 17, 2026",
+    "Date": "2026-09-18T00:00:00.000Z",
     "Type": "Pts",
     "Race Name": "UNOH 250 presented by Ohio Logistics",
     "Track": "Bristol Motor Speedway",
@@ -1694,9 +1771,10 @@
     "Caut Laps": 38
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5660,
-    "Date": "September 18, 2026",
+    "Date": "2026-09-18T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Food City 300",
     "Track": "Bristol Motor Speedway",
@@ -1716,9 +1794,10 @@
     "Caut Laps": 47
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5626,
-    "Date": "September 19, 2026",
+    "Date": "2026-09-19T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Bass Pro Shops Night Race",
     "Track": "Bristol Motor Speedway",
@@ -1738,9 +1817,10 @@
     "Caut Laps": 78
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5675,
-    "Date": "September 26, 2026",
+    "Date": "2026-09-26T17:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Race to Stop Suicide 200",
     "Track": "Kansas Speedway",
@@ -1760,9 +1840,10 @@
     "Caut Laps": 47
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5628,
-    "Date": "September 27, 2026",
+    "Date": "2026-09-27T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Hollywood Casino 400 ",
     "Track": "Kansas Speedway",
@@ -1782,9 +1863,10 @@
     "Caut Laps": 26
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5663,
-    "Date": "October 3, 2026",
+    "Date": "2026-10-03T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Focused Health 302",
     "Track": "Las Vegas Motor Speedway",
@@ -1804,9 +1886,10 @@
     "Caut Laps": 21
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5630,
-    "Date": "October 4, 2026",
+    "Date": "2026-10-04T21:30:00.000Z",
     "Type": "Pts",
     "Race Name": "South Point 400",
     "Track": "Las Vegas Motor Speedway",
@@ -1826,9 +1909,10 @@
     "Caut Laps": 21
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5688,
-    "Date": "October 9, 2026",
+    "Date": "2026-10-09T21:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Ecosave 200",
     "Track": "Charlotte Motor Speedway",
@@ -1848,9 +1932,10 @@
     "Caut Laps": 28
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5629,
-    "Date": "October 11, 2026",
+    "Date": "2026-10-11T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Bank of America 400",
     "Track": "Charlotte Motor Speedway",
@@ -1870,9 +1955,10 @@
     "Caut Laps": 33
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5662,
-    "Date": "October 11, 2026",
+    "Date": "2026-10-12T00:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Blue Cross NC 300",
     "Track": "Charlotte Motor Speedway",
@@ -1892,9 +1978,10 @@
     "Caut Laps": 38
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5691,
-    "Date": "October 16, 2026",
+    "Date": "2026-10-16T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Zero Carbon Bioethanol 150 Powered by POET ",
     "Track": "Phoenix Raceway",
@@ -1914,9 +2001,10 @@
     "Caut Laps": 16
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5666,
-    "Date": "October 17, 2026",
+    "Date": "2026-10-17T23:30:00.000Z",
     "Type": "Pts",
     "Race Name": "Timberland PRO 200",
     "Track": "Phoenix Raceway",
@@ -1936,9 +2024,10 @@
     "Caut Laps": 35
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5633,
-    "Date": "October 18, 2026",
+    "Date": "2026-10-18T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Freeway Insurance 500",
     "Track": "Phoenix Raceway",
@@ -1958,9 +2047,10 @@
     "Caut Laps": 43
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5689,
-    "Date": "October 23, 2026",
+    "Date": "2026-10-23T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Love's RV Stop 225",
     "Track": "Talladega Superspeedway",
@@ -1980,9 +2070,10 @@
     "Caut Laps": 26
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5664,
-    "Date": "October 24, 2026",
+    "Date": "2026-10-24T19:30:00.000Z",
     "Type": "Pts",
     "Race Name": "The Progress Group 250",
     "Track": "Talladega Superspeedway",
@@ -2002,9 +2093,10 @@
     "Caut Laps": 20
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5631,
-    "Date": "October 25, 2026",
+    "Date": "2026-10-25T18:00:00.000Z",
     "Type": "Pts",
     "Race Name": "YellaWood 500",
     "Track": "Talladega Superspeedway",
@@ -2024,9 +2116,10 @@
     "Caut Laps": 18
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5671,
-    "Date": "October 30, 2026",
+    "Date": "2026-10-30T22:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Black's Tire 200 presented by Down East Heating & Air Conditioning",
     "Track": "Martinsville Speedway",
@@ -2046,9 +2139,10 @@
     "Caut Laps": 0
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5665,
-    "Date": "October 31, 2026",
+    "Date": "2026-10-31T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "National Debt Relief 250",
     "Track": "Martinsville Speedway",
@@ -2068,9 +2162,10 @@
     "Caut Laps": 0
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5632,
-    "Date": "November 1, 2026",
+    "Date": "2026-11-01T19:00:00.000Z",
     "Type": "Pts",
     "Race Name": "Xfinity 500",
     "Track": "Martinsville Speedway",
@@ -2090,9 +2185,10 @@
     "Caut Laps": 0
   },
   {
+    "Series ID": 3,
     "Series": "NCTS",
     "Race ID": 5670,
-    "Date": "November 6, 2026",
+    "Date": "2026-11-07T00:30:00.000Z",
     "Type": "Pts",
     "Race Name": "NASCAR CRAFTSMAN Truck Series Championship Race",
     "Track": "Homestead-Miami Speedway",
@@ -2112,9 +2208,10 @@
     "Caut Laps": 0
   },
   {
+    "Series ID": 2,
     "Series": "NOAPS",
     "Race ID": 5639,
-    "Date": "November 7, 2026",
+    "Date": "2026-11-07T22:00:00.000Z",
     "Type": "Pts",
     "Race Name": "NASCAR O'Reilly Auto Parts Series Championship Race",
     "Track": "Homestead-Miami Speedway",
@@ -2134,9 +2231,10 @@
     "Caut Laps": 0
   },
   {
+    "Series ID": 1,
     "Series": "NCS",
     "Race ID": 5601,
-    "Date": "November 8, 2026",
+    "Date": "2026-11-08T20:00:00.000Z",
     "Type": "Pts",
     "Race Name": "NASCAR Championship Race",
     "Track": "Homestead-Miami Speedway",
