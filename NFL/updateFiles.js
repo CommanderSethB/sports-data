@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 18;
-const STAT_END_WEEK = 7;
+const STAT_END_WEEK = 8;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
@@ -1645,7 +1645,7 @@ function buildWeekView(weekNum = STAT_END_WEEK + 1) {
             weekSchedule.push({
                 'Team': gameData[game]['Away Team'],
                 'Win%': awayWinPct.toFixed(4),
-                'PredScore': predictedScore(gameData[game]['Away ID'], gameData[game]['Home ID']),
+//                'PredScore': predictedScore(gameData[game]['Away ID'], gameData[game]['Home ID']),
                 'FinalScore': awayScore,
                 'Winner': actualWinner,
                 'ML': gameData[game]['Away ML'],
@@ -1656,7 +1656,7 @@ function buildWeekView(weekNum = STAT_END_WEEK + 1) {
             weekSchedule.push({
                 'Team': gameData[game]['Home Team'],
                 'Win%': homeWinPct.toFixed(4),
-                'PredScore': parseInt(predictedScore(gameData[game]['Home ID'], gameData[game]['Away ID'])) + HOME_FIELD,
+//                'PredScore': parseInt(predictedScore(gameData[game]['Home ID'], gameData[game]['Away ID'])) + HOME_FIELD,
                 'FinalScore': homeScore,
                 'Winner': predCorrect,
                 'ML': gameData[game]['Home ML'],

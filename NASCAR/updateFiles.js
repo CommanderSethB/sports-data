@@ -21,6 +21,7 @@ async function main(){
     await fetchSchedule();
     console.log("Fetching race data...");
     await fetchRaceData();
+    console.log("All files updated successfully.");
 }
 
 // This function hits up NASCAR's API to fetch the schedule json, 
