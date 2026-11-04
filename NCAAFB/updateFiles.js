@@ -958,7 +958,7 @@ async function updateSchedules() {
     let schedules = [];
     for (let team in teamList) { 
         schedules.push({
-            "Team ID": teamList[team].ID,
+            "Team ID": teamList[team]['Team ID'],
             "Week 1": null, "Week 2": null, "Week 3": null, "Week 4": null,
             "Week 5": null, "Week 6": null, "Week 7": null, "Week 8": null,
             "Week 9": null, "Week 10": null, "Week 11": null, "Week 12": null,
