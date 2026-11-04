@@ -11,14 +11,14 @@ const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
 
 // Weight distribution for Power Rankings calculation (must add up to 1.0)
-const RATING_WEIGHT_REC = 0.3;      // 0.30 - Record weight
-const RATING_WEIGHT_PE = 0.1;       // 0.40 - Pythagorean Expectation weight
-const RATING_WEIGHT_TOF = 0.05;     // 0.45 - Turnover Factor weight
-const RATING_WEIGHT_TDP = 0.1;      // 0.55 - Touchdown Points Percentage weight
-const RATING_WEIGHT_SBP = 0.25;     // 0.80 - Strength Based Power weight
-const RATING_WEIGHT_SOS = 0.1;      // 0.90 - Strength of Schedule weight
-const RATING_WEIGHT_MOM = 0.1;      // 1.00 - Momentum weight
-const RATING_WEIGHT_HEALTH = 0.0;   // 1.00 - Team Health weight
+const RATING_WEIGHT_REC = 0.25;      // 0.25 - Record weight
+const RATING_WEIGHT_PE = 0.1;       // 0.35 - Pythagorean Expectation weight
+const RATING_WEIGHT_TOF = 0.05;     // 0.40 - Turnover Factor weight
+const RATING_WEIGHT_TDP = 0.1;      // 0.50 - Touchdown Points Percentage weight
+const RATING_WEIGHT_SBP = 0.2;     // 0.70 - Strength Based Power weight
+const RATING_WEIGHT_SOS = 0.1;      // 0.80 - Strength of Schedule weight
+const RATING_WEIGHT_MOM = 0.1;      // 0.90 - Momentum weight
+const RATING_WEIGHT_CONF = 0.1;   // 1.00 - Team Health weight
 
 // ESPN API Endpoints
 const REGSEASON_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?groups=80&limit=150&seasontype=2&dates=";
@@ -1143,30 +1143,36 @@ function predictionPercentage(teamA, teamB) {
     let teamStats = JSON.parse(rawData);
     
     let teamADict = teamStats.find(x => x['Team ID'] === teamA);
-    let teamAGamesPlayed = parseInt(teamADict['GP']);
+    let teamBDict = teamStats.find(x => x['Team ID'] === teamB);
+
+    // Safeguard against missing team stats
+    if (!teamADict || !teamBDict) return (0.5).toFixed(4);
+
+    let teamAGamesPlayed = parseInt(teamADict['GP']) || 1;
     let teamAPointsFor = parseInt(teamADict['PF']) / teamAGamesPlayed;
     let teamATDPts = getTeamTDPtsPercentage(teamA, "for");
     let teamATA = (parseInt(teamADict['Int']) + (parseInt(teamADict['Recovered']) - (parseInt(teamADict['Fumble']) - parseInt(teamADict['Lost'])))) / teamAGamesPlayed;
     let teamAMom = getMomentum(getStreak(teamA), teamAGamesPlayed);
-//    let teamAHealthScore = getHealthScore(teamA);
 
-    let teamBDict = teamStats.find(x => x['Team ID'] === teamB);
-    let teamBGamesPlayed = parseInt(teamBDict['GP']);
+    let teamBGamesPlayed = parseInt(teamBDict['GP']) || 1;
     let teamBPointsFor = parseInt(teamBDict['PF']) / teamBGamesPlayed;
     let teamBTDPts = getTeamTDPtsPercentage(teamB, "for");
     let teamBTA = (parseInt(teamBDict['Int']) + (parseInt(teamBDict['Recovered']) - (parseInt(teamBDict['Fumble']) - parseInt(teamBDict['Lost'])))) / teamBGamesPlayed;
     let teamBMom = getMomentum(getStreak(teamB), teamBGamesPlayed);
-//    let teamBHealthScore = getHealthScore(teamB);
 
     rawData = fs.readFileSync('./NCAAFB/data/teamAllowedStats.json', 'utf-8');
     teamStats = JSON.parse(rawData);
 
     teamADict = teamStats.find(x => x['Team ID'] === teamA);
+    teamBDict = teamStats.find(x => x['Team ID'] === teamB);
+
+    // Safeguard against missing allowed stats
+    if (!teamADict || !teamBDict) return (0.5).toFixed(4);
+
     let teamAPointsAll = parseInt(teamADict['PF']) / teamAGamesPlayed;
     let teamATDPtsAll = getTeamTDPtsPercentage(teamA, "allowed");
     let teamATAAll = (parseInt(teamADict['Int']) + (parseInt(teamADict['Recovered']) - (parseInt(teamADict['Fumble']) - parseInt(teamADict['Lost'])))) / teamAGamesPlayed;
 
-    teamBDict = teamStats.find(x => x['Team ID'] === teamB);
     let teamBPointsAll = parseInt(teamBDict['PF']) / teamBGamesPlayed;
     let teamBTDPtsAll = getTeamTDPtsPercentage(teamB, "allowed");
     let teamBTAAll = (parseInt(teamBDict['Int']) + (parseInt(teamBDict['Recovered']) - (parseInt(teamBDict['Fumble']) - parseInt(teamBDict['Lost'])))) / teamBGamesPlayed;
@@ -1177,10 +1183,9 @@ function predictionPercentage(teamA, teamB) {
     let turnoverPercent = 1.0 - aPercentB(teamATAAll, teamBTAAll);
     let touchdownPercent = aPercentB(teamATDPts, teamBTDPts);
     let touchdownAllPercent = 1.0 - aPercentB(teamATDPtsAll, teamBTDPtsAll);
-    let momentumPercent = aPercentB(teamAMom, teamBMom);
-//    let healthPercent = aPercentB(teamAHealthScore, teamBHealthScore);  
+    let momentumPercent = aPercentB(teamAMom, teamBMom);  
 
-    let percentSum = parseFloat(pointsForPercent) + parseFloat(pointsAllPercent) + parseFloat(takeawayPercent) + parseFloat(touchdownPercent) + parseFloat(turnoverPercent) + parseFloat(touchdownAllPercent) + parseFloat(momentumPercent);// + parseFloat(healthPercent);
+    let percentSum = parseFloat(pointsForPercent) + parseFloat(pointsAllPercent) + parseFloat(takeawayPercent) + parseFloat(touchdownPercent) + parseFloat(turnoverPercent) + parseFloat(touchdownAllPercent) + parseFloat(momentumPercent);
     let finalPercent = percentSum / 8;
 
     return finalPercent.toFixed(4);
@@ -1208,12 +1213,12 @@ function updateSBP() {
     let max = 0.0;
 
     for (let teamY in teamList) {
-        sbp.push({ "Team ID": teamList[teamY]['ID'] });
+        sbp.push({ "Team ID": teamList[teamY]['Team ID'] });
         let sum = 0.0;
 
         for (let teamX in teamList) {
-            let pct = parseFloat(predictionPercentage(teamList[teamY]['ID'], teamList[teamX]['ID']));
-            sbp[teamY][teamList[teamX]['ID']] = pct.toFixed(4);
+            let pct = parseFloat(predictionPercentage(teamList[teamY]['Team ID'], teamList[teamX]['Team ID']));
+            sbp[teamY][teamList[teamX]['Team ID']] = pct.toFixed(4);
             sum += pct;
         }
 
@@ -1309,6 +1314,7 @@ function updatePowerRankings() {
         let sbp = parseFloat(getTeamSBP(teamID));
         let sos = parseFloat(getTeamStrengthOfSchedule(teamID));
         let momentum = parseFloat(getMomentum(standings[currentTeam]['Streak'], standings[currentTeam]['GP']));
+        let conf = parseFloat(getConfNonConfRecord(standings[currentTeam]['Conference']));
 
         let rating = 
             record * RATING_WEIGHT_REC + 
@@ -1317,7 +1323,8 @@ function updatePowerRankings() {
             touchdownFactor * RATING_WEIGHT_TDP + 
             sbp * RATING_WEIGHT_SBP + 
             sos * RATING_WEIGHT_SOS + 
-            momentum * RATING_WEIGHT_MOM;
+            momentum * RATING_WEIGHT_MOM + 
+            conf * RATING_WEIGHT_CONF;
 
         powerRankings.push({
             'Rk': null,
@@ -1330,6 +1337,7 @@ function updatePowerRankings() {
             'TD Fact': touchdownFactor.toFixed(4),
             'SOS': sos.toFixed(4),
             'Mom': momentum.toFixed(4),
+            'Conf': conf.toFixed(4),
             'Rating': rating.toFixed(4)            
         });
     }
@@ -1354,6 +1362,34 @@ function updatePowerRankings() {
     }
 
     fs.writeFileSync('./NCAAFB/data/powerRankings.json', JSON.stringify(powerRankings, null, 2));
+}
+
+function getConfNonConfRecord(conf) {
+    let rawData = fs.readFileSync('./NCAAFB/data/standings.json', 'utf-8');
+    let standings = JSON.parse(rawData);
+    let confWins = 0;
+    let confLosses = 0;
+    let confTies = 0;    
+    let nonConfWins = 0;
+    let nonConfLosses = 0;
+    let nonConfTies = 0;
+
+    for (let team in standings) {
+        if (standings[team]['Conference'] === conf) {
+            let rec = standings[team]['Conf'].split('-');
+            confWins += parseInt(rec[0]);
+            confLosses += parseInt(rec[1]);
+            confTies += parseInt(rec[2]);
+
+            rec = standings[team]['Record'].split('-');
+            nonConfWins += parseInt(rec[0]) - confWins;
+            nonConfLosses += parseInt(rec[1]) - confLosses;
+            nonConfTies += parseInt(rec[2]) - confTies;
+        }
+    }
+
+    let nonConfRec = (nonConfWins  + nonConfTies / 2) / (nonConfWins + nonConfLosses + nonConfTies);
+    return nonConfRec.toFixed(4);
 }
 
 function updateTeamWeeklyRankingFile(teamName, currentRk) {
