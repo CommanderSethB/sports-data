@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 18;
-const STAT_END_WEEK = 8;
+const STAT_END_WEEK = 9;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
@@ -22,10 +22,8 @@ const RATING_WEIGHT_HEALTH = 0.0;   // 1.00 - Team Health weight
 
 // ESPN API Endpoints
 const REGSEASON_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?groups=80&limit=150&seasontype=2&dates=";
-const TEAMS_URL = "https://site.api.espn.com/apis/site/v2/sports/football/college-football/teams";
 const BOXSCORE_BASE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=";
-const INJURY_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/injuries";
-const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/";
+const TEAM_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/teams/";
 
 const fs = require('fs');
 
@@ -36,12 +34,8 @@ async function main() {
     try {
         console.log("Updating live scoring data...");
         await updateGames();
-//        console.log("Updating injury report...");
-//        await updateInjuryReport();
-        console.log("Updating team list...");
-        await updateTeams();
-//        console.log("Updating depth charts...");
-//        await updateDepthCharts();
+        console.log("Building teamList");
+        await buildTeamList();
         console.log("Updating schedules...");
         await updateSchedules();
         console.log("Updating standings...");
@@ -55,65 +49,6 @@ async function main() {
         console.log("All files updated successfully!");
     } catch (err) {
         console.error("Error in main execution pipeline:", err);
-    }
-}
-
-/**
- * Fetches and parses the current NCAAFB injury report across all teams.
- */
-async function updateInjuryReport() {
-    let result = [];
-
-    try {
-        const response = await fetch(INJURY_URL);
-        const data = await response.json();
-
-        // Loop through each team and their corresponding injuries
-        for (let team = 0; team < data.injuries.length; team++) {
-            let teamID = data.injuries[team].id;
-
-            for (let injury = 0; injury < data.injuries[team].injuries.length; injury++) {
-                let currentInjury = data.injuries[team].injuries[injury];
-                let playerLink = currentInjury.athlete.links[0].href;
-                let playerID = playerLink.split("/")[7];
-                let playerName = currentInjury.athlete.displayName;
-                let injuryStatus = convertInjuryStatus(currentInjury.type.name);
-                let playerScore = convertInjuryStatusToScore(currentInjury.type.name);
-
-                result.push({ teamID, playerID, playerName, injuryStatus, playerScore });
-            }
-        }
-    } catch (err) {
-        console.error("Error fetching injury report:", err);
-    }
-
-    // Save injury data to disk with 2-space indentation formatting
-    fs.writeFileSync('./NCAAFB/data/injuryReport.json', JSON.stringify(result, null, 2));
-}
-
-function convertInjuryStatus(inj_status) {
-    switch (inj_status) {
-        case "INJURY_STATUS_ACTIVE": return "Active";
-        case "INJURY_STATUS_OUT": return "Out";
-        case "INJURY_STATUS_QUESTIONABLE": return "Questionable";
-        case "INJURY_STATUS_IR": return "IR";
-        case "INJURY_STATUS_DOUBTFUL": return "Doubtful";
-        case "INJURY_STATUS_SUSPENSION": return "Suspended";
-        case "INJURY_STATUS_PROBABLE": return "Probable";
-        default: return inj_status;
-    }
-}
-  
-function convertInjuryStatusToScore(inj_status) {
-    switch (inj_status) {
-        case "INJURY_STATUS_ACTIVE": return 1.0;
-        case "INJURY_STATUS_OUT": return 0.0;
-        case "INJURY_STATUS_QUESTIONABLE": return 0.5;
-        case "INJURY_STATUS_IR": return -0.5;
-        case "INJURY_STATUS_DOUBTFUL": return 0.25;
-        case "INJURY_STATUS_SUSPENSION": return -0.5;
-        case "INJURY_STATUS_PROBABLE": return 0.75;
-        default: return inj_status;
     }
 }
 
@@ -395,6 +330,83 @@ function processBoxscore(boxscoreData, statList) {
     }
 }
 
+async function buildTeamList() {
+    let scoreData = await JSON.parse(fs.readFileSync('./NCAAFB/data/liveScoring.json'));
+    let teamList = [];
+
+    for(let game in scoreData) {
+        let homeTeam = scoreData[game]["Home ID"];
+        let awayTeam = scoreData[game]["Away ID"];
+
+        try {
+            if (teamList.find(team => team["Team ID"] === homeTeam) === undefined && parseInt(homeTeam) >= 0) {
+                let url = TEAM_URL + homeTeam;
+                let rawTeamData = await fetch(url);
+                let teamData = await rawTeamData.json();
+                let teamAbbr = teamData.team.abbreviation;
+                let teamColor = `#${teamData.team.color}`;
+                let teamConf = getConferenceByID(teamData.team.groups.id);
+                let teamLogo = teamData.team.logos[0].href;
+
+                teamList.push({ 
+                    "Team ID": homeTeam,
+                    "Team Name": scoreData[game]["Home Team"],
+                    "Abbr": teamAbbr,
+                    "Conference": teamConf,
+                    "Color": teamColor,
+                    "Logo": teamLogo
+                });
+            }
+        } catch (err) {
+            console.error(`Error fetching data for home team ${homeTeam}:`, err);
+        }
+
+        try {
+            if (teamList.find(team => team["Team ID"] === awayTeam) === undefined && parseInt(awayTeam) >= 0) {
+                let url = TEAM_URL + awayTeam;
+                let rawTeamData = await fetch(url);
+                let teamData = await rawTeamData.json();
+                let teamAbbr = teamData.team.abbreviation;
+                let teamColor = `#${teamData.team.color}`;
+                let teamConf = getConferenceByID(teamData.team.groups.id);
+                let teamLogo = teamData.team.logos[0].href;
+
+                teamList.push({ 
+                    "Team ID": awayTeam,
+                    "Team Name": scoreData[game]["Away Team"],
+                    "Abbr": teamAbbr,
+                    "Conference": teamConf,
+                    "Color": teamColor,
+                    "Logo": teamLogo
+                });
+            }
+        } catch (err) {
+            console.error(`Error fetching data for away team ${awayTeam}:`, err);
+        }
+    }
+
+    teamList.sort((a, b) => a["Team ID"] - b["Team ID"]);
+
+    fs.writeFileSync('./NCAAFB/data/teamList.json', JSON.stringify(teamList, null, 2));
+}
+
+function getConferenceByID(confID) {
+    switch (confID) {
+        case "1": return "ACC";
+        case "4": return "B12";
+        case "5": return "B10";
+        case "8": return "SEC";
+        case "9": return "P12";
+        case "12": return "CUSA";
+        case "15": return "MAC";
+        case "17": return "MWC";
+        case "18": return "Ind";
+        case "37": return "SBC";
+        case "80": return "AAC";
+        default: return "Other";
+    }
+}
+
 /**
  * Aggregates individual player stats across the season.
  */
@@ -562,102 +574,12 @@ function updatePlayerStats(statList) {
 
 function calculatePasserRating(cmp, att, yds, tds, int) {
     if (att === 0) return "0.0";
-    let a = passerRatingBound(5.0 * ((cmp / att) - 0.3));
-    let b = passerRatingBound(0.25 * ((yds / att) - 3.0));
-    let c = passerRatingBound(20.0 * (tds / att));
-    let d = 2.375 - passerRatingBound(25.0 * (int / att));
-    let rating = 100.0 * ((a + b + c + d) / 6.0);
+    let a = 8.4 * parseInt(yds);
+    let b = 330 * parseInt(tds);
+    let c = 100 * parseInt(cmp);
+    let d = 200 * parseInt(int);
+    let rating = (a + b + c - d) / parseInt(att);
     return rating.toFixed(1);
-}
-
-function passerRatingBound(num) {
-    let max = 2.375;
-    let min = 0.0;
-    
-    if (num > max) return max;
-    if (num < min) return min;
-    return num;
-}
-
-/**
- * Fetches current team profiles and metadata from the NCAAFB teams endpoint.
- */
-async function updateTeams() {
-    let teamList = [];
-
-    try {
-        const response = await fetch(TEAMS_URL);
-        const data = await response.json();
-        let teams = data.sports[0].leagues[0].teams;
-
-        for (let team = 0; team < teams.length; team++) {
-            let currentTeam = teams[team].team;
-            let teamID = currentTeam.id;
-            let teamName = currentTeam.displayName;
-            let teamAbbreviation = currentTeam.abbreviation;
-            let teamColor = `#${currentTeam.color}`;
-            let teamLogo = currentTeam.logos[0].href;
-            let division = getDivision(teamID);
-
-            teamList.push({ "ID": teamID, "Abbr": teamAbbreviation, "Name": teamName, "Color": teamColor, "Logo": teamLogo, "Division": division });
-        }
-    } catch (error) {
-        console.error("Error fetching teams data:", error);
-    }
-
-    teamList.sort((a, b) => a.ID - b.ID);
-    fs.writeFileSync('./NCAAFB/data/teamList.json', JSON.stringify(teamList, null, 2));
-}
-
-/**
- * Fetches depth charts concurrently for all teams.
- */
-async function updateDepthCharts() {
-    let rawData = fs.readFileSync('./NCAAFB/data/teamList.json', 'utf-8');
-    let teamList = JSON.parse(rawData);     
-
-    let depthCharts = [];
-
-    // Concurrent fetch using Promise.all mapping over the team list
-    const promises = teamList.map(async (team) => {
-        let teamID = team.ID;
-        let url = `${DEPTH_CHART_URL}${SEASON}/teams/${teamID}/depthcharts`;
-
-        try {
-            let response = await fetch(url);
-            let data = await response.json();
-
-            for (let i = 0; i < data.items.length; i++) {
-                let unit = data.items[i].positions;
-
-                for (let pos in unit) {
-                    let position = unit[pos].position.abbreviation;
-                    let row = { 'Team': teamID, 'Position': position, 'First': null, 'Second': null, 'Third': null, 'Fourth': null, 'Fifth': null };
-
-                    for (let ath = 0; ath < unit[pos].athletes.length; ath++) {
-                        let currentAthleteLink = unit[pos].athletes[ath].athlete['$ref'];
-                        let playerID = currentAthleteLink.split("/")[11].split('?')[0];
-
-                        let rank = "X";
-                        switch (ath) {
-                            case 0: rank = "First"; break;
-                            case 1: rank = "Second"; break;
-                            case 2: rank = "Third"; break;
-                            case 3: rank = "Fourth"; break;
-                            case 4: rank = "Fifth"; break;
-                        }
-                        row[rank] = playerID;
-                    }
-                    depthCharts.push(row);
-                }
-            }
-        } catch (error) {
-            console.error(`Error fetching depth chart for team ${teamID}:`, error);
-        }
-    });
-
-    await Promise.all(promises);
-    fs.writeFileSync('./NCAAFB/data/depthCharts.json', JSON.stringify(depthCharts, null, 2));
 }
 
 /**
@@ -1016,17 +938,10 @@ function updateTeamAllowedStats(statList, gameData) {
     fs.writeFileSync('./NCAAFB/data/teamAllowedStats.json', JSON.stringify(newStatList, null, 2));
 }
 
-function getDivision(teamID) {
-    let rawData = fs.readFileSync('./NCAAFB/data/divisions.json', 'utf-8');
-    let divisions = JSON.parse(rawData);
-    let team = divisions.find(x => x['ID'] === teamID);
-    return `${team['Conference']} ${team['Division']}`;
-}
-
 function getConference(teamID) {
-    let rawData = fs.readFileSync('./NCAAFB/data/divisions.json', 'utf-8');
+    let rawData = fs.readFileSync('./NCAAFB/data/teamList.json', 'utf-8');
     let divisions = JSON.parse(rawData);
-    let team = divisions.find(x => x['ID'] === teamID);
+    let team = divisions.find(x => x['Team ID'] === teamID);
     return team['Conference'];
 }
 
@@ -1106,7 +1021,7 @@ async function generateStandings() {
     let teamList = JSON.parse(rawData);
 
     for (let team in teamList) {
-        let teamID = teamList[team]['ID'];
+        let teamID = teamList[team]['Team ID'];
         let win = getLiveScoringItem(teamID, "wins", "all");
         let los = getLiveScoringItem(teamID, "loss", "all");
         let tie = getLiveScoringItem(teamID, "ties", "all");
@@ -1128,13 +1043,6 @@ async function generateStandings() {
         let gpAway = win + los + tie;
         let recDecAway = gpAway === 0 ? 0 : (win + tie / 2) / gpAway;
 
-        win = getLiveScoringItem(teamID, "wins", "div");
-        los = getLiveScoringItem(teamID, "loss", "div");
-        tie = getLiveScoringItem(teamID, "ties", "div");
-        let recDiv = `${win}-${los}-${tie}`;
-        let gpDiv = win + los + tie;
-        let recDecDiv = gpDiv === 0 ? 0 : (win + tie / 2) / gpDiv;
-
         win = getLiveScoringItem(teamID, "wins", "conf");
         los = getLiveScoringItem(teamID, "loss", "conf");
         tie = getLiveScoringItem(teamID, "ties", "conf");
@@ -1148,8 +1056,8 @@ async function generateStandings() {
 
         standings.push({
             "Team ID": teamID,
-            "Team Name": teamList[team]['Name'],
-            "Division": teamList[team]['Division'],
+            "Team Name": teamList[team]['Team Name'],
+            "Conference": teamList[team]['Conference'],
             "GP": gp,
             "Record": rec,
             "Rec%": recDec.toFixed(4),
@@ -1157,8 +1065,6 @@ async function generateStandings() {
             "Home%": recDecHome.toFixed(4),
             "Away": recAway, 
             "Away%": recDecAway.toFixed(4),
-            "Div": recDiv,
-            "Div%": recDecDiv.toFixed(4),
             "Conf": recConf,
             "Conf%": recDecConf.toFixed(4),
             "PF": pf,
@@ -1168,7 +1074,7 @@ async function generateStandings() {
         });
     }
 
-    standings.sort((a, b) => a['Division'].localeCompare(b['Division']) || tieBreak(a, b));
+    standings.sort((a, b) => a['Conference'].localeCompare(b['Conference']) || tieBreak(a, b));
     fs.writeFileSync('./NCAAFB/data/standings.json', JSON.stringify(standings, null, 2));
 }
 
@@ -1210,115 +1116,18 @@ function getLiveScoringItem(teamID, item, type = "all") {
 
                 else {
                     let sameConf = getConference(gameData[game]['Away ID']) === getConference(gameData[game]['Home ID']);
-                    let sameDiv = getDivision(gameData[game]['Away ID']) === getDivision(gameData[game]['Home ID']);
 
                     if (item === "wins" && type === "conf" && sameConf && winner === teamID) dataPoint += 1;
                     else if (item === "loss" && type === "conf" && sameConf && winner !== teamID && winner !== "Tie") dataPoint += 1;
                     else if (item === "ties" && type === "conf" && sameConf && winner === "Tie") dataPoint += 1;
                     else if (item === "pf" && type === "conf" && sameConf) dataPoint += parseInt(isHome ? gameData[game]['Home Score'] : gameData[game]['Away Score']);
                     else if (item === "pa" && type === "conf" && sameConf) dataPoint += parseInt(isHome ? gameData[game]['Away Score'] : gameData[game]['Home Score']);
-
-                    else if (item === "wins" && type === "div" && sameDiv && winner === teamID) dataPoint += 1;
-                    else if (item === "loss" && type === "div" && sameDiv && winner !== teamID && winner !== "Tie") dataPoint += 1;
-                    else if (item === "ties" && type === "div" && sameDiv && winner === "Tie") dataPoint += 1;
-                    else if (item === "pf" && type === "div" && sameDiv) dataPoint += parseInt(isHome ? gameData[game]['Home Score'] : gameData[game]['Away Score']);
-                    else if (item === "pa" && type === "div" && sameDiv) dataPoint += parseInt(isHome ? gameData[game]['Away Score'] : gameData[game]['Home Score']);
                 }
             }
         }
     }
 
     return dataPoint;
-}
-
-/**
- * Calculates team health scores based on depth chart positions and player injury reports.
- */
-function getHealthScore(teamID) {
-    let rawData = fs.readFileSync('./NCAAFB/data/depthCharts.json', 'utf-8');
-    let depthCharts = JSON.parse(rawData);
-    let playerList = [];
-
-    for (let position in depthCharts) {
-        if (depthCharts[position]['Team'] === teamID) {
-            let positionWeight = getPositionWeight(depthCharts[position]['Position']);
-            let strings = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
-            let multipliers = [1.0, 0.8, 0.6, 0.4, 0.2];
-
-            for (let idx = 0; idx < strings.length; idx++) {
-                let playerID = depthCharts[position][strings[idx]];
-                if (playerID !== null) {
-                    let player = playerList.find(x => x['Player ID'] === playerID);
-                    let weightedImpact = positionWeight * multipliers[idx];
-
-                    if (player === undefined) {
-                        playerList.push({
-                            "Player ID": playerID,
-                            "Impact Score": weightedImpact,
-                            "Injury Score": getPlayerInjuryScore(playerID)                        
-                        });
-                    } else {
-                        player['Impact Score'] += weightedImpact;
-                    }
-                }
-            }
-        }
-    }
-
-    let teamImpactScore = 0.0;
-    let teamInjuryScore = 0.0;
-
-    for (let player in playerList) {
-        teamImpactScore += playerList[player]['Impact Score'];
-        teamInjuryScore += (playerList[player]['Impact Score'] * playerList[player]['Injury Score']);
-    }
-
-    if (teamImpactScore === 0) return (1.0).toFixed(4);
-    return (teamInjuryScore / teamImpactScore).toFixed(4);
-}
-
-function getPositionWeight(pos) {  
-    switch (pos) {
-        case "LDE": return 0.80;
-        case "NT":  return 0.85;
-        case "RDE": return 0.95;
-        case "WLB": return 0.90;
-        case "MLB": return 1.00;
-        case "SLB": return 0.85;
-        case "LCB": return 0.90;
-        case "SS":  return 0.80;
-        case "FS":  return 0.85;
-        case "RCB": return 0.85;
-        case "NB":  return 0.75;
-        case "K":   return 0.50;
-        case "P":   return 0.50;
-        case "H":   return 0.25;
-        case "PR":  return 0.65;
-        case "KR":  return 0.70;
-        case "LS":  return 0.50;
-        case "WR":  return 0.85;
-        case "LT":  return 0.95;
-        case "LG":  return 0.80;
-        case "C":   return 0.85;
-        case "RG":  return 0.80;
-        case "RT":  return 0.90;
-        case "QB":  return 1.00;
-        case "TE":  return 0.75;
-        case "RB":  return 0.80;
-        default: return 0.5;
-    }
-}
-
-function getPlayerInjuryScore(playerID) {
-    let rawData = fs.readFileSync('./NCAAFB/data/injuryReport.json', 'utf-8');
-    let injuryReport = JSON.parse(rawData);
-    let injuryScoreIndex = injuryReport.find(x => x.playerID === playerID);
-
-    if (injuryScoreIndex === undefined) { 
-        return 1.0;
-    } else {
-        return parseFloat(injuryScoreIndex.playerScore);
-    }
 }
 
 function aPercentB(a, b, power = 1) {
@@ -1500,7 +1309,6 @@ function updatePowerRankings() {
         let sbp = parseFloat(getTeamSBP(teamID));
         let sos = parseFloat(getTeamStrengthOfSchedule(teamID));
         let momentum = parseFloat(getMomentum(standings[currentTeam]['Streak'], standings[currentTeam]['GP']));
-//        let health = parseFloat(getHealthScore(teamID));
 
         let rating = 
             record * RATING_WEIGHT_REC + 
@@ -1509,8 +1317,7 @@ function updatePowerRankings() {
             touchdownFactor * RATING_WEIGHT_TDP + 
             sbp * RATING_WEIGHT_SBP + 
             sos * RATING_WEIGHT_SOS + 
-            momentum * RATING_WEIGHT_MOM;// + 
- //           health * RATING_WEIGHT_HEALTH;
+            momentum * RATING_WEIGHT_MOM;
 
         powerRankings.push({
             'Rk': null,
@@ -1523,7 +1330,6 @@ function updatePowerRankings() {
             'TD Fact': touchdownFactor.toFixed(4),
             'SOS': sos.toFixed(4),
             'Mom': momentum.toFixed(4),
-//            'Health': health.toFixed(4),
             'Rating': rating.toFixed(4)            
         });
     }
@@ -1555,7 +1361,17 @@ function updateTeamWeeklyRankingFile(teamName, currentRk) {
     let weeklyRankings = JSON.parse(rawData);
 
     let team = weeklyRankings.find(x => x['Team Name'] === teamName);
-    team[STAT_END_WEEK] = currentRk;
+    
+    // Safeguard against missing teams in weeklyRankings.json
+    if (!team) {
+        weeklyRankings.push({
+            'Team Name': teamName,
+            [STAT_END_WEEK]: currentRk
+        });
+    }
+    else {
+        team[STAT_END_WEEK] = currentRk;        
+    }
 
     let movement = 0;
 
@@ -1673,7 +1489,7 @@ function getTeamAbbreviation(teamName) {
     let rawData = fs.readFileSync('./NCAAFB/data/teamList.json', 'utf-8');
     let teamList = JSON.parse(rawData);
 
-    return teamList.find(x => x['Name'] === teamName)['Abbr'];
+    return teamList.find(x => x['Team Name'] === teamName)['Abbr'];
 }
 
 function teamSpread(team, spread) {
