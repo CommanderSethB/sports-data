@@ -238,16 +238,23 @@ function processBoxscore(boxscoreData, statList) {
     for (let boxScoreTeam = 0; boxScoreTeam < boxScoreTeams.length; boxScoreTeam++) {
         let currentBoxScoreTeam = boxScoreTeams[boxScoreTeam];
         let boxScorePlayerList = [];
+        let playerNames = {};
         let teamID = currentBoxScoreTeam.team.id;
         let oppID = boxScoreTeams[1 - boxScoreTeam].team.id;
 
-        // Collect unique player IDs from team statistics categories
+        // Collect unique player IDs and names from team statistics categories
         for (let stat = 0; stat < currentBoxScoreTeam.statistics.length; stat++) {
             let currentStat = currentBoxScoreTeam.statistics[stat];
             for (let boxScorePlayer = 0; boxScorePlayer < currentStat.athletes.length; boxScorePlayer++) {
                 let currentPlayer = currentStat.athletes[boxScorePlayer];
-                if (!boxScorePlayerList.includes(currentPlayer.athlete.id)) {
-                    boxScorePlayerList.push(currentPlayer.athlete.id);
+                let playerId = currentPlayer.athlete.id;
+                let playerName = currentPlayer.athlete.displayName;
+
+                if (!boxScorePlayerList.includes(playerId)) {
+                    boxScorePlayerList.push(playerId);
+                }
+                if (playerName && !playerNames[playerId]) {
+                    playerNames[playerId] = playerName;
                 }
             }
         }
@@ -274,6 +281,7 @@ function processBoxscore(boxscoreData, statList) {
             let puntsInside20 = 0, longestPunt = 0;
 
             let currentPlayerID = boxScorePlayerList[boxScorePlayer];
+            let currentPlayerName = playerNames[currentPlayerID] || null;
             let splitString;
 
             for (let stat = 0; stat < currentBoxScoreTeam.statistics.length; stat++) {
@@ -371,6 +379,7 @@ function processBoxscore(boxscoreData, statList) {
 
             statList.push({
                 playerID: currentPlayerID,
+                playerName: currentPlayerName,
                 teamID,
                 oppID, 
                 passCompletions, passAttempts, passYards, passYardsPerAttempt,
@@ -410,6 +419,7 @@ function updatePlayerStats(statList) {
 
     for (let i = 0; i < playerList.length; i++) {
         let teamID = null;
+        let playerName = null;
         let gamesPlayed = 0;
         let passCompletions = 0, passAttempts = 0, passYards = 0, passYardsPerAttempt = 0;
         let passTouchdowns = 0, passInterceptions = 0, passSacks = 0, passSackYards = 0;
@@ -432,6 +442,9 @@ function updatePlayerStats(statList) {
         for (let j = 0; j < statList.length; j++) {
             if (statList[j].playerID === playerList[i]) {
                 teamID = statList[j].teamID;
+                if (statList[j].playerName) {
+                    playerName = statList[j].playerName;
+                }
                 gamesPlayed += 1;
                 passCompletions += parseInt(statList[j].passCompletions);
                 passAttempts += parseInt(statList[j].passAttempts);
@@ -496,6 +509,7 @@ function updatePlayerStats(statList) {
 
         newStatList.push({
             "Player ID": playerList[i],
+            "Player Name": playerName,
             "Team ID": teamID,
             "GP": gamesPlayed, 
             "Com": passCompletions,
@@ -1495,7 +1509,7 @@ function updatePowerRankings() {
         let teamID = standings[currentTeam]['Team ID'];
         let record = parseFloat(standings[currentTeam]['Rec%']);
         let pyth = parseFloat(pythagoreanExpectation(teamID));
-        let turnoverFactor = parseFloat(getTeamTurnoverFactor ? getTeamTurnoverFactor(teamID) : 0);
+        let turnoverFactor = parseFloat(getTeamTurnoverFactor(teamID) ? getTeamTurnoverFactor(teamID) : 0);
         let touchdownFactor = parseFloat(getTeamTDPtsPercentage(teamID));
         let sbp = parseFloat(getTeamSBP(teamID));
         let sos = parseFloat(getTeamStrengthOfSchedule(teamID));
