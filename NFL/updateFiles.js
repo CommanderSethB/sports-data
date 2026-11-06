@@ -30,7 +30,9 @@ const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/lea
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-main();
+//main();
+
+buildBettingSheets();
 
 async function main() {
     try {
@@ -1697,4 +1699,95 @@ function teamSpread(team, spread) {
 
     if(splitSpread[0] === getTeamAbbreviation(team)) return spread;
     return getTeamAbbreviation(team) + " " + splitSpread[1].replace("-", "+");
+}
+
+async function buildBettingSheets(){
+    let rawData = fs.readFileSync('./NFL/data/boxScores.json', 'utf-8');
+    let boxscoreData = JSON.parse(rawData);
+    let passBettingSheet = [];
+
+    for(let statLine in boxscoreData) {
+        if(parseInt(boxscoreData[statLine]['passAttempts']) > 0) {
+            let currentPlayer = passBettingSheet.find(x => x['Player ID'] === boxscoreData[statLine]['playerID']);
+
+            if(currentPlayer){
+                currentPlayer['GP'] = parseInt(currentPlayer['GP']) + 1;
+                currentPlayer['20+ CMP'] = parseInt(currentPlayer['20+ CMP']) + (parseInt(boxscoreData[statLine]['passCompletions']) >= 20 ? 1 : 0);
+                currentPlayer['25+ CMP'] = parseInt(currentPlayer['25+ CMP']) + (parseInt(boxscoreData[statLine]['passCompletions']) >= 25 ? 1 : 0);
+                currentPlayer['30+ CMP'] = parseInt(currentPlayer['30+ CMP']) + (parseInt(boxscoreData[statLine]['passCompletions']) >= 30 ? 1 : 0);
+                currentPlayer['35+ CMP'] = parseInt(currentPlayer['35+ CMP']) + (parseInt(boxscoreData[statLine]['passCompletions']) >= 35 ? 1 : 0);
+                currentPlayer['30+ ATT'] = parseInt(currentPlayer['30+ ATT']) + (parseInt(boxscoreData[statLine]['passAttempts']) >= 30 ? 1 : 0);
+                currentPlayer['35+ ATT'] = parseInt(currentPlayer['35+ ATT']) + (parseInt(boxscoreData[statLine]['passAttempts']) >= 35 ? 1 : 0);
+                currentPlayer['40+ ATT'] = parseInt(currentPlayer['40+ ATT']) + (parseInt(boxscoreData[statLine]['passAttempts']) >= 40 ? 1 : 0);
+                currentPlayer['45+ ATT'] = parseInt(currentPlayer['45+ ATT']) + (parseInt(boxscoreData[statLine]['passAttempts']) >= 45 ? 1 : 0);
+                currentPlayer['150+ YDS'] = parseInt(currentPlayer['150+ YDS']) + (parseInt(boxscoreData[statLine]['passYards']) >= 150 ? 1 : 0);
+                currentPlayer['200+ YDS'] = parseInt(currentPlayer['200+ YDS']) + (parseInt(boxscoreData[statLine]['passYards']) >= 200 ? 1 : 0);
+                currentPlayer['250+ YDS'] = parseInt(currentPlayer['250+ YDS']) + (parseInt(boxscoreData[statLine]['passYards']) >= 250 ? 1 : 0);
+                currentPlayer['300+ YDS'] = parseInt(currentPlayer['300+ YDS']) + (parseInt(boxscoreData[statLine]['passYards']) >= 300 ? 1 : 0);
+                currentPlayer['350+ YDS'] = parseInt(currentPlayer['350+ YDS']) + (parseInt(boxscoreData[statLine]['passYards']) >= 350 ? 1 : 0);
+                currentPlayer['1+ TD'] = parseInt(currentPlayer['1+ TD']) + (parseInt(boxscoreData[statLine]['passTouchdowns']) >= 1 ? 1 : 0);
+                currentPlayer['2+ TD'] = parseInt(currentPlayer['2+ TD']) + (parseInt(boxscoreData[statLine]['passTouchdowns']) >= 2 ? 1 : 0);
+                currentPlayer['3+ TD'] = parseInt(currentPlayer['3+ TD']) + (parseInt(boxscoreData[statLine]['passTouchdowns']) >= 3 ? 1 : 0);
+                currentPlayer['1+ INT'] = parseInt(currentPlayer['1+ INT']) + (parseInt(boxscoreData[statLine]['passInterceptions']) >= 1 ? 1 : 0);
+                currentPlayer['2+ INT'] = parseInt(currentPlayer['2+ INT']) + (parseInt(boxscoreData[statLine]['passInterceptions']) >= 2 ? 1 : 0);
+                currentPlayer['3+ INT'] = parseInt(currentPlayer['3+ INT']) + (parseInt(boxscoreData[statLine]['passInterceptions']) >= 3 ? 1 : 0);
+            } else {
+                passBettingSheet.push({
+                    'Player ID': boxscoreData[statLine]['playerID'],
+                    'Player Name': boxscoreData[statLine]['playerName'],
+                    'GP': "1",
+                    '20+ CMP': parseInt(boxscoreData[statLine]['passCompletions']) >= 20 ? 1 : 0,
+                    '25+ CMP': parseInt(boxscoreData[statLine]['passCompletions']) >= 25 ? 1 : 0,
+                    '30+ CMP': parseInt(boxscoreData[statLine]['passCompletions']) >= 30 ? 1 : 0,
+                    '35+ CMP': parseInt(boxscoreData[statLine]['passCompletions']) >= 35 ? 1 : 0,
+                    '30+ ATT': parseInt(boxscoreData[statLine]['passAttempts']) >= 30 ? 1 : 0,
+                    '35+ ATT': parseInt(boxscoreData[statLine]['passAttempts']) >= 35 ? 1 : 0,
+                    '40+ ATT': parseInt(boxscoreData[statLine]['passAttempts']) >= 40 ? 1 : 0,
+                    '45+ ATT': parseInt(boxscoreData[statLine]['passAttempts']) >= 45 ? 1 : 0,
+                    '150+ YDS': parseInt(boxscoreData[statLine]['passYards']) >= 150 ? 1 : 0,
+                    '200+ YDS': parseInt(boxscoreData[statLine]['passYards']) >= 200 ? 1 : 0,
+                    '250+ YDS': parseInt(boxscoreData[statLine]['passYards']) >= 250 ? 1 : 0,
+                    '300+ YDS': parseInt(boxscoreData[statLine]['passYards']) >= 300 ? 1 : 0,
+                    '350+ YDS': parseInt(boxscoreData[statLine]['passYards']) >= 350 ? 1 : 0,
+                    '1+ TD': parseInt(boxscoreData[statLine]['passTouchdowns']) >= 1 ? 1 : 0,
+                    '2+ TD': parseInt(boxscoreData[statLine]['passTouchdowns']) >= 2 ? 1 : 0,
+                    '3+ TD': parseInt(boxscoreData[statLine]['passTouchdowns']) >= 3 ? 1 : 0,
+                    '1+ INT': parseInt(boxscoreData[statLine]['passInterceptions']) >= 1 ? 1 : 0,
+                    '2+ INT': parseInt(boxscoreData[statLine]['passInterceptions']) >= 2 ? 1 : 0,
+                    '3+ INT': parseInt(boxscoreData[statLine]['passInterceptions']) >= 3 ? 1 : 0
+                });
+            }
+        }
+    }
+
+    for(let player in passBettingSheet) {
+        let hits = 0;
+        let atts = parseInt(passBettingSheet[player]['GP']) * 19;
+        
+        hits += parseInt(passBettingSheet[player]['20+ CMP']);
+        hits += parseInt(passBettingSheet[player]['25+ CMP']);
+        hits += parseInt(passBettingSheet[player]['30+ CMP']);
+        hits += parseInt(passBettingSheet[player]['35+ CMP']);
+        hits += parseInt(passBettingSheet[player]['30+ ATT']);
+        hits += parseInt(passBettingSheet[player]['35+ ATT']);
+        hits += parseInt(passBettingSheet[player]['40+ ATT']);
+        hits += parseInt(passBettingSheet[player]['45+ ATT']);
+        hits += parseInt(passBettingSheet[player]['150+ YDS']);
+        hits += parseInt(passBettingSheet[player]['200+ YDS']);
+        hits += parseInt(passBettingSheet[player]['250+ YDS']);
+        hits += parseInt(passBettingSheet[player]['300+ YDS']);
+        hits += parseInt(passBettingSheet[player]['350+ YDS']);
+        hits += parseInt(passBettingSheet[player]['1+ TD']);
+        hits += parseInt(passBettingSheet[player]['2+ TD']);
+        hits += parseInt(passBettingSheet[player]['3+ TD']);
+        hits += parseInt(passBettingSheet[player]['1+ INT']);
+        hits += parseInt(passBettingSheet[player]['2+ INT']);
+        hits += parseInt(passBettingSheet[player]['3+ INT']);
+
+        passBettingSheet[player]['Mod.HitRate'] = (hits / atts).toFixed(4);
+    }
+
+    passBettingSheet.sort((a, b) => b['Mod.HitRate'] - a['Mod.HitRate'] || a['Player ID'] - b['Player ID']);
+
+    fs.writeFileSync('./NFL/data/passBettingSheet.json', JSON.stringify(passBettingSheet, null, 2));
 }

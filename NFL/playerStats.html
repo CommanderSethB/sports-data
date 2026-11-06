@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NFL Player Stats</title>
+    <title>NFL Betting Sheets</title>
     <style>
         /* Sports-themed styling */
         body {
@@ -79,7 +79,7 @@
         async function loadTableData() {
             try {
                 // Replace 'data.json' with the path to your actual JSON file
-                const response = await fetch('./data/playerStats.json');
+                const response = await fetch('./data/passBettingSheet.json');
                 if (!response.ok) {
                     throw new Error('Failed to load JSON data');
                 }
