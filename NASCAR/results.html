@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NASCAR Results</title>
+    <style>
+        /* Sports-themed styling */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f8;
+            color: #1a1a1a;
+            margin: 24px;
+            padding: 0;
+        }
+
+        h2 {
+            color: #0b2341; /* Athletic Navy */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        /* Selector Controls Styling */
+        .selector-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .selector-container label {
+            font-weight: 600;
+            color: #1b4332;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .selector-container select {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1b4332;
+            background-color: #ffffff;
+            border: 2px solid #2d6a4f;
+            border-radius: 6px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .selector-container select:hover {
+            background-color: #f8f9fa;
+            border-color: #1b4332;
+        }
+
+        .table-section-title {
+            color: #1b4332;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 4px solid #2d6a4f;
+            padding-left: 8px;
+        }
+
+        #table-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 24px;
+            border-top: 4px solid #1b4332; /* Turf Green accent bar */
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            display: none; /* Hidden by default, toggled via JS */
+        }
+
+        .table-wrapper.active {
+            display: block; /* Only active table shows */
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid #2d6a4f;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #1b4332; /* Deep Turf Green */
+            color: #ffffff;
+            padding: 12px 16px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            border-bottom: 3px solid #2d6a4f;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        th:hover {
+            background-color: #2d6a4f;
+        }
+
+        th::after {
+            content: '';
+            margin-left: 6px;
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        th.asc::after {
+            content: '▲';
+            opacity: 1;
+        }
+
+        th.desc::after {
+            content: '▼';
+            opacity: 1;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+            color: #333333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa; 
+        }
+
+        tr:hover {
+            background-color: #e8f5e9; 
+            transition: background-color 0.15s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Race Results</h2>
+
+    <!-- Dropdown to select active table -->
+    <div class="selector-container" id="selector-wrapper" style="display: none;">
+        <label for="table-select">Select Series:</label>
+        <select id="table-select"></select>
+    </div>
+
+    <!-- Container where tables will be built dynamically -->
+    <div id="table-container"></div>
+
+    <script>
+        // Function to handle sorting a specific table when a header is clicked
+        function makeTableSortable(table) {
+            const headers = table.querySelectorAll('th');
+            const tbody = table.querySelector('tbody');
+
+            headers.forEach((th, index) => {
+                let isAscending = true;
+
+                th.addEventListener('click', () => {
+                    headers.forEach(h => {
+                        if (h !== th) h.classList.remove('asc', 'desc');
+                    });
+
+                    if (th.classList.contains('asc')) {
+                        th.classList.remove('asc');
+                        th.classList.add('desc');
+                        isAscending = false;
+                    } else {
+                        th.classList.remove('desc');
+                        th.classList.add('asc');
+                        isAscending = true;
+                    }
+
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                    rows.sort((rowA, rowB) => {
+                        const cellA = rowA.children[index].textContent.trim();
+                        const cellB = rowB.children[index].textContent.trim();
+
+                        const isEmptyA = cellA === '' || cellA.toLowerCase() === 'null' || cellA.toLowerCase() === 'n/a';
+                        const isEmptyB = cellB === '' || cellB.toLowerCase() === 'null' || cellB.toLowerCase() === 'n/a';
+
+                        // Handle null/empty values to ensure they are always treated as high values
+                        if (isEmptyA && isEmptyB) return 0;
+                        if (isEmptyA) return 1;  // A is null, treat as larger (goes to bottom in asc)
+                        if (isEmptyB) return -1; // B is null, treat as larger (goes to bottom in asc)
+
+                        const numA = parseFloat(cellA);
+                        const numB = parseFloat(cellB);
+
+                        if (!isNaN(numA) && !isNaN(numB)) {
+                            return isAscending ? numA - numB : numB - numA;
+                        }
+
+                        return isAscending 
+                            ? cellA.localeCompare(cellB, undefined, { numeric: true }) 
+                            : cellB.localeCompare(cellA, undefined, { numeric: true });
+                    });
+
+                    tbody.innerHTML = '';
+                    rows.forEach(row => tbody.appendChild(row));
+                });
+            });
+        }
+
+        // Function to fetch JSON and build selectable tables dynamically
+        async function loadTableData() {
+            try {
+                const response = await fetch('./data/results.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load JSON data');
+                }
+                const data = await response.json();
+
+                const container = document.getElementById('table-container');
+                const selectorWrapper = document.getElementById('selector-wrapper');
+                const tableSelect = document.getElementById('table-select');
+                
+                container.innerHTML = '';
+                tableSelect.innerHTML = '';
+
+                if (!data || Object.keys(data).length === 0) {
+                    container.innerHTML = '<p style="text-align:center;">No data available.</p>';
+                    return;
+                }
+
+                const wrappers = [];
+
+                // Iterate over each table section in the JSON object
+                for (const [tableTitle, rows] of Object.entries(data)) {
+                    if (!Array.isArray(rows) || rows.length === 0) continue;
+
+                    const formattedTitle = tableTitle.replace(/_/g, ' ');
+
+                    // Populate dropdown option
+                    const option = document.createElement('option');
+                    option.value = formattedTitle;
+                    option.textContent = formattedTitle;
+                    tableSelect.appendChild(option);
+
+                    // Create a wrapper for each table section
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    wrapper.dataset.title = formattedTitle;
+
+                    // Add a sub-heading for the table
+                    const sectionTitle = document.createElement('div');
+                    sectionTitle.className = 'table-section-title';
+                    sectionTitle.textContent = formattedTitle;
+                    wrapper.appendChild(sectionTitle);
+
+                    // Create table elements
+                    const table = document.createElement('table');
+                    const thead = document.createElement('thead');
+                    const tbody = document.createElement('tbody');
+
+                    const headers = Object.keys(rows[0]);
+                    const headerRow = document.createElement('tr');
+                    
+                    headers.forEach(headerText => {
+                        const th = document.createElement('th');
+                        th.textContent = headerText.replace(/_/g, ' ');
+                        headerRow.appendChild(th);
+                    });
+                    thead.appendChild(headerRow);
+                    table.appendChild(thead);
+
+                    rows.forEach(item => {
+                        const row = document.createElement('tr');
+                        headers.forEach(header => {
+                            const td = document.createElement('td');
+                            td.textContent = item[header] !== undefined && item[header] !== null ? item[header] : '';
+                            row.appendChild(td);
+                        });
+                        tbody.appendChild(row);
+                    });
+                    table.appendChild(tbody);
+                    
+                    wrapper.appendChild(table);
+                    container.appendChild(wrapper);
+                    wrappers.push(wrapper);
+
+                    makeTableSortable(table);
+                }
+
+                // Show selector if there are tables available
+                if (wrappers.length > 0) {
+                    selectorWrapper.style.display = 'flex';
+                    // Default to the first table
+                    wrappers[0].classList.add('active');
+                }
+
+                // Handle dropdown change event to switch visible tables
+                tableSelect.addEventListener('change', (e) => {
+                    const selectedTitle = e.target.value;
+                    wrappers.forEach(wrap => {
+                        if (wrap.dataset.title === selectedTitle) {
+                            wrap.classList.add('active');
+                        } else {
+                            wrap.classList.remove('active');
+                        }
+                    });
+                });
+
+            } catch (error) {
+                console.log('Error loading data:', error);
+                document.getElementById('table-container').innerHTML = 
+                    `<p style="text-align:center; color: red;">Could not load data. Make sure you are running this through a local server (like Live Server) so fetch() can access your JSON file.</p>`;
+            }
+        }
+
+        loadTableData();
+    </script>
+
+</body>
+</html>
