@@ -1784,22 +1784,21 @@ async function buildBettingSheets() {
         updateSheet(recBettingSheet, statLine, getRecStatsObject(statLine), 'receptions');
     }
 
-    // Generic function to compute hit rates and sort sheets
-    function finalizeSheet(sheetArray, multiplier = 19) {
+    // Generic function to compute individual stat hit rates as XX.X% formatted strings
+    function finalizeSheet(sheetArray) {
         for (let player in sheetArray) {
-            let hits = 0;
-            let atts = parseInt(sheetArray[player]['GP']) * multiplier;
+            let gp = parseInt(sheetArray[player]['GP']);
             
             for (let key in sheetArray[player]) {
-                if (!['Player ID', 'Player Name', 'GP', 'Mod.HitRate'].includes(key)) {
-                    hits += parseInt(sheetArray[player][key]);
+                if (!['Player ID', 'Player Name', 'GP'].includes(key)) {
+                    let rawCount = parseInt(sheetArray[player][key]);
+                    // Convert raw hit count into individual milestone percentage formatted to 1 decimal place
+                    sheetArray[player][key] = ((rawCount / gp) * 100).toFixed(1) + "%";
                 }
             }
-
-            sheetArray[player]['Mod.HitRate'] = (hits / atts).toFixed(4);
         }
 
-        sheetArray.sort((a, b) => b['Mod.HitRate'] - a['Mod.HitRate'] || a['Player ID'] - b['Player ID']);
+        sheetArray.sort((a, b) => a['Player ID'] - b['Player ID']);
     }
 
     // Finalize all three sheets
