@@ -2,261 +2,313 @@
   {
     "8": 2,
     "9": 2,
+    "10": 13,
     "Team Name": "Miami Hurricanes"
   },
   {
     "8": 1,
     "9": 1,
+    "10": 1,
     "Team Name": "UCLA Bruins"
   },
   {
     "8": 7,
     "9": 6,
+    "10": 4,
     "Team Name": "Utah Utes"
   },
   {
     "8": 5,
     "9": 7,
+    "10": 22,
     "Team Name": "UTSA Roadrunners"
   },
   {
     "8": 16,
     "9": 10,
+    "10": 9,
     "Team Name": "Indiana Hoosiers"
   },
   {
     "8": 24,
     "9": 20,
+    "10": 37,
     "Team Name": "BYU Cougars"
   },
   {
     "8": 31,
     "9": 22,
+    "10": 40,
     "Team Name": "South Florida Bulls"
   },
   {
     "8": 10,
     "9": 21,
+    "10": 31,
     "Team Name": "Northwestern Wildcats"
   },
   {
     "8": 35,
     "9": 34,
+    "10": 19,
     "Team Name": "Houston Cougars"
   },
   {
     "8": 34,
     "9": 25,
+    "10": 16,
     "Team Name": "Duke Blue Devils"
   },
   {
     "8": 8,
     "9": 24,
+    "10": 47,
     "Team Name": "Ohio State Buckeyes"
   },
   {
     "8": 25,
     "9": 18,
+    "10": 18,
     "Team Name": "Memphis Tigers"
   },
   {
     "8": 20,
     "9": 16,
+    "10": 8,
     "Team Name": "North Texas Mean Green"
   },
   {
     "8": 17,
     "9": 48,
+    "10": 35,
     "Team Name": "Arizona Wildcats"
   },
   {
     "8": 50,
     "9": 36,
+    "10": 29,
     "Team Name": "Iowa Hawkeyes"
   },
   {
     "8": 28,
     "9": 29,
+    "10": 49,
     "Team Name": "Virginia Tech Hokies"
   },
   {
     "8": 29,
     "9": 60,
+    "10": 44,
     "Team Name": "SMU Mustangs"
   },
   {
     "8": 57,
     "9": 40,
+    "10": 39,
     "Team Name": "USC Trojans"
   },
   {
     "8": 60,
     "9": 26,
+    "10": 26,
     "Team Name": "Pittsburgh Panthers"
   },
   {
     "8": 26,
     "9": 51,
+    "10": 66,
     "Team Name": "Nebraska Cornhuskers"
   },
   {
     "8": 69,
     "9": 39,
+    "10": 21,
     "Team Name": "Baylor Bears"
   },
   {
     "8": 55,
     "9": 45,
+    "10": 36,
     "Team Name": "Louisville Cardinals"
   },
   {
     "8": 18,
     "9": 53,
+    "10": 68,
     "Team Name": "Army Black Knights"
   },
   {
     "8": 54,
     "9": 40,
+    "10": 45,
     "Team Name": "Oregon Ducks"
   },
   {
     "8": 68,
     "9": 35,
+    "10": 62,
     "Team Name": "Washington Huskies"
   },
   {
     "8": 39,
     "9": 37,
+    "10": 59,
     "Team Name": "West Virginia Mountaineers"
   },
   {
     "8": 37,
     "9": 57,
+    "10": 43,
     "Team Name": "Oklahoma State Cowboys"
   },
   {
     "8": 41,
     "9": 43,
+    "10": 57,
     "Team Name": "Minnesota Golden Gophers"
   },
   {
     "8": 76,
     "9": 56,
+    "10": 79,
     "Team Name": "Michigan Wolverines"
   },
   {
     "8": 56,
     "9": 59,
+    "10": 30,
     "Team Name": "Tulsa Golden Hurricane"
   },
   {
     "8": 59,
     "9": 52,
+    "10": 41,
     "Team Name": "Illinois Fighting Illini"
   },
   {
     "8": 67,
     "9": 38,
+    "10": 38,
     "Team Name": "Penn State Nittany Lions"
   },
   {
     "8": 58,
     "9": 75,
+    "10": 53,
     "Team Name": "Florida Atlantic Owls"
   },
   {
     "8": 105,
     "9": 83,
+    "10": 93,
     "Team Name": "NC State Wolfpack"
   },
   {
     "8": 101,
     "9": 86,
+    "10": 58,
     "Team Name": "Clemson Tigers"
   },
   {
     "8": 83,
     "9": 73,
+    "10": 83,
     "Team Name": "Iowa State Cyclones"
   },
   {
     "8": 73,
     "9": 94,
+    "10": 46,
     "Team Name": "North Carolina Tar Heels"
   },
   {
     "8": 98,
     "9": 70,
+    "10": 98,
     "Team Name": "Syracuse Orange"
   },
   {
     "8": 72,
     "9": 100,
+    "10": 108,
     "Team Name": "Boston College Eagles"
   },
   {
     "8": 110,
     "9": 87,
+    "10": 73,
     "Team Name": "East Carolina Pirates"
   },
   {
     "8": 70,
     "9": 97,
+    "10": 101,
     "Team Name": "UAB Blazers"
   },
   {
     "8": 121,
     "9": 124,
+    "10": 126,
     "Team Name": "Temple Owls"
   },
   {
     "8": 133,
     "9": 133,
+    "10": 133,
     "Team Name": "Rice Owls"
   },
   {
     "8": 122,
     "9": 120,
+    "10": 110,
     "Team Name": "Navy Midshipmen"
   },
   {
     "8": 132,
     "9": 131,
+    "10": 134,
     "Team Name": "Charlotte 49ers"
   },
   {
     "8": 75,
     "9": 89,
+    "10": 86,
     "Team Name": "Virginia Cavaliers"
   },
   {
     "8": 102,
     "9": 95,
+    "10": 99,
     "Team Name": "Tulane Green Wave"
   },
   {
     "8": 103,
     "9": 114,
+    "10": 92,
     "Team Name": "Florida State Seminoles"
   },
   {
     "8": 100,
     "9": 112,
+    "10": 113,
     "Team Name": "Stanford Cardinal"
   },
   {
     "8": 118,
     "9": 118,
+    "10": 120,
     "Team Name": "California Golden Bears"
   },
   {
     "8": 123,
     "9": 122,
+    "10": 130,
     "Team Name": "Georgia Tech Yellow Jackets"
   },
   {
     "8": 19,
     "9": 13,
+    "10": 12,
     "Team Name": "Wake Forest Demon Deacons"
   },
   {
@@ -266,236 +318,283 @@
   {
     "8": 23,
     "9": 46,
+    "10": 65,
     "Team Name": "Cincinnati Bearcats"
   },
   {
     "8": 97,
     "9": 108,
+    "10": 117,
     "Team Name": "Kansas Jayhawks"
   },
   {
     "8": 81,
     "9": 82,
+    "10": 104,
     "Team Name": "Kansas State Wildcats"
   },
   {
     "8": 5,
     "9": 3,
+    "10": 2,
     "Team Name": "Notre Dame Fighting Irish"
   },
   {
     "8": 3,
     "9": 4,
+    "10": 3,
     "Team Name": "New Mexico Lobos"
   },
   {
     "8": 11,
     "9": 8,
+    "10": 5,
     "Team Name": "Liberty Flames"
   },
   {
     "8": 21,
     "9": 15,
+    "10": 14,
     "Team Name": "North Dakota State Bison"
   },
   {
     "8": 40,
     "9": 27,
+    "10": 20,
     "Team Name": "Texas Tech Red Raiders"
   },
   {
     "8": 36,
     "9": 31,
+    "10": 25,
     "Team Name": "Toledo Rockets"
   },
   {
     "8": 46,
     "9": 44,
+    "10": 33,
     "Team Name": "Air Force Falcons"
   },
   {
     "8": 43,
     "9": 32,
+    "10": 24,
     "Team Name": "Jacksonville State Gamecocks"
   },
   {
     "8": 74,
     "9": 58,
+    "10": 56,
     "Team Name": "Western Michigan Broncos"
   },
   {
     "8": 47,
     "9": 65,
+    "10": 55,
     "Team Name": "Wisconsin Badgers"
   },
   {
     "8": 76,
     "9": 64,
+    "10": 91,
     "Team Name": "UNLV Rebels"
   },
   {
     "8": 63,
     "9": 61,
+    "10": 76,
     "Team Name": "Miami (OH) RedHawks"
   },
   {
     "8": 92,
     "9": 90,
+    "10": 69,
     "Team Name": "Massachusetts Minutemen"
   },
   {
     "8": 82,
     "9": 77,
+    "10": 54,
     "Team Name": "Wyoming Cowboys"
   },
   {
     "8": 87,
     "9": 74,
+    "10": 84,
     "Team Name": "TCU Horned Frogs"
   },
   {
     "8": 48,
     "9": 68,
+    "10": 82,
     "Team Name": "UConn Huskies"
   },
   {
     "8": 78,
     "9": 72,
+    "10": 64,
     "Team Name": "Buffalo Bulls"
   },
   {
     "8": 61,
     "9": 76,
+    "10": 67,
     "Team Name": "UCF Knights"
   },
   {
     "8": 89,
     "9": 71,
+    "10": 78,
     "Team Name": "Delaware Blue Hens"
   },
   {
     "8": 51,
     "9": 81,
+    "10": 61,
     "Team Name": "Middle Tennessee Blue Raiders"
   },
   {
     "8": 79,
     "9": 98,
+    "10": 80,
     "Team Name": "Arizona State Sun Devils"
   },
   {
     "8": 93,
     "9": 91,
+    "10": 107,
     "Team Name": "Eastern Michigan Eagles"
   },
   {
     "8": 94,
     "9": 106,
+    "10": 88,
     "Team Name": "San José State Spartans"
   },
   {
     "8": 109,
     "9": 105,
+    "10": 74,
     "Team Name": "Central Michigan Chippewas"
   },
   {
     "8": 95,
     "9": 101,
+    "10": 109,
     "Team Name": "Purdue Boilermakers"
   },
   {
     "8": 96,
     "9": 113,
+    "10": 118,
     "Team Name": "New Mexico State Aggies"
   },
   {
     "8": 99,
     "9": 109,
+    "10": 121,
     "Team Name": "Nevada Wolf Pack"
   },
   {
     "8": 116,
     "9": 102,
+    "10": 111,
     "Team Name": "Missouri State Bears"
   },
   {
     "8": 129,
     "9": 115,
+    "10": 125,
     "Team Name": "Colorado Buffaloes"
   },
   {
     "8": 108,
     "9": 121,
+    "10": 106,
     "Team Name": "Florida International Panthers"
   },
   {
     "8": 112,
     "9": 110,
+    "10": 119,
     "Team Name": "Ball State Cardinals"
   },
   {
     "8": 106,
     "9": 117,
+    "10": 123,
     "Team Name": "Western Kentucky Hilltoppers"
   },
   {
     "8": 119,
     "9": 123,
+    "10": 97,
     "Team Name": "Maryland Terrapins"
   },
   {
     "8": 128,
     "9": 103,
+    "10": 95,
     "Team Name": "Kennesaw State Owls"
   },
   {
     "8": 117,
     "9": 118,
+    "10": 124,
     "Team Name": "Rutgers Scarlet Knights"
   },
   {
     "8": 114,
     "9": 116,
+    "10": 100,
     "Team Name": "Hawai'i Rainbow Warriors"
   },
   {
     "8": 120,
     "9": 125,
+    "10": 127,
     "Team Name": "Kent State Golden Flashes"
   },
   {
     "8": 131,
     "9": 130,
+    "10": 115,
     "Team Name": "Michigan State Spartans"
   },
   {
     "8": 130,
     "9": 132,
+    "10": 132,
     "Team Name": "Bowling Green Falcons"
   },
   {
     "8": 112,
     "9": 127,
+    "10": 129,
     "Team Name": "Sam Houston Bearkats"
   },
   {
     "8": 137,
     "9": 129,
+    "10": 131,
     "Team Name": "Sacramento State Hornets"
   },
   {
     "8": 38,
     "9": 33,
+    "10": 32,
     "Team Name": "Ohio Bobcats"
   },
   {
     "8": 136,
     "9": 137,
+    "10": 137,
     "Team Name": "Akron Zips"
   },
   {
     "8": 134,
     "9": 136,
+    "10": 136,
     "Team Name": "UTEP Miners"
   },
   {
@@ -521,6 +620,7 @@
   {
     "8": 138,
     "9": 138,
+    "10": 138,
     "Team Name": "Northern Illinois Huskies"
   },
   {
@@ -822,86 +922,103 @@
   {
     "8": 4,
     "9": 5,
+    "10": 27,
     "Team Name": "Kentucky Wildcats"
   },
   {
     "8": 27,
     "9": 17,
+    "10": 15,
     "Team Name": "Georgia Bulldogs"
   },
   {
     "8": 9,
     "9": 11,
+    "10": 10,
     "Team Name": "Boise State Broncos"
   },
   {
     "8": 12,
     "9": 19,
+    "10": 11,
     "Team Name": "James Madison Dukes"
   },
   {
     "8": 14,
     "9": 12,
+    "10": 6,
     "Team Name": "Louisiana Tech Bulldogs"
   },
   {
     "8": 13,
     "9": 14,
+    "10": 7,
     "Team Name": "Alabama Crimson Tide"
   },
   {
     "8": 32,
     "9": 9,
+    "10": 17,
     "Team Name": "Missouri Tigers"
   },
   {
     "8": 30,
     "9": 28,
+    "10": 51,
     "Team Name": "LSU Tigers"
   },
   {
     "8": 44,
     "9": 42,
+    "10": 28,
     "Team Name": "Tennessee Volunteers"
   },
   {
     "8": 42,
     "9": 30,
+    "10": 23,
     "Team Name": "Texas Longhorns"
   },
   {
     "8": 62,
     "9": 47,
+    "10": 63,
     "Team Name": "Ole Miss Rebels"
   },
   {
     "8": 45,
     "9": 23,
+    "10": 50,
     "Team Name": "Fresno State Bulldogs"
   },
   {
     "8": 15,
     "9": 50,
+    "10": 60,
     "Team Name": "Oregon State Beavers"
   },
   {
     "8": 49,
     "9": 49,
+    "10": 34,
     "Team Name": "Louisiana Ragin' Cajuns"
   },
   {
     "8": 33,
     "9": 67,
+    "10": 75,
     "Team Name": "Florida Gators"
   },
   {
     "8": 22,
     "9": 69,
+    "10": 87,
     "Team Name": "App State Mountaineers"
   },
   {
     "8": 52,
     "9": 54,
+    "10": 71,
     "Team Name": "Arkansas State Red Wolves"
   },
   {
@@ -911,101 +1028,121 @@
   {
     "8": 91,
     "9": 66,
+    "10": 52,
     "Team Name": "Georgia State Panthers"
   },
   {
     "8": 88,
     "9": 63,
+    "10": 48,
     "Team Name": "Georgia Southern Eagles"
   },
   {
     "8": 83,
     "9": 78,
+    "10": 94,
     "Team Name": "Texas A&M Aggies"
   },
   {
     "8": 104,
     "9": 62,
+    "10": 81,
     "Team Name": "Troy Trojans"
   },
   {
     "8": 53,
     "9": 85,
+    "10": 96,
     "Team Name": "South Alabama Jaguars"
   },
   {
     "8": 66,
     "9": 93,
+    "10": 77,
     "Team Name": "Texas State Bobcats"
   },
   {
     "8": 90,
     "9": 88,
+    "10": 105,
     "Team Name": "Marshall Thundering Herd"
   },
   {
     "8": 71,
     "9": 92,
+    "10": 70,
     "Team Name": "Auburn Tigers"
   },
   {
     "8": 86,
     "9": 79,
+    "10": 72,
     "Team Name": "Oklahoma Sooners"
   },
   {
     "8": 85,
     "9": 99,
+    "10": 103,
     "Team Name": "Mississippi State Bulldogs"
   },
   {
     "8": 65,
     "9": 80,
+    "10": 89,
     "Team Name": "Colorado State Rams"
   },
   {
     "8": 107,
     "9": 84,
+    "10": 85,
     "Team Name": "San Diego State Aztecs"
   },
   {
     "8": 111,
     "9": 104,
+    "10": 116,
     "Team Name": "Coastal Carolina Chanticleers"
   },
   {
     "8": 115,
     "9": 96,
+    "10": 112,
     "Team Name": "Southern Miss Golden Eagles"
   },
   {
     "8": 124,
     "9": 111,
+    "10": 90,
     "Team Name": "Utah State Aggies"
   },
   {
     "8": 80,
     "9": 107,
+    "10": 122,
     "Team Name": "Arkansas Razorbacks"
   },
   {
     "8": 125,
     "9": 126,
+    "10": 114,
     "Team Name": "Vanderbilt Commodores"
   },
   {
     "8": 126,
     "9": 128,
+    "10": 101,
     "Team Name": "Old Dominion Monarchs"
   },
   {
     "8": 135,
     "9": 135,
+    "10": 135,
     "Team Name": "Washington State Cougars"
   },
   {
     "8": 127,
     "9": 134,
+    "10": 128,
     "Team Name": "UL Monroe Warhawks"
   },
   {
@@ -1087,6 +1224,7 @@
   {
     "8": 64,
     "9": 55,
+    "10": 42,
     "Team Name": "South Carolina Gamecocks"
   }
 ]

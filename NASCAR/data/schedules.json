@@ -909,16 +909,16 @@
       "Actual Distance": 400.5,
       "Scheduled Laps": 267,
       "Actual Laps": 267,
-      "Stg 1": 80,
-      "Stg 2": 85,
+      "Stg 1": 78,
+      "Stg 2": 87,
       "Stg 3": 102,
       "Entries": 40,
-      "Pole": 0,
-      "Pole Spd": 0,
-      "Lead Chg": 0,
-      "Leaders": 0,
-      "Caut": 0,
-      "Caut Laps": 0
+      "Pole": 4228,
+      "Pole Spd": 166.687,
+      "Lead Chg": 18,
+      "Leaders": 8,
+      "Caut": 3,
+      "Caut Laps": 23
     }
   ],
   "O'Reilly Auto Parts Series": [
@@ -1671,15 +1671,15 @@
       "Scheduled Laps": 200,
       "Actual Laps": 200,
       "Stg 1": 45,
-      "Stg 2": 45,
-      "Stg 3": 110,
+      "Stg 2": 44,
+      "Stg 3": 111,
       "Entries": 38,
-      "Pole": 0,
-      "Pole Spd": 0,
-      "Lead Chg": 0,
-      "Leaders": 0,
-      "Caut": 0,
-      "Caut Laps": 0
+      "Pole": 4204,
+      "Pole Spd": 160.82,
+      "Lead Chg": 12,
+      "Leaders": 5,
+      "Caut": 4,
+      "Caut Laps": 27
     }
   ],
   "Craftsman Truck Series": [
@@ -2250,13 +2250,13 @@
       "Stg 1": 30,
       "Stg 2": 30,
       "Stg 3": 74,
-      "Entries": 36,
-      "Pole": 0,
-      "Pole Spd": 0,
-      "Lead Chg": 0,
-      "Leaders": 0,
-      "Caut": 0,
-      "Caut Laps": 0
+      "Entries": 35,
+      "Pole": 4416,
+      "Pole Spd": 164.855,
+      "Lead Chg": 20,
+      "Leaders": 9,
+      "Caut": 4,
+      "Caut Laps": 25
     }
   ]
 }

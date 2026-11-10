@@ -48,6 +48,30 @@
             letter-spacing: 0.8px;
             border-bottom: 3px solid #2d6a4f;
             white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        th:hover {
+            background-color: #2d6a4f;
+        }
+
+        /* Sort indicators */
+        th::after {
+            content: ' ↕';
+            opacity: 0.4;
+            font-size: 10px;
+        }
+
+        th.sort-asc::after {
+            content: ' ▲';
+            opacity: 1;
+        }
+
+        th.sort-desc::after {
+            content: ' ▼';
+            opacity: 1;
         }
 
         td {
@@ -75,6 +99,9 @@
     <div id="table-container"></div>
 
     <script>
+        let currentData = [];
+        let sortState = { key: null, direction: 'asc' };
+
         // Function to fetch JSON and build the table dynamically
         async function loadTableData() {
             try {
@@ -83,53 +110,91 @@
                 if (!response.ok) {
                     throw new Error('Failed to load JSON data');
                 }
-                const data = await response.json();
+                currentData = await response.json();
 
-                if (!data || data.length === 0) {
+                if (!currentData || currentData.length === 0) {
                     document.getElementById('table-container').innerHTML = '<p style="text-align:center;">No data available.</p>';
                     return;
                 }
 
-                // Create table elements
-                const table = document.createElement('table');
-                const thead = document.createElement('thead');
-                const tbody = document.createElement('tbody');
-
-                // Get keys from the first object to use as table headers
-                const headers = Object.keys(data[0]);
-                const headerRow = document.createElement('tr');
-                
-                headers.forEach(headerText => {
-                    const th = document.createElement('th');
-                    // Format header text (capitalize, remove underscores, etc.)
-                    th.textContent = headerText.replace(/_/g, ' ');
-                    headerRow.appendChild(th);
-                });
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
-
-                // Populate table rows with JSON data
-                data.forEach(item => {
-                    const row = document.createElement('tr');
-                    headers.forEach(header => {
-                        const td = document.createElement('td');
-                        td.textContent = item[header] !== undefined ? item[header] : '';
-                        row.appendChild(td);
-                    });
-                    tbody.appendChild(row);
-                });
-                table.appendChild(tbody);
-
-                // Insert the table into the container
-                const container = document.getElementById('table-container');
-                container.innerHTML = '';
-                container.appendChild(table);
+                renderTable();
 
             } catch (error) {
                 console.log('Error loading data:', error);
                 document.getElementById('table-container').innerHTML = 
                     `<p style="text-align:center; color: red;">Could not load data. Make sure you are running this through a local server (like Live Server) so fetch() can access your JSON file.</p>`;
             }
+        }
+
+        function sortData(key) {
+            if (sortState.key === key) {
+                sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortState.key = key;
+                sortState.direction = 'asc';
+            }
+
+            currentData.sort((a, b) => {
+                let valA = a[key] ?? '';
+                let valB = b[key] ?? '';
+
+                // Handle numeric values
+                const numA = Number(valA);
+                const numB = Number(valB);
+
+                if (!isNaN(numA) && !isNaN(numB) && valA !== '' && valB !== '') {
+                    return sortState.direction === 'asc' ? numA - numB : numB - numA;
+                }
+
+                // Fallback to string comparison
+                return sortState.direction === 'asc' 
+                    ? String(valA).localeCompare(String(valB), undefined, { numeric: true, sensitivity: 'base' })
+                    : String(valB).localeCompare(String(valA), undefined, { numeric: true, sensitivity: 'base' });
+            });
+
+            renderTable();
+        }
+
+        function renderTable() {
+            const container = document.getElementById('table-container');
+            container.innerHTML = '';
+
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            const headers = Object.keys(currentData[0]);
+            const headerRow = document.createElement('tr');
+            
+            headers.forEach(headerText => {
+                const th = document.createElement('th');
+                th.textContent = headerText.replace(/_/g, ' ');
+                
+                // Add sort indicator classes
+                if (sortState.key === headerText) {
+                    th.classList.add(sortState.direction === 'asc' ? 'sort-asc' : 'sort-desc');
+                }
+
+                // Add click listener for sorting
+                th.addEventListener('click', () => sortData(headerText));
+                headerRow.appendChild(th);
+            });
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            currentData.forEach(item => {
+                const row = document.createElement('tr');
+                headers.forEach(header => {
+                    const td = document.createElement('td');
+                    td.textContent = item[header] !== undefined ? item[header] : '';
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            container.appendChild(table);
         }
 
         // Run the function when the page loads

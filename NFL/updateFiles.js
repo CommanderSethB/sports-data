@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 18;
-const STAT_END_WEEK = 8;
+const STAT_END_WEEK = 9;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
@@ -30,9 +30,7 @@ const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/lea
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-//main();
-
-buildBettingSheets();
+main();
 
 async function main() {
     try {
@@ -54,6 +52,8 @@ async function main() {
         await updatePowerRankings();
         console.log("Building weekly view...");
         buildWeekView();
+        console.log("Building betting sheets...");
+        await buildBettingSheets();
         console.log("All files updated successfully!");
     } catch (err) {
         console.error("Error in main execution pipeline:", err);
