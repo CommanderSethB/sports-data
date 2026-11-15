@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 18;
-const STAT_END_WEEK = 9;
+const STAT_END_WEEK = 10;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
@@ -28,27 +28,28 @@ const TEAM_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/col
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-main();
+//main();
+updateSchedules();
 
 async function main() {
     try {
-        console.log("Updating live scoring data...");
+        console.log("NCAAFB: Updating live scoring data...");
         await updateGames();
-        console.log("Building teamList");
+        console.log("NCAAFB: Building teamList");
         await buildTeamList();
-        console.log("Updating schedules...");
+        console.log("NCAAFB: Updating schedules...");
         await updateSchedules();
-        console.log("Updating standings...");
+        console.log("NCAAFB: Updating standings...");
         await generateStandings();
-        console.log("Updating prediction percentages...");
+        console.log("NCAAFB: Updating prediction percentages...");
         await updateSBP();
-        console.log("Updating power rankings...");
+        console.log("NCAAFB: Updating power rankings...");
         await updatePowerRankings();
-        console.log("Building weekly view...");
+        console.log("NCAAFB: Building weekly view...");
         buildWeekView();
-        console.log("All files updated successfully!");
+        console.log("NCAAFB: All files updated successfully!");
     } catch (err) {
-        console.error("Error in main execution pipeline:", err);
+        console.error("NCAAFB: Error in main execution pipeline:", err);
     }
 }
 

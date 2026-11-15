@@ -17,11 +17,11 @@ const TODAY = new Date();
 main();
 
 async function main(){
-    console.log("Fetching new schedule...");
+    console.log("NASCAR: Fetching new schedule...");
     await fetchSchedule();
-    console.log("Fetching race data...");
+    console.log("NASCAR: Fetching race data...");
     await fetchRaceData();
-    console.log("All files updated successfully.");
+    console.log("NASCAR: All files updated successfully.");
 }
 
 // This function hits up NASCAR's API to fetch the schedule json, 

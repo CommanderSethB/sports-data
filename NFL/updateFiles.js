@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 18;
-const STAT_END_WEEK = 8;
+const STAT_END_WEEK = 9;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
@@ -34,27 +34,27 @@ main();
 
 async function main() {
     try {
-        console.log("Updating live scoring data...");
+        console.log("NFL: Updating live scoring data...");
         await updateGames();
-        console.log("Updating injury report...");
+        console.log("NFL: Updating injury report...");
         await updateInjuryReport();
-        console.log("Updating team list...");
+        console.log("NFL: Updating team list...");
         await updateTeams();
-        console.log("Updating depth charts...");
+        console.log("NFL: Updating depth charts...");
         await updateDepthCharts();
-        console.log("Updating schedules...");
+        console.log("NFL: Updating schedules...");
         await updateSchedules();
-        console.log("Updating standings...");
+        console.log("NFL: Updating standings...");
         await generateStandings();
-        console.log("Updating prediction percentages...");
+        console.log("NFL: Updating prediction percentages...");
         await updateSBP();
-        console.log("Updating power rankings...");
+        console.log("NFL: Updating power rankings...");
         await updatePowerRankings();
-        console.log("Building weekly view...");
+        console.log("NFL: Building weekly view...");
         buildWeekView();
-        console.log("All files updated successfully!");
+        console.log("NFL: All files updated successfully!");
     } catch (err) {
-        console.error("Error in main execution pipeline:", err);
+        console.error("NFL: Error in main execution pipeline:", err);
     }
 }
 
