@@ -1719,8 +1719,8 @@ async function buildBettingSheets() {
         const ints = parseInt(line['passInterceptions']) || 0;
 
         let stats = {};
-        [20, 25, 30, 35].forEach(v => stats[`${v}+ CMP`] = cmp >= v ? 1 : 0);
-        [30, 35, 40, 45].forEach(v => stats[`${v}+ ATT`] = att >= v ? 1 : 0);
+        [20, 25, 30].forEach(v => stats[`${v}+ CMP`] = cmp >= v ? 1 : 0);
+        [30, 35, 40].forEach(v => stats[`${v}+ ATT`] = att >= v ? 1 : 0);
         [150, 175, 200, 225, 250, 300, 350].forEach(v => stats[`${v}+ YDS`] = yds >= v ? 1 : 0);
         [1, 2, 3].forEach(v => stats[`${v}+ TD`] = tds >= v ? 1 : 0);
         [1, 2, 3].forEach(v => stats[`${v}+ INT`] = ints >= v ? 1 : 0);
