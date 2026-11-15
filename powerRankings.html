@@ -48,6 +48,25 @@
             letter-spacing: 0.8px;
             border-bottom: 3px solid #2d6a4f;
             white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.15s ease-in-out;
+        }
+
+        th:hover {
+            background-color: #2d6a4f;
+        }
+
+        .sort-indicator {
+            display: inline-block;
+            margin-left: 6px;
+            font-size: 10px;
+            opacity: 0.4;
+        }
+
+        th.sort-asc .sort-indicator,
+        th.sort-desc .sort-indicator {
+            opacity: 1;
         }
 
         td {
@@ -84,6 +103,116 @@
         document.title = pageTitleText;
         document.getElementById('page-title').textContent = pageTitleText;
 
+        let tableData = [];
+        let sortState = {
+            column: null,
+            direction: 'asc' // 'asc' or 'desc'
+        };
+
+        // Helper function to intelligently compare values (numbers, W-L records, strings)
+        function compareValues(valA, valB, direction) {
+            const modifier = direction === 'asc' ? 1 : -1;
+
+            // Handle null/undefined
+            if (valA == null && valB == null) return 0;
+            if (valA == null) return 1;
+            if (valB == null) return -1;
+
+            // 1. Direct numbers
+            if (typeof valA === 'number' && typeof valB === 'number') {
+                return (valA - valB) * modifier;
+            }
+
+            const strA = String(valA).trim();
+            const strB = String(valB).trim();
+
+            // 2. Win-Loss records (e.g., "10-2" vs "9-3")
+            const recordRegex = /^(\d+)-(\d+)(?:-(\d+))?$/;
+            const matchA = strA.match(recordRegex);
+            const matchB = strB.match(recordRegex);
+            if (matchA && matchB) {
+                const winsDiff = parseInt(matchA[1], 10) - parseInt(matchB[1], 10);
+                if (winsDiff !== 0) return winsDiff * modifier;
+                // Secondary sort: fewer losses is better when sorting descending
+                const lossesDiff = parseInt(matchB[2], 10) - parseInt(matchA[2], 10);
+                return lossesDiff * modifier;
+            }
+
+            // 3. Numeric strings (e.g., "+14", "-3.5", "82.5%")
+            const cleanNumA = parseFloat(strA.replace(/[%+,]/g, ''));
+            const cleanNumB = parseFloat(strB.replace(/[%+,]/g, ''));
+            if (!isNaN(cleanNumA) && !isNaN(cleanNumB) && /^-?\+?[\d,.]+%?$/.test(strA) && /^-?\+?[\d,.]+%?$/.test(strB)) {
+                return (cleanNumA - cleanNumB) * modifier;
+            }
+
+            // 4. Standard alphabetical sort
+            return strA.localeCompare(strB, undefined, { numeric: true, sensitivity: 'base' }) * modifier;
+        }
+
+        function sortTable(header) {
+            if (sortState.column === header) {
+                sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortState.column = header;
+                sortState.direction = 'asc';
+            }
+
+            tableData.sort((a, b) => compareValues(a[header], b[header], sortState.direction));
+            renderTable();
+        }
+
+        function renderTable() {
+            const container = document.getElementById('table-container');
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            const headers = Object.keys(tableData[0]);
+            const headerRow = document.createElement('tr');
+
+            headers.forEach(headerKey => {
+                const th = document.createElement('th');
+                
+                // Format header text
+                const label = document.createElement('span');
+                label.textContent = headerKey.replace(/_/g, ' ');
+                th.appendChild(label);
+
+                // Add sort arrow indicator
+                const indicator = document.createElement('span');
+                indicator.className = 'sort-indicator';
+                
+                if (sortState.column === headerKey) {
+                    th.classList.add(sortState.direction === 'asc' ? 'sort-asc' : 'sort-desc');
+                    indicator.textContent = sortState.direction === 'asc' ? '▲' : '▼';
+                } else {
+                    indicator.textContent = '⇅';
+                }
+                
+                th.appendChild(indicator);
+                th.addEventListener('click', () => sortTable(headerKey));
+                headerRow.appendChild(th);
+            });
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Populate table rows
+            tableData.forEach(item => {
+                const row = document.createElement('tr');
+                headers.forEach(header => {
+                    const td = document.createElement('td');
+                    td.textContent = item[header] !== undefined ? item[header] : '';
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            container.innerHTML = '';
+            container.appendChild(table);
+        }
+
         // Function to fetch JSON and build the table dynamically
         async function loadTableData() {
             try {
@@ -99,40 +228,8 @@
                     return;
                 }
 
-                // Create table elements
-                const table = document.createElement('table');
-                const thead = document.createElement('thead');
-                const tbody = document.createElement('tbody');
-
-                // Get keys from the first object to use as table headers
-                const headers = Object.keys(data[0]);
-                const headerRow = document.createElement('tr');
-                
-                headers.forEach(headerText => {
-                    const th = document.createElement('th');
-                    // Format header text (capitalize, remove underscores, etc.)
-                    th.textContent = headerText.replace(/_/g, ' ');
-                    headerRow.appendChild(th);
-                });
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
-
-                // Populate table rows with JSON data
-                data.forEach(item => {
-                    const row = document.createElement('tr');
-                    headers.forEach(header => {
-                        const td = document.createElement('td');
-                        td.textContent = item[header] !== undefined ? item[header] : '';
-                        row.appendChild(td);
-                    });
-                    tbody.appendChild(row);
-                });
-                table.appendChild(tbody);
-
-                // Insert the table into the container
-                const container = document.getElementById('table-container');
-                container.innerHTML = '';
-                container.appendChild(table);
+                tableData = data;
+                renderTable();
 
             } catch (error) {
                 console.log('Error loading data:', error);
