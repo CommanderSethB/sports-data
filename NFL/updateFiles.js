@@ -52,7 +52,9 @@ async function main() {
         await updatePowerRankings();
         console.log("NFL: Building weekly view...");
         buildWeekView();
-        console.log("NFL: All files updated successfully!");
+        console.log("Building betting sheets...");
+        await buildBettingSheets();
+        console.log("All files updated successfully!");
     } catch (err) {
         console.error("NFL: Error in main execution pipeline:", err);
     }
@@ -238,16 +240,23 @@ function processBoxscore(boxscoreData, statList) {
     for (let boxScoreTeam = 0; boxScoreTeam < boxScoreTeams.length; boxScoreTeam++) {
         let currentBoxScoreTeam = boxScoreTeams[boxScoreTeam];
         let boxScorePlayerList = [];
+        let playerNames = {};
         let teamID = currentBoxScoreTeam.team.id;
         let oppID = boxScoreTeams[1 - boxScoreTeam].team.id;
 
-        // Collect unique player IDs from team statistics categories
+        // Collect unique player IDs and names from team statistics categories
         for (let stat = 0; stat < currentBoxScoreTeam.statistics.length; stat++) {
             let currentStat = currentBoxScoreTeam.statistics[stat];
             for (let boxScorePlayer = 0; boxScorePlayer < currentStat.athletes.length; boxScorePlayer++) {
                 let currentPlayer = currentStat.athletes[boxScorePlayer];
-                if (!boxScorePlayerList.includes(currentPlayer.athlete.id)) {
-                    boxScorePlayerList.push(currentPlayer.athlete.id);
+                let playerId = currentPlayer.athlete.id;
+                let playerName = currentPlayer.athlete.displayName;
+
+                if (!boxScorePlayerList.includes(playerId)) {
+                    boxScorePlayerList.push(playerId);
+                }
+                if (playerName && !playerNames[playerId]) {
+                    playerNames[playerId] = playerName;
                 }
             }
         }
@@ -274,6 +283,7 @@ function processBoxscore(boxscoreData, statList) {
             let puntsInside20 = 0, longestPunt = 0;
 
             let currentPlayerID = boxScorePlayerList[boxScorePlayer];
+            let currentPlayerName = playerNames[currentPlayerID] || null;
             let splitString;
 
             for (let stat = 0; stat < currentBoxScoreTeam.statistics.length; stat++) {
@@ -371,6 +381,7 @@ function processBoxscore(boxscoreData, statList) {
 
             statList.push({
                 playerID: currentPlayerID,
+                playerName: currentPlayerName,
                 teamID,
                 oppID, 
                 passCompletions, passAttempts, passYards, passYardsPerAttempt,
@@ -410,6 +421,7 @@ function updatePlayerStats(statList) {
 
     for (let i = 0; i < playerList.length; i++) {
         let teamID = null;
+        let playerName = null;
         let gamesPlayed = 0;
         let passCompletions = 0, passAttempts = 0, passYards = 0, passYardsPerAttempt = 0;
         let passTouchdowns = 0, passInterceptions = 0, passSacks = 0, passSackYards = 0;
@@ -432,6 +444,9 @@ function updatePlayerStats(statList) {
         for (let j = 0; j < statList.length; j++) {
             if (statList[j].playerID === playerList[i]) {
                 teamID = statList[j].teamID;
+                if (statList[j].playerName) {
+                    playerName = statList[j].playerName;
+                }
                 gamesPlayed += 1;
                 passCompletions += parseInt(statList[j].passCompletions);
                 passAttempts += parseInt(statList[j].passAttempts);
@@ -496,6 +511,7 @@ function updatePlayerStats(statList) {
 
         newStatList.push({
             "Player ID": playerList[i],
+            "Player Name": playerName,
             "Team ID": teamID,
             "GP": gamesPlayed, 
             "Com": passCompletions,
@@ -1495,7 +1511,7 @@ function updatePowerRankings() {
         let teamID = standings[currentTeam]['Team ID'];
         let record = parseFloat(standings[currentTeam]['Rec%']);
         let pyth = parseFloat(pythagoreanExpectation(teamID));
-        let turnoverFactor = parseFloat(getTeamTurnoverFactor ? getTeamTurnoverFactor(teamID) : 0);
+        let turnoverFactor = parseFloat(getTeamTurnoverFactor(teamID) ? getTeamTurnoverFactor(teamID) : 0);
         let touchdownFactor = parseFloat(getTeamTDPtsPercentage(teamID));
         let sbp = parseFloat(getTeamSBP(teamID));
         let sos = parseFloat(getTeamStrengthOfSchedule(teamID));
@@ -1683,4 +1699,117 @@ function teamSpread(team, spread) {
 
     if(splitSpread[0] === getTeamAbbreviation(team)) return spread;
     return getTeamAbbreviation(team) + " " + splitSpread[1].replace("-", "+");
+}
+
+async function buildBettingSheets() {
+    let rawData = fs.readFileSync('./NFL/data/boxScores.json', 'utf-8');
+    let boxscoreData = JSON.parse(rawData);
+    
+    let bettingSheet = {};
+    let passBettingSheet = [];
+    let rushBettingSheet = [];
+    let recBettingSheet = [];
+
+    // Helper to generate passing stat milestones
+    function getPassStatsObject(line) {
+        const cmp = parseInt(line['passCompletions']) || 0;
+        const att = parseInt(line['passAttempts']) || 0;
+        const yds = parseInt(line['passYards']) || 0;
+        const tds = parseInt(line['passTouchdowns']) || 0;
+        const ints = parseInt(line['passInterceptions']) || 0;
+
+        let stats = {};
+        [20, 25, 30, 35].forEach(v => stats[`${v}+ CMP`] = cmp >= v ? 1 : 0);
+        [30, 35, 40, 45].forEach(v => stats[`${v}+ ATT`] = att >= v ? 1 : 0);
+        [150, 200, 250, 300, 350].forEach(v => stats[`${v}+ YDS`] = yds >= v ? 1 : 0);
+        [1, 2, 3].forEach(v => stats[`${v}+ TD`] = tds >= v ? 1 : 0);
+        [1, 2, 3].forEach(v => stats[`${v}+ INT`] = ints >= v ? 1 : 0);
+        return stats;
+    }
+
+    // Helper to generate rushing stat milestones
+    function getRushStatsObject(line) {
+        const att = parseInt(line['rushAttempts']) || 0;
+        const yds = parseInt(line['rushYards']) || 0;
+        const tds = parseInt(line['rushTouchdowns']) || 0;
+
+        let stats = {};
+        [10, 15, 20, 25].forEach(v => stats[`${v}+ ATT`] = att >= v ? 1 : 0);
+        [25, 50, 75, 100, 125, 150].forEach(v => stats[`${v}+ YDS`] = yds >= v ? 1 : 0);
+        [1, 2, 3].forEach(v => stats[`${v}+ TD`] = tds >= v ? 1 : 0);
+        return stats;
+    }
+
+    // Helper to generate receiving stat milestones
+    function getRecStatsObject(line) {
+        const rec = parseInt(line['receptions']) || 0;
+        const tgt = parseInt(line['receivingTargets']) || 0;
+        const yds = parseInt(line['receivingYards']) || 0;
+        const tds = parseInt(line['receivingTouchdowns']) || 0;
+
+        let stats = {};
+        [3, 5, 7, 10].forEach(v => stats[`${v}+ REC`] = rec >= v ? 1 : 0);
+        [4, 6, 8, 12].forEach(v => stats[`${v}+ TGT`] = tgt >= v ? 1 : 0);
+        [25, 50, 75, 100, 125, 150].forEach(v => stats[`${v}+ YDS`] = yds >= v ? 1 : 0);
+        [1, 2, 3].forEach(v => stats[`${v}+ TD`] = tds >= v ? 1 : 0);
+        return stats;
+    }
+
+    // Generic aggregator function to handle sheet population
+    function updateSheet(sheetArray, statLine, statsObj, minCheckKey) {
+        if (parseInt(statLine[minCheckKey]) > 0) {
+            let playerID = statLine['playerID'];
+            let currentPlayer = sheetArray.find(x => x['Player ID'] === playerID);
+
+            if (currentPlayer) {
+                currentPlayer['GP'] = parseInt(currentPlayer['GP']) + 1;
+                for (let key in statsObj) {
+                    currentPlayer[key] = parseInt(currentPlayer[key]) + statsObj[key];
+                }
+            } else {
+                sheetArray.push({
+                    'Player ID': playerID,
+                    'Player Name': statLine['playerName'],
+                    'GP': 1,
+                    ...statsObj
+                });
+            }
+        }
+    }
+
+    // Loop through box scores and populate arrays
+    for (let statLine of boxscoreData) {
+        updateSheet(passBettingSheet, statLine, getPassStatsObject(statLine), 'passAttempts');
+        updateSheet(rushBettingSheet, statLine, getRushStatsObject(statLine), 'rushAttempts');
+        updateSheet(recBettingSheet, statLine, getRecStatsObject(statLine), 'receptions');
+    }
+
+    // Generic function to compute individual stat hit rates as XX.X% formatted strings
+    function finalizeSheet(sheetArray) {
+        for (let player in sheetArray) {
+            let gp = parseInt(sheetArray[player]['GP']);
+            
+            for (let key in sheetArray[player]) {
+                if (!['Player ID', 'Player Name', 'GP'].includes(key)) {
+                    let rawCount = parseInt(sheetArray[player][key]);
+                    // Convert raw hit count into individual milestone percentage formatted to 1 decimal place
+                    sheetArray[player][key] = ((rawCount / gp) * 100).toFixed(1) + "%";
+                }
+            }
+        }
+
+        sheetArray.sort((a, b) => a['Player ID'] - b['Player ID']);
+    }
+
+    // Finalize all three sheets
+    finalizeSheet(passBettingSheet);
+    finalizeSheet(rushBettingSheet);
+    finalizeSheet(recBettingSheet);
+
+    // Assign to the multi-table object structure
+    bettingSheet['Passing Stats'] = passBettingSheet;
+    bettingSheet['Rushing Stats'] = rushBettingSheet;
+    bettingSheet['Receiving Stats'] = recBettingSheet;
+
+    fs.writeFileSync('./NFL/data/bettingSheet.json', JSON.stringify(bettingSheet, null, 2));
 }

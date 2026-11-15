@@ -1,695 +1,137 @@
 [
   {
-    "Team": "Western Michigan Broncos",
-    "Win%": "0.5365",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-625",
-    "Spread": "WMU -14",
+    "Team": "Oregon State Beavers",
+    "Win%": "0.4500",
+    "FinalScore": 41,
+    "Winner": "Boise State Broncos",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
-    "Team": "Akron Zips",
-    "Win%": "0.4635",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+455",
-    "Spread": "AKR +14",
-    "Over/Under": 49.5
+    "Team": "Boise State Broncos",
+    "Win%": "0.5500",
+    "FinalScore": 46,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
-    "Team": "Kent State Golden Flashes",
-    "Win%": "0.4401",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+170",
-    "Spread": "KENT +5.5",
+    "Team": "Florida Gators",
+    "Win%": "0.3773",
+    "FinalScore": 21,
+    "Winner": "Florida Gators",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
-    "Team": "Bowling Green Falcons",
-    "Win%": "0.5599",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-205",
-    "Spread": "BGSU -5.5",
-    "Over/Under": 43.5
-  },
-  {
-    "Team": "Ohio Bobcats",
-    "Win%": "0.3498",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-118",
-    "Spread": "OHIO -1.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Miami (OH) RedHawks",
-    "Win%": "0.6502",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-102",
-    "Spread": "M-OH +1.5",
-    "Over/Under": 46.5
-  },
-  {
-    "Team": "Buffalo Bulls",
-    "Win%": "0.4070",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-135",
-    "Spread": "BUFF +2.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Ball State Cardinals",
-    "Win%": "0.5930",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+114",
-    "Spread": "BALL +2.5",
-    "Over/Under": 51.5
-  },
-  {
-    "Team": "Sacramento State Hornets",
-    "Win%": "0.3796",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+675",
-    "Spread": "SAC +18.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Central Michigan Chippewas",
-    "Win%": "0.6204",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-1050",
-    "Spread": "CMU -18.5",
-    "Over/Under": 43.5
-  },
-  {
-    "Team": "Massachusetts Minutemen",
-    "Win%": "0.4416",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+455",
-    "Spread": "MASS +14.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Toledo Rockets",
-    "Win%": "0.5584",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-625",
-    "Spread": "TOL -14.5",
-    "Over/Under": 52.5
-  },
-  {
-    "Team": "Memphis Tigers",
-    "Win%": "0.4067",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-192",
-    "Spread": "MEM -4",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "South Florida Bulls",
-    "Win%": "0.5933",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+160",
-    "Spread": "USF +4",
-    "Over/Under": 50.5
-  },
-  {
-    "Team": "Louisiana Ragin' Cajuns",
-    "Win%": "0.5122",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-410",
-    "Spread": "UL -11.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "UL Monroe Warhawks",
-    "Win%": "0.4878",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+320",
-    "Spread": "ULM +11.5",
-    "Over/Under": 49.5
-  },
-  {
-    "Team": "Florida State Seminoles",
-    "Win%": "0.3804",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+142",
-    "Spread": "FSU +3.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Pittsburgh Panthers",
-    "Win%": "0.6196",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-170",
-    "Spread": "PITT -3.5",
-    "Over/Under": 54.5
-  },
-  {
-    "Team": "Illinois Fighting Illini",
-    "Win%": "0.4288",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+300",
-    "Spread": "ILL +10",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "UCLA Bruins",
-    "Win%": "0.5712",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-380",
-    "Spread": "UCLA -10",
-    "Over/Under": 47.5
-  },
-  {
-    "Team": "Houston Cougars",
-    "Win%": "0.5631",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-395",
-    "Spread": "HOU -10.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Colorado Buffaloes",
-    "Win%": "0.4369",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+310",
-    "Spread": "COLO +10.5",
-    "Over/Under": 50.5
-  },
-  {
-    "Team": "Duke Blue Devils",
-    "Win%": "0.4355",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+410",
-    "Spread": "DUKE +13.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Miami Hurricanes",
-    "Win%": "0.5645",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-550",
-    "Spread": "MIA -13.5",
-    "Over/Under": 54.5
-  },
-  {
-    "Team": "Northwestern Wildcats",
-    "Win%": "0.5149",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+360",
-    "Spread": "NU +12.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Ohio State Buckeyes",
-    "Win%": "0.4851",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-470",
-    "Spread": "OSU -12.5",
-    "Over/Under": 45.5
-  },
-  {
-    "Team": "Wake Forest Demon Deacons",
-    "Win%": "0.4540",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-115",
-    "Spread": "WAKE -1.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "SMU Mustangs",
-    "Win%": "0.5460",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-105",
-    "Spread": "SMU +1.5",
-    "Over/Under": 61.5
-  },
-  {
-    "Team": "Cincinnati Bearcats",
-    "Win%": "0.3033",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+130",
-    "Spread": "CIN +3",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Iowa State Cyclones",
-    "Win%": "0.6967",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-155",
-    "Spread": "ISU -3",
-    "Over/Under": 60.5
-  },
-  {
-    "Team": "Auburn Tigers",
-    "Win%": "0.4784",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-148",
-    "Spread": "AUB -2.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Mississippi State Bulldogs",
-    "Win%": "0.5216",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+124",
-    "Spread": "MSST +2.5",
-    "Over/Under": 50.5
-  },
-  {
-    "Team": "Syracuse Orange",
-    "Win%": "0.4203",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-135",
-    "Spread": "SYR -3",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "NC State Wolfpack",
-    "Win%": "0.5797",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+114",
-    "Spread": "NCSU +3",
-    "Over/Under": 53.5
-  },
-  {
-    "Team": "Wisconsin Badgers",
-    "Win%": "0.4016",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-325",
-    "Spread": "WIS -8.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Maryland Terrapins",
-    "Win%": "0.5984",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+260",
-    "Spread": "MD +8.5",
-    "Over/Under": 43.5
-  },
-  {
-    "Team": "James Madison Dukes",
-    "Win%": "0.5003",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-192",
-    "Spread": "JMU -4",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "UConn Huskies",
-    "Win%": "0.4997",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+160",
-    "Spread": "CONN +4",
-    "Over/Under": 57.5
-  },
-  {
-    "Team": "Georgia Tech Yellow Jackets",
-    "Win%": "0.2768",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+410",
-    "Spread": "GT +13.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Clemson Tigers",
-    "Win%": "0.7232",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-550",
-    "Spread": "CLEM -13.5",
-    "Over/Under": 47.5
-  },
-  {
-    "Team": "Nebraska Cornhuskers",
-    "Win%": "0.5032",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-550",
-    "Spread": "NEB -13.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Rutgers Scarlet Knights",
-    "Win%": "0.4968",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+410",
-    "Spread": "RUTG +13.5",
-    "Over/Under": 52.5
-  },
-  {
-    "Team": "Alabama Crimson Tide",
-    "Win%": "0.5730",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-850",
-    "Spread": "ALA -15.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Vanderbilt Commodores",
-    "Win%": "0.4270",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+575",
-    "Spread": "VAN +15.5",
-    "Over/Under": 50.5
-  },
-  {
-    "Team": "East Carolina Pirates",
-    "Win%": "0.4906",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-470",
-    "Spread": "ECU -11.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Charlotte 49ers",
-    "Win%": "0.5094",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+360",
-    "Spread": "CLT +11.5",
-    "Over/Under": 44.5
-  },
-  {
-    "Team": "UAB Blazers",
-    "Win%": "0.4331",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+110",
-    "Spread": "UAB +2.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Temple Owls",
-    "Win%": "0.5669",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-130",
-    "Spread": "TEM -2.5",
-    "Over/Under": 48.5
-  },
-  {
-    "Team": "Arkansas State Red Wolves",
-    "Win%": "0.5020",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-102",
-    "Spread": "ARST +1.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Coastal Carolina Chanticleers",
-    "Win%": "0.4980",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-118",
-    "Spread": "CCU -1.5",
-    "Over/Under": 50.5
-  },
-  {
-    "Team": "Kansas State Wildcats",
-    "Win%": "0.3671",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+310",
-    "Spread": "KSU +10",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "TCU Horned Frogs",
-    "Win%": "0.6329",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-395",
-    "Spread": "TCU -10",
-    "Over/Under": 45.5
-  },
-  {
-    "Team": "Tulane Green Wave",
-    "Win%": "0.3418",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+110",
-    "Spread": "TULN +2.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Rice Owls",
-    "Win%": "0.6582",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-130",
-    "Spread": "RICE -2.5",
-    "Over/Under": 48.5
-  },
-  {
-    "Team": "Kennesaw State Owls",
-    "Win%": "0.3580",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-305",
-    "Spread": "KENN -7.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Sam Houston Bearkats",
-    "Win%": "0.6420",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+245",
-    "Spread": "SHSU +7.5",
-    "Over/Under": 46.5
-  },
-  {
-    "Team": "Tennessee Volunteers",
-    "Win%": "0.5033",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-135",
-    "Spread": "TENN -2.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Texas A&M Aggies",
-    "Win%": "0.4967",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+114",
-    "Spread": "TA&M +2.5",
-    "Over/Under": 43.5
-  },
-  {
-    "Team": "New Mexico State Aggies",
-    "Win%": "0.4188",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+105",
-    "Spread": "NMSU +1.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Missouri State Bears",
-    "Win%": "0.5812",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-125",
-    "Spread": "MOST -1.5",
-    "Over/Under": 48.5
-  },
-  {
-    "Team": "Florida International Panthers",
-    "Win%": "0.3980",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+180",
-    "Spread": "FIU +5.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Delaware Blue Hens",
-    "Win%": "0.6020",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-218",
-    "Spread": "DEL -5.5",
-    "Over/Under": 54.5
-  },
-  {
-    "Team": "Missouri Tigers",
-    "Win%": "0.7340",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+500",
-    "Spread": "MIZ +15.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Georgia Bulldogs",
-    "Win%": "0.2660",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-700",
-    "Spread": "UGA -15.5",
-    "Over/Under": 47.5
-  },
-  {
-    "Team": "USC Trojans",
-    "Win%": "0.2350",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+230",
-    "Spread": "USC +7.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Indiana Hoosiers",
-    "Win%": "0.7650",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-285",
-    "Spread": "IU -7.5",
-    "Over/Under": 49.5
+    "Team": "Kentucky Wildcats",
+    "Win%": "0.6227",
+    "FinalScore": 14,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "Baylor Bears",
-    "Win%": "0.4564",
+    "Win%": "0.4663",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+240",
-    "Spread": "BAY +7.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
     "Team": "BYU Cougars",
-    "Win%": "0.5436",
+    "Win%": "0.5337",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-298",
-    "Spread": "BYU -7.5",
-    "Over/Under": 49.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
-    "Team": "Boston College Eagles",
-    "Win%": "0.0695",
+    "Team": "Louisville Cardinals",
+    "Win%": "0.4660",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+1800",
-    "Spread": "BC +29.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
-    "Team": "Notre Dame Fighting Irish",
-    "Win%": "0.9305",
+    "Team": "North Carolina Tar Heels",
+    "Win%": "0.5340",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-5000",
-    "Spread": "ND -29.5",
-    "Over/Under": 52.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
-    "Team": "Michigan Wolverines",
-    "Win%": "0.4294",
+    "Team": "Minnesota Golden Gophers",
+    "Win%": "0.3529",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+340",
-    "Spread": "MICH +11.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
-    "Team": "Oregon Ducks",
-    "Win%": "0.5706",
+    "Team": "Penn State Nittany Lions",
+    "Win%": "0.6471",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-440",
-    "Spread": "ORE -11.5",
-    "Over/Under": 38.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
-    "Team": "Arizona State Sun Devils",
-    "Win%": "0.4139",
+    "Team": "San José State Spartans",
+    "Win%": "0.4290",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+142",
-    "Spread": "ASU +3.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
-    "Team": "UCF Knights",
-    "Win%": "0.5861",
+    "Team": "Air Force Falcons",
+    "Win%": "0.5710",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-170",
-    "Spread": "UCF -3.5",
-    "Over/Under": 48.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
-    "Team": "California Golden Bears",
-    "Win%": "0.3763",
+    "Team": "Troy Trojans",
+    "Win%": "0.4375",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+320",
-    "Spread": "CAL +10",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
-    "Team": "Virginia Cavaliers",
-    "Win%": "0.6237",
+    "Team": "South Alabama Jaguars",
+    "Win%": "0.5625",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-410",
-    "Spread": "UVA -10",
-    "Over/Under": 47.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "Florida Atlantic Owls",
     "Win%": "0.3802",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+180",
-    "Spread": "FAU +5.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
@@ -697,359 +139,53 @@
     "Win%": "0.6198",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-218",
-    "Spread": "TLSA -5.5",
-    "Over/Under": 74.5
-  },
-  {
-    "Team": "Nevada Wolf Pack",
-    "Win%": "0.4208",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-285",
-    "Spread": "NEV -7",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Northern Illinois Huskies",
-    "Win%": "0.5792",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+230",
-    "Spread": "NIU +7",
-    "Over/Under": 47.5
-  },
-  {
-    "Team": "Georgia Southern Eagles",
-    "Win%": "0.5240",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-205",
-    "Spread": "GASO -5.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Georgia State Panthers",
-    "Win%": "0.4760",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+170",
-    "Spread": "GAST +5.5",
-    "Over/Under": 56.5
-  },
-  {
-    "Team": "Jacksonville State Gamecocks",
-    "Win%": "0.5278",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-285",
-    "Spread": "JXST -7.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Western Kentucky Hilltoppers",
-    "Win%": "0.4722",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+230",
-    "Spread": "WKU +7.5",
-    "Over/Under": 53.5
-  },
-  {
-    "Team": "Middle Tennessee Blue Raiders",
-    "Win%": "0.4310",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+900",
-    "Spread": "MTSU +20.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Liberty Flames",
-    "Win%": "0.5690",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-1600",
-    "Spread": "LIB -20.5",
-    "Over/Under": 53.5
-  },
-  {
-    "Team": "Fresno State Bulldogs",
-    "Win%": "0.5539",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+295",
-    "Spread": "FRES +10",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Texas State Bobcats",
-    "Win%": "0.4461",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-375",
-    "Spread": "TXST -10",
-    "Over/Under": 59.5
-  },
-  {
-    "Team": "Ole Miss Rebels",
-    "Win%": "0.4240",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-115",
-    "Spread": "MISS -1.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Oklahoma Sooners",
-    "Win%": "0.5760",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-105",
-    "Spread": "OU +1.5",
-    "Over/Under": 48.5
-  },
-  {
-    "Team": "Washington Huskies",
-    "Win%": "0.5113",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-170",
-    "Spread": "WASH -3",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Michigan State Spartans",
-    "Win%": "0.4887",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+142",
-    "Spread": "MSU +3",
-    "Over/Under": 43.5
-  },
-  {
-    "Team": "Southern Miss Golden Eagles",
-    "Win%": "0.3639",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+625",
-    "Spread": "USM +17.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Louisiana Tech Bulldogs",
-    "Win%": "0.6361",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-950",
-    "Spread": "LT -17.5",
-    "Over/Under": 54.5
-  },
-  {
-    "Team": "Kansas Jayhawks",
-    "Win%": "0.3467",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+120",
-    "Spread": "KU +3",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "West Virginia Mountaineers",
-    "Win%": "0.6533",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-142",
-    "Spread": "WVU -3",
-    "Over/Under": 67.5
-  },
-  {
-    "Team": "Oregon State Beavers",
-    "Win%": "0.4760",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+390",
-    "Spread": "ORST +13.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Boise State Broncos",
-    "Win%": "0.5240",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-520",
-    "Spread": "BOIS -13.5",
-    "Over/Under": 65.5
-  },
-  {
-    "Team": "App State Mountaineers",
-    "Win%": "0.5428",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-120",
-    "Spread": "APP -1.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Marshall Thundering Herd",
-    "Win%": "0.4572",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+100",
-    "Spread": "MRSH +1.5",
-    "Over/Under": 53.5
-  },
-  {
-    "Team": "Florida Gators",
-    "Win%": "0.3815",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+145",
-    "Spread": "FLA +3.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Kentucky Wildcats",
-    "Win%": "0.6185",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-175",
-    "Spread": "UK -3.5",
-    "Over/Under": 53.5
-  },
-  {
-    "Team": "Louisville Cardinals",
-    "Win%": "0.4578",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-170",
-    "Spread": "LOU -3.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "North Carolina Tar Heels",
-    "Win%": "0.5422",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+142",
-    "Spread": "UNC +3.5",
-    "Over/Under": 59.5
-  },
-  {
-    "Team": "Minnesota Golden Gophers",
-    "Win%": "0.3668",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+270",
-    "Spread": "MINN +9.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Penn State Nittany Lions",
-    "Win%": "0.6332",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-340",
-    "Spread": "PSU -9.5",
-    "Over/Under": 41.5
-  },
-  {
-    "Team": "San José State Spartans",
-    "Win%": "0.4323",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+360",
-    "Spread": "SJSU +12.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Air Force Falcons",
-    "Win%": "0.5677",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-470",
-    "Spread": "AFA +12.5",
-    "Over/Under": 47.5
-  },
-  {
-    "Team": "Troy Trojans",
-    "Win%": "0.4286",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+130",
-    "Spread": "TROY +3",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "South Alabama Jaguars",
-    "Win%": "0.5714",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-155",
-    "Spread": "USA -3",
-    "Over/Under": 55.5
-  },
-  {
-    "Team": "Utah Utes",
-    "Win%": "0.4602",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-142",
-    "Spread": "UTAH -2.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Arizona Wildcats",
-    "Win%": "0.5398",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+120",
-    "Spread": "ARIZ +2.5",
-    "Over/Under": 54.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "Texas Longhorns",
-    "Win%": "0.4753",
+    "Win%": "0.4878",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+150",
-    "Spread": "TEX +3.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
     "Team": "LSU Tigers",
-    "Win%": "0.5247",
+    "Win%": "0.5122",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-180",
-    "Spread": "LSU -3.5",
-    "Over/Under": 46.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "Purdue Boilermakers",
-    "Win%": "0.4673",
+    "Win%": "0.4489",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+625",
-    "Spread": "PUR +16.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
     "Team": "Iowa Hawkeyes",
-    "Win%": "0.5327",
+    "Win%": "0.5511",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-950",
-    "Spread": "IOWA -16.5",
-    "Over/Under": 47.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "Stanford Cardinal",
     "Win%": "0.0752",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+500",
-    "Spread": "STAN +15.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
@@ -1057,152 +193,1016 @@
     "Win%": "0.9248",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-700",
-    "Spread": "VT -15.5",
-    "Over/Under": 58.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "UNLV Rebels",
-    "Win%": "0.3206",
+    "Win%": "0.3015",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+440",
-    "Spread": "UNLV +14",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
     "Team": "New Mexico Lobos",
-    "Win%": "0.6794",
+    "Win%": "0.6985",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-600",
-    "Spread": "UNM -14",
-    "Over/Under": 46.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "South Carolina Gamecocks",
-    "Win%": "0.3537",
+    "Win%": "0.3724",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-310",
-    "Spread": "SC -7.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
     "Team": "Arkansas Razorbacks",
-    "Win%": "0.6463",
+    "Win%": "0.6276",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+250",
-    "Spread": "ARK +7.5",
-    "Over/Under": 51.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "North Texas Mean Green",
-    "Win%": "0.5107",
+    "Win%": "0.5297",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-125",
-    "Spread": "UNT -2.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
     "Team": "UTSA Roadrunners",
-    "Win%": "0.4893",
+    "Win%": "0.4703",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+105",
-    "Spread": "UTSA +2.5",
-    "Over/Under": 76.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Missouri Tigers",
+    "Win%": "0.7242",
+    "FinalScore": 21,
+    "Winner": "Georgia Bulldogs",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Georgia Bulldogs",
+    "Win%": "0.2758",
+    "FinalScore": 48,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Alabama Crimson Tide",
+    "Win%": "0.5760",
+    "FinalScore": 21,
+    "Winner": "Alabama Crimson Tide",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Vanderbilt Commodores",
+    "Win%": "0.4240",
+    "FinalScore": 6,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Boston College Eagles",
+    "Win%": "0.0556",
+    "FinalScore": 7,
+    "Winner": "Notre Dame Fighting Irish",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Notre Dame Fighting Irish",
+    "Win%": "0.9444",
+    "FinalScore": 41,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Duke Blue Devils",
+    "Win%": "0.4480",
+    "FinalScore": 25,
+    "Winner": "Miami Hurricanes",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Miami Hurricanes",
+    "Win%": "0.5520",
+    "FinalScore": 36,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Tennessee Volunteers",
+    "Win%": "0.5143",
+    "FinalScore": 22,
+    "Winner": "Tennessee Volunteers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Texas A&M Aggies",
+    "Win%": "0.4857",
+    "FinalScore": 7,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "USC Trojans",
+    "Win%": "0.2320",
+    "FinalScore": 13,
+    "Winner": "Indiana Hoosiers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Indiana Hoosiers",
+    "Win%": "0.7680",
+    "FinalScore": 27,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Wake Forest Demon Deacons",
+    "Win%": "0.4665",
+    "FinalScore": 49,
+    "Winner": "Wake Forest Demon Deacons",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "SMU Mustangs",
+    "Win%": "0.5335",
+    "FinalScore": 7,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Michigan Wolverines",
+    "Win%": "0.4196",
+    "FinalScore": 7,
+    "Winner": "Oregon Ducks",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Oregon Ducks",
+    "Win%": "0.5804",
+    "FinalScore": 31,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Northwestern Wildcats",
+    "Win%": "0.5149",
+    "FinalScore": 19,
+    "Winner": "Ohio State Buckeyes",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Ohio State Buckeyes",
+    "Win%": "0.4851",
+    "FinalScore": 28,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Cincinnati Bearcats",
+    "Win%": "0.2991",
+    "FinalScore": 13,
+    "Winner": "Iowa State Cyclones",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Iowa State Cyclones",
+    "Win%": "0.7009",
+    "FinalScore": 41,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Syracuse Orange",
+    "Win%": "0.4203",
+    "FinalScore": 34,
+    "Winner": "Syracuse Orange",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "NC State Wolfpack",
+    "Win%": "0.5797",
+    "FinalScore": 31,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Wisconsin Badgers",
+    "Win%": "0.4016",
+    "FinalScore": 21,
+    "Winner": "Maryland Terrapins",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Maryland Terrapins",
+    "Win%": "0.5984",
+    "FinalScore": 24,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "James Madison Dukes",
+    "Win%": "0.5111",
+    "FinalScore": 22,
+    "Winner": "UConn Huskies",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "UConn Huskies",
+    "Win%": "0.4889",
+    "FinalScore": 46,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Georgia Tech Yellow Jackets",
+    "Win%": "0.2534",
+    "FinalScore": 20,
+    "Winner": "Georgia Tech Yellow Jackets",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Clemson Tigers",
+    "Win%": "0.7466",
+    "FinalScore": 6,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Nebraska Cornhuskers",
+    "Win%": "0.4975",
+    "FinalScore": 31,
+    "Winner": "Nebraska Cornhuskers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Rutgers Scarlet Knights",
+    "Win%": "0.5025",
+    "FinalScore": 0,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "East Carolina Pirates",
+    "Win%": "0.5045",
+    "FinalScore": 17,
+    "Winner": "East Carolina Pirates",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Charlotte 49ers",
+    "Win%": "0.4955",
+    "FinalScore": 16,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "UAB Blazers",
+    "Win%": "0.4540",
+    "FinalScore": 36,
+    "Winner": "UAB Blazers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Temple Owls",
+    "Win%": "0.5460",
+    "FinalScore": 10,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Arkansas State Red Wolves",
+    "Win%": "0.5020",
+    "FinalScore": 21,
+    "Winner": "Coastal Carolina Chanticleers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Coastal Carolina Chanticleers",
+    "Win%": "0.4980",
+    "FinalScore": 28,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Kansas State Wildcats",
+    "Win%": "0.3582",
+    "FinalScore": 10,
+    "Winner": "TCU Horned Frogs",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "TCU Horned Frogs",
+    "Win%": "0.6418",
+    "FinalScore": 20,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Kennesaw State Owls",
+    "Win%": "0.3937",
+    "FinalScore": 26,
+    "Winner": "Kennesaw State Owls",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Sam Houston Bearkats",
+    "Win%": "0.6063",
+    "FinalScore": 7,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "New Mexico State Aggies",
+    "Win%": "0.4146",
+    "FinalScore": 21,
+    "Winner": "Missouri State Bears",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Missouri State Bears",
+    "Win%": "0.5854",
+    "FinalScore": 27,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Florida International Panthers",
+    "Win%": "0.4050",
+    "FinalScore": 16,
+    "Winner": "Delaware Blue Hens",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Delaware Blue Hens",
+    "Win%": "0.5950",
+    "FinalScore": 24,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Kansas Jayhawks",
+    "Win%": "0.3425",
+    "FinalScore": 37,
+    "Winner": "Kansas Jayhawks",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "West Virginia Mountaineers",
+    "Win%": "0.6575",
+    "FinalScore": 14,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "California Golden Bears",
+    "Win%": "0.3763",
+    "FinalScore": 7,
+    "Winner": "Virginia Cavaliers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Virginia Cavaliers",
+    "Win%": "0.6237",
+    "FinalScore": 36,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Nevada Wolf Pack",
+    "Win%": "0.4833",
+    "FinalScore": 28,
+    "Winner": "Nevada Wolf Pack",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Northern Illinois Huskies",
+    "Win%": "0.5167",
+    "FinalScore": 7,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Georgia Southern Eagles",
+    "Win%": "0.5297",
+    "FinalScore": 34,
+    "Winner": "Georgia Southern Eagles",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Georgia State Panthers",
+    "Win%": "0.4703",
+    "FinalScore": 17,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Jacksonville State Gamecocks",
+    "Win%": "0.5506",
+    "FinalScore": 24,
+    "Winner": "Western Kentucky Hilltoppers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Western Kentucky Hilltoppers",
+    "Win%": "0.4494",
+    "FinalScore": 34,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Middle Tennessee Blue Raiders",
+    "Win%": "0.4148",
+    "FinalScore": 23,
+    "Winner": "Liberty Flames",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Liberty Flames",
+    "Win%": "0.5852",
+    "FinalScore": 28,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Fresno State Bulldogs",
+    "Win%": "0.5469",
+    "FinalScore": 35,
+    "Winner": "Texas State Bobcats",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Texas State Bobcats",
+    "Win%": "0.4531",
+    "FinalScore": 37,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Auburn Tigers",
+    "Win%": "0.5052",
+    "FinalScore": 41,
+    "Winner": "Auburn Tigers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Mississippi State Bulldogs",
+    "Win%": "0.4948",
+    "FinalScore": 9,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Tulane Green Wave",
+    "Win%": "0.3904",
+    "FinalScore": 20,
+    "Winner": "Tulane Green Wave",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Rice Owls",
+    "Win%": "0.6096",
+    "FinalScore": 17,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Southern Miss Golden Eagles",
+    "Win%": "0.3449",
+    "FinalScore": 31,
+    "Winner": "Louisiana Tech Bulldogs",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Louisiana Tech Bulldogs",
+    "Win%": "0.6551",
+    "FinalScore": 63,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Arizona State Sun Devils",
+    "Win%": "0.4139",
+    "FinalScore": 26,
+    "Winner": "Arizona State Sun Devils",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "UCF Knights",
+    "Win%": "0.5861",
+    "FinalScore": 13,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Washington Huskies",
+    "Win%": "0.5044",
+    "FinalScore": 21,
+    "Winner": "Washington Huskies",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Michigan State Spartans",
+    "Win%": "0.4956",
+    "FinalScore": 14,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "App State Mountaineers",
+    "Win%": "0.5386",
+    "FinalScore": 20,
+    "Winner": "App State Mountaineers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Marshall Thundering Herd",
+    "Win%": "0.4614",
+    "FinalScore": 16,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "Texas Tech Red Raiders",
-    "Win%": "0.4353",
+    "Win%": "0.4382",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+142",
-    "Spread": "TTU +3.5",
+    "ML": null,
+    "Spread": null,
     "Over/Under": "O/U"
   },
   {
     "Team": "Oklahoma State Cowboys",
-    "Win%": "0.5647",
+    "Win%": "0.5618",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-170",
-    "Spread": "OKST -3.5",
-    "Over/Under": 72.5
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Team": "Utah State Aggies",
-    "Win%": "0.4305",
+    "Win%": "0.4335",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-135",
-    "Spread": "USU -2.5",
+    "ML": "-155",
+    "Spread": "USU -3",
     "Over/Under": "O/U"
   },
   {
     "Team": "San Diego State Aztecs",
-    "Win%": "0.5695",
+    "Win%": "0.5665",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+114",
-    "Spread": "SDSU +2.5",
-    "Over/Under": 42.5
+    "ML": "+130",
+    "Spread": "SDSU +3",
+    "Over/Under": 43.5
   },
   {
     "Team": "Wyoming Cowboys",
-    "Win%": "0.4670",
+    "Win%": "0.5129",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-305",
-    "Spread": "WYO -7.5",
+    "ML": "-285",
+    "Spread": "WYO -7",
     "Over/Under": "O/U"
   },
   {
     "Team": "UTEP Miners",
-    "Win%": "0.5330",
+    "Win%": "0.4871",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+245",
-    "Spread": "UTEP +7.5",
-    "Over/Under": 39.5
+    "ML": "+230",
+    "Spread": "UTEP +7",
+    "Over/Under": 40.5
+  },
+  {
+    "Team": "Utah Utes",
+    "Win%": "0.4781",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "-130",
+    "Spread": "UTAH -1.5",
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Arizona Wildcats",
+    "Win%": "0.5219",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "+110",
+    "Spread": "ARIZ +1.5",
+    "Over/Under": 55.5
   },
   {
     "Team": "Colorado State Rams",
-    "Win%": "0.5015",
+    "Win%": "0.5265",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+285",
-    "Spread": "CSU +9.5",
+    "ML": "+250",
+    "Spread": "CSU +8.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Washington State Cougars",
-    "Win%": "0.4985",
+    "Win%": "0.4735",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-360",
-    "Spread": "WSU -9.5",
-    "Over/Under": 67.5
+    "ML": "-310",
+    "Spread": "WSU -8.5",
+    "Over/Under": 64.5
   },
   {
     "Team": "North Dakota State Bison",
-    "Win%": "0.5136",
+    "Win%": "0.5106",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-245",
-    "Spread": "NDSU -6.5",
+    "ML": "-285",
+    "Spread": "NDSU -7.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Hawai'i Rainbow Warriors",
-    "Win%": "0.4864",
+    "Win%": "0.4894",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+200",
-    "Spread": "HAW +6.5",
-    "Over/Under": 38.5
+    "ML": "+230",
+    "Spread": "HAW +7.5",
+    "Over/Under": 39.5
+  },
+  {
+    "Team": "Western Michigan Broncos",
+    "Win%": "0.5782",
+    "FinalScore": 42,
+    "Winner": "Western Michigan Broncos",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Akron Zips",
+    "Win%": "0.4218",
+    "FinalScore": 14,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Kent State Golden Flashes",
+    "Win%": "0.4490",
+    "FinalScore": 28,
+    "Winner": "Bowling Green Falcons",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Bowling Green Falcons",
+    "Win%": "0.5510",
+    "FinalScore": 33,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Ohio Bobcats",
+    "Win%": "0.3689",
+    "FinalScore": 17,
+    "Winner": "Miami (OH) RedHawks",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Miami (OH) RedHawks",
+    "Win%": "0.6311",
+    "FinalScore": 34,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Buffalo Bulls",
+    "Win%": "0.4219",
+    "FinalScore": 28,
+    "Winner": "Buffalo Bulls",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Ball State Cardinals",
+    "Win%": "0.5781",
+    "FinalScore": 7,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Sacramento State Hornets",
+    "Win%": "0.3731",
+    "FinalScore": 7,
+    "Winner": "Central Michigan Chippewas",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Central Michigan Chippewas",
+    "Win%": "0.6269",
+    "FinalScore": 28,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Massachusetts Minutemen",
+    "Win%": "0.4359",
+    "FinalScore": 0,
+    "Winner": "Toledo Rockets",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Toledo Rockets",
+    "Win%": "0.5641",
+    "FinalScore": 24,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Memphis Tigers",
+    "Win%": "0.4166",
+    "FinalScore": 52,
+    "Winner": "Memphis Tigers",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "South Florida Bulls",
+    "Win%": "0.5834",
+    "FinalScore": 41,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Louisiana Ragin' Cajuns",
+    "Win%": "0.5122",
+    "FinalScore": 42,
+    "Winner": "Louisiana Ragin' Cajuns",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "UL Monroe Warhawks",
+    "Win%": "0.4878",
+    "FinalScore": 21,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Illinois Fighting Illini",
+    "Win%": "0.4187",
+    "FinalScore": 14,
+    "Winner": "UCLA Bruins",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "UCLA Bruins",
+    "Win%": "0.5813",
+    "FinalScore": 22,
+    "Winner": "WIN",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Houston Cougars",
+    "Win%": "0.5700",
+    "FinalScore": 32,
+    "Winner": "Colorado Buffaloes",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Colorado Buffaloes",
+    "Win%": "0.4300",
+    "FinalScore": 42,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Florida State Seminoles",
+    "Win%": "0.3804",
+    "FinalScore": 16,
+    "Winner": "Florida State Seminoles",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Pittsburgh Panthers",
+    "Win%": "0.6196",
+    "FinalScore": 10,
+    "Winner": "LOSE",
+    "ML": null,
+    "Spread": null,
+    "Over/Under": null
+  },
+  {
+    "Team": "Ole Miss Rebels",
+    "Win%": "0.4171",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "+124",
+    "Spread": "MISS +2.5",
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Oklahoma Sooners",
+    "Win%": "0.5829",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "-148",
+    "Spread": "OU -2.5",
+    "Over/Under": 48.5
   }
 ]

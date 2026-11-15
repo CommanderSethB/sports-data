@@ -4,7 +4,7 @@
  */
 
 const SEASON = 2026;
-const NUM_WEEKS = 18;
+const NUM_WEEKS = 15;
 const STAT_END_WEEK = 10;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
@@ -28,8 +28,7 @@ const TEAM_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/col
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-//main();
-updateSchedules();
+main();
 
 async function main() {
     try {
@@ -959,7 +958,7 @@ async function updateSchedules() {
     let schedules = [];
     for (let team in teamList) { 
         schedules.push({
-            "Team ID": teamList[team].ID,
+            "Team ID": teamList[team]['Team ID'],
             "Week 1": null, "Week 2": null, "Week 3": null, "Week 4": null,
             "Week 5": null, "Week 6": null, "Week 7": null, "Week 8": null,
             "Week 9": null, "Week 10": null, "Week 11": null, "Week 12": null,
@@ -1132,9 +1131,16 @@ function getLiveScoringItem(teamID, item, type = "all") {
 }
 
 function aPercentB(a, b, power = 1) {
-    let sum = Math.pow(parseFloat(a), power) + Math.pow(parseFloat(b), power);
-    if (sum === 0) return 0.0;
-    return (Math.pow(a, power) / sum).toFixed(4);
+    let parsedA = parseFloat(a);
+    let parsedB = parseFloat(b);
+
+    if (isNaN(parsedA)) parsedA = 0.0;
+    if (isNaN(parsedB)) parsedB = 0.0;
+
+    let sum = Math.pow(parsedA, power) + Math.pow(parsedB, power);
+    if (sum === 0) return (0.0).toFixed(4);
+    
+    return (Math.pow(parsedA, power) / sum).toFixed(4);
 }
 
 function predictionPercentage(teamA, teamB) {
@@ -1206,7 +1212,7 @@ function getMomentum(winStreak, gp) {
 /**
  * Generates Strength Based Power (SBP) ratings for teams based on match predictor percentages.
  */
-function updateSBP() {
+async function updateSBP() {
     let rawData = fs.readFileSync('./NCAAFB/data/teamList.json', 'utf-8');
     let teamList = JSON.parse(rawData);
 
@@ -1301,46 +1307,48 @@ function getTeamStrengthOfSchedule(team) {
 /**
  * Calculates comprehensive power rankings using weighted team metrics.
  */
-function updatePowerRankings() {
+async function updatePowerRankings() {
     let rawData = fs.readFileSync('./NCAAFB/data/standings.json', 'utf-8');
     let standings = JSON.parse(rawData);
     let powerRankings = [];
 
     for (let currentTeam in standings) {
-        let teamID = standings[currentTeam]['Team ID'];
-        let record = parseFloat(standings[currentTeam]['Rec%']);
-        let pyth = parseFloat(pythagoreanExpectation(teamID));
-        let turnoverFactor = parseFloat(getTeamTurnoverFactor ? getTeamTurnoverFactor(teamID) : 0);
-        let touchdownFactor = parseFloat(getTeamTDPtsPercentage(teamID));
-        let sbp = parseFloat(getTeamSBP(teamID));
-        let sos = parseFloat(getTeamStrengthOfSchedule(teamID));
-        let momentum = parseFloat(getMomentum(standings[currentTeam]['Streak'], standings[currentTeam]['GP']));
-        let conf = parseFloat(getConfNonConfRecord(standings[currentTeam]['Conference']));
+        if(!(standings[currentTeam]['Conference'] === "Other")){
+            let teamID = standings[currentTeam]['Team ID'];
+            let record = parseFloat(standings[currentTeam]['Rec%']);
+            let pyth = parseFloat(pythagoreanExpectation(teamID));
+            let turnoverFactor = parseFloat(getTeamTurnoverFactor(teamID) ? getTeamTurnoverFactor(teamID) : 0);
+            let touchdownFactor = parseFloat(getTeamTDPtsPercentage(teamID));
+            let sbp = parseFloat(getTeamSBP(teamID));
+            let sos = parseFloat(getTeamStrengthOfSchedule(teamID));
+            let momentum = parseFloat(getMomentum(standings[currentTeam]['Streak'], standings[currentTeam]['GP']));
+            let conf = parseFloat(getConfNonConfRecord(standings[currentTeam]['Conference']));
 
-        let rating = 
-            record * RATING_WEIGHT_REC + 
-            pyth * RATING_WEIGHT_PE + 
-            turnoverFactor * RATING_WEIGHT_TOF + 
-            touchdownFactor * RATING_WEIGHT_TDP + 
-            sbp * RATING_WEIGHT_SBP + 
-            sos * RATING_WEIGHT_SOS + 
-            momentum * RATING_WEIGHT_MOM + 
-            conf * RATING_WEIGHT_CONF;
+            let rating = 
+                record * RATING_WEIGHT_REC + 
+                pyth * RATING_WEIGHT_PE + 
+                turnoverFactor * RATING_WEIGHT_TOF + 
+                touchdownFactor * RATING_WEIGHT_TDP + 
+                sbp * RATING_WEIGHT_SBP + 
+                sos * RATING_WEIGHT_SOS + 
+                momentum * RATING_WEIGHT_MOM + 
+                conf * RATING_WEIGHT_CONF;
 
-        powerRankings.push({
-            'Rk': null,
-            'Mv': null,
-            'Team Name': standings[currentTeam]['Team Name'],
-            'Record': record.toFixed(4),
-            'Pyth%': pyth.toFixed(4),
-            'SBP': sbp.toFixed(4),
-            'TO Fact': turnoverFactor.toFixed(4),
-            'TD Fact': touchdownFactor.toFixed(4),
-            'SOS': sos.toFixed(4),
-            'Mom': momentum.toFixed(4),
-            'Conf': conf.toFixed(4),
-            'Rating': rating.toFixed(4)            
-        });
+            powerRankings.push({
+                'Rk': null,
+                'Mv': null,
+                'Team Name': standings[currentTeam]['Team Name'],
+                'Record': record.toFixed(4),
+                'Pyth%': pyth.toFixed(4),
+                'SBP': sbp.toFixed(4),
+                'TO Fact': turnoverFactor.toFixed(4),
+                'TD Fact': touchdownFactor.toFixed(4),
+                'SOS': sos.toFixed(4),
+                'Mom': momentum.toFixed(4),
+                'Conf': conf.toFixed(4),
+                'Rating': rating.toFixed(4)            
+            });
+        }
     }
 
     powerRankings.sort((a, b) => b['Rating'] - a['Rating']);
@@ -1431,10 +1439,17 @@ function getTeamTurnoverFactor(team) {
     let teamDict = stats.find(x => x['Team ID'] === team);
     if (!teamDict) return 0.5;
 
-    let takeaways = parseInt(teamDict['Int']) + (parseInt(teamDict['Recovered']) - (parseInt(teamDict['Fumble']) - parseInt(teamDict['Lost'])));
-    let turnovers = parseInt(teamDict['Int Pass']) + parseInt(teamDict['Lost']);
+    let interceptions = parseInt(teamDict['Int']) || 0;
+    let recovered = parseInt(teamDict['Recovered']) || 0;
+    let fumbles = parseInt(teamDict['Fumble']) || 0;
+    let lost = parseInt(teamDict['Lost']) || 0;
+    let passInts = parseInt(teamDict['Int Pass']) || 0;
 
-    return aPercentB(takeaways, turnovers, TOF_POWER);
+    let takeaways = interceptions + (recovered - (fumbles - lost));
+    let turnovers = passInts + lost;
+
+    let result = parseFloat(aPercentB(takeaways, turnovers, TOF_POWER));
+    return isNaN(result) ? 0.5 : result; // Fallback safeguard
 }
 
 function predictedScore(teamA, teamB) {
