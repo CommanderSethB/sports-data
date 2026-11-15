@@ -58,15 +58,56 @@
             border-color: #1b4332;
         }
 
+        /* Section Header & Filter Controls */
+        .table-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
         .table-section-title {
             color: #1b4332;
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-left: 4px solid #2d6a4f;
             padding-left: 8px;
+            margin: 0;
+        }
+
+        .filter-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .row-counter {
+            font-size: 13px;
+            font-weight: 600;
+            color: #555555;
+        }
+
+        .reset-btn {
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #1b4332;
+            background-color: #e8f5e9;
+            border: 1px solid #2d6a4f;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .reset-btn:hover {
+            background-color: #2d6a4f;
+            color: #ffffff;
         }
 
         #table-container {
@@ -96,38 +137,69 @@
             font-size: 14px;
         }
 
-        th {
+        /* Sortable Header Row */
+        tr.sort-row th {
             background-color: #1b4332; /* Deep Turf Green */
             color: #ffffff;
             padding: 12px 16px;
             text-transform: uppercase;
             font-size: 12px;
             letter-spacing: 0.8px;
-            border-bottom: 3px solid #2d6a4f;
+            border-bottom: 2px solid #2d6a4f;
             white-space: nowrap;
             cursor: pointer;
             user-select: none;
         }
 
-        th:hover {
+        tr.sort-row th:hover {
             background-color: #2d6a4f;
         }
 
-        th::after {
+        tr.sort-row th::after {
             content: '';
             margin-left: 6px;
             font-size: 10px;
             opacity: 0.6;
         }
 
-        th.asc::after {
+        tr.sort-row th.asc::after {
             content: '▲';
             opacity: 1;
         }
 
-        th.desc::after {
+        tr.sort-row th.desc::after {
             content: '▼';
             opacity: 1;
+        }
+
+        /* Column Filter Row */
+        tr.filter-row th {
+            background-color: #24553f;
+            padding: 6px 10px;
+            border-bottom: 3px solid #2d6a4f;
+        }
+
+        .column-filter {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px 8px;
+            font-size: 12px;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            border: 1px solid #95d5b2;
+            border-radius: 4px;
+            outline: none;
+            min-width: 75px;
+        }
+
+        .column-filter:focus {
+            border-color: #ffffff;
+            box-shadow: 0 0 0 2px rgba(149, 213, 178, 0.5);
+        }
+
+        .column-filter::placeholder {
+            color: #888888;
+            font-style: italic;
         }
 
         td {
@@ -136,11 +208,11 @@
             color: #333333;
         }
 
-        tr:nth-child(even) {
+        tbody tr:nth-child(even) {
             background-color: #f8f9fa; 
         }
 
-        tr:hover {
+        tbody tr:hover {
             background-color: #e8f5e9; 
             transition: background-color 0.15s ease-in-out;
         }
@@ -160,9 +232,82 @@
     <div id="table-container"></div>
 
     <script>
+        // Evaluates a cell value against a filter string (supports comma-separated terms, text search, and comparison operators)
+        function matchesFilter(cellValue, filterQuery) {
+            const query = filterQuery.trim();
+            if (!query) return true;
+
+            const rawCell = cellValue.trim();
+            
+            // Check for comparison operators (e.g. "> 50", "<= -110", "= 3")
+            const operatorMatch = query.match(/^(>=|<=|>|<|=)\s*(-?\d+(\.\d+)?)$/);
+            if (operatorMatch) {
+                const operator = operatorMatch[1];
+                const targetNum = parseFloat(operatorMatch[2]);
+                const cellNum = parseFloat(rawCell.replace(/[^0-9.-]/g, ''));
+
+                if (!isNaN(cellNum) && !isNaN(targetNum)) {
+                    switch (operator) {
+                        case '>':  return cellNum > targetNum;
+                        case '<':  return cellNum < targetNum;
+                        case '>=': return cellNum >= targetNum;
+                        case '<=': return cellNum <= targetNum;
+                        case '=':  return cellNum === targetNum;
+                    }
+                }
+            }
+
+            // Split by comma to support multiple terms/names (OR logic across terms)
+            const terms = query.split(',').map(t => t.trim().toLowerCase()).filter(t => t.length > 0);
+            if (terms.length === 0) return true;
+
+            const lowerCell = rawCell.toLowerCase();
+            return terms.some(term => lowerCell.includes(term));
+        }
+
+        // Attaches multi-column filtering and reset controls to a table
+        function makeTableFilterable(table, counterElement, resetButton) {
+            const filterInputs = Array.from(table.querySelectorAll('.column-filter'));
+            const tbody = table.querySelector('tbody');
+
+            function applyFilters() {
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                const activeFilters = filterInputs.map(input => ({
+                    colIndex: parseInt(input.dataset.colIndex, 10),
+                    value: input.value
+                }));
+
+                let visibleCount = 0;
+
+                rows.forEach(row => {
+                    const isMatch = activeFilters.every(filter => {
+                        if (!filter.value.trim()) return true;
+                        const cellText = row.children[filter.colIndex]?.textContent || '';
+                        return matchesFilter(cellText, filter.value);
+                    });
+
+                    row.style.display = isMatch ? '' : 'none';
+                    if (isMatch) visibleCount++;
+                });
+
+                counterElement.textContent = `Showing ${visibleCount} of ${rows.length} rows`;
+            }
+
+            filterInputs.forEach(input => {
+                input.addEventListener('input', applyFilters);
+            });
+
+            resetButton.addEventListener('click', () => {
+                filterInputs.forEach(input => input.value = '');
+                applyFilters();
+            });
+
+            applyFilters();
+        }
+
         // Function to handle sorting a specific table when a header is clicked
         function makeTableSortable(table) {
-            const headers = table.querySelectorAll('th');
+            const headers = table.querySelectorAll('tr.sort-row th');
             const tbody = table.querySelector('tbody');
 
             headers.forEach((th, index) => {
@@ -201,7 +346,6 @@
                             : cellB.localeCompare(cellA, undefined, { numeric: true });
                     });
 
-                    tbody.innerHTML = '';
                     rows.forEach(row => tbody.appendChild(row));
                 });
             });
@@ -247,26 +391,71 @@
                     wrapper.className = 'table-wrapper';
                     wrapper.dataset.title = formattedTitle;
 
-                    // Add a sub-heading for the table
+                    // Header bar with title, row counter, and reset button
+                    const headerBar = document.createElement('div');
+                    headerBar.className = 'table-header-bar';
+
                     const sectionTitle = document.createElement('div');
                     sectionTitle.className = 'table-section-title';
                     sectionTitle.textContent = formattedTitle;
-                    wrapper.appendChild(sectionTitle);
+
+                    const controls = document.createElement('div');
+                    controls.className = 'filter-controls';
+
+                    const rowCounter = document.createElement('span');
+                    rowCounter.className = 'row-counter';
+
+                    const resetBtn = document.createElement('button');
+                    resetBtn.type = 'button';
+                    resetBtn.className = 'reset-btn';
+                    resetBtn.textContent = 'Reset Filters';
+
+                    controls.appendChild(rowCounter);
+                    controls.appendChild(resetBtn);
+                    headerBar.appendChild(sectionTitle);
+                    headerBar.appendChild(controls);
+                    wrapper.appendChild(headerBar);
 
                     // Create table elements
                     const table = document.createElement('table');
                     const thead = document.createElement('thead');
                     const tbody = document.createElement('tbody');
 
-                    const headers = Object.keys(rows[0]);
-                    const headerRow = document.createElement('tr');
-                    
-                    headers.forEach(headerText => {
-                        const th = document.createElement('th');
-                        th.textContent = headerText.replace(/_/g, ' ');
-                        headerRow.appendChild(th);
+                    // Filter out any key/column matching Player ID
+                    const allHeaders = Object.keys(rows[0]);
+                    const headers = allHeaders.filter(header => {
+                        const normalized = header.toLowerCase().replace(/[_ ]/g, '');
+                        return normalized !== 'playerid';
                     });
+                    
+                    // Row 1: Sortable column headers
+                    const headerRow = document.createElement('tr');
+                    headerRow.className = 'sort-row';
+                    
+                    // Row 2: Column filter inputs
+                    const filterRow = document.createElement('tr');
+                    filterRow.className = 'filter-row';
+
+                    headers.forEach((headerText, colIndex) => {
+                        const cleanLabel = headerText.replace(/_/g, ' ');
+
+                        const th = document.createElement('th');
+                        th.textContent = cleanLabel;
+                        headerRow.appendChild(th);
+
+                        const filterTh = document.createElement('th');
+                        const input = document.createElement('input');
+                        input.type = 'text';
+                        input.className = 'column-filter';
+                        input.placeholder = `Filter (e.g. A, B)...`;
+                        input.title = `Filter ${cleanLabel} (use commas for multiple, e.g. Mahomes, Allen)`;
+                        input.dataset.colIndex = colIndex;
+                        filterTh.appendChild(input);
+                        filterRow.appendChild(filterTh);
+                    });
+
                     thead.appendChild(headerRow);
+                    thead.appendChild(filterRow);
                     table.appendChild(thead);
 
                     rows.forEach(item => {
@@ -285,12 +474,12 @@
                     wrappers.push(wrapper);
 
                     makeTableSortable(table);
+                    makeTableFilterable(table, rowCounter, resetBtn);
                 }
 
                 // Show selector if there are tables available
                 if (wrappers.length > 0) {
                     selectorWrapper.style.display = 'flex';
-                    // Default to the first table
                     wrappers[0].classList.add('active');
                 }
 
