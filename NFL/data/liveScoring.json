@@ -2474,14 +2474,14 @@
     "Home ID": "8",
     "Away Team": "New England Patriots",
     "Away ID": "17",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "-155",
-    "Away ML": "+130",
-    "Spread": "DET -3",
-    "Over/Under": 49.5
+    "Status": "Final",
+    "Home Score": "35",
+    "Away Score": "10",
+    "Winner": "8",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2492,14 +2492,14 @@
     "Home ID": "1",
     "Away Team": "Kansas City Chiefs",
     "Away ID": "12",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "+140",
-    "Away ML": "-166",
-    "Spread": "KC -3",
-    "Over/Under": 47.5
+    "Status": "Final",
+    "Home Score": "13",
+    "Away Score": "35",
+    "Winner": "12",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2510,14 +2510,14 @@
     "Home ID": "5",
     "Away Team": "Houston Texans",
     "Away ID": "34",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "+185",
-    "Away ML": "-225",
-    "Spread": "HOU -4.5",
-    "Over/Under": 40.5
+    "Status": "Final",
+    "Home Score": "27",
+    "Away Score": "24",
+    "Winner": "5",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2528,14 +2528,14 @@
     "Home ID": "9",
     "Away Team": "Minnesota Vikings",
     "Away ID": "16",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "-148",
-    "Away ML": "+124",
-    "Spread": "GB -2.5",
-    "Over/Under": 42.5
+    "Status": "Final",
+    "Home Score": "10",
+    "Away Score": "30",
+    "Winner": "16",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2546,14 +2546,14 @@
     "Home ID": "10",
     "Away Team": "Jacksonville Jaguars",
     "Away ID": "30",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "+470",
-    "Away ML": "-650",
-    "Spread": "JAX -10.5",
-    "Over/Under": 46.5
+    "Status": "Final",
+    "Home Score": "23",
+    "Away Score": "40",
+    "Winner": "30",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2564,14 +2564,14 @@
     "Home ID": "11",
     "Away Team": "Miami Dolphins",
     "Away ID": "15",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "-218",
-    "Away ML": "+180",
-    "Spread": "IND -4.5",
-    "Over/Under": 37.5
+    "Status": "Final",
+    "Home Score": "24",
+    "Away Score": "22",
+    "Winner": "11",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2582,14 +2582,14 @@
     "Home ID": "18",
     "Away Team": "Carolina Panthers",
     "Away ID": "29",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "-130",
-    "Away ML": "+110",
-    "Spread": "NO -1.5",
-    "Over/Under": 48.5
+    "Status": "Final",
+    "Home Score": "17",
+    "Away Score": "20",
+    "Winner": "29",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2600,14 +2600,14 @@
     "Home ID": "20",
     "Away Team": "Buffalo Bills",
     "Away ID": "2",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "+310",
-    "Away ML": "-395",
-    "Spread": "BUF -7.5",
-    "Over/Under": 51.5
+    "Status": "Final",
+    "Home Score": "12",
+    "Away Score": "31",
+    "Winner": "2",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2618,14 +2618,14 @@
     "Home ID": "13",
     "Away Team": "Seattle Seahawks",
     "Away ID": "26",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "+240",
-    "Away ML": "-298",
-    "Spread": "SEA -6.5",
-    "Over/Under": 40.5
+    "Status": "Final",
+    "Home Score": "13",
+    "Away Score": "21",
+    "Winner": "26",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2636,14 +2636,14 @@
     "Home ID": "22",
     "Away Team": "Los Angeles Rams",
     "Away ID": "14",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "+390",
-    "Away ML": "-520",
-    "Spread": "LAR -9.5",
-    "Over/Under": 38.5
+    "Status": "Final",
+    "Home Score": "6",
+    "Away Score": "34",
+    "Winner": "14",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2654,14 +2654,14 @@
     "Home ID": "6",
     "Away Team": "San Francisco 49ers",
     "Away ID": "25",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "+170",
-    "Away ML": "-205",
-    "Spread": "SF -3.5",
-    "Over/Under": 55.5
+    "Status": "Final",
+    "Home Score": "40",
+    "Away Score": "46",
+    "Winner": "25",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2672,14 +2672,14 @@
     "Home ID": "4",
     "Away Team": "Pittsburgh Steelers",
     "Away ID": "23",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "-185",
-    "Away ML": "+154",
-    "Spread": "CIN -3.5",
-    "Over/Under": 49.5
+    "Status": "Final",
+    "Home Score": "38",
+    "Away Score": "18",
+    "Winner": "4",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 10",
@@ -2690,14 +2690,14 @@
     "Home ID": "33",
     "Away Team": "Los Angeles Chargers",
     "Away ID": "24",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": "-225",
-    "Away ML": "+185",
-    "Spread": "BAL -4.5",
-    "Over/Under": 38.5
+    "Status": "Final",
+    "Home Score": "20",
+    "Away Score": "23",
+    "Winner": "24",
+    "Home ML": null,
+    "Away ML": null,
+    "Spread": null,
+    "Over/Under": null
   },
   {
     "Week": "Week 11",
@@ -2712,9 +2712,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-455",
-    "Away ML": "+350",
-    "Spread": "HOU -10",
+    "Home ML": "-700",
+    "Away ML": "+500",
+    "Spread": "HOU -12.5",
     "Over/Under": 44.5
   },
   {
@@ -2730,10 +2730,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-1650",
-    "Away ML": "+950",
+    "Home ML": "-1200",
+    "Away ML": "+750",
     "Spread": "BUF -16.5",
-    "Over/Under": 46.5
+    "Over/Under": 45.5
   },
   {
     "Week": "Week 11",
@@ -2748,9 +2748,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-470",
-    "Away ML": "+360",
-    "Spread": "CHI -9.5",
+    "Home ML": "-675",
+    "Away ML": "+490",
+    "Spread": "CHI -11.5",
     "Over/Under": 48.5
   },
   {
@@ -2766,10 +2766,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-410",
-    "Away ML": "+320",
-    "Spread": "DAL -7.5",
-    "Over/Under": 51.5
+    "Home ML": "-425",
+    "Away ML": "+330",
+    "Spread": "DAL -8.5",
+    "Over/Under": 54.5
   },
   {
     "Week": "Week 11",
@@ -2784,10 +2784,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-180",
-    "Away ML": "+150",
-    "Spread": "DET -3.5",
-    "Over/Under": 47.5
+    "Home ML": "-270",
+    "Away ML": "+220",
+    "Spread": "DET -6.5",
+    "Over/Under": 46.5
   },
   {
     "Week": "Week 11",
@@ -2802,10 +2802,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-950",
-    "Away ML": "+625",
-    "Spread": "KC -14",
-    "Over/Under": 42.5
+    "Home ML": "-1450",
+    "Away ML": "+850",
+    "Spread": "KC -16.5",
+    "Over/Under": 41.5
   },
   {
     "Week": "Week 11",
@@ -2820,8 +2820,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+164",
-    "Away ML": "-198",
+    "Home ML": "+180",
+    "Away ML": "-218",
     "Spread": "PIT -4.5",
     "Over/Under": 38.5
   },
@@ -2838,10 +2838,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-125",
-    "Away ML": "+105",
-    "Spread": "CAR -1.5",
-    "Over/Under": 44.5
+    "Home ML": "-148",
+    "Away ML": "+124",
+    "Spread": "CAR -2.5",
+    "Over/Under": 43.5
   },
   {
     "Week": "Week 11",
@@ -2856,10 +2856,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-125",
-    "Away ML": "+105",
-    "Spread": "LAC -1.5",
-    "Over/Under": 42.5
+    "Home ML": "-162",
+    "Away ML": "+136",
+    "Spread": "LAC -3",
+    "Over/Under": 40.5
   },
   {
     "Week": "Week 11",
@@ -2874,10 +2874,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-455",
-    "Away ML": "+350",
-    "Spread": "DEN -8.5",
-    "Over/Under": 41.5
+    "Home ML": "-550",
+    "Away ML": "+410",
+    "Spread": "DEN -10",
+    "Over/Under": 40.5
   },
   {
     "Week": "Week 11",
@@ -2895,7 +2895,7 @@
     "Home ML": "+215",
     "Away ML": "-265",
     "Spread": "JAX -6",
-    "Over/Under": 44.5
+    "Over/Under": 46.5
   },
   {
     "Week": "Week 11",
@@ -2910,10 +2910,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-205",
-    "Away ML": "+170",
-    "Spread": "SF -3.5",
-    "Over/Under": 45.5
+    "Home ML": "-162",
+    "Away ML": "+136",
+    "Spread": "SF -3",
+    "Over/Under": 46.5
   },
   {
     "Week": "Week 11",
@@ -2928,10 +2928,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+170",
-    "Away ML": "-205",
-    "Spread": "CIN -3.5",
-    "Over/Under": 51.5
+    "Home ML": "+235",
+    "Away ML": "-290",
+    "Spread": "CIN -6.5",
+    "Over/Under": 52.5
   },
   {
     "Week": "Week 12",

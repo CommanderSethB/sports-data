@@ -1,20 +1,6 @@
 [
   {
     "teamID": "22",
-    "playerID": "3059722",
-    "playerName": "Zay Jones",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "4239944",
-    "playerName": "Hunter Long",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "22",
     "playerID": "4709718",
     "playerName": "Jayden Williams",
     "injuryStatus": "Questionable",
@@ -22,22 +8,29 @@
   },
   {
     "teamID": "22",
-    "playerID": "4240619",
-    "playerName": "Zachary Carter",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
+    "playerID": "3886633",
+    "playerName": "Hjalte Froholdt",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "22",
     "playerID": "4367199",
     "playerName": "Jon Gaines II",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "22",
-    "playerID": "3886633",
-    "playerName": "Hjalte Froholdt",
+    "playerID": "4363538",
+    "playerName": "Chad Ryland",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4428996",
+    "playerName": "Jordan Burch",
     "injuryStatus": "Out",
     "playerScore": 0
   },
@@ -45,8 +38,92 @@
     "teamID": "22",
     "playerID": "3918331",
     "playerName": "Andrew Wingard",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "22",
+    "playerID": "4361272",
+    "playerName": "Eku Leota",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4363408",
+    "playerName": "Starling Thomas V",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4430841",
+    "playerName": "Carson Beck",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4373626",
+    "playerName": "Tyler Allgeier",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4361307",
+    "playerName": "Trey McBride",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4040805",
+    "playerName": "Roy Lopez",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4239944",
+    "playerName": "Hunter Long",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "5151948",
+    "playerName": "Joey Aguilar",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4569480",
+    "playerName": "Darius Robinson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4698113",
+    "playerName": "Max Melton",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "22",
+    "playerID": "4038524",
+    "playerName": "Gardner Minshew II",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "22",
+    "playerID": "4240619",
+    "playerName": "Zachary Carter",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
   },
   {
     "teamID": "22",
@@ -85,38 +162,10 @@
   },
   {
     "teamID": "22",
-    "playerID": "4569480",
-    "playerName": "Darius Robinson",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "22",
     "playerID": "3127287",
     "playerName": "Budda Baker",
     "injuryStatus": "Active",
     "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "4698113",
-    "playerName": "Max Melton",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "22",
-    "playerID": "4430841",
-    "playerName": "Carson Beck",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "4038524",
-    "playerName": "Gardner Minshew II",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
   },
   {
     "teamID": "22",
@@ -126,60 +175,123 @@
     "playerScore": 1
   },
   {
-    "teamID": "22",
-    "playerID": "4039050",
-    "playerName": "Devin Duvernay",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "4360761",
-    "playerName": "Michael Wilson",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "22",
-    "playerID": "5151948",
-    "playerName": "Joey Aguilar",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "4363538",
-    "playerName": "Chad Ryland",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "11394",
-    "playerName": "Josh Johnson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "4361272",
-    "playerName": "Eku Leota",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "22",
-    "playerID": "4363408",
-    "playerName": "Starling Thomas V",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
     "teamID": "1",
     "playerID": "4037626",
     "playerName": "Divine Deablo",
     "injuryStatus": "Out",
     "playerScore": 0
+  },
+  {
+    "teamID": "1",
+    "playerID": "4870612",
+    "playerName": "Zachariah Branch",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "1",
+    "playerID": "4361409",
+    "playerName": "Jahan Dotson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4372066",
+    "playerName": "Jake Moody",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "3043275",
+    "playerName": "Austin Hooper",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4426502",
+    "playerName": "Drake London",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4685590",
+    "playerName": "Cameron Williams",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4575860",
+    "playerName": "Robert Longerbeam",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4870988",
+    "playerName": "Avieon Terrell",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "5344782",
+    "playerName": "Jack Strand",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "14012",
+    "playerName": "Andy Dalton",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4360423",
+    "playerName": "Michael Penix Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4360248",
+    "playerName": "Kyle Pitts Sr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4430807",
+    "playerName": "Bijan Robinson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "3128303",
+    "playerName": "Josh Woods",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "5081394",
+    "playerName": "James Pearce Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "1",
+    "playerID": "4429014",
+    "playerName": "Gervon Dexter Sr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "1",
@@ -204,41 +316,6 @@
   },
   {
     "teamID": "1",
-    "playerID": "4870612",
-    "playerName": "Zachariah Branch",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "1",
-    "playerID": "4685590",
-    "playerName": "Cameron Williams",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
-    "playerID": "3128303",
-    "playerName": "Josh Woods",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "1",
-    "playerID": "5081394",
-    "playerName": "James Pearce Jr.",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "1",
-    "playerID": "4429014",
-    "playerName": "Gervon Dexter Sr.",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "1",
     "playerID": "4035886",
     "playerName": "Khalil Herbert",
     "injuryStatus": "Active",
@@ -253,36 +330,8 @@
   },
   {
     "teamID": "1",
-    "playerID": "4361409",
-    "playerName": "Jahan Dotson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
     "playerID": "4243220",
     "playerName": "Andrew Vorhees",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
-    "playerID": "5344782",
-    "playerName": "Jack Strand",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
-    "playerID": "14012",
-    "playerName": "Andy Dalton",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
-    "playerID": "4575860",
-    "playerName": "Robert Longerbeam",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -295,73 +344,45 @@
   },
   {
     "teamID": "1",
-    "playerID": "4360248",
-    "playerName": "Kyle Pitts Sr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
-    "playerID": "4360423",
-    "playerName": "Michael Penix Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
-    "playerID": "4426502",
-    "playerName": "Drake London",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
-    "playerID": "4430807",
-    "playerName": "Bijan Robinson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "1",
     "playerID": "4360807",
     "playerName": "Yasir Abdullah",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "1",
-    "playerID": "4431210",
-    "playerName": "Beaux Collins",
+    "teamID": "33",
+    "playerID": "3858276",
+    "playerName": "Jaylinn Hawkins",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "33",
+    "playerID": "4702918",
+    "playerName": "Chandler Rivers",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "1",
-    "playerID": "4241474",
-    "playerName": "Brian Robinson Jr.",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "1",
-    "playerID": "3045527",
-    "playerName": "Samson Ebukam",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
+    "teamID": "33",
+    "playerID": "4565311",
+    "playerName": "Aeneas Peebles",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "33",
-    "playerID": "4685526",
-    "playerName": "Adam Randall",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
+    "playerID": "4685736",
+    "playerName": "Emery Jones Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "33",
-    "playerID": "3858276",
-    "playerName": "Jaylinn Hawkins",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "playerID": "5088338",
+    "playerName": "Elijah Sarratt",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "33",
@@ -372,8 +393,78 @@
   },
   {
     "teamID": "33",
+    "playerID": "4870847",
+    "playerName": "Ja'Kobi Lane",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "33",
+    "playerID": "3116365",
+    "playerName": "Mark Andrews",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "33",
+    "playerID": "4429615",
+    "playerName": "Zay Flowers",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "33",
+    "playerID": "2578570",
+    "playerName": "Jacoby Brissett",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "33",
+    "playerID": "3043078",
+    "playerName": "Derrick Henry",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "33",
+    "playerID": "4035245",
+    "playerName": "Nnamdi Madubuike",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "33",
     "playerID": "4832793",
     "playerName": "Olaivavega Ioane",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "33",
+    "playerID": "4428512",
+    "playerName": "Kedon Slovis",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "33",
+    "playerID": "4685526",
+    "playerName": "Adam Randall",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "33",
+    "playerID": "2576399",
+    "playerName": "Nick Vannett",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "33",
+    "playerID": "2576581",
+    "playerName": "Chris Moore",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -414,41 +505,6 @@
   },
   {
     "teamID": "33",
-    "playerID": "4565311",
-    "playerName": "Aeneas Peebles",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4685736",
-    "playerName": "Emery Jones Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4428512",
-    "playerName": "Kedon Slovis",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "5088338",
-    "playerName": "Elijah Sarratt",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "2578570",
-    "playerName": "Jacoby Brissett",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
     "playerID": "4685530",
     "playerName": "Malaki Starks",
     "injuryStatus": "Active",
@@ -463,169 +519,8 @@
   },
   {
     "teamID": "33",
-    "playerID": "3043078",
-    "playerName": "Derrick Henry",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
     "playerID": "4432260",
     "playerName": "Matt Hibner",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4870847",
-    "playerName": "Ja'Kobi Lane",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4876132",
-    "playerName": "Josh Cuevas",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4696882",
-    "playerName": "Devontez Walker",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4038441",
-    "playerName": "Justice Hill",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "3116365",
-    "playerName": "Mark Andrews",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4429582",
-    "playerName": "Joe Fagnano",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "33",
-    "playerID": "4429615",
-    "playerName": "Zay Flowers",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4596480",
-    "playerName": "Jordan Hancock",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "2",
-    "playerID": "4241476",
-    "playerName": "Tyrell Shavers",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "2",
-    "playerID": "4039034",
-    "playerName": "Shane Buechele",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4367203",
-    "playerName": "Alec Anderson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "3051324",
-    "playerName": "Dion Dawkins",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4030899",
-    "playerName": "Spencer Brown",
-    "injuryStatus": "Doubtful",
-    "playerScore": 0.25
-  },
-  {
-    "teamID": "2",
-    "playerID": "4379778",
-    "playerName": "Christian Benford",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "2",
-    "playerID": "4036134",
-    "playerName": "Amani Hooker",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4033748",
-    "playerName": "Connor McGovern",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4385690",
-    "playerName": "Dalton Kincaid",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4044133",
-    "playerName": "Sam Franklin Jr.",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "2",
-    "playerID": "4259166",
-    "playerName": "Terrel Bernard",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "3127294",
-    "playerName": "Greg Gaines",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4688552",
-    "playerName": "Keleki Latu",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "4573699",
-    "playerName": "Jackson Hawes",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -645,6 +540,20 @@
   },
   {
     "teamID": "2",
+    "playerID": "4635008",
+    "playerName": "Keon Coleman",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4606712",
+    "playerName": "Ar'maj Reed-Adams",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
     "playerID": "3915487",
     "playerName": "Mike Danna",
     "injuryStatus": "Active",
@@ -652,8 +561,15 @@
   },
   {
     "teamID": "2",
-    "playerID": "4683153",
-    "playerName": "Skyler Bell",
+    "playerID": "3127294",
+    "playerName": "Greg Gaines",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4869533",
+    "playerName": "Jude Bowry",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -666,15 +582,8 @@
   },
   {
     "teamID": "2",
-    "playerID": "4635008",
-    "playerName": "Keon Coleman",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "2",
-    "playerID": "3915411",
-    "playerName": "Ty Johnson",
+    "playerID": "4429501",
+    "playerName": "Ray Davis",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -687,8 +596,8 @@
   },
   {
     "teamID": "2",
-    "playerID": "4429501",
-    "playerName": "Ray Davis",
+    "playerID": "4385690",
+    "playerName": "Dalton Kincaid",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -696,6 +605,216 @@
     "teamID": "2",
     "playerID": "3915416",
     "playerName": "DJ Moore",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "3918298",
+    "playerName": "Josh Allen",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4379399",
+    "playerName": "James Cook III",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4568624",
+    "playerName": "Dorian Williams",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "2",
+    "playerID": "4401823",
+    "playerName": "Dee Alford",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "2",
+    "playerID": "4379778",
+    "playerName": "Christian Benford",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "2",
+    "playerID": "4030899",
+    "playerName": "Spencer Brown",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4596480",
+    "playerName": "Jordan Hancock",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4044133",
+    "playerName": "Sam Franklin Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4241476",
+    "playerName": "Tyrell Shavers",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "2",
+    "playerID": "4367203",
+    "playerName": "Alec Anderson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "3051324",
+    "playerName": "Dion Dawkins",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4036134",
+    "playerName": "Amani Hooker",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "2",
+    "playerID": "4033748",
+    "playerName": "Connor McGovern",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "5151083",
+    "playerName": "Will Lee III",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "29",
+    "playerID": "3117253",
+    "playerName": "Bobby Okereke",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "29",
+    "playerID": "4372780",
+    "playerName": "Tommy Tremble",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4568263",
+    "playerName": "Ryan Fitzgerald",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4240595",
+    "playerName": "Marco Wilson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4874515",
+    "playerName": "Sam Hecht",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4239934",
+    "playerName": "AJ Dillon",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4431588",
+    "playerName": "Ja'Tavion Sanders",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4431077",
+    "playerName": "TeRah Edwards",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4428993",
+    "playerName": "Haynes King",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "2576925",
+    "playerName": "Darren Waller",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4695883",
+    "playerName": "Jalen Coker",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4685720",
+    "playerName": "Bryce Young",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4685472",
+    "playerName": "Tetairoa McMillan",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4241416",
+    "playerName": "Chuba Hubbard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4242975",
+    "playerName": "Jaelan Phillips",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "29",
+    "playerID": "4430034",
+    "playerName": "Xavier Legette",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -719,34 +838,6 @@
     "playerName": "Jonathon Brooks",
     "injuryStatus": "IR",
     "playerScore": -0.5
-  },
-  {
-    "teamID": "29",
-    "playerID": "4430034",
-    "playerName": "Xavier Legette",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "29",
-    "playerID": "5151083",
-    "playerName": "Will Lee III",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "29",
-    "playerID": "4242975",
-    "playerName": "Jaelan Phillips",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "29",
-    "playerID": "3117253",
-    "playerName": "Bobby Okereke",
-    "injuryStatus": "Out",
-    "playerScore": 0
   },
   {
     "teamID": "29",
@@ -784,95 +875,25 @@
     "playerScore": 1
   },
   {
-    "teamID": "29",
-    "playerID": "4568263",
-    "playerName": "Ryan Fitzgerald",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "3",
+    "playerID": "4870953",
+    "playerName": "Malik Muhammad II",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "29",
-    "playerID": "4362847",
-    "playerName": "Jaycee Horn",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
+    "teamID": "3",
+    "playerID": "4608686",
+    "playerName": "Kyle Monangai",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "29",
-    "playerID": "4431588",
-    "playerName": "Ja'Tavion Sanders",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4431077",
-    "playerName": "TeRah Edwards",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4428993",
-    "playerName": "Haynes King",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4239934",
-    "playerName": "AJ Dillon",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4695883",
-    "playerName": "Jalen Coker",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4372780",
-    "playerName": "Tommy Tremble",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "2576925",
-    "playerName": "Darren Waller",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4685472",
-    "playerName": "Tetairoa McMillan",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4241416",
-    "playerName": "Chuba Hubbard",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4685720",
-    "playerName": "Bryce Young",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "29",
-    "playerID": "4696902",
-    "playerName": "Torricelli Simpkins III",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "3",
+    "playerID": "4685278",
+    "playerName": "Luther Burden III",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "3",
@@ -974,13 +995,6 @@
   },
   {
     "teamID": "3",
-    "playerID": "4685278",
-    "playerName": "Luther Burden III",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "3",
     "playerID": "4426374",
     "playerName": "Tyrique Stevenson Sr.",
     "injuryStatus": "Questionable",
@@ -988,24 +1002,10 @@
   },
   {
     "teamID": "3",
-    "playerID": "4870953",
-    "playerName": "Malik Muhammad II",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "3",
     "playerID": "15168",
     "playerName": "Case Keenum",
     "injuryStatus": "Active",
     "playerScore": 1
-  },
-  {
-    "teamID": "3",
-    "playerID": "4608686",
-    "playerName": "Kyle Monangai",
-    "injuryStatus": "Out",
-    "playerScore": 0
   },
   {
     "teamID": "3",
@@ -1051,17 +1051,115 @@
   },
   {
     "teamID": "4",
+    "playerID": "4401811",
+    "playerName": "Kyle Dugger",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "4",
+    "playerID": "4429000",
+    "playerName": "Myles Hinton",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "4",
+    "playerID": "4360234",
+    "playerName": "Evan McPherson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "4384852",
+    "playerName": "Dohnte Meyers",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "4239993",
+    "playerName": "Tee Higgins",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "3116389",
+    "playerName": "Samaje Perine",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "4870866",
+    "playerName": "Connor Lew",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "5081542",
+    "playerName": "Landon Robinson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "4429299",
+    "playerName": "Tahj Brooks",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "3116164",
+    "playerName": "Mike Gesicki",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "4362238",
+    "playerName": "Chase Brown",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "4362628",
+    "playerName": "Ja'Marr Chase",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "3915511",
+    "playerName": "Joe Burrow",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "4",
+    "playerID": "3051746",
+    "playerName": "Oren Burks",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "4",
+    "playerID": "3125082",
+    "playerName": "Dalton Risner",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "4",
     "playerID": "4368003",
     "playerName": "Andrei Iosivas",
     "injuryStatus": "IR",
     "playerScore": -0.5
-  },
-  {
-    "teamID": "4",
-    "playerID": "4401811",
-    "playerName": "Kyle Dugger",
-    "injuryStatus": "Out",
-    "playerScore": 0
   },
   {
     "teamID": "4",
@@ -1107,83 +1205,6 @@
   },
   {
     "teamID": "4",
-    "playerID": "4384852",
-    "playerName": "Dohnte Meyers",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "3116389",
-    "playerName": "Samaje Perine",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "4429000",
-    "playerName": "Myles Hinton",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "4870866",
-    "playerName": "Connor Lew",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "5081542",
-    "playerName": "Landon Robinson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "4360234",
-    "playerName": "Evan McPherson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "3116164",
-    "playerName": "Mike Gesicki",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "4362238",
-    "playerName": "Chase Brown",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "4239993",
-    "playerName": "Tee Higgins",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "4362628",
-    "playerName": "Ja'Marr Chase",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
-    "playerID": "3915511",
-    "playerName": "Joe Burrow",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "4",
     "playerID": "4430065",
     "playerName": "Cedric Johnson",
     "injuryStatus": "Active",
@@ -1204,23 +1225,100 @@
     "playerScore": -0.5
   },
   {
-    "teamID": "4",
-    "playerID": "4690070",
-    "playerName": "Mitchell Tinsley",
+    "teamID": "5",
+    "playerID": "4569620",
+    "playerName": "Ronnie Hickman",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "5",
+    "playerID": "4258620",
+    "playerName": "Andre Szmyt",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "4",
-    "playerID": "5092508",
-    "playerName": "Colbie Young",
+    "teamID": "5",
+    "playerID": "4816090",
+    "playerName": "Parker Brailsford",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "4",
-    "playerID": "3917797",
-    "playerName": "Joe Giles-Harris",
+    "teamID": "5",
+    "playerID": "4427238",
+    "playerName": "Dillon Gabriel",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "5150249",
+    "playerName": "Justin Jefferson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "4242516",
+    "playerName": "Noah Igbinoghene",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "4431325",
+    "playerName": "Taylen Green",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "4722893",
+    "playerName": "Jaleel McLaughlin",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "5081397",
+    "playerName": "Dylan Sampson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "4241463",
+    "playerName": "Jerry Jeudy",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "4870653",
+    "playerName": "KC Concepcion",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "4832800",
+    "playerName": "Denzel Boston",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "3122840",
+    "playerName": "Deshaun Watson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
+    "playerID": "5083076",
+    "playerName": "Harold Fannin Jr.",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -1233,17 +1331,17 @@
   },
   {
     "teamID": "5",
+    "playerID": "3115336",
+    "playerName": "Derek Barnett",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "5",
     "playerID": "2515270",
     "playerName": "Michael Burton",
     "injuryStatus": "IR",
     "playerScore": -0.5
-  },
-  {
-    "teamID": "5",
-    "playerID": "4876006",
-    "playerName": "Zaire Mitchell-Paden",
-    "injuryStatus": "Active",
-    "playerScore": 1
   },
   {
     "teamID": "5",
@@ -1275,13 +1373,6 @@
   },
   {
     "teamID": "5",
-    "playerID": "4569620",
-    "playerName": "Ronnie Hickman",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "5",
     "playerID": "3115485",
     "playerName": "Elgton Jenkins",
     "injuryStatus": "Active",
@@ -1309,107 +1400,37 @@
     "playerScore": 1
   },
   {
-    "teamID": "5",
-    "playerID": "5083076",
-    "playerName": "Harold Fannin Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4832800",
-    "playerName": "Denzel Boston",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "5",
-    "playerID": "4695783",
-    "playerName": "Myles Harden",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4432762",
-    "playerName": "Shedeur Sanders",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "3122840",
-    "playerName": "Deshaun Watson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4242516",
-    "playerName": "Noah Igbinoghene",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4431325",
-    "playerName": "Taylen Green",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4816090",
-    "playerName": "Parker Brailsford",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "5150249",
-    "playerName": "Justin Jefferson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4258620",
-    "playerName": "Andre Szmyt",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4241463",
-    "playerName": "Jerry Jeudy",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "5081397",
-    "playerName": "Dylan Sampson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "5",
-    "playerID": "4870653",
-    "playerName": "KC Concepcion",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
     "teamID": "6",
-    "playerID": "2980097",
-    "playerName": "Jonathan Bullard",
+    "playerID": "4360590",
+    "playerName": "Juanyeh Thomas",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
   {
     "teamID": "6",
-    "playerID": "4361988",
-    "playerName": "James Mitchell",
+    "playerID": "3929850",
+    "playerName": "P.J. Locke",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "6",
+    "playerID": "4426485",
+    "playerName": "Jonathan Mingo",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "6",
+    "playerID": "4683848",
+    "playerName": "Donovan Ezeiruaku",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "6",
+    "playerID": "3953687",
+    "playerName": "Brandon Aubrey",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -1422,113 +1443,15 @@
   },
   {
     "teamID": "6",
-    "playerID": "4429676",
-    "playerName": "Tyler Goodson",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "6",
-    "playerID": "4683848",
-    "playerName": "Donovan Ezeiruaku",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "6",
-    "playerID": "4426506",
-    "playerName": "Joey Porter Jr.",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "6",
     "playerID": "4248911",
     "playerName": "DaRon Bland",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "6",
-    "playerID": "4426485",
-    "playerName": "Jonathan Mingo",
     "injuryStatus": "Out",
     "playerScore": 0
   },
   {
     "teamID": "6",
-    "playerID": "3676833",
-    "playerName": "KaVontae Turpin",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "4360590",
-    "playerName": "Juanyeh Thomas",
-    "injuryStatus": "Doubtful",
-    "playerScore": 0.25
-  },
-  {
-    "teamID": "6",
-    "playerID": "4426354",
-    "playerName": "George Pickens",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "4362088",
-    "playerName": "DeMarvion Overshown",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "4595352",
-    "playerName": "Alijah Clark",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "6",
-    "playerID": "4870706",
-    "playerName": "Caleb Downs",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "4372096",
-    "playerName": "Luke Schoonmaker",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "4702577",
-    "playerName": "Devin Moore",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "6",
-    "playerID": "5083754",
-    "playerName": "Ryan Flournoy",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "4360967",
-    "playerName": "Brevyn Spann-Ford",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "3929850",
-    "playerName": "P.J. Locke",
+    "playerID": "4685263",
+    "playerName": "Tyler Booker",
     "injuryStatus": "Out",
     "playerScore": 0
   },
@@ -1548,15 +1471,8 @@
   },
   {
     "teamID": "6",
-    "playerID": "3953687",
-    "playerName": "Brandon Aubrey",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "6",
-    "playerID": "2577417",
-    "playerName": "Dak Prescott",
+    "playerID": "4360307",
+    "playerName": "Derion Kendrick",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -1573,6 +1489,111 @@
     "playerName": "CeeDee Lamb",
     "injuryStatus": "Active",
     "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "2577417",
+    "playerName": "Dak Prescott",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4426354",
+    "playerName": "George Pickens",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "5083754",
+    "playerName": "Ryan Flournoy",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4367210",
+    "playerName": "Otito Ogbonnia",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "2980097",
+    "playerName": "Jonathan Bullard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4426506",
+    "playerName": "Joey Porter Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4595352",
+    "playerName": "Alijah Clark",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4361988",
+    "playerName": "James Mitchell",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4429676",
+    "playerName": "Tyler Goodson",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "6",
+    "playerID": "3676833",
+    "playerName": "KaVontae Turpin",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4362088",
+    "playerName": "DeMarvion Overshown",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "6",
+    "playerID": "4870706",
+    "playerName": "Caleb Downs",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "7",
+    "playerID": "4360853",
+    "playerName": "Talanoa Hufanga",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "7",
+    "playerID": "4039059",
+    "playerName": "Brandon Jones",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "7",
+    "playerID": "4429193",
+    "playerName": "Kris Abrams-Draine",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "7",
@@ -1618,20 +1639,6 @@
   },
   {
     "teamID": "7",
-    "playerID": "4039059",
-    "playerName": "Brandon Jones",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "7",
-    "playerID": "4360853",
-    "playerName": "Talanoa Hufanga",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "7",
     "playerID": "4039057",
     "playerName": "Lil'Jordan Humphrey",
     "injuryStatus": "Active",
@@ -1650,13 +1657,6 @@
     "playerName": "Sam Ehlinger",
     "injuryStatus": "Active",
     "playerScore": 1
-  },
-  {
-    "teamID": "7",
-    "playerID": "4429193",
-    "playerName": "Kris Abrams-Draine",
-    "injuryStatus": "Out",
-    "playerScore": 0
   },
   {
     "teamID": "7",
@@ -1751,22 +1751,8 @@
   },
   {
     "teamID": "8",
-    "playerID": "4038849",
-    "playerName": "DJ Wonnum",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "8",
-    "playerID": "4912274",
-    "playerName": "Sione Vaki",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "8",
-    "playerID": "4374302",
-    "playerName": "Amon-Ra St. Brown",
+    "playerID": "3139387",
+    "playerName": "D.J. Reed",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
@@ -1774,69 +1760,27 @@
     "teamID": "8",
     "playerID": "4361788",
     "playerName": "Cade Mays",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "8",
+    "playerID": "4372099",
+    "playerName": "Aidan Hutchinson",
     "injuryStatus": "Out",
     "playerScore": 0
   },
   {
     "teamID": "8",
-    "playerID": "4692025",
-    "playerName": "Brian Branch",
+    "playerID": "4038432",
+    "playerName": "Amen Ogbongbemiga",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "8",
-    "playerID": "3139387",
-    "playerName": "D.J. Reed",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "8",
-    "playerID": "4360383",
-    "playerName": "Kerby Joseph",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "8",
-    "playerID": "3046779",
-    "playerName": "Jared Goff",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "8",
-    "playerID": "3045463",
-    "playerName": "Chuck Clark",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "8",
-    "playerID": "4383429",
-    "playerName": "Jacob Saylors",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "8",
-    "playerID": "5123663",
-    "playerName": "Isaac TeSlaa",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "8",
-    "playerID": "4430027",
-    "playerName": "Sam LaPorta",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "8",
-    "playerID": "4361939",
-    "playerName": "Andre Cisco",
+    "playerID": "5093004",
+    "playerName": "Keith Abney II",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -1856,8 +1800,8 @@
   },
   {
     "teamID": "8",
-    "playerID": "4689936",
-    "playerName": "Jake Bates",
+    "playerID": "4430027",
+    "playerName": "Sam LaPorta",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -1870,8 +1814,85 @@
   },
   {
     "teamID": "8",
+    "playerID": "4374302",
+    "playerName": "Amon-Ra St. Brown",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "4689936",
+    "playerName": "Jake Bates",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "5123663",
+    "playerName": "Isaac TeSlaa",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "4912274",
+    "playerName": "Sione Vaki",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
     "playerID": "4429795",
     "playerName": "Jahmyr Gibbs",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "3046779",
+    "playerName": "Jared Goff",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "4038849",
+    "playerName": "DJ Wonnum",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "4692025",
+    "playerName": "Brian Branch",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "4360383",
+    "playerName": "Kerby Joseph",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "8",
+    "playerID": "3045463",
+    "playerName": "Chuck Clark",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "4383429",
+    "playerName": "Jacob Saylors",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "8",
+    "playerID": "4361939",
+    "playerName": "Andre Cisco",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -1881,13 +1902,6 @@
     "playerName": "Jack Campbell",
     "injuryStatus": "IR",
     "playerScore": -0.5
-  },
-  {
-    "teamID": "8",
-    "playerID": "4038432",
-    "playerName": "Amen Ogbongbemiga",
-    "injuryStatus": "Active",
-    "playerScore": 1
   },
   {
     "teamID": "8",
@@ -1911,74 +1925,11 @@
     "playerScore": 1
   },
   {
-    "teamID": "8",
-    "playerID": "4566092",
-    "playerName": "Ennis Rakestraw Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "8",
-    "playerID": "4361529",
-    "playerName": "Isiah Pacheco",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "4429466",
-    "playerName": "Drake Dabney",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "9",
-    "playerID": "4360086",
-    "playerName": "Josh Whyle",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "3149687",
-    "playerName": "Chris Brooks",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "4430191",
-    "playerName": "Skyy Moore",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "4047365",
-    "playerName": "Josh Jacobs",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
     "teamID": "9",
     "playerID": "14931",
     "playerName": "Kevin Zeitler",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "4361904",
-    "playerName": "Travis Glover",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "4242390",
-    "playerName": "Aaron Banks",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "injuryStatus": "Out",
+    "playerScore": 0
   },
   {
     "teamID": "9",
@@ -1989,38 +1940,10 @@
   },
   {
     "teamID": "9",
-    "playerID": "4567406",
-    "playerName": "Ty'Ron Hopper",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "9",
-    "playerID": "4686906",
-    "playerName": "Lukas Van Ness",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "4688930",
-    "playerName": "Javon Bullard",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "9",
     "playerID": "3124005",
     "playerName": "Zaire Franklin",
-    "injuryStatus": "Doubtful",
-    "playerScore": 0.25
-  },
-  {
-    "teamID": "9",
-    "playerID": "4241470",
-    "playerName": "Xavier McKinney",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "injuryStatus": "Out",
+    "playerScore": 0
   },
   {
     "teamID": "9",
@@ -2031,22 +1954,15 @@
   },
   {
     "teamID": "9",
-    "playerID": "4361423",
-    "playerName": "Micah Parsons",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "playerID": "3149687",
+    "playerName": "Chris Brooks",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "9",
-    "playerID": "4429136",
-    "playerName": "Warren Brinson",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "9",
-    "playerID": "4259305",
-    "playerName": "Bo Melton",
+    "playerID": "4635009",
+    "playerName": "J. Michael Sturdivant",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -2059,29 +1975,36 @@
   },
   {
     "teamID": "9",
-    "playerID": "4428863",
-    "playerName": "Evan Williams",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "playerID": "5076652",
+    "playerName": "Brandon Cisse",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "9",
-    "playerID": "4239947",
-    "playerName": "Isaiah McDuffie",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "playerID": "4430191",
+    "playerName": "Skyy Moore",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "9",
-    "playerID": "4429023",
-    "playerName": "MarShawn Lloyd",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "playerID": "4361423",
+    "playerName": "Micah Parsons",
+    "injuryStatus": "Out",
+    "playerScore": 0
   },
   {
     "teamID": "9",
-    "playerID": "3054212",
-    "playerName": "Jonnu Smith",
+    "playerID": "4047365",
+    "playerName": "Josh Jacobs",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "9",
+    "playerID": "4360887",
+    "playerName": "Donovan Jennings",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -2094,24 +2017,115 @@
   },
   {
     "teamID": "9",
+    "playerID": "14163",
+    "playerName": "Tyrod Taylor",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4429023",
+    "playerName": "MarShawn Lloyd",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
     "playerID": "4819231",
     "playerName": "Kaleb Johnson",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
+    "teamID": "9",
+    "playerID": "4572680",
+    "playerName": "Tucker Kraft",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4701936",
+    "playerName": "Matthew Golden",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4248528",
+    "playerName": "Christian Watson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4036378",
+    "playerName": "Jordan Love",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4259305",
+    "playerName": "Bo Melton",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "9",
+    "playerID": "4361904",
+    "playerName": "Travis Glover",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4686906",
+    "playerName": "Lukas Van Ness",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4688930",
+    "playerName": "Javon Bullard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "9",
+    "playerID": "4241470",
+    "playerName": "Xavier McKinney",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
     "teamID": "34",
-    "playerID": "4241250",
-    "playerName": "Jake Hummel",
+    "playerID": "2976560",
+    "playerName": "Danielle Hunter",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
   {
     "teamID": "34",
-    "playerID": "3121595",
-    "playerName": "Braden Smith",
+    "playerID": "4362504",
+    "playerName": "Brevin Jordan",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
+  },
+  {
+    "teamID": "34",
+    "playerID": "4429022",
+    "playerName": "Kayshon Boutte",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "2971573",
+    "playerName": "Ka'imi Fairbairn",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "34",
@@ -2122,8 +2136,29 @@
   },
   {
     "teamID": "34",
-    "playerID": "4685724",
-    "playerName": "Will Anderson Jr.",
+    "playerID": "4839498",
+    "playerName": "Keylan Rutledge",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "3045474",
+    "playerName": "Wyatt Teller",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "3919117",
+    "playerName": "Azeez Al-Shaair",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "34",
+    "playerID": "4241250",
+    "playerName": "Jake Hummel",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
@@ -2131,50 +2166,36 @@
     "teamID": "34",
     "playerID": "4429059",
     "playerName": "Woody Marks",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
+  },
+  {
+    "teamID": "34",
+    "playerID": "4432708",
+    "playerName": "Marvin Harrison Jr.",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "34",
     "playerID": "4035538",
     "playerName": "David Montgomery",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "34",
-    "playerID": "4839498",
-    "playerName": "Keylan Rutledge",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "34",
-    "playerID": "4243956",
-    "playerName": "Reed Blankenship",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "34",
-    "playerID": "2976560",
-    "playerName": "Danielle Hunter",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "playerID": "3117256",
+    "playerName": "Dalton Schultz",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "34",
-    "playerID": "4362504",
-    "playerName": "Brevin Jordan",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "34",
-    "playerID": "3919117",
-    "playerName": "Azeez Al-Shaair",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "playerID": "4362478",
+    "playerName": "Emari Demercado",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "34",
@@ -2185,24 +2206,59 @@
   },
   {
     "teamID": "34",
-    "playerID": "3045474",
-    "playerName": "Wyatt Teller",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "playerID": "4686422",
+    "playerName": "Xavier Hutchinson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "4432577",
+    "playerName": "C.J. Stroud",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "4258173",
+    "playerName": "Nico Collins",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "3121595",
+    "playerName": "Braden Smith",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "4685724",
+    "playerName": "Will Anderson Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "34",
     "playerID": "3043109",
     "playerName": "Trent Brown",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "34",
-    "playerID": "4432708",
-    "playerName": "Marvin Harrison Jr.",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "playerID": "4243956",
+    "playerName": "Reed Blankenship",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "34",
+    "playerID": "4372716",
+    "playerName": "Nikko Remigio",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "34",
@@ -2219,67 +2275,123 @@
     "playerScore": 1
   },
   {
-    "teamID": "34",
-    "playerID": "4426496",
-    "playerName": "Cade Stover",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "11",
+    "playerID": "2566045",
+    "playerName": "Luke Rhodes",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "34",
-    "playerID": "3843945",
-    "playerName": "Foster Moreau",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "11",
+    "playerID": "3863182",
+    "playerName": "Jerry Tillery",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "34",
-    "playerID": "4428656",
-    "playerName": "Nate Thomas",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "11",
+    "playerID": "4892240",
+    "playerName": "Jalen Travis",
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
   },
   {
-    "teamID": "34",
-    "playerID": "4880873",
-    "playerName": "Febechi Nwaiwu",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "11",
+    "playerID": "4601021",
+    "playerName": "Jaylon Carlies",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "34",
-    "playerID": "2971573",
-    "playerName": "Ka'imi Fairbairn",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "34",
-    "playerID": "3117256",
-    "playerName": "Dalton Schultz",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "34",
-    "playerID": "4429022",
-    "playerName": "Kayshon Boutte",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "34",
-    "playerID": "4686422",
-    "playerName": "Xavier Hutchinson",
+    "teamID": "11",
+    "playerID": "4571557",
+    "playerName": "Spencer Shrader",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "11",
-    "playerID": "4050373",
-    "playerName": "Quez Watkins",
+    "playerID": "3051889",
+    "playerName": "Laquon Treadwell",
     "injuryStatus": "Active",
     "playerScore": 1
+  },
+  {
+    "teamID": "11",
+    "playerID": "4874509",
+    "playerName": "DJ Giddens",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "11",
+    "playerID": "4362523",
+    "playerName": "Will Mallory",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "11",
+    "playerID": "4429684",
+    "playerName": "Anthony Gould",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "11",
+    "playerID": "4037361",
+    "playerName": "Charvarius Ward",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "11",
+    "playerID": "4427250",
+    "playerName": "Sauce Gardner",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "11",
+    "playerID": "4683423",
+    "playerName": "Riley Leonard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "11",
+    "playerID": "4686468",
+    "playerName": "Seth McGowan",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "11",
+    "playerID": "3917792",
+    "playerName": "Daniel Jones",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "11",
+    "playerID": "4431459",
+    "playerName": "Tyler Warren",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "11",
+    "playerID": "4242335",
+    "playerName": "Jonathan Taylor",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "11",
+    "playerID": "4362580",
+    "playerName": "Bernhard Raimann",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "11",
@@ -2301,41 +2413,6 @@
     "playerName": "Mo Alie-Cox",
     "injuryStatus": "IR",
     "playerScore": -0.5
-  },
-  {
-    "teamID": "11",
-    "playerID": "4362523",
-    "playerName": "Will Mallory",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "11",
-    "playerID": "4892240",
-    "playerName": "Jalen Travis",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "11",
-    "playerID": "4601021",
-    "playerName": "Jaylon Carlies",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "11",
-    "playerID": "3863182",
-    "playerName": "Jerry Tillery",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "11",
-    "playerID": "2566045",
-    "playerName": "Luke Rhodes",
-    "injuryStatus": "Out",
-    "playerScore": 0
   },
   {
     "teamID": "11",
@@ -2373,79 +2450,114 @@
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "4431459",
-    "playerName": "Tyler Warren",
+    "teamID": "30",
+    "playerID": "4686361",
+    "playerName": "Cam Little",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "4683151",
-    "playerName": "Deion Burks",
+    "teamID": "30",
+    "playerID": "4685415",
+    "playerName": "Travis Hunter",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "4360078",
-    "playerName": "Alec Pierce",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "11",
-    "playerID": "4061956",
-    "playerName": "Ashton Dulin",
+    "teamID": "30",
+    "playerID": "4612298",
+    "playerName": "Albert Regis",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "4429684",
-    "playerName": "Anthony Gould",
+    "teamID": "30",
+    "playerID": "4832922",
+    "playerName": "Wesley Williams",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "3051889",
-    "playerName": "Laquon Treadwell",
+    "teamID": "30",
+    "playerID": "3919512",
+    "playerName": "Jessie Bates III",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "3929785",
-    "playerName": "Nick Westbrook-Ikhine",
+    "teamID": "30",
+    "playerID": "5085024",
+    "playerName": "CJ Williams",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "4242335",
-    "playerName": "Jonathan Taylor",
+    "teamID": "30",
+    "playerID": "4911851",
+    "playerName": "LeQuint Allen Jr.",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "4874509",
-    "playerName": "DJ Giddens",
+    "teamID": "30",
+    "playerID": "4877475",
+    "playerName": "Cam'Ron Silmon-Craig",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "4683423",
-    "playerName": "Riley Leonard",
+    "teamID": "30",
+    "playerID": "4362619",
+    "playerName": "Chris Rodriguez Jr.",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "11",
-    "playerID": "3895840",
-    "playerName": "Charlie Heck",
+    "teamID": "30",
+    "playerID": "4879194",
+    "playerName": "Josh Cameron",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "30",
+    "playerID": "4432773",
+    "playerName": "Brian Thomas Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "30",
+    "playerID": "3916433",
+    "playerName": "Jakobi Meyers",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "30",
+    "playerID": "4432620",
+    "playerName": "Parker Washington",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "30",
+    "playerID": "4882093",
+    "playerName": "Bhayshul Tuten",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "30",
+    "playerID": "4360310",
+    "playerName": "Trevor Lawrence",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "30",
+    "playerID": "4430539",
+    "playerName": "Brenton Strange",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -2453,8 +2565,15 @@
     "teamID": "30",
     "playerID": "4242391",
     "playerName": "Robert Hainsey",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "30",
+    "playerID": "4573319",
+    "playerName": "Danny Striggow",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "30",
@@ -2486,43 +2605,8 @@
   },
   {
     "teamID": "30",
-    "playerID": "4362619",
-    "playerName": "Chris Rodriguez Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "3916433",
-    "playerName": "Jakobi Meyers",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "4882093",
-    "playerName": "Bhayshul Tuten",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
     "playerID": "4429168",
     "playerName": "Antonio Johnson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "3919512",
-    "playerName": "Jessie Bates III",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "30",
-    "playerID": "4432773",
-    "playerName": "Brian Thomas Jr.",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -2535,106 +2619,106 @@
   },
   {
     "teamID": "30",
-    "playerID": "5085024",
-    "playerName": "CJ Williams",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "4832922",
-    "playerName": "Wesley Williams",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
     "playerID": "4577494",
     "playerName": "Alijah Huzzie",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "30",
-    "playerID": "3050073",
-    "playerName": "Foyesade Oluokun",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "12",
+    "playerID": "4871063",
+    "playerName": "Peter Woods",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "30",
-    "playerID": "4917427",
-    "playerName": "Tanner Koziol",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "12",
+    "playerID": "4567048",
+    "playerName": "Kenneth Walker III",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "30",
-    "playerID": "4686248",
-    "playerName": "Nate Boerkircher",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "12",
+    "playerID": "4043041",
+    "playerName": "Jaylon Moore",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "30",
-    "playerID": "4879194",
-    "playerName": "Josh Cameron",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "12",
+    "playerID": "4685489",
+    "playerName": "Jaydn Ott",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "30",
-    "playerID": "2576336",
-    "playerName": "Ameer Abdullah",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "4430539",
-    "playerName": "Brenton Strange",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "4685415",
-    "playerName": "Travis Hunter",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "4686361",
-    "playerName": "Cam Little",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "4360310",
-    "playerName": "Trevor Lawrence",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "30",
-    "playerID": "4432620",
-    "playerName": "Parker Washington",
+    "teamID": "12",
+    "playerID": "3055899",
+    "playerName": "Harrison Butker",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "12",
-    "playerID": "5155179",
-    "playerName": "Jacob De Jesus",
+    "playerID": "4240472",
+    "playerName": "Noah Gray",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "12",
-    "playerID": "4605841",
-    "playerName": "Nate Carter",
+    "playerID": "5278708",
+    "playerName": "Melvin Smith Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "12",
+    "playerID": "4372070",
+    "playerName": "Ben VanSumeren",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "12",
+    "playerID": "4567747",
+    "playerName": "Garrett Nussmeier",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "12",
+    "playerID": "5093923",
+    "playerName": "Andrew Armstrong",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "12",
+    "playerID": "4912218",
+    "playerName": "Cyrus Allen",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "12",
+    "playerID": "4683062",
+    "playerName": "Xavier Worthy",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "12",
+    "playerID": "15847",
+    "playerName": "Travis Kelce",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "12",
+    "playerID": "4688813",
+    "playerName": "Josh Downs",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -2647,38 +2731,10 @@
   },
   {
     "teamID": "12",
-    "playerID": "4567048",
-    "playerName": "Kenneth Walker III",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "12",
-    "playerID": "4043041",
-    "playerName": "Jaylon Moore",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "12",
-    "playerID": "4871063",
-    "playerName": "Peter Woods",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "12",
-    "playerID": "4685489",
-    "playerName": "Jaydn Ott",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "12",
-    "playerID": "4880124",
-    "playerName": "Mansoor Delane",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "playerID": "4428331",
+    "playerName": "Rashee Rice",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "12",
@@ -2689,8 +2745,22 @@
   },
   {
     "teamID": "12",
-    "playerID": "4688813",
-    "playerName": "Josh Downs",
+    "playerID": "4430723",
+    "playerName": "Jared Wiley",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "12",
+    "playerID": "4242459",
+    "playerName": "Trey Smith",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "12",
+    "playerID": "4880124",
+    "playerName": "Mansoor Delane",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -2724,87 +2794,17 @@
   },
   {
     "teamID": "12",
-    "playerID": "4683062",
-    "playerName": "Xavier Worthy",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "3055899",
-    "playerName": "Harrison Butker",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
     "playerID": "4362887",
     "playerName": "Justin Fields",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "12",
-    "playerID": "5082630",
-    "playerName": "Jalen Royals",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "4240472",
-    "playerName": "Noah Gray",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "4912218",
-    "playerName": "Cyrus Allen",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "4372070",
-    "playerName": "Ben VanSumeren",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "4567747",
-    "playerName": "Garrett Nussmeier",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "4602984",
-    "playerName": "Diego Pounds",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "4428331",
-    "playerName": "Rashee Rice",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "12",
-    "playerID": "15847",
-    "playerName": "Travis Kelce",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
     "teamID": "13",
-    "playerID": "5155825",
-    "playerName": "Carter Runyon",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "playerID": "4432775",
+    "playerName": "Dont'e Thornton Jr.",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "13",
@@ -2815,17 +2815,115 @@
   },
   {
     "teamID": "13",
-    "playerID": "4431623",
-    "playerName": "Trey Zuhn III",
+    "playerID": "4249087",
+    "playerName": "Matt Gay",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "13",
-    "playerID": "4432775",
-    "playerName": "Dont'e Thornton Jr.",
+    "playerID": "4401805",
+    "playerName": "Dareke Young",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4432665",
+    "playerName": "Brock Bowers",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
+  },
+  {
+    "teamID": "13",
+    "playerID": "4682488",
+    "playerName": "Dalton Johnson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4250393",
+    "playerName": "Tristin McCollum",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4612077",
+    "playerName": "Bryce Cabeldue",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4382466",
+    "playerName": "Jalen Nailor",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4366963",
+    "playerName": "Dylan Laube",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4429086",
+    "playerName": "Michael Mayer",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4428718",
+    "playerName": "Tre Tucker",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4837248",
+    "playerName": "Fernando Mendoza",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4686658",
+    "playerName": "Mike Washington Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4890973",
+    "playerName": "Ashton Jeanty",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4258194",
+    "playerName": "Kwity Paye",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "13",
+    "playerID": "5150247",
+    "playerName": "Malik Benson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "13",
+    "playerID": "4431623",
+    "playerName": "Trey Zuhn III",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "13",
@@ -2877,179 +2975,18 @@
     "playerScore": 1
   },
   {
-    "teamID": "13",
-    "playerID": "4837248",
-    "playerName": "Fernando Mendoza",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4249087",
-    "playerName": "Matt Gay",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4612077",
-    "playerName": "Bryce Cabeldue",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "5150247",
-    "playerName": "Malik Benson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4682488",
-    "playerName": "Dalton Johnson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4382466",
-    "playerName": "Jalen Nailor",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4429086",
-    "playerName": "Michael Mayer",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4686658",
-    "playerName": "Mike Washington Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4428718",
-    "playerName": "Tre Tucker",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4890973",
-    "playerName": "Ashton Jeanty",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4432665",
-    "playerName": "Brock Bowers",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4430330",
-    "playerName": "Darien Porter",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4241983",
-    "playerName": "Cody White",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "13",
-    "playerID": "4045305",
-    "playerName": "Ian Thomas",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "24",
-    "playerID": "4433914",
-    "playerName": "Branson Taylor",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "24",
-    "playerID": "4411189",
-    "playerName": "Trey Pipkins III",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "24",
-    "playerID": "4040842",
-    "playerName": "Kayode Awosika",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
     "teamID": "24",
     "playerID": "4360745",
     "playerName": "Kendall Williamson",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "24",
     "playerID": "4574105",
     "playerName": "Isas Waxter",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "24",
-    "playerID": "4690171",
-    "playerName": "Deane Leonard",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "24",
-    "playerID": "4567138",
-    "playerName": "Justin Eboigbe",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
-  },
-  {
-    "teamID": "24",
-    "playerID": "2579621",
-    "playerName": "Denzel Perryman",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "24",
-    "playerID": "4596334",
-    "playerName": "Keaton Mitchell",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "24",
-    "playerID": "3123076",
-    "playerName": "David Njoku",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "24",
-    "playerID": "4838693",
-    "playerName": "Rodney Shelley",
-    "injuryStatus": "Active",
-    "playerScore": 1
   },
   {
     "teamID": "24",
@@ -3060,15 +2997,15 @@
   },
   {
     "teamID": "24",
-    "playerID": "4685553",
-    "playerName": "Brenen Thompson",
-    "injuryStatus": "Doubtful",
-    "playerScore": 0.25
+    "playerID": "2576702",
+    "playerName": "Bud Dupree",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "24",
-    "playerID": "4427404",
-    "playerName": "Cam Hart",
+    "playerID": "4429025",
+    "playerName": "Quentin Johnston",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3081,15 +3018,106 @@
   },
   {
     "teamID": "24",
-    "playerID": "5082660",
-    "playerName": "Alex Harkey",
+    "playerID": "4038941",
+    "playerName": "Justin Herbert",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "24",
-    "playerID": "4038941",
-    "playerName": "Justin Herbert",
+    "playerID": "4685382",
+    "playerName": "Omarion Hampton",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "4838693",
+    "playerName": "Rodney Shelley",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "24",
+    "playerID": "4595342",
+    "playerName": "Oronde Gadsden",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "4685553",
+    "playerName": "Brenen Thompson",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "24",
+    "playerID": "4040842",
+    "playerName": "Kayode Awosika",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "4567138",
+    "playerName": "Justin Eboigbe",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "24",
+    "playerID": "4411189",
+    "playerName": "Trey Pipkins III",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "24",
+    "playerID": "4433914",
+    "playerName": "Branson Taylor",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "24",
+    "playerID": "2579621",
+    "playerName": "Denzel Perryman",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "3123076",
+    "playerName": "David Njoku",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "4690171",
+    "playerName": "Deane Leonard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "4596334",
+    "playerName": "Keaton Mitchell",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "4427404",
+    "playerName": "Cam Hart",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "24",
+    "playerID": "5082660",
+    "playerName": "Alex Harkey",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3116,38 +3144,17 @@
   },
   {
     "teamID": "24",
-    "playerID": "4595342",
-    "playerName": "Oronde Gadsden",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "24",
     "playerID": "4241263",
     "playerName": "Charlie Kolar",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "24",
-    "playerID": "4426535",
-    "playerName": "Theo Wease Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "24",
-    "playerID": "4362081",
-    "playerName": "Cameron Dicker",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "24",
-    "playerID": "4429020",
-    "playerName": "DJ Uiagalelei",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "14",
+    "playerID": "2575907",
+    "playerName": "Joe Cardona",
+    "injuryStatus": "Out",
+    "playerScore": 0
   },
   {
     "teamID": "14",
@@ -3158,27 +3165,6 @@
   },
   {
     "teamID": "14",
-    "playerID": "4426405",
-    "playerName": "Trent McDuffie",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "14",
-    "playerID": "4242154",
-    "playerName": "Kam Curl",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "14",
-    "playerID": "4426553",
-    "playerName": "Davis Allen",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "14",
     "playerID": "4605951",
     "playerName": "CJ Daniels",
     "injuryStatus": "Active",
@@ -3186,8 +3172,29 @@
   },
   {
     "teamID": "14",
-    "playerID": "4242557",
-    "playerName": "Colby Parkinson",
+    "playerID": "4360797",
+    "playerName": "Tutu Atwell",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "4243003",
+    "playerName": "Ronnie Rivers",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "4426553",
+    "playerName": "Davis Allen",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "16339",
+    "playerName": "Brandon McManus",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3200,92 +3207,29 @@
   },
   {
     "teamID": "14",
-    "playerID": "4710855",
-    "playerName": "Konata Mumpfield",
+    "playerID": "4242557",
+    "playerName": "Colby Parkinson",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "14",
-    "playerID": "3122132",
-    "playerName": "Myles Garrett",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "14",
-    "playerID": "4431342",
-    "playerName": "Brennan Presley",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "14",
-    "playerID": "4426515",
-    "playerName": "Puka Nacua",
+    "playerID": "4430155",
+    "playerName": "Dylan McMahon",
     "injuryStatus": "IR",
     "playerScore": -0.5
   },
   {
     "teamID": "14",
-    "playerID": "4243181",
-    "playerName": "Nate Landman",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "playerID": "3052180",
+    "playerName": "Coleman Shelton",
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
   },
   {
     "teamID": "14",
-    "playerID": "4249128",
-    "playerName": "Quentin Lake",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "14",
-    "playerID": "16800",
-    "playerName": "Davante Adams",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "14",
-    "playerID": "4360797",
-    "playerName": "Tutu Atwell",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "14",
-    "playerID": "4569382",
-    "playerName": "Jordan Whittington",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "14",
-    "playerID": "4386544",
-    "playerName": "Xavier Smith",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "14",
-    "playerID": "2575907",
-    "playerName": "Joe Cardona",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "14",
-    "playerID": "4570037",
-    "playerName": "Terrance Ferguson",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "14",
-    "playerID": "16339",
-    "playerName": "Brandon McManus",
+    "playerID": "5082391",
+    "playerName": "Maximus Pulley",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3293,20 +3237,6 @@
     "teamID": "14",
     "playerID": "4598574",
     "playerName": "Darryl Peterson III",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "14",
-    "playerID": "3912189",
-    "playerName": "Bill Murray",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "14",
-    "playerID": "4685522",
-    "playerName": "Ty Simpson",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3325,37 +3255,212 @@
     "playerScore": 1
   },
   {
-    "teamID": "15",
-    "playerID": "4036660",
-    "playerName": "Darrell Baker Jr.",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "15",
-    "playerID": "4241802",
-    "playerName": "Jalen Reagor",
+    "teamID": "14",
+    "playerID": "4386544",
+    "playerName": "Xavier Smith",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "15",
-    "playerID": "4429435",
-    "playerName": "Brady Cook",
+    "teamID": "14",
+    "playerID": "4710855",
+    "playerName": "Konata Mumpfield",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "15",
-    "playerID": "3043234",
-    "playerName": "Zane Gonzalez",
+    "teamID": "14",
+    "playerID": "12483",
+    "playerName": "Matthew Stafford",
     "injuryStatus": "Active",
     "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "4430737",
+    "playerName": "Kyren Williams",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "4429096",
+    "playerName": "Blake Corum",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "4426405",
+    "playerName": "Trent McDuffie",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "4242154",
+    "playerName": "Kam Curl",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "4685522",
+    "playerName": "Ty Simpson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "3122132",
+    "playerName": "Myles Garrett",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "14",
+    "playerID": "16800",
+    "playerName": "Davante Adams",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "15",
+    "playerID": "4430681",
+    "playerName": "Jared Wayne",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "15",
+    "playerID": "4869961",
+    "playerName": "Chris Bell",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "15",
     "playerID": "4040537",
     "playerName": "Aaron Brewer",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "15",
+    "playerID": "4683276",
+    "playerName": "Zeek Biggers",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "15",
+    "playerID": "4682745",
+    "playerName": "Jaylen Wright",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4685246",
+    "playerName": "Kaytron Allen",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4837188",
+    "playerName": "Jordan Phillips",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "15",
+    "playerID": "4875079",
+    "playerName": "Marcellas Dial Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4426446",
+    "playerName": "Caedan Wallace",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4912052",
+    "playerName": "Justin Joly",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4242512",
+    "playerName": "Malik Willis",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "15",
+    "playerID": "4714379",
+    "playerName": "Seydou Traore",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4367209",
+    "playerName": "Greg Dulcich",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4249417",
+    "playerName": "Jalen Tolbert",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4569603",
+    "playerName": "Malik Washington",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4869645",
+    "playerName": "Caleb Douglas",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4433971",
+    "playerName": "Kyle McCord",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4711533",
+    "playerName": "Ollie Gordon II",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "15",
+    "playerID": "4362064",
+    "playerName": "Andrew Meyer",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "15",
+    "playerID": "4036660",
+    "playerName": "Darrell Baker Jr.",
     "injuryStatus": "Out",
     "playerScore": 0
   },
@@ -3365,20 +3470,6 @@
     "playerName": "Will Kacmarek",
     "injuryStatus": "Active",
     "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4430681",
-    "playerName": "Jared Wayne",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "15",
-    "playerID": "4869961",
-    "playerName": "Chris Bell",
-    "injuryStatus": "Doubtful",
-    "playerScore": 0.25
   },
   {
     "teamID": "15",
@@ -3409,128 +3500,16 @@
     "playerScore": 1
   },
   {
-    "teamID": "15",
-    "playerID": "4682745",
-    "playerName": "Jaylen Wright",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4242512",
-    "playerName": "Malik Willis",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "15",
-    "playerID": "4685307",
-    "playerName": "Kevin Coleman Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "3057956",
-    "playerName": "Zach Sieler",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "15",
-    "playerID": "4433971",
-    "playerName": "Kyle McCord",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4685246",
-    "playerName": "Kaytron Allen",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4362135",
-    "playerName": "Christian Haynes",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4875079",
-    "playerName": "Marcellas Dial Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4249417",
-    "playerName": "Jalen Tolbert",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4912052",
-    "playerName": "Justin Joly",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "5144457",
-    "playerName": "Chukwuebuka Godrick",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4367209",
-    "playerName": "Greg Dulcich",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "15",
-    "playerID": "4569603",
-    "playerName": "Malik Washington",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "4361112",
-    "playerName": "Devin Culp",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "4360637",
-    "playerName": "Jeshaun Jones",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "3917315",
-    "playerName": "Kyler Murray",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
     "teamID": "16",
     "playerID": "4629149",
     "playerName": "Tyrion Ingram-Dawkins",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "16",
-    "playerID": "4046537",
-    "playerName": "Joshua Metellus",
+    "playerID": "3886598",
+    "playerName": "Jauan Jennings",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
@@ -3538,76 +3517,13 @@
     "teamID": "16",
     "playerID": "3728281",
     "playerName": "Blake Cashman",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "16",
-    "playerID": "4568007",
-    "playerName": "Jay Ward",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "2573079",
-    "playerName": "Carson Wentz",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "3886598",
-    "playerName": "Jauan Jennings",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "16",
-    "playerID": "14880",
-    "playerName": "Kirk Cousins",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "4429205",
-    "playerName": "Jordan Addison",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
   {
     "teamID": "16",
-    "playerID": "4036133",
-    "playerName": "T.J. Hockenson",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "16",
-    "playerID": "3056916",
-    "playerName": "Eric Wilson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "4262921",
-    "playerName": "Justin Jefferson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "4565185",
-    "playerName": "Tai Felton",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "4240631",
-    "playerName": "DeeJay Dallas",
+    "playerID": "4567104",
+    "playerName": "Will Reichard",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3620,10 +3536,31 @@
   },
   {
     "teamID": "16",
-    "playerID": "4567104",
-    "playerName": "Will Reichard",
+    "playerID": "4565185",
+    "playerName": "Tai Felton",
     "injuryStatus": "Active",
     "playerScore": 1
+  },
+  {
+    "teamID": "16",
+    "playerID": "3133487",
+    "playerName": "Andrew Van Ginkel",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "16",
+    "playerID": "4429205",
+    "playerName": "Jordan Addison",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "16",
+    "playerID": "4036133",
+    "playerName": "T.J. Hockenson",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "16",
@@ -3634,22 +3571,15 @@
   },
   {
     "teamID": "16",
-    "playerID": "4602019",
-    "playerName": "Caleb Banks",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "playerID": "3917315",
+    "playerName": "Kyler Murray",
+    "injuryStatus": "Out",
+    "playerScore": 0
   },
   {
     "teamID": "16",
-    "playerID": "5091793",
-    "playerName": "Charles Demmings",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "16",
-    "playerID": "4710865",
-    "playerName": "Jakobe Thomas",
+    "playerID": "4708049",
+    "playerName": "Gavin Bartholomew",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3669,94 +3599,94 @@
   },
   {
     "teamID": "16",
+    "playerID": "14880",
+    "playerName": "Kirk Cousins",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "16",
+    "playerID": "4262921",
+    "playerName": "Justin Jefferson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "16",
+    "playerID": "4875564",
+    "playerName": "Bo Richter",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "16",
     "playerID": "16772",
     "playerName": "Kyle Van Noy",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
-    "teamID": "17",
-    "playerID": "15718",
-    "playerName": "Greg Van Roten",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "teamID": "16",
+    "playerID": "4046537",
+    "playerName": "Joshua Metellus",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
-    "teamID": "17",
-    "playerID": "4039505",
-    "playerName": "Reggie Gilliam",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "teamID": "16",
+    "playerID": "4568007",
+    "playerName": "Jay Ward",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
-    "teamID": "17",
-    "playerID": "4432710",
-    "playerName": "TreVeyon Henderson",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
+    "teamID": "16",
+    "playerID": "2573079",
+    "playerName": "Carson Wentz",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "16",
+    "playerID": "3056916",
+    "playerName": "Eric Wilson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "16",
+    "playerID": "4240631",
+    "playerName": "DeeJay Dallas",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "16",
+    "playerID": "4602019",
+    "playerName": "Caleb Banks",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "16",
+    "playerID": "5091793",
+    "playerName": "Charles Demmings",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "17",
     "playerID": "4047941",
     "playerName": "Brenden Schooler",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
+    "injuryStatus": "Out",
+    "playerScore": 0
   },
   {
     "teamID": "17",
-    "playerID": "4368113",
-    "playerName": "Charles Woods",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "17",
-    "playerID": "2574056",
-    "playerName": "Kevin Byard",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "17",
-    "playerID": "16771",
-    "playerName": "Morgan Moses",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "17",
-    "playerID": "3046439",
-    "playerName": "Hunter Henry",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "17",
-    "playerID": "4569173",
-    "playerName": "Rhamondre Stevenson",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "17",
-    "playerID": "4047646",
-    "playerName": "A.J. Brown",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "17",
-    "playerID": "4686772",
-    "playerName": "Christian Gonzalez",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "17",
-    "playerID": "4685298",
-    "playerName": "Will Campbell",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "playerID": "4428394",
+    "playerName": "Walter Rouse",
+    "injuryStatus": "Out",
+    "playerScore": 0
   },
   {
     "teamID": "17",
@@ -3774,43 +3704,8 @@
   },
   {
     "teamID": "17",
-    "playerID": "4428394",
-    "playerName": "Walter Rouse",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "17",
-    "playerID": "4372026",
-    "playerName": "Cameron Latu",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "17",
-    "playerID": "4698253",
-    "playerName": "Lan Larison",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "17",
-    "playerID": "4613202",
-    "playerName": "Kyle Williams",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "17",
     "playerID": "4831959",
     "playerName": "Eli Raridon",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "17",
-    "playerID": "4569923",
-    "playerName": "Andy Borregales",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3830,8 +3725,29 @@
   },
   {
     "teamID": "17",
-    "playerID": "4431431",
-    "playerName": "Corey Kiner",
+    "playerID": "4240391",
+    "playerName": "Tommy DeVito",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "4431452",
+    "playerName": "Drake Maye",
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
+  },
+  {
+    "teamID": "17",
+    "playerID": "4047646",
+    "playerName": "A.J. Brown",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "17",
+    "playerID": "4569923",
+    "playerName": "Andy Borregales",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3844,17 +3760,129 @@
   },
   {
     "teamID": "17",
-    "playerID": "4431452",
-    "playerName": "Drake Maye",
+    "playerID": "3046439",
+    "playerName": "Hunter Henry",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "2991662",
+    "playerName": "Mack Hollins",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "4431431",
+    "playerName": "Corey Kiner",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "4569173",
+    "playerName": "Rhamondre Stevenson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "3915525",
+    "playerName": "Dre'Mont Jones",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "17",
+    "playerID": "3129446",
+    "playerName": "Robert Spillane",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "17",
+    "playerID": "16771",
+    "playerName": "Morgan Moses",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "15718",
+    "playerName": "Greg Van Roten",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "4368113",
+    "playerName": "Charles Woods",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "2574056",
+    "playerName": "Kevin Byard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "4039505",
+    "playerName": "Reggie Gilliam",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "4372026",
+    "playerName": "Cameron Latu",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
+    "playerID": "4432710",
+    "playerName": "TreVeyon Henderson",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "18",
+    "playerID": "3917331",
+    "playerName": "Erik McCoy",
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
+  },
+  {
+    "teamID": "18",
+    "playerID": "5081999",
+    "playerName": "CJ Donaldson",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "18",
+    "playerID": "4606711",
+    "playerName": "Taliese Fuaga",
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
+  },
+  {
+    "teamID": "18",
+    "playerID": "4036131",
+    "playerName": "Noah Fant",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "18",
-    "playerID": "4685479",
-    "playerName": "Christen Miller",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
+    "playerID": "4569559",
+    "playerName": "Devaughn Vele",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "18",
@@ -3865,10 +3893,101 @@
   },
   {
     "teamID": "18",
+    "playerID": "4430379",
+    "playerName": "Asim Richards",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "18",
+    "playerID": "4566088",
+    "playerName": "Jaylan Ford",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4775268",
+    "playerName": "Mike Reid",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4361259",
+    "playerName": "Zach Wilson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "3929645",
+    "playerName": "Juwan Johnson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4569682",
+    "playerName": "Audric Estime",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4880281",
+    "playerName": "Jordyn Tyson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
     "playerID": "4239996",
     "playerName": "Travis Etienne Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4360689",
+    "playerName": "Tyler Shough",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4361370",
+    "playerName": "Chris Olave",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "3054850",
+    "playerName": "Alvin Kamara",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4241993",
+    "playerName": "Pete Werner",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
+  },
+  {
+    "teamID": "18",
+    "playerID": "4429568",
+    "playerName": "Martin Emerson Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "4685479",
+    "playerName": "Christen Miller",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
   },
   {
     "teamID": "18",
@@ -3886,57 +4005,8 @@
   },
   {
     "teamID": "18",
-    "playerID": "3917331",
-    "playerName": "Erik McCoy",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "18",
-    "playerID": "4606711",
-    "playerName": "Taliese Fuaga",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "18",
-    "playerID": "4429568",
-    "playerName": "Martin Emerson Jr.",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "18",
-    "playerID": "5081999",
-    "playerName": "CJ Donaldson",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "18",
     "playerID": "4428350",
     "playerName": "Quincy Riley",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "4036131",
-    "playerName": "Noah Fant",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "3054850",
-    "playerName": "Alvin Kamara",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "4241993",
-    "playerName": "Pete Werner",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3955,72 +4025,51 @@
     "playerScore": 1
   },
   {
-    "teamID": "18",
-    "playerID": "4880281",
-    "playerName": "Jordyn Tyson",
+    "teamID": "19",
+    "playerID": "4040615",
+    "playerName": "Malik Harrison",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "19",
+    "playerID": "4427278",
+    "playerName": "Xavier Gipson",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "18",
-    "playerID": "4698597",
-    "playerName": "Barion Brown",
+    "teamID": "19",
+    "playerID": "5082353",
+    "playerName": "J.C. Davis",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "18",
-    "playerID": "4879276",
-    "playerName": "Bryce Lance",
+    "teamID": "19",
+    "playerID": "4242547",
+    "playerName": "Paulson Adebo",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "18",
-    "playerID": "4569559",
-    "playerName": "Devaughn Vele",
+    "teamID": "19",
+    "playerID": "4590292",
+    "playerName": "Thomas Fidone II",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "18",
-    "playerID": "4566088",
-    "playerName": "Jaylan Ford",
+    "teamID": "19",
+    "playerID": "5144942",
+    "playerName": "CJ Okoye",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "18",
-    "playerID": "4775268",
-    "playerName": "Mike Reid",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "4682479",
-    "playerName": "Mason Murphy",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "4248047",
-    "playerName": "John Ridgeway III",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "4361259",
-    "playerName": "Zach Wilson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "3929645",
-    "playerName": "Juwan Johnson",
+    "teamID": "19",
+    "playerID": "4039243",
+    "playerName": "Josh Sills",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4131,55 +4180,6 @@
   },
   {
     "teamID": "19",
-    "playerID": "4040615",
-    "playerName": "Malik Harrison",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "19",
-    "playerID": "4691043",
-    "playerName": "Nikko Reed",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "19",
-    "playerID": "4039243",
-    "playerName": "Josh Sills",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "19",
-    "playerID": "5144942",
-    "playerName": "CJ Okoye",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "19",
-    "playerID": "5082353",
-    "playerName": "J.C. Davis",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "19",
-    "playerID": "4590292",
-    "playerName": "Thomas Fidone II",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "19",
-    "playerID": "4242547",
-    "playerName": "Paulson Adebo",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "19",
     "playerID": "4725996",
     "playerName": "Abdul Carter",
     "injuryStatus": "Active",
@@ -4201,50 +4201,8 @@
   },
   {
     "teamID": "20",
-    "playerID": "4837388",
-    "playerName": "VJ Payne",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "20",
-    "playerID": "4597500",
-    "playerName": "Adonai Mitchell",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "20",
-    "playerID": "4569618",
-    "playerName": "Garrett Wilson",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "20",
-    "playerID": "4723820",
-    "playerName": "Omar Cooper Jr.",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "20",
-    "playerID": "4570470",
-    "playerName": "Nahshon Wright",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "20",
-    "playerID": "3117255",
-    "playerName": "Harrison Phillips",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "20",
-    "playerID": "4362094",
-    "playerName": "Joseph Ossai",
+    "playerID": "4683815",
+    "playerName": "Trevin Wallace",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
@@ -4257,22 +4215,8 @@
   },
   {
     "teamID": "20",
-    "playerID": "4683815",
-    "playerName": "Trevin Wallace",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "20",
-    "playerID": "4685248",
-    "playerName": "David Bailey",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "20",
-    "playerID": "4569371",
-    "playerName": "Isaiah Williams",
+    "playerID": "3124679",
+    "playerName": "Jason Sanders",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4292,6 +4236,132 @@
   },
   {
     "teamID": "20",
+    "playerID": "4243375",
+    "playerName": "Dylan Parham",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "20",
+    "playerID": "15864",
+    "playerName": "Geno Smith",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "20",
+    "playerID": "5083315",
+    "playerName": "Kenyon Sadiq",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4241410",
+    "playerName": "Jelani Woods",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "3134353",
+    "playerName": "Tim Patrick",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4574142",
+    "playerName": "Nate Lynn",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4723820",
+    "playerName": "Omar Cooper Jr.",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "20",
+    "playerID": "4597500",
+    "playerName": "Adonai Mitchell",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4685247",
+    "playerName": "Braelon Allen",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4685413",
+    "playerName": "Cade Klubnik",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4427366",
+    "playerName": "Breece Hall",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4569618",
+    "playerName": "Garrett Wilson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4837388",
+    "playerName": "VJ Payne",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4570470",
+    "playerName": "Nahshon Wright",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4362094",
+    "playerName": "Joseph Ossai",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "3117255",
+    "playerName": "Harrison Phillips",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4685248",
+    "playerName": "David Bailey",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "4569371",
+    "playerName": "Isaiah Williams",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
     "playerID": "3116177",
     "playerName": "Troy Reeder",
     "injuryStatus": "Active",
@@ -4305,72 +4375,58 @@
     "playerScore": 1
   },
   {
-    "teamID": "20",
-    "playerID": "3134353",
-    "playerName": "Tim Patrick",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "21",
+    "playerID": "4428850",
+    "playerName": "Dontayvion Wicks",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "20",
-    "playerID": "4373951",
-    "playerName": "Kohl Levao",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "21",
+    "playerID": "4241478",
+    "playerName": "DeVonta Smith",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "20",
-    "playerID": "4361767",
-    "playerName": "Will McDonald IV",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "21",
+    "playerID": "2971027",
+    "playerName": "Jonathan Jones",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "20",
-    "playerID": "3124679",
-    "playerName": "Jason Sanders",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "21",
+    "playerID": "4685287",
+    "playerName": "Jihaad Campbell",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "20",
-    "playerID": "5083315",
-    "playerName": "Kenyon Sadiq",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "21",
+    "playerID": "4240456",
+    "playerName": "Michael Carter II",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "20",
-    "playerID": "15864",
-    "playerName": "Geno Smith",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "21",
+    "playerID": "3926231",
+    "playerName": "Britain Covey",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "20",
-    "playerID": "4685247",
-    "playerName": "Braelon Allen",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "21",
+    "playerID": "4431545",
+    "playerName": "Will Shipley",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
   },
   {
-    "teamID": "20",
-    "playerID": "4427366",
-    "playerName": "Breece Hall",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "20",
-    "playerID": "4426686",
-    "playerName": "Dane Belton",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "20",
-    "playerID": "4361331",
-    "playerName": "Jamien Sherwood",
+    "teamID": "21",
+    "playerID": "15835",
+    "playerName": "Zach Ertz",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4422,48 +4478,6 @@
     "playerName": "Eli Stowers",
     "injuryStatus": "Active",
     "playerScore": 1
-  },
-  {
-    "teamID": "21",
-    "playerID": "4428850",
-    "playerName": "Dontayvion Wicks",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "21",
-    "playerID": "4241478",
-    "playerName": "DeVonta Smith",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "21",
-    "playerID": "2971027",
-    "playerName": "Jonathan Jones",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "21",
-    "playerID": "3926231",
-    "playerName": "Britain Covey",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "21",
-    "playerID": "4685287",
-    "playerName": "Jihaad Campbell",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "21",
-    "playerID": "4240456",
-    "playerName": "Michael Carter II",
-    "injuryStatus": "Out",
-    "playerScore": 0
   },
   {
     "teamID": "21",
@@ -4536,93 +4550,16 @@
     "playerScore": 1
   },
   {
-    "teamID": "21",
-    "playerID": "4362116",
-    "playerName": "Moro Ojomo",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "21",
-    "playerID": "3139368",
-    "playerName": "Marcus Epps",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "23",
-    "playerID": "4682980",
-    "playerName": "Derrick Harmon",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "23",
-    "playerID": "4361411",
-    "playerName": "Pat Freiermuth",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
     "teamID": "23",
     "playerID": "3929846",
     "playerName": "DeShon Elliott",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "23",
-    "playerID": "4035687",
-    "playerName": "Michael Pittman Jr.",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "23",
-    "playerID": "4567979",
-    "playerName": "Brandin Echols",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "23",
-    "playerID": "4692628",
-    "playerName": "Doneiko Slaughter",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "23",
-    "playerID": "4035656",
-    "playerName": "Ben Skowronek",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "23",
     "playerID": "17372",
     "playerName": "Chris Boswell",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "23",
-    "playerID": "4429955",
-    "playerName": "Will Howard",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "23",
-    "playerID": "4714771",
-    "playerName": "Drew Allar",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "23",
-    "playerID": "5081508",
-    "playerName": "Eli Heidenreich",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4642,8 +4579,50 @@
   },
   {
     "teamID": "23",
-    "playerID": "4038815",
-    "playerName": "Rico Dowdle",
+    "playerID": "4368304",
+    "playerName": "Mason McCormick",
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
+  },
+  {
+    "teamID": "23",
+    "playerID": "4035687",
+    "playerName": "Michael Pittman Jr.",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "23",
+    "playerID": "4431492",
+    "playerName": "Roman Wilson",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "23",
+    "playerID": "3932886",
+    "playerName": "Sean Murphy-Bunting",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "4714771",
+    "playerName": "Drew Allar",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "5081508",
+    "playerName": "Eli Heidenreich",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "3116407",
+    "playerName": "Mason Rudolph",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4656,6 +4635,27 @@
   },
   {
     "teamID": "23",
+    "playerID": "4569987",
+    "playerName": "Jaylen Warren",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "4038815",
+    "playerName": "Rico Dowdle",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "4361411",
+    "playerName": "Pat Freiermuth",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
     "playerID": "8439",
     "playerName": "Aaron Rodgers",
     "injuryStatus": "Active",
@@ -4663,8 +4663,36 @@
   },
   {
     "teamID": "23",
-    "playerID": "4569987",
-    "playerName": "Jaylen Warren",
+    "playerID": "4429955",
+    "playerName": "Will Howard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "4682980",
+    "playerName": "Derrick Harmon",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "4567979",
+    "playerName": "Brandin Echols",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "4692628",
+    "playerName": "Doneiko Slaughter",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "23",
+    "playerID": "4035656",
+    "playerName": "Ben Skowronek",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4697,32 +4725,137 @@
     "playerScore": 1
   },
   {
-    "teamID": "23",
-    "playerID": "4242207",
-    "playerName": "Patrick Queen",
+    "teamID": "25",
+    "playerID": "4431466",
+    "playerName": "Jordan Watkins",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "23",
-    "playerID": "3116407",
-    "playerName": "Mason Rudolph",
+    "teamID": "25",
+    "playerID": "4034949",
+    "playerName": "Eddy Pineiro",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "23",
-    "playerID": "3045282",
-    "playerName": "T.J. Watt",
+    "teamID": "25",
+    "playerID": "4685397",
+    "playerName": "Jordan James",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "23",
-    "playerID": "3047495",
-    "playerName": "Sebastian Joseph-Day",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
+    "teamID": "25",
+    "playerID": "4427325",
+    "playerName": "Renardo Green",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "25",
+    "playerID": "16737",
+    "playerName": "Mike Evans",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "25",
+    "playerID": "4691556",
+    "playerName": "Enrique Cruz Jr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "4430431",
+    "playerName": "Kurtis Rourke",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "4426698",
+    "playerName": "Tatum Bethune",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "15818",
+    "playerName": "Keenan Allen",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "3040151",
+    "playerName": "George Kittle",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "3126486",
+    "playerName": "Deebo Samuel Sr.",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "4361741",
+    "playerName": "Brock Purdy",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "3117251",
+    "playerName": "Christian McCaffrey",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "4696044",
+    "playerName": "Kaelon Black",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "13241",
+    "playerName": "Trent Williams",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "4242488",
+    "playerName": "Deommodore Lenoir",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "3916903",
+    "playerName": "Dre Greenlaw",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "16731",
+    "playerName": "Brandin Cooks",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "25",
+    "playerID": "4565200",
+    "playerName": "Upton Stout",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "25",
@@ -4747,57 +4880,8 @@
   },
   {
     "teamID": "25",
-    "playerID": "13241",
-    "playerName": "Trent Williams",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "25",
-    "playerID": "4427325",
-    "playerName": "Renardo Green",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "25",
-    "playerID": "4242488",
-    "playerName": "Deommodore Lenoir",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "25",
-    "playerID": "3916903",
-    "playerName": "Dre Greenlaw",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "25",
     "playerID": "3057524",
     "playerName": "Siran Neal",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "3126486",
-    "playerName": "Deebo Samuel Sr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "16737",
-    "playerName": "Mike Evans",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "25",
-    "playerID": "15818",
-    "playerName": "Keenan Allen",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4816,88 +4900,11 @@
     "playerScore": 1
   },
   {
-    "teamID": "25",
-    "playerID": "4565200",
-    "playerName": "Upton Stout",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "25",
-    "playerID": "16731",
-    "playerName": "Brandin Cooks",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "3043116",
-    "playerName": "Demarcus Robinson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4241464",
-    "playerName": "Mac Jones",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4685397",
-    "playerName": "Jordan James",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4034949",
-    "playerName": "Eddy Pineiro",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4360438",
-    "playerName": "Brandon Aiyuk",
+    "teamID": "26",
+    "playerID": "2971622",
+    "playerName": "Leonard Williams",
     "injuryStatus": "Out",
     "playerScore": 0
-  },
-  {
-    "teamID": "25",
-    "playerID": "4039029",
-    "playerName": "Khalid Kareem",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4426698",
-    "playerName": "Tatum Bethune",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4691556",
-    "playerName": "Enrique Cruz Jr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4430431",
-    "playerName": "Kurtis Rourke",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "25",
-    "playerID": "4696044",
-    "playerName": "Kaelon Black",
-    "injuryStatus": "Active",
-    "playerScore": 1
   },
   {
     "teamID": "26",
@@ -4912,6 +4919,111 @@
     "playerName": "Charles Cross",
     "injuryStatus": "Out",
     "playerScore": 0
+  },
+  {
+    "teamID": "26",
+    "playerID": "2473037",
+    "playerName": "Jason Myers",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "2977187",
+    "playerName": "Cooper Kupp",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "4597703",
+    "playerName": "Tory Horton",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "4429835",
+    "playerName": "George Holani",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "26",
+    "playerID": "5082331",
+    "playerName": "Avery Smith",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "3912547",
+    "playerName": "Sam Darnold",
+    "injuryStatus": "Out",
+    "playerScore": 0
+  },
+  {
+    "teamID": "26",
+    "playerID": "4576297",
+    "playerName": "AJ Barner",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "4032473",
+    "playerName": "Rashid Shaheed",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "3924327",
+    "playerName": "Drew Lock",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "4685512",
+    "playerName": "Jadarian Price",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "4426385",
+    "playerName": "Zach Charbonnet",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "4430878",
+    "playerName": "Jaxon Smith-Njigba",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "26",
+    "playerID": "3115312",
+    "playerName": "Jarran Reed",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "26",
+    "playerID": "4245171",
+    "playerName": "Abraham Lucas",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "26",
+    "playerID": "4887558",
+    "playerName": "Emanuel Wilson",
+    "injuryStatus": "Active",
+    "playerScore": 1
   },
   {
     "teamID": "26",
@@ -4936,13 +5048,6 @@
   },
   {
     "teamID": "26",
-    "playerID": "2971622",
-    "playerName": "Leonard Williams",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "26",
     "playerID": "4364623",
     "playerName": "Patrick O'Connell",
     "injuryStatus": "Active",
@@ -4964,115 +5069,31 @@
   },
   {
     "teamID": "26",
-    "playerID": "3924327",
-    "playerName": "Drew Lock",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
     "playerID": "4362851",
     "playerName": "Ernest Jones IV",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "26",
-    "playerID": "4032473",
-    "playerName": "Rashid Shaheed",
+    "teamID": "27",
+    "playerID": "4686334",
+    "playerName": "Yaya Diaby",
+    "injuryStatus": "Doubtful",
+    "playerScore": 0.25
+  },
+  {
+    "teamID": "27",
+    "playerID": "3120590",
+    "playerName": "Easton Stick",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "26",
-    "playerID": "4887558",
-    "playerName": "Emanuel Wilson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "2977187",
-    "playerName": "Cooper Kupp",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4429835",
-    "playerName": "George Holani",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4597703",
-    "playerName": "Tory Horton",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "2473037",
-    "playerName": "Jason Myers",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "3912547",
-    "playerName": "Sam Darnold",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "26",
-    "playerID": "4685512",
-    "playerName": "Jadarian Price",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4426385",
-    "playerName": "Zach Charbonnet",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4576297",
-    "playerName": "AJ Barner",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4430878",
-    "playerName": "Jaxon Smith-Njigba",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4432734",
-    "playerName": "Jalen Milroe",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4592823",
-    "playerName": "Beau Stephens",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "26",
-    "playerID": "4686540",
-    "playerName": "Tyrice Knight",
-    "injuryStatus": "Active",
-    "playerScore": 1
+    "teamID": "27",
+    "playerID": "3052587",
+    "playerName": "Baker Mayfield",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "27",
@@ -5146,13 +5167,6 @@
   },
   {
     "teamID": "27",
-    "playerID": "4686334",
-    "playerName": "Yaya Diaby",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "27",
     "playerID": "4890885",
     "playerName": "Ayden Garnes",
     "injuryStatus": "Active",
@@ -5209,13 +5223,6 @@
   },
   {
     "teamID": "27",
-    "playerID": "3052587",
-    "playerName": "Baker Mayfield",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "27",
     "playerID": "4567750",
     "playerName": "Emeka Egbuka",
     "injuryStatus": "Active",
@@ -5243,11 +5250,137 @@
     "playerScore": 1
   },
   {
-    "teamID": "27",
-    "playerID": "4890373",
-    "playerName": "Bauer Sharp",
+    "teamID": "10",
+    "playerID": "4870805",
+    "playerName": "Anthony Hill Jr.",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "10",
+    "playerID": "3926229",
+    "playerName": "Cody Barton",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "10",
+    "playerID": "4431268",
+    "playerName": "Chimere Dike",
     "injuryStatus": "Active",
     "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4361516",
+    "playerName": "Daniel Bellinger",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "3124084",
+    "playerName": "Joey Slye",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4431353",
+    "playerName": "Xavier Restrepo",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "3925357",
+    "playerName": "Calvin Ridley",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4426987",
+    "playerName": "Brandon Crenshaw-Dickson",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4685145",
+    "playerName": "Jaylon Jones",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "5081785",
+    "playerName": "Jackie Marshall",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4685555",
+    "playerName": "Nicholas Singleton",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4871023",
+    "playerName": "Carnell Tate",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "10",
+    "playerID": "4686728",
+    "playerName": "Gunnar Helm",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4428557",
+    "playerName": "Tyjae Spears",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4883647",
+    "playerName": "Elic Ayomanor",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "3916148",
+    "playerName": "Tony Pollard",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4688380",
+    "playerName": "Cam Ward",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "10",
+    "playerID": "4569587",
+    "playerName": "Wan'Dale Robinson",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "10",
+    "playerID": "4240532",
+    "playerName": "Tony Adams",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
     "teamID": "10",
@@ -5279,38 +5412,10 @@
   },
   {
     "teamID": "10",
-    "playerID": "4431353",
-    "playerName": "Xavier Restrepo",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
     "playerID": "4429100",
     "playerName": "Peter Skoronski",
     "injuryStatus": "IR",
     "playerScore": -0.5
-  },
-  {
-    "teamID": "10",
-    "playerID": "3926229",
-    "playerName": "Cody Barton",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "10",
-    "playerID": "4870805",
-    "playerName": "Anthony Hill Jr.",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "10",
-    "playerID": "4431268",
-    "playerName": "Chimere Dike",
-    "injuryStatus": "Active",
-    "playerScore": 1
   },
   {
     "teamID": "10",
@@ -5320,107 +5425,58 @@
     "playerScore": 1
   },
   {
-    "teamID": "10",
-    "playerID": "3916148",
-    "playerName": "Tony Pollard",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "4428557",
-    "playerName": "Tyjae Spears",
+    "teamID": "28",
+    "playerID": "4361088",
+    "playerName": "Colson Yankoff",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
   {
-    "teamID": "10",
-    "playerID": "4871023",
-    "playerName": "Carnell Tate",
-    "injuryStatus": "Out",
-    "playerScore": 0
+    "teamID": "28",
+    "playerID": "2576736",
+    "playerName": "Lucas Patrick",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
   },
   {
-    "teamID": "10",
-    "playerID": "4431437",
-    "playerName": "JC Latham",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "4685145",
-    "playerName": "Jaylon Jones",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "4570469",
-    "playerName": "Marcus Harris",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "4431613",
-    "playerName": "James Williams Sr.",
+    "teamID": "28",
+    "playerID": "3051890",
+    "playerName": "Laremy Tunsil",
     "injuryStatus": "IR",
     "playerScore": -0.5
   },
   {
-    "teamID": "10",
-    "playerID": "4573318",
-    "playerName": "Dorian Mausi",
+    "teamID": "28",
+    "playerID": "4575131",
+    "playerName": "Jacory Croskey-Merritt",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "28",
+    "playerID": "3122797",
+    "playerName": "Isaac Yiadom",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "10",
-    "playerID": "4685555",
-    "playerName": "Nicholas Singleton",
+    "teamID": "28",
+    "playerID": "4605488",
+    "playerName": "Tanoa Togiai",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "10",
-    "playerID": "3925357",
-    "playerName": "Calvin Ridley",
+    "teamID": "28",
+    "playerID": "4428343",
+    "playerName": "Ricky Barber",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
-    "teamID": "10",
-    "playerID": "3124084",
-    "playerName": "Joey Slye",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "4883647",
-    "playerName": "Elic Ayomanor",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "4426987",
-    "playerName": "Brandon Crenshaw-Dickson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "4039160",
-    "playerName": "Kylen Granson",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "10",
-    "playerID": "5081785",
-    "playerName": "Jackie Marshall",
+    "teamID": "28",
+    "playerID": "4432722",
+    "playerName": "Athan Kaliakmanis",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -5517,48 +5573,6 @@
   },
   {
     "teamID": "28",
-    "playerID": "4432722",
-    "playerName": "Athan Kaliakmanis",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "28",
-    "playerID": "3122797",
-    "playerName": "Isaac Yiadom",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "28",
-    "playerID": "4605488",
-    "playerName": "Tanoa Togiai",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "28",
-    "playerID": "4428343",
-    "playerName": "Ricky Barber",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "28",
-    "playerID": "2576736",
-    "playerName": "Lucas Patrick",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "28",
-    "playerID": "4361088",
-    "playerName": "Colson Yankoff",
-    "injuryStatus": "Out",
-    "playerScore": 0
-  },
-  {
-    "teamID": "28",
     "playerID": "3886601",
     "playerName": "Shy Tuttle",
     "injuryStatus": "Active",
@@ -5582,20 +5596,6 @@
     "teamID": "28",
     "playerID": "4430560",
     "playerName": "Jer'Zhan Newton",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "28",
-    "playerID": "4361577",
-    "playerName": "Dyami Brown",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "28",
-    "playerID": "4262199",
-    "playerName": "Sam Cosmi",
     "injuryStatus": "Active",
     "playerScore": 1
   }

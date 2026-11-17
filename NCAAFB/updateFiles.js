@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 15;
-const STAT_END_WEEK = 10;
+const STAT_END_WEEK = 11;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
@@ -28,7 +28,8 @@ const TEAM_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/col
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-main();
+//main();
+updatePowerRankings();
 
 async function main() {
     try {
@@ -1375,10 +1376,7 @@ async function updatePowerRankings() {
 
 function getConfNonConfRecord(conf) {
     let rawData = fs.readFileSync('./NCAAFB/data/standings.json', 'utf-8');
-    let standings = JSON.parse(rawData);
-    let confWins = 0;
-    let confLosses = 0;
-    let confTies = 0;    
+    let standings = JSON.parse(rawData); 
     let nonConfWins = 0;
     let nonConfLosses = 0;
     let nonConfTies = 0;
@@ -1386,14 +1384,14 @@ function getConfNonConfRecord(conf) {
     for (let team in standings) {
         if (standings[team]['Conference'] === conf) {
             let rec = standings[team]['Conf'].split('-');
-            confWins += parseInt(rec[0]);
-            confLosses += parseInt(rec[1]);
-            confTies += parseInt(rec[2]);
+            let confWins = parseInt(rec[0]);
+            let confLosses = parseInt(rec[1]);
+            let confTies = parseInt(rec[2]);
 
             rec = standings[team]['Record'].split('-');
-            nonConfWins += parseInt(rec[0]) - confWins;
-            nonConfLosses += parseInt(rec[1]) - confLosses;
-            nonConfTies += parseInt(rec[2]) - confTies;
+            nonConfWins += (parseInt(rec[0]) - confWins);
+            nonConfLosses += (parseInt(rec[1]) - confLosses);
+            nonConfTies += (parseInt(rec[2]) - confTies);
         }
     }
 

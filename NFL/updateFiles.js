@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 18;
-const STAT_END_WEEK = 9;
+const STAT_END_WEEK = 10;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
@@ -52,9 +52,9 @@ async function main() {
         await updatePowerRankings();
         console.log("NFL: Building weekly view...");
         buildWeekView();
-        console.log("Building betting sheets...");
+        console.log("NFL: Building betting sheets...");
         await buildBettingSheets();
-        console.log("All files updated successfully!");
+        console.log("NFL: All files updated successfully!");
     } catch (err) {
         console.error("NFL: Error in main execution pipeline:", err);
     }
