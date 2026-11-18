@@ -30,7 +30,18 @@ const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/lea
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-main();
+//main();
+testGenerateStandings();
+
+async function testGenerateStandings() {
+    try {
+        console.log("NFL: Testing standings generation...");
+
+        generateStandings();
+    } catch (err) {
+        console.error("NFL: Error in testGenerateStandings execution:", err);
+    }
+}
 
 async function main() {
     try {
@@ -1180,7 +1191,8 @@ async function generateStandings() {
             "PF": pf,
             "PA": pa,
             "Diff": diff.toFixed(0),
-            "Streak": getStreak(teamID)
+            "Streak": getStreak(teamID),
+            "DivRank": divisionRank(teamID)
         });
     }
 
@@ -1812,4 +1824,138 @@ async function buildBettingSheets() {
     bettingSheet['Receiving Stats'] = recBettingSheet;
 
     fs.writeFileSync('./NFL/data/bettingSheet.json', JSON.stringify(bettingSheet, null, 2));
+}
+
+function divisionRank(teamID) {
+    // Get team list
+    let rawData = fs.readFileSync('./NFL/data/standings.json', 'utf-8');
+    let teamList = JSON.parse(rawData);
+    
+    let team = teamList.find(x => x['Team ID'] === teamID);
+    if (!team) return null;
+
+    let division = team['Division'];
+    let divisionTeams = teamList.filter(x => x['Division'] === division);
+    divisionTeams.sort((a, b) => b['Rec%'] - a['Rec%'] || divisionRankHelperH2H(a, b) || b['Div%'] - a['Div%'] || divisionRankHelperCommonGames(a, b) || b['Conf%'] - a['Conf%']);
+    return divisionTeams.findIndex(x => x['Team ID'] === teamID) + 1;
+}
+
+function divisionRankHelperH2H(teamA, teamB) {
+    let teamAID = teamA['Team ID'];
+    let teamBID = teamB['Team ID'];
+    let rawData = fs.readFileSync('./NFL/data/liveScoring.json', 'utf-8');
+    let gameData = JSON.parse(rawData);
+    let teamAWins = 0;
+    let teamBWins = 0;
+    
+    for(let game in gameData) {
+        let weekString = String(gameData[game]['Week']);
+        let week = parseInt(weekString.split(' ')[1]); 
+
+        if (gameData[game]['Home ID'] === teamAID && gameData[game]['Away ID'] === teamBID && week <= STAT_END_WEEK) {
+            let winner = gameData[game]['Winner'];
+            if (winner === teamAID) {
+                teamAWins++;
+            } else if (winner === teamBID) {
+                teamBWins++;
+            }
+        }
+    }
+    
+    if (teamAWins > teamBWins) return -1;
+    else if (teamAWins < teamBWins) return 1;
+    else return 0;
+}
+
+function divisionRankHelperCommonGames(teamA, teamB) {
+    let teamAID = teamA['Team ID'];
+    let teamBID = teamB['Team ID'];
+    let rawData = fs.readFileSync('./NFL/data/liveScoring.json', 'utf-8');
+    let gameData = JSON.parse(rawData);
+    const compareCommonOpponents = createCommonOpponentsComparator(gameData);
+    return compareCommonOpponents(teamAID, teamBID);
+}
+
+/**
+ * Factory function that returns a JavaScript sort comparator to rank teams 
+ * based on their win percentage against common opponents, requiring a minimum of 4 games.
+ * 
+ * @param {Array} liveScoring - The array of game objects from liveScoring.json[cite: 1]
+ * @returns {Function} Comparator function (teamAID, teamBID) => number
+ */
+function createCommonOpponentsComparator(liveScoring) {
+  return function compareCommonOpponents(teamAID, teamBID) {
+    const idA = String(teamAID);
+    const idB = String(teamBID);
+
+    if (idA === idB) return 0;
+
+    // 1. Filter for completed games only ("Status": "Final")[cite: 1]
+    const completedGames = liveScoring.filter(
+      (game) => game.Status === "Final" && game.Winner !== null
+    );
+
+    // Helper to get all games and unique opponents for a given team
+    const getTeamData = (teamId) => {
+      const games = completedGames.filter(
+        (g) => g["Home ID"] === teamId || g["Away ID"] === teamId
+      );
+      const opponents = new Set(
+        games.map((g) => (g["Home ID"] === teamId ? g["Away ID"] : g["Home ID"]))
+      );
+      return { games, opponents };
+    };
+
+    const dataA = getTeamData(idA);
+    const dataB = getTeamData(idB);
+
+    // 2. Find common opponents (excluding the two teams playing each other)
+    const commonOpponents = new Set(
+      [...dataA.opponents].filter(
+        (oppId) => dataB.opponents.has(oppId) && oppId !== idA && oppId !== idB
+      )
+    );
+
+    if (commonOpponents.size === 0) return 0;
+
+    // Helper to calculate total points and games played against common opponents
+    const getCommonRecord = (teamId, games) => {
+      let points = 0;
+      let gamesPlayed = 0;
+
+      for (const game of games) {
+        const opponentId =
+          game["Home ID"] === teamId ? game["Away ID"] : game["Home ID"];
+
+        if (commonOpponents.has(opponentId)) {
+          gamesPlayed++;
+          if (game.Winner === teamId) {
+            points += 1; // Win
+          } else if (game.Winner === "Tie") {
+            points += 0.5; // Tie
+          }
+          // Loss adds 0 points
+        }
+      }
+
+      return { points, gamesPlayed };
+    };
+
+    const recordA = getCommonRecord(idA, dataA.games);
+    const recordB = getCommonRecord(idB, dataB.games);
+
+    // 3. Minimum threshold check: At least 4 games played against common opponents for both teams
+    if (recordA.gamesPlayed < 4 || recordB.gamesPlayed < 4) {
+      return 0; // Does not meet the minimum requirement; treat as tied for this step
+    }
+
+    // 4. Calculate win percentages
+    const winPctA = recordA.points / recordA.gamesPlayed;
+    const winPctB = recordB.points / recordB.gamesPlayed;
+
+    // 5. Sort descending (higher win percentage ranks first)
+    if (winPctA > winPctB) return -1;
+    if (winPctA < winPctB) return 1;
+    return 0;
+  };
 }
