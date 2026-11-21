@@ -3676,6 +3676,13 @@
   },
   {
     "teamID": "17",
+    "playerID": "4240391",
+    "playerName": "Tommy DeVito",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "17",
     "playerID": "4047646",
     "playerName": "A.J. Brown",
     "injuryStatus": "Doubtful",
@@ -3774,13 +3781,6 @@
   },
   {
     "teamID": "17",
-    "playerID": "4240391",
-    "playerName": "Tommy DeVito",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "17",
     "playerID": "4569923",
     "playerName": "Andy Borregales",
     "injuryStatus": "Active",
@@ -3846,6 +3846,13 @@
     "teamID": "17",
     "playerID": "15718",
     "playerName": "Greg Van Roten",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "18",
+    "playerID": "5208518",
+    "playerName": "Charlie Smyth",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -3937,13 +3944,6 @@
     "teamID": "18",
     "playerID": "4569559",
     "playerName": "Devaughn Vele",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "18",
-    "playerID": "5208518",
-    "playerName": "Charlie Smyth",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4201,6 +4201,13 @@
   },
   {
     "teamID": "20",
+    "playerID": "4427366",
+    "playerName": "Breece Hall",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
     "playerID": "4243375",
     "playerName": "Dylan Parham",
     "injuryStatus": "Questionable",
@@ -4350,13 +4357,6 @@
     "teamID": "20",
     "playerID": "4685413",
     "playerName": "Cade Klubnik",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "20",
-    "playerID": "4427366",
-    "playerName": "Breece Hall",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -5076,6 +5076,13 @@
   },
   {
     "teamID": "27",
+    "playerID": "3052587",
+    "playerName": "Baker Mayfield",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "27",
     "playerID": "4248533",
     "playerName": "Josh Hayes",
     "injuryStatus": "IR",
@@ -5101,13 +5108,6 @@
     "playerName": "Jalon Daniels",
     "injuryStatus": "Active",
     "playerScore": 1
-  },
-  {
-    "teamID": "27",
-    "playerID": "3052587",
-    "playerName": "Baker Mayfield",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
   },
   {
     "teamID": "27",
@@ -5251,6 +5251,13 @@
   },
   {
     "teamID": "10",
+    "playerID": "4871023",
+    "playerName": "Carnell Tate",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "10",
     "playerID": "4695280",
     "playerName": "Micah Robinson",
     "injuryStatus": "Questionable",
@@ -5288,13 +5295,6 @@
     "teamID": "10",
     "playerID": "4428557",
     "playerName": "Tyjae Spears",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "10",
-    "playerID": "4871023",
-    "playerName": "Carnell Tate",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
@@ -5426,6 +5426,13 @@
   },
   {
     "teamID": "28",
+    "playerID": "4697815",
+    "playerName": "Rachaad White",
+    "injuryStatus": "Questionable",
+    "playerScore": 0.5
+  },
+  {
+    "teamID": "28",
     "playerID": "3051890",
     "playerName": "Laremy Tunsil",
     "injuryStatus": "IR",
@@ -5435,13 +5442,6 @@
     "teamID": "28",
     "playerID": "4567156",
     "playerName": "Treylon Burks",
-    "injuryStatus": "Questionable",
-    "playerScore": 0.5
-  },
-  {
-    "teamID": "28",
-    "playerID": "4697815",
-    "playerName": "Rachaad White",
     "injuryStatus": "Questionable",
     "playerScore": 0.5
   },
