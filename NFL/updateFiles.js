@@ -30,18 +30,7 @@ const DEPTH_CHART_URL = "https://sports.core.api.espn.com/v2/sports/football/lea
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-//main();
-testGenerateStandings();
-
-async function testGenerateStandings() {
-    try {
-        console.log("NFL: Testing standings generation...");
-
-        generateStandings();
-    } catch (err) {
-        console.error("NFL: Error in testGenerateStandings execution:", err);
-    }
-}
+main();
 
 async function main() {
     try {
@@ -131,13 +120,93 @@ function convertInjuryStatusToScore(inj_status) {
 }
 
 /**
+ * Checks whether an existing game record already has final scores saved.
+ */
+function hasFinalScores(existingGame) {
+    if (!existingGame) return false;
+    return (
+        existingGame["Status"] === "Final" &&
+        existingGame["Home Score"] !== null &&
+        existingGame["Home Score"] !== undefined &&
+        existingGame["Away Score"] !== null &&
+        existingGame["Away Score"] !== undefined
+    );
+}
+
+/**
+ * Extracts game odds from a competition object and only updates values
+ * when the newly fetched value is not null or undefined.
+ */
+function resolveGameOdds(competition, existingGame = null) {
+    let homeOdds = existingGame ? (existingGame["Home ML"] ?? null) : null;
+    let awayOdds = existingGame ? (existingGame["Away ML"] ?? null) : null;
+    let spread = existingGame ? (existingGame["Spread"] ?? null) : null;
+    let overUnder = existingGame ? (existingGame["Over/Under"] ?? null) : null;
+
+    try {
+        const odds = competition?.odds?.[0];
+        if (odds) {
+            const fetchedHomeOdds = odds?.moneyline?.home?.close?.odds;
+            const fetchedAwayOdds = odds?.moneyline?.away?.close?.odds;
+            const fetchedSpread = odds?.details;
+            const fetchedOverUnder = odds?.overUnder;
+
+            if (fetchedHomeOdds !== null && fetchedHomeOdds !== undefined) {
+                homeOdds = fetchedHomeOdds;
+            }
+            if (fetchedAwayOdds !== null && fetchedAwayOdds !== undefined) {
+                awayOdds = fetchedAwayOdds;
+            }
+            if (fetchedSpread !== null && fetchedSpread !== undefined) {
+                spread = fetchedSpread;
+            }
+            if (fetchedOverUnder !== null && fetchedOverUnder !== undefined) {
+                overUnder = fetchedOverUnder;
+            }
+        }
+    } catch (error) {
+        // Odds unavailable for this game; retain existing/null defaults
+    }
+
+    return { homeOdds, awayOdds, spread, overUnder };
+}
+
+/**
  * Fetches game schedules and boxscores week-by-week.
- * Uses Promise.all to fetch boxscores concurrently for maximum speedup.
+ * Skips boxscore fetches for games that already have final scores in liveScoring.json.
  */
 async function updateGames() {
     let gameList = [];
     let statList = [];
     let boxscorePromises = [];
+
+    const liveScoringPath = './NFL/data/liveScoring.json';
+    const boxScoresPath = './NFL/data/boxScores.json';
+
+    // Load existing games if available so non-null odds and final scores can be checked
+    let existingGamesById = new Map();
+    if (fs.existsSync(liveScoringPath)) {
+        try {
+            const existingGames = JSON.parse(fs.readFileSync(liveScoringPath, 'utf-8'));
+            for (const g of existingGames) {
+                if (g && g["Game ID"]) {
+                    existingGamesById.set(g["Game ID"], g);
+                }
+            }
+        } catch (err) {
+            console.error("Error reading existing liveScoring.json:", err);
+        }
+    }
+
+    // Load existing boxscore rows so skipped final games retain their player stats
+    let existingBoxScores = [];
+    if (fs.existsSync(boxScoresPath)) {
+        try {
+            existingBoxScores = JSON.parse(fs.readFileSync(boxScoresPath, 'utf-8'));
+        } catch (err) {
+            console.error("Error reading existing boxScores.json:", err);
+        }
+    }
 
     // Iterate through each week of the regular season
     for (let week = 1; week <= NUM_WEEKS; week++) {
@@ -154,7 +223,7 @@ async function updateGames() {
                 let gameID = currentGame.id;
                 let gameDate = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(currentGame.date));
                 let gameTime = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).format(new Date(currentGame.date));
-                
+
                 let competition = currentGame.competitions[0];
                 let homeCompetitor = competition.competitors[0];
                 let awayCompetitor = competition.competitors[1];
@@ -167,17 +236,11 @@ async function updateGames() {
                 let awayScore = awayCompetitor.score;
                 let gameStatus = currentGame.status.type.description;
 
-                // Safely extract betting odds if available
-                let homeOdds = null, awayOdds = null, spread = null, overUnder = null;
-                try {
-                    let odds = competition.odds[0];
-                    homeOdds = odds.moneyline.home.close.odds;
-                    awayOdds = odds.moneyline.away.close.odds;
-                    spread = odds.details;
-                    overUnder = odds.overUnder;
-                } catch (error) {
-                    // Odds unavailable for this game
-                }
+                const existingGame = existingGamesById.get(gameID) || null;
+                const alreadyFinal = hasFinalScores(existingGame);
+
+                // Resolve betting odds, only updating when fetched values are not null/undefined
+                const { homeOdds, awayOdds, spread, overUnder } = resolveGameOdds(competition, existingGame);
 
                 // Determine game outcome/winner
                 let winningTeam = null;
@@ -190,35 +253,42 @@ async function updateGames() {
                 }
 
                 gameList.push({
-                    "Week": weekName, 
-                    "Game ID": gameID, 
-                    "Game Date": gameDate, 
-                    "Game Time": gameTime, 
-                    "Home Team": homeTeamName, 
-                    "Home ID": homeTeam, 
-                    "Away Team": awayTeamName, 
-                    "Away ID": awayTeam, 
-                    "Status": gameStatus, 
-                    "Home Score": homeScore, 
+                    "Week": weekName,
+                    "Game ID": gameID,
+                    "Game Date": gameDate,
+                    "Game Time": gameTime,
+                    "Home Team": homeTeamName,
+                    "Home ID": homeTeam,
+                    "Away Team": awayTeamName,
+                    "Away ID": awayTeam,
+                    "Status": gameStatus,
+                    "Home Score": homeScore,
                     "Away Score": awayScore,
-                    "Winner": winningTeam, 
-                    "Home ML": homeOdds, 
-                    "Away ML": awayOdds, 
-                    "Spread": spread, 
+                    "Winner": winningTeam,
+                    "Home ML": homeOdds,
+                    "Away ML": awayOdds,
+                    "Spread": spread,
                     "Over/Under": overUnder
                 });
 
-                // If the game falls within the valid statistical range, queue its boxscore fetch
+                // If the game falls within the valid statistical range, either reuse saved stats or fetch boxscore
                 if (week <= STAT_END_WEEK) {
-                    let boxscoreURL = `${BOXSCORE_BASE_URL}${gameID}`;
-                    boxscorePromises.push(
-                        fetch(boxscoreURL)
-                            .then(res => res.json())
-                            .then(boxscoreData => {
-                                processBoxscore(boxscoreData, statList);
-                            })
-                            .catch(err => console.error(`Error fetching boxscore for game ${gameID}:`, err))
-                    );
+                    if (alreadyFinal && existingBoxScores.length > 0) {
+                        const cachedGameStats = existingBoxScores.filter(
+                            (row) => String(row.gameID) === String(gameID)
+                        );
+                        statList.push(...cachedGameStats);
+                    } else {
+                        let boxscoreURL = `${BOXSCORE_BASE_URL}${gameID}`;
+                        boxscorePromises.push(
+                            fetch(boxscoreURL)
+                                .then(res => res.json())
+                                .then(boxscoreData => {
+                                    processBoxscore(boxscoreData, statList, gameID);
+                                })
+                                .catch(err => console.error(`Error fetching boxscore for game ${gameID}:`, err))
+                        );
+                    }
                 }
             }
         } catch (error) {
@@ -229,11 +299,11 @@ async function updateGames() {
     // Await all queued boxscore requests to run and complete concurrently
     await Promise.all(boxscorePromises);
 
-    fs.writeFileSync('./NFL/data/liveScoring.json', JSON.stringify(gameList, null, 2));
+    fs.writeFileSync(liveScoringPath, JSON.stringify(gameList, null, 2));
 
     // Sort stats by player ID before writing
     statList.sort((a, b) => a.playerID - b.playerID);
-    fs.writeFileSync('./NFL/data/boxScores.json', JSON.stringify(statList, null, 2));
+    fs.writeFileSync(boxScoresPath, JSON.stringify(statList, null, 2));
 
     // Aggregate statistics downstream
     updatePlayerStats(statList);
@@ -244,7 +314,7 @@ async function updateGames() {
 /**
  * Helper function to parse individual player performance lines from a game's boxscore summary.
  */
-function processBoxscore(boxscoreData, statList) {
+function processBoxscore(boxscoreData, statList, gameID = null) {
     if (!boxscoreData || !boxscoreData.boxscore || !boxscoreData.boxscore.players) return;
     let boxScoreTeams = boxscoreData.boxscore.players;
 
@@ -391,6 +461,7 @@ function processBoxscore(boxscoreData, statList) {
             }
 
             statList.push({
+                gameID,
                 playerID: currentPlayerID,
                 playerName: currentPlayerName,
                 teamID,

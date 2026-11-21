@@ -195,10 +195,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "AUB -48.5",
+      "Over/Under": 59.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -213,10 +213,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-650",
+      "Away ML": "+470",
+      "Spread": "ALA -15.5",
+      "Over/Under": 50.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -420,10 +420,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+195",
-      "Away ML": "-238",
-      "Spread": "UTSA -6.5",
-      "Over/Under": 52.5
+      "Home ML": "+160",
+      "Away ML": "-192",
+      "Spread": "UTSA -4.5",
+      "Over/Under": 49.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -645,9 +645,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+154",
-      "Away ML": "-185",
-      "Spread": "USA -3.5",
+      "Home ML": "+164",
+      "Away ML": "-198",
+      "Spread": "USA -5.5",
       "Over/Under": 65.5
     },
     "Week 13": {
@@ -870,10 +870,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-1600",
-      "Away ML": "+900",
-      "Spread": "TEX -20.5",
-      "Over/Under": 47.5
+      "Home ML": "-1350",
+      "Away ML": "+800",
+      "Spread": "TEX -18.5",
+      "Over/Under": 46.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -1095,10 +1095,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+136",
-      "Away ML": "-162",
-      "Spread": "OKST -3",
-      "Over/Under": 61.5
+      "Home ML": "+114",
+      "Away ML": "-135",
+      "Spread": "OKST -2.5",
+      "Over/Under": 59.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -1320,10 +1320,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+235",
-      "Away ML": "-290",
-      "Spread": "ARIZ -7",
-      "Over/Under": 52.5
+      "Home ML": "+295",
+      "Away ML": "-375",
+      "Spread": "ARIZ -10",
+      "Over/Under": 53.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -1791,10 +1791,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-900",
-      "Away ML": "+600",
-      "Spread": "BOIS -16.5",
-      "Over/Under": 61.5
+      "Home ML": "-1450",
+      "Away ML": "+850",
+      "Spread": "BOIS -20.5",
+      "Over/Under": 60.5
     },
     "Week 13": null,
     "Week 14": null,
@@ -1999,10 +1999,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+210",
-      "Away ML": "-258",
-      "Spread": "UNLV -7",
-      "Over/Under": 46.5
+      "Home ML": "+200",
+      "Away ML": "-245",
+      "Spread": "UNLV -6.5",
+      "Over/Under": 47.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -2207,10 +2207,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+110",
-      "Away ML": "-130",
+      "Home ML": "+114",
+      "Away ML": "-135",
       "Spread": "STAN -2.5",
-      "Over/Under": 56.5
+      "Over/Under": 55.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -2432,10 +2432,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+110",
-      "Away ML": "-130",
+      "Home ML": "+114",
+      "Away ML": "-135",
       "Spread": "STAN -2.5",
-      "Over/Under": 56.5
+      "Over/Under": 55.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -2657,10 +2657,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+154",
-      "Away ML": "-185",
+      "Home ML": "+150",
+      "Away ML": "-180",
       "Spread": "UCLA -3.5",
-      "Over/Under": 37.5
+      "Over/Under": 36.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -2675,10 +2675,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-135",
+      "Away ML": "+114",
+      "Spread": "UCLA -2.5",
+      "Over/Under": 52.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -2865,8 +2865,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-900",
-      "Away ML": "+600",
+      "Home ML": "-950",
+      "Away ML": "+625",
       "Spread": "USC -17.5",
       "Over/Under": 57.5
     },
@@ -2883,10 +2883,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-135",
+      "Away ML": "+114",
+      "Spread": "UCLA -2.5",
+      "Over/Under": 52.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -3093,7 +3093,7 @@
       "Home ML": "-1450",
       "Away ML": "+850",
       "Spread": "FRES -20.5",
-      "Over/Under": 65.5
+      "Over/Under": 66.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -3315,10 +3315,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-162",
-      "Away ML": "+136",
+      "Home ML": "-155",
+      "Away ML": "+130",
       "Spread": "CIN -3",
-      "Over/Under": 58.5
+      "Over/Under": 56.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -3540,10 +3540,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-535",
-      "Away ML": "+400",
+      "Home ML": "-600",
+      "Away ML": "+440",
       "Spread": "CONN -13.5",
-      "Over/Under": 47.5
+      "Over/Under": 48.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -3820,9 +3820,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+140",
-      "Away ML": "-166",
-      "Spread": "DEL -3.5",
+      "Home ML": "+130",
+      "Away ML": "-155",
+      "Spread": "DEL -3",
       "Over/Under": 53.5
     },
     "Week 13": {
@@ -4066,10 +4066,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-375",
-      "Away ML": "+295",
-      "Spread": "FSU -9.5",
-      "Over/Under": 55.5
+      "Home ML": "-395",
+      "Away ML": "+310",
+      "Spread": "FSU -10.5",
+      "Over/Under": 56.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -4499,8 +4499,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-550",
-      "Away ML": "+410",
+      "Home ML": "-575",
+      "Away ML": "+425",
       "Spread": "FLA -13.5",
       "Over/Under": 47.5
     },
@@ -4727,7 +4727,7 @@
       "Home ML": "-105",
       "Away ML": "-115",
       "Spread": "USF -1.5",
-      "Over/Under": 64.5
+      "Over/Under": 63.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -4949,10 +4949,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+900",
-      "Away ML": "-1600",
-      "Spread": "WAKE -21",
-      "Over/Under": 56.5
+      "Home ML": "+1100",
+      "Away ML": "-2100",
+      "Spread": "WAKE -22.5",
+      "Over/Under": 55.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -5174,10 +5174,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+575",
-      "Away ML": "-850",
-      "Spread": "UGA -16.5",
-      "Over/Under": 50.5
+      "Home ML": "+525",
+      "Away ML": "-750",
+      "Spread": "UGA -14.5",
+      "Over/Under": 51.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -5382,9 +5382,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-192",
-      "Away ML": "+160",
-      "Spread": "NEV -4",
+      "Home ML": "-258",
+      "Away ML": "+210",
+      "Spread": "NEV -7",
       "Over/Under": 40.5
     },
     "Week 13": {
@@ -5603,10 +5603,10 @@
       "Home ID": "2116",
       "Away Team": "Iowa State Cyclones",
       "Away ID": "66",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "48",
+      "Away Score": "17",
+      "Winner": "2116",
       "Home ML": "-125",
       "Away ML": "+105",
       "Spread": "UCF -2.5",
@@ -5832,10 +5832,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-900",
-      "Away ML": "+600",
-      "Spread": "BOIS -16.5",
-      "Over/Under": 61.5
+      "Home ML": "-1450",
+      "Away ML": "+850",
+      "Spread": "BOIS -20.5",
+      "Over/Under": 60.5
     },
     "Week 13": null,
     "Week 14": {
@@ -6095,10 +6095,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+130",
-      "Away ML": "-155",
+      "Home ML": "+124",
+      "Away ML": "-148",
       "Spread": "NU -3",
-      "Over/Under": 42.5
+      "Over/Under": 41.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -6358,9 +6358,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+250",
-      "Away ML": "-310",
-      "Spread": "IU -7.5",
+      "Home ML": "+270",
+      "Away ML": "-340",
+      "Spread": "IU -9.5",
       "Over/Under": 43.5
     },
     "Week 13": {
@@ -6586,7 +6586,7 @@
       "Home ML": "-1650",
       "Away ML": "+950",
       "Spread": "ND -20.5",
-      "Over/Under": 56.5
+      "Over/Under": 55.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -6601,10 +6601,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "+750",
+      "Away ML": "-1200",
+      "Spread": "ND -20.5",
+      "Over/Under": 54.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -6863,10 +6863,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-218",
-      "Away ML": "+180",
-      "Spread": "MIZ -5.5",
-      "Over/Under": 48.5
+      "Home ML": "-205",
+      "Away ML": "+170",
+      "Spread": "MIZ -4.5",
+      "Over/Under": 49.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -6881,10 +6881,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-118",
+      "Away ML": "-102",
+      "Spread": "UK -1.5",
+      "Over/Under": 54.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -7088,9 +7088,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-550",
-      "Away ML": "+410",
-      "Spread": "LOU -13.5",
+      "Home ML": "-485",
+      "Away ML": "+370",
+      "Spread": "LOU -12.5",
       "Over/Under": 50.5
     },
     "Week 13": {
@@ -7106,10 +7106,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-118",
+      "Away ML": "-102",
+      "Spread": "UK -1.5",
+      "Over/Under": 54.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -7313,8 +7313,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-850",
-      "Away ML": "+575",
+      "Home ML": "-1000",
+      "Away ML": "+650",
       "Spread": "LIB -17.5",
       "Over/Under": 53.5
     },
@@ -7541,7 +7541,7 @@
       "Home ML": "-105",
       "Away ML": "-115",
       "Spread": "LSU -1.5",
-      "Over/Under": 46.5
+      "Over/Under": 45.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -7763,10 +7763,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+114",
-      "Away ML": "-135",
-      "Spread": "SYR -2.5",
-      "Over/Under": 50.5
+      "Home ML": "+130",
+      "Away ML": "-155",
+      "Spread": "SYR -3",
+      "Over/Under": 52.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -8022,10 +8022,10 @@
       "Home ID": "113",
       "Away Team": "Akron Zips",
       "Away ID": "2006",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "33",
+      "Away Score": "34",
+      "Winner": "2006",
       "Home ML": "-162",
       "Away ML": "+136",
       "Spread": "MASS -3",
@@ -8306,8 +8306,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-900",
-      "Away ML": "+600",
+      "Home ML": "-950",
+      "Away ML": "+625",
       "Spread": "USC -17.5",
       "Over/Under": 57.5
     },
@@ -8527,10 +8527,10 @@
       "Home ID": "127",
       "Away Team": "Oregon Ducks",
       "Away ID": "2483",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "7",
+      "Away Score": "45",
+      "Winner": "2483",
       "Home ML": "+525",
       "Away ML": "-750",
       "Spread": "ORE -16.5",
@@ -8756,10 +8756,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+154",
-      "Away ML": "-185",
+      "Home ML": "+150",
+      "Away ML": "-180",
       "Spread": "UCLA -3.5",
-      "Over/Under": 37.5
+      "Over/Under": 36.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -8774,10 +8774,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-440",
+      "Away ML": "+340",
+      "Spread": "OSU -12.5",
+      "Over/Under": 41.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -8981,10 +8981,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+130",
-      "Away ML": "-155",
+      "Home ML": "+124",
+      "Away ML": "-148",
       "Spread": "NU -3",
-      "Over/Under": 42.5
+      "Over/Under": 41.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -9206,10 +9206,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-218",
-      "Away ML": "+180",
-      "Spread": "MIZ -5.5",
-      "Over/Under": 48.5
+      "Home ML": "-205",
+      "Away ML": "+170",
+      "Spread": "MIZ -4.5",
+      "Over/Under": 49.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -9224,10 +9224,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-118",
+      "Away ML": "-102",
+      "Spread": "MIZ -1.5",
+      "Over/Under": 42.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -9431,10 +9431,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "MISS -49.5",
+      "Over/Under": 60.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -9728,10 +9728,10 @@
       "Home ID": "150",
       "Away Team": "Clemson Tigers",
       "Away ID": "228",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "10",
+      "Away Score": "20",
+      "Winner": "228",
       "Home ML": "-520",
       "Away ML": "+390",
       "Spread": "DUKE -13.5",
@@ -9957,10 +9957,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-218",
-      "Away ML": "+180",
-      "Spread": "ARMY -5.5",
-      "Over/Under": 44.5
+      "Home ML": "-205",
+      "Away ML": "+170",
+      "Spread": "ARMY -4.5",
+      "Over/Under": 45.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -10182,10 +10182,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-375",
-      "Away ML": "+295",
-      "Spread": "FSU -9.5",
-      "Over/Under": 55.5
+      "Home ML": "-395",
+      "Away ML": "+310",
+      "Spread": "FSU -10.5",
+      "Over/Under": 56.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -10202,6 +10202,7 @@
       "Winner": null,
       "Home ML": "OFF",
       "Away ML": "OFF",
+      "Spread": null,
       "Over/Under": 55.5
     },
     "Week 14": null,
@@ -10406,10 +10407,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-118",
-      "Away ML": "-102",
-      "Spread": "UVA -1.5",
-      "Over/Under": 43.5
+      "Home ML": "-105",
+      "Away ML": "-115",
+      "Spread": "UNC -1.5",
+      "Over/Under": 41.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -10426,6 +10427,7 @@
       "Winner": null,
       "Home ML": "OFF",
       "Away ML": "OFF",
+      "Spread": null,
       "Over/Under": 55.5
     },
     "Week 14": null,
@@ -10630,10 +10632,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+900",
-      "Away ML": "-1600",
-      "Spread": "WAKE -21",
-      "Over/Under": 56.5
+      "Home ML": "+1100",
+      "Away ML": "-2100",
+      "Spread": "WAKE -22.5",
+      "Over/Under": 55.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -10893,10 +10895,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+136",
-      "Away ML": "-162",
-      "Spread": "OSU -3",
-      "Over/Under": 41.5
+      "Home ML": "+154",
+      "Away ML": "-185",
+      "Spread": "OSU -3.5",
+      "Over/Under": 42.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -10911,10 +10913,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "IOWA -6.5",
+      "Over/Under": 38.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -11156,10 +11158,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-2400",
-      "Away ML": "+1200",
-      "Spread": "PSU -24.5",
-      "Over/Under": 50.5
+      "Home ML": "-3200",
+      "Away ML": "+1400",
+      "Spread": "PSU -26.5",
+      "Over/Under": 48.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -11364,9 +11366,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+140",
-      "Away ML": "-166",
-      "Spread": "DEL -3.5",
+      "Home ML": "+130",
+      "Away ML": "-155",
+      "Spread": "DEL -3",
       "Over/Under": 53.5
     },
     "Week 13": {
@@ -11585,10 +11587,10 @@
       "Home ID": "2751",
       "Away Team": "New Mexico Lobos",
       "Away ID": "167",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "17",
+      "Away Score": "24",
+      "Winner": "167",
       "Home ML": "+245",
       "Away ML": "-305",
       "Spread": "UNM -7.5",
@@ -11814,10 +11816,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+114",
-      "Away ML": "-135",
-      "Spread": "SYR -2.5",
-      "Over/Under": 50.5
+      "Home ML": "+130",
+      "Away ML": "-155",
+      "Spread": "SYR -3",
+      "Over/Under": 52.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -11832,10 +11834,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "+750",
+      "Away ML": "-1200",
+      "Spread": "ND -20.5",
+      "Over/Under": 54.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -12035,10 +12037,10 @@
       "Home ID": "2649",
       "Away Team": "Bowling Green Falcons",
       "Away ID": "189",
-      "Status": "Scheduled",
-      "Home Score": "0",
+      "Status": "Final",
+      "Home Score": "19",
       "Away Score": "0",
-      "Winner": null,
+      "Winner": "2649",
       "Home ML": "-750",
       "Away ML": "+525",
       "Spread": "TOL -15.5",
@@ -12260,10 +12262,10 @@
       "Home ID": "2309",
       "Away Team": "Miami (OH) RedHawks",
       "Away ID": "193",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "3",
+      "Away Score": "20",
+      "Winner": "193",
       "Home ML": "+280",
       "Away ML": "-355",
       "Spread": "M-OH -9.5",
@@ -12489,10 +12491,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+136",
-      "Away ML": "-162",
-      "Spread": "OSU -3",
-      "Over/Under": 41.5
+      "Home ML": "+154",
+      "Away ML": "-185",
+      "Spread": "OSU -3.5",
+      "Over/Under": 42.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -12507,10 +12509,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-440",
+      "Away ML": "+340",
+      "Spread": "OSU -12.5",
+      "Over/Under": 41.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -12710,10 +12712,10 @@
       "Home ID": "195",
       "Away Team": "Ball State Cardinals",
       "Away ID": "2050",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "35",
+      "Away Score": "28",
+      "Winner": "195",
       "Home ML": "-455",
       "Away ML": "+350",
       "Spread": "OHIO -11.5",
@@ -12939,10 +12941,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+136",
-      "Away ML": "-162",
-      "Spread": "OKST -3",
-      "Over/Under": 61.5
+      "Home ML": "+114",
+      "Away ML": "-135",
+      "Spread": "OKST -2.5",
+      "Over/Under": 59.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -13164,10 +13166,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-305",
-      "Away ML": "+245",
-      "Spread": "OU -7.5",
-      "Over/Under": 38.5
+      "Home ML": "-290",
+      "Away ML": "+235",
+      "Spread": "OU -7",
+      "Over/Under": 36.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -13182,10 +13184,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-118",
+      "Away ML": "-102",
+      "Spread": "MIZ -1.5",
+      "Over/Under": 42.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -13392,7 +13394,7 @@
       "Home ML": "-2100",
       "Away ML": "+1100",
       "Spread": "TLSA -22.5",
-      "Over/Under": 52.5
+      "Over/Under": 51.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -13614,9 +13616,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-355",
-      "Away ML": "+280",
-      "Spread": "ORST -9.5",
+      "Home ML": "-290",
+      "Away ML": "+235",
+      "Spread": "ORST -7.5",
       "Over/Under": 51.5
     },
     "Week 13": null,
@@ -13822,10 +13824,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-2400",
-      "Away ML": "+1200",
-      "Spread": "PSU -24.5",
-      "Over/Under": 50.5
+      "Home ML": "-3200",
+      "Away ML": "+1400",
+      "Spread": "PSU -26.5",
+      "Over/Under": 48.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -14043,10 +14045,10 @@
       "Home ID": "218",
       "Away Team": "Rice Owls",
       "Away ID": "242",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "27",
+      "Away Score": "31",
+      "Winner": "242",
       "Home ML": "-148",
       "Away ML": "+124",
       "Spread": "TEM -3",
@@ -14272,9 +14274,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-550",
-      "Away ML": "+410",
-      "Spread": "LOU -13.5",
+      "Home ML": "-485",
+      "Away ML": "+370",
+      "Spread": "LOU -12.5",
       "Over/Under": 50.5
     },
     "Week 13": {
@@ -14569,10 +14571,10 @@
       "Home ID": "150",
       "Away Team": "Clemson Tigers",
       "Away ID": "228",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "10",
+      "Away Score": "20",
+      "Winner": "228",
       "Home ML": "-520",
       "Away ML": "+390",
       "Spread": "DUKE -13.5",
@@ -14857,10 +14859,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+142",
-      "Away ML": "-170",
-      "Spread": "MEM -3.5",
-      "Over/Under": 66.5
+      "Home ML": "+120",
+      "Away ML": "-142",
+      "Spread": "MEM -2.5",
+      "Over/Under": 68.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -14912,10 +14914,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "ALA -48.5",
+      "Over/Under": 57.5
     },
     "Week 13": null,
     "Week 14": null,
@@ -15120,8 +15122,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-550",
-      "Away ML": "+410",
+      "Home ML": "-575",
+      "Away ML": "+425",
       "Spread": "FLA -13.5",
       "Over/Under": 47.5
     },
@@ -15345,9 +15347,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+142",
-      "Away ML": "-170",
-      "Spread": "TTU -3.5",
+      "Home ML": "+170",
+      "Away ML": "-205",
+      "Spread": "TTU -5.5",
       "Over/Under": 57.5
     },
     "Week 13": {
@@ -15566,10 +15568,10 @@
       "Home ID": "218",
       "Away Team": "Rice Owls",
       "Away ID": "242",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "27",
+      "Away Score": "31",
+      "Winner": "242",
       "Home ML": "-148",
       "Away ML": "+124",
       "Spread": "TEM -3",
@@ -15795,10 +15797,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-305",
-      "Away ML": "+245",
-      "Spread": "OU -7.5",
-      "Over/Under": 38.5
+      "Home ML": "-290",
+      "Away ML": "+235",
+      "Spread": "OU -7",
+      "Over/Under": 36.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -15813,10 +15815,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "+250",
+      "Away ML": "-310",
+      "Spread": "TEX -7.5",
+      "Over/Under": 41.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -16020,10 +16022,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+250",
-      "Away ML": "-310",
-      "Spread": "HOU -7.5",
-      "Over/Under": 70.5
+      "Home ML": "+220",
+      "Away ML": "-270",
+      "Spread": "HOU -7",
+      "Over/Under": 72.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -16245,10 +16247,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+205",
-      "Away ML": "-250",
-      "Spread": "UNT -6.5",
-      "Over/Under": 57.5
+      "Home ML": "+235",
+      "Away ML": "-290",
+      "Spread": "UNT -7.5",
+      "Over/Under": 56.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -16470,10 +16472,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-1600",
-      "Away ML": "+900",
-      "Spread": "TEX -20.5",
-      "Over/Under": 47.5
+      "Home ML": "-1350",
+      "Away ML": "+800",
+      "Spread": "TEX -18.5",
+      "Over/Under": 46.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -16488,10 +16490,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "+250",
+      "Away ML": "-310",
+      "Spread": "TEX -7.5",
+      "Over/Under": 41.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -16695,10 +16697,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+185",
-      "Away ML": "-225",
-      "Spread": "BYU -5.5",
-      "Over/Under": 47.5
+      "Home ML": "+164",
+      "Away ML": "-198",
+      "Spread": "BYU -4.5",
+      "Over/Under": 46.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -16958,9 +16960,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+220",
-      "Away ML": "-270",
-      "Spread": "UTAH -7",
+      "Home ML": "+260",
+      "Away ML": "-325",
+      "Spread": "UTAH -8.5",
       "Over/Under": 46.5
     },
     "Week 13": {
@@ -17446,10 +17448,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-118",
-      "Away ML": "-102",
-      "Spread": "UVA -1.5",
-      "Over/Under": 43.5
+      "Home ML": "-105",
+      "Away ML": "-115",
+      "Spread": "UNC -1.5",
+      "Over/Under": 41.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -17671,10 +17673,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-1600",
-      "Away ML": "+900",
+      "Home ML": "-1650",
+      "Away ML": "+950",
       "Spread": "MIA -20.5",
-      "Over/Under": 61.5
+      "Over/Under": 60.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -17896,9 +17898,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+250",
-      "Away ML": "-310",
-      "Spread": "IU -7.5",
+      "Home ML": "+270",
+      "Away ML": "-340",
+      "Spread": "IU -9.5",
       "Over/Under": 43.5
     },
     "Week 13": {
@@ -18121,9 +18123,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-425",
-      "Away ML": "+330",
-      "Spread": "TXST -10.5",
+      "Home ML": "-535",
+      "Away ML": "+400",
+      "Spread": "TXST -13.5",
       "Over/Under": 61.5
     },
     "Week 13": {
@@ -18346,9 +18348,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+180",
-      "Away ML": "-218",
-      "Spread": "WIS -6",
+      "Home ML": "+170",
+      "Away ML": "-205",
+      "Spread": "WIS -4.5",
       "Over/Under": 46.5
     },
     "Week 13": {
@@ -18571,9 +18573,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-110",
-      "Away ML": "-110",
-      "Spread": "MRSH -1.5",
+      "Home ML": "-142",
+      "Away ML": "+120",
+      "Spread": "MRSH -2.5",
       "Over/Under": 56.5
     },
     "Week 13": {
@@ -18796,10 +18798,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+250",
-      "Away ML": "-310",
-      "Spread": "HOU -7.5",
-      "Over/Under": 70.5
+      "Home ML": "+220",
+      "Away ML": "-270",
+      "Spread": "HOU -7",
+      "Over/Under": 72.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -19024,7 +19026,7 @@
       "Home ML": "-1450",
       "Away ML": "+850",
       "Spread": "FRES -20.5",
-      "Over/Under": 65.5
+      "Over/Under": 66.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -19339,10 +19341,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+260",
-      "Away ML": "-325",
-      "Spread": "GASO -8.5",
-      "Over/Under": 48.5
+      "Home ML": "+280",
+      "Away ML": "-355",
+      "Spread": "GASO -9.5",
+      "Over/Under": 47.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -19602,10 +19604,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-535",
-      "Away ML": "+400",
+      "Home ML": "-600",
+      "Away ML": "+440",
       "Spread": "CONN -13.5",
-      "Over/Under": 47.5
+      "Over/Under": 48.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -19903,10 +19905,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-410",
-      "Away ML": "+320",
+      "Home ML": "-395",
+      "Away ML": "+310",
       "Spread": "UL -10.5",
-      "Over/Under": 51.5
+      "Over/Under": 49.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -20221,10 +20223,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-410",
-      "Away ML": "+320",
+      "Home ML": "-395",
+      "Away ML": "+310",
       "Spread": "UL -10.5",
-      "Over/Under": 51.5
+      "Over/Under": 49.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -20446,9 +20448,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-425",
-      "Away ML": "+330",
-      "Spread": "TXST -10.5",
+      "Home ML": "-535",
+      "Away ML": "+400",
+      "Spread": "TXST -13.5",
       "Over/Under": 61.5
     },
     "Week 13": null,
@@ -20654,9 +20656,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-355",
-      "Away ML": "+280",
-      "Spread": "ORST -9.5",
+      "Home ML": "-290",
+      "Away ML": "+235",
+      "Spread": "ORST -7.5",
       "Over/Under": 51.5
     },
     "Week 13": {
@@ -20917,10 +20919,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "ALA -48.5",
+      "Over/Under": 57.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -20935,10 +20937,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-650",
+      "Away ML": "+470",
+      "Spread": "ALA -15.5",
+      "Over/Under": 50.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -21142,9 +21144,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-170",
-      "Away ML": "+142",
-      "Spread": "KENN -3.5",
+      "Home ML": "-125",
+      "Away ML": "+105",
+      "Spread": "KENN -2.5",
       "Over/Under": 44.5
     },
     "Week 13": {
@@ -21367,10 +21369,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-2400",
+      "Away ML": "+1200",
+      "Spread": "MSST -29.5",
+      "Over/Under": 59.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -21575,10 +21577,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-218",
-      "Away ML": "+180",
-      "Spread": "ARMY -5.5",
-      "Over/Under": 44.5
+      "Home ML": "-205",
+      "Away ML": "+170",
+      "Spread": "ARMY -4.5",
+      "Over/Under": 45.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -22114,10 +22116,10 @@
       "Home ID": "2005",
       "Away Team": "UTEP Miners",
       "Away ID": "2638",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "52",
+      "Away Score": "3",
+      "Winner": "2005",
       "Home ML": "-2100",
       "Away ML": "+1100",
       "Spread": "AF -22.5",
@@ -22339,10 +22341,10 @@
       "Home ID": "113",
       "Away Team": "Akron Zips",
       "Away ID": "2006",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "33",
+      "Away Score": "34",
+      "Winner": "2006",
       "Home ML": "-162",
       "Away ML": "+136",
       "Spread": "MASS -3",
@@ -22647,7 +22649,7 @@
       "Home ML": "-625",
       "Away ML": "+455",
       "Spread": "APP -14",
-      "Over/Under": 49.5
+      "Over/Under": 50.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -22907,10 +22909,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-575",
-      "Away ML": "+425",
-      "Spread": "LT -13.5",
-      "Over/Under": 52.5
+      "Home ML": "-600",
+      "Away ML": "+440",
+      "Spread": "LT -14.5",
+      "Over/Under": 54.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -23166,10 +23168,10 @@
       "Home ID": "195",
       "Away Team": "Ball State Cardinals",
       "Away ID": "2050",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "35",
+      "Away Score": "28",
+      "Winner": "195",
       "Home ML": "-455",
       "Away ML": "+350",
       "Spread": "OHIO -11.5",
@@ -23467,10 +23469,10 @@
       "Home ID": "2084",
       "Away Team": "Central Michigan Chippewas",
       "Away ID": "2117",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "40",
+      "Away Score": "21",
+      "Winner": "2084",
       "Home ML": "-118",
       "Away ML": "-102",
       "Spread": "BUF -1.5",
@@ -23806,10 +23808,10 @@
       "Home ID": "2116",
       "Away Team": "Iowa State Cyclones",
       "Away ID": "66",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "48",
+      "Away Score": "17",
+      "Winner": "2116",
       "Home ML": "-125",
       "Away ML": "+105",
       "Spread": "UCF -2.5",
@@ -24031,10 +24033,10 @@
       "Home ID": "2084",
       "Away Team": "Central Michigan Chippewas",
       "Away ID": "2117",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "40",
+      "Away Score": "21",
+      "Winner": "2084",
       "Home ML": "-118",
       "Away ML": "-102",
       "Spread": "BUF -1.5",
@@ -24315,10 +24317,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-162",
-      "Away ML": "+136",
+      "Home ML": "-155",
+      "Away ML": "+130",
       "Spread": "CIN -3",
-      "Over/Under": 58.5
+      "Over/Under": 56.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -24764,10 +24766,10 @@
       "Home ID": "2711",
       "Away Team": "Eastern Michigan Eagles",
       "Away ID": "2199",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "34",
+      "Away Score": "27",
+      "Winner": "2711",
       "Home ML": "-700",
       "Away ML": "+500",
       "Spread": "WMU -15.5",
@@ -25034,7 +25036,7 @@
       "Home ML": "-105",
       "Away ML": "-115",
       "Spread": "USF -1.5",
-      "Over/Under": 64.5
+      "Over/Under": 63.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -25256,9 +25258,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-170",
-      "Away ML": "+142",
-      "Spread": "KENN -3.5",
+      "Home ML": "-125",
+      "Away ML": "+105",
+      "Spread": "KENN -2.5",
       "Over/Under": 44.5
     },
     "Week 13": {
@@ -25591,9 +25593,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-110",
-      "Away ML": "-110",
-      "Spread": "MRSH -1.5",
+      "Home ML": "-142",
+      "Away ML": "+120",
+      "Spread": "MRSH -2.5",
       "Over/Under": 56.5
     },
     "Week 13": {
@@ -25965,10 +25967,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "IOWA -6.5",
+      "Over/Under": 38.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -26172,10 +26174,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+185",
-      "Away ML": "-225",
-      "Spread": "BYU -5.5",
-      "Over/Under": 47.5
+      "Home ML": "+164",
+      "Away ML": "-198",
+      "Spread": "BYU -4.5",
+      "Over/Under": 46.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -26397,10 +26399,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+235",
-      "Away ML": "-290",
-      "Spread": "ARIZ -7",
-      "Over/Under": 52.5
+      "Home ML": "+295",
+      "Away ML": "-375",
+      "Spread": "ARIZ -10",
+      "Over/Under": 53.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -26618,10 +26620,10 @@
       "Home ID": "2309",
       "Away Team": "Miami (OH) RedHawks",
       "Away ID": "193",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "3",
+      "Away Score": "20",
+      "Winner": "193",
       "Home ML": "+280",
       "Away ML": "-355",
       "Spread": "M-OH -9.5",
@@ -26885,8 +26887,8 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-850",
-      "Away ML": "+575",
+      "Home ML": "-1000",
+      "Away ML": "+650",
       "Spread": "LIB -17.5",
       "Over/Under": 53.5
     },
@@ -27165,10 +27167,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-575",
-      "Away ML": "+425",
-      "Spread": "LT -13.5",
-      "Over/Under": 52.5
+      "Home ML": "-600",
+      "Away ML": "+440",
+      "Spread": "LT -14.5",
+      "Over/Under": 54.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -27538,10 +27540,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-1600",
-      "Away ML": "+900",
+      "Home ML": "-1650",
+      "Away ML": "+950",
       "Spread": "MIA -20.5",
-      "Over/Under": 61.5
+      "Over/Under": 60.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -27763,9 +27765,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+180",
-      "Away ML": "-218",
-      "Spread": "MTSU -5.5",
+      "Home ML": "+190",
+      "Away ML": "-230",
+      "Spread": "MTSU -6.5",
       "Over/Under": 48.5
     },
     "Week 13": {
@@ -28085,10 +28087,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+142",
-      "Away ML": "-170",
-      "Spread": "MEM -3.5",
-      "Over/Under": 66.5
+      "Home ML": "+120",
+      "Away ML": "-142",
+      "Spread": "MEM -2.5",
+      "Over/Under": 68.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -28368,7 +28370,7 @@
       "Home ML": "-2100",
       "Away ML": "+1100",
       "Spread": "TLSA -22.5",
-      "Over/Under": 52.5
+      "Over/Under": 51.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -28593,7 +28595,7 @@
       "Home ML": "-625",
       "Away ML": "+455",
       "Spread": "APP -14",
-      "Over/Under": 49.5
+      "Over/Under": 50.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -28798,10 +28800,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+210",
-      "Away ML": "-258",
-      "Spread": "UNLV -7",
-      "Over/Under": 46.5
+      "Home ML": "+200",
+      "Away ML": "-245",
+      "Spread": "UNLV -6.5",
+      "Over/Under": 47.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -29023,9 +29025,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "-192",
-      "Away ML": "+160",
-      "Spread": "NEV -4",
+      "Home ML": "-258",
+      "Away ML": "+210",
+      "Spread": "NEV -7",
       "Over/Under": 40.5
     },
     "Week 13": {
@@ -30015,10 +30017,10 @@
       "Home ID": "127",
       "Away Team": "Oregon Ducks",
       "Away ID": "2483",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "7",
+      "Away Score": "45",
+      "Winner": "2483",
       "Home ML": "+525",
       "Away ML": "-750",
       "Spread": "ORE -16.5",
@@ -30337,9 +30339,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+180",
-      "Away ML": "-218",
-      "Spread": "WIS -6",
+      "Home ML": "+170",
+      "Away ML": "-205",
+      "Spread": "WIS -4.5",
       "Over/Under": 46.5
     },
     "Week 13": {
@@ -30655,9 +30657,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+180",
-      "Away ML": "-218",
-      "Spread": "MTSU -5.5",
+      "Home ML": "+190",
+      "Away ML": "-230",
+      "Spread": "MTSU -6.5",
       "Over/Under": 48.5
     },
     "Week 13": {
@@ -30727,10 +30729,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "AUB -48.5",
+      "Over/Under": 59.5
     },
     "Week 13": null,
     "Week 14": null,
@@ -31031,7 +31033,7 @@
       "Home ML": "-1650",
       "Away ML": "+950",
       "Spread": "ND -20.5",
-      "Over/Under": 56.5
+      "Over/Under": 55.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -31291,9 +31293,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+154",
-      "Away ML": "-185",
-      "Spread": "USA -3.5",
+      "Home ML": "+164",
+      "Away ML": "-198",
+      "Spread": "USA -5.5",
       "Over/Under": 65.5
     },
     "Week 13": {
@@ -31516,10 +31518,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+575",
-      "Away ML": "-850",
-      "Spread": "UGA -16.5",
-      "Over/Under": 50.5
+      "Home ML": "+525",
+      "Away ML": "-750",
+      "Spread": "UGA -14.5",
+      "Over/Under": 51.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -32080,9 +32082,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+220",
-      "Away ML": "-270",
-      "Spread": "UTAH -7",
+      "Home ML": "+260",
+      "Away ML": "-325",
+      "Spread": "UTAH -8.5",
       "Over/Under": 46.5
     },
     "Week 13": {
@@ -32098,9 +32100,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "OFF",
-      "Away ML": "OFF",
-      "Spread": "TTU -16.5"
+      "Home ML": "-360",
+      "Away ML": "+285",
+      "Spread": "TTU -10.5",
+      "Over/Under": 47.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -32362,7 +32365,7 @@
       "Home ML": "-105",
       "Away ML": "-115",
       "Spread": "LSU -1.5",
-      "Over/Under": 46.5
+      "Over/Under": 45.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -32452,10 +32455,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "-2400",
+      "Away ML": "+1200",
+      "Spread": "MSST -29.5",
+      "Over/Under": 59.5
     },
     "Week 13": null,
     "Week 14": null,
@@ -32660,10 +32663,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+195",
-      "Away ML": "-238",
-      "Spread": "UTSA -6.5",
-      "Over/Under": 52.5
+      "Home ML": "+160",
+      "Away ML": "-192",
+      "Spread": "UTSA -4.5",
+      "Over/Under": 49.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -32881,10 +32884,10 @@
       "Home ID": "2005",
       "Away Team": "UTEP Miners",
       "Away ID": "2638",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "52",
+      "Away Score": "3",
+      "Winner": "2005",
       "Home ML": "-2100",
       "Away ML": "+1100",
       "Spread": "AF -22.5",
@@ -33165,9 +33168,9 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+142",
-      "Away ML": "-170",
-      "Spread": "TTU -3.5",
+      "Home ML": "+170",
+      "Away ML": "-205",
+      "Spread": "TTU -5.5",
       "Over/Under": 57.5
     },
     "Week 13": {
@@ -33183,9 +33186,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "OFF",
-      "Away ML": "OFF",
-      "Spread": "TTU -16.5"
+      "Home ML": "-360",
+      "Away ML": "+285",
+      "Spread": "TTU -10.5",
+      "Over/Under": 47.5
     },
     "Week 14": null,
     "Week 15": null,
@@ -33440,10 +33444,10 @@
       "Home ID": "2649",
       "Away Team": "Bowling Green Falcons",
       "Away ID": "189",
-      "Status": "Scheduled",
-      "Home Score": "0",
+      "Status": "Final",
+      "Home Score": "19",
       "Away Score": "0",
-      "Winner": null,
+      "Winner": "2649",
       "Home ML": "-750",
       "Away ML": "+525",
       "Spread": "TOL -15.5",
@@ -33669,10 +33673,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+260",
-      "Away ML": "-325",
-      "Spread": "GASO -8.5",
-      "Over/Under": 48.5
+      "Home ML": "+280",
+      "Away ML": "-355",
+      "Spread": "GASO -9.5",
+      "Over/Under": 47.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -33894,10 +33898,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": "+205",
-      "Away ML": "-250",
-      "Spread": "UNT -6.5",
-      "Over/Under": 57.5
+      "Home ML": "+235",
+      "Away ML": "-290",
+      "Spread": "UNT -7.5",
+      "Over/Under": 56.5
     },
     "Week 13": {
       "Week": "Week 13",
@@ -34339,10 +34343,10 @@
       "Home ID": "2711",
       "Away Team": "Eastern Michigan Eagles",
       "Away ID": "2199",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "34",
+      "Away Score": "27",
+      "Winner": "2711",
       "Home ML": "-700",
       "Away ML": "+500",
       "Spread": "WMU -15.5",
@@ -34491,10 +34495,10 @@
       "Home Score": "0",
       "Away Score": "0",
       "Winner": null,
-      "Home ML": null,
-      "Away ML": null,
-      "Spread": null,
-      "Over/Under": null
+      "Home ML": "OFF",
+      "Away ML": "OFF",
+      "Spread": "MISS -49.5",
+      "Over/Under": 60.5
     },
     "Week 13": null,
     "Week 14": null,
@@ -34695,10 +34699,10 @@
       "Home ID": "2751",
       "Away Team": "New Mexico Lobos",
       "Away ID": "167",
-      "Status": "Scheduled",
-      "Home Score": "0",
-      "Away Score": "0",
-      "Winner": null,
+      "Status": "Final",
+      "Home Score": "17",
+      "Away Score": "24",
+      "Winner": "167",
       "Home ML": "+245",
       "Away ML": "-305",
       "Spread": "UNM -7.5",

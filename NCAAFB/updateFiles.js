@@ -28,8 +28,7 @@ const TEAM_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/col
 const fs = require('fs');
 
 // Kick off the main execution pipeline
-//main();
-updatePowerRankings();
+main();
 
 async function main() {
     try {
@@ -54,13 +53,93 @@ async function main() {
 }
 
 /**
+ * Checks whether an existing game record already has final scores saved.
+ */
+function hasFinalScores(existingGame) {
+    if (!existingGame) return false;
+    return (
+        existingGame["Status"] === "Final" &&
+        existingGame["Home Score"] !== null &&
+        existingGame["Home Score"] !== undefined &&
+        existingGame["Away Score"] !== null &&
+        existingGame["Away Score"] !== undefined
+    );
+}
+
+/**
+ * Extracts game odds from a competition object and only updates values
+ * when the newly fetched value is not null or undefined.
+ */
+function resolveGameOdds(competition, existingGame = null) {
+    let homeOdds = existingGame ? (existingGame["Home ML"] ?? null) : null;
+    let awayOdds = existingGame ? (existingGame["Away ML"] ?? null) : null;
+    let spread = existingGame ? (existingGame["Spread"] ?? null) : null;
+    let overUnder = existingGame ? (existingGame["Over/Under"] ?? null) : null;
+
+    try {
+        const odds = competition?.odds?.[0];
+        if (odds) {
+            const fetchedHomeOdds = odds?.moneyline?.home?.close?.odds;
+            const fetchedAwayOdds = odds?.moneyline?.away?.close?.odds;
+            const fetchedSpread = odds?.details;
+            const fetchedOverUnder = odds?.overUnder;
+
+            if (fetchedHomeOdds !== null && fetchedHomeOdds !== undefined) {
+                homeOdds = fetchedHomeOdds;
+            }
+            if (fetchedAwayOdds !== null && fetchedAwayOdds !== undefined) {
+                awayOdds = fetchedAwayOdds;
+            }
+            if (fetchedSpread !== null && fetchedSpread !== undefined) {
+                spread = fetchedSpread;
+            }
+            if (fetchedOverUnder !== null && fetchedOverUnder !== undefined) {
+                overUnder = fetchedOverUnder;
+            }
+        }
+    } catch (error) {
+        // Odds unavailable for this game; retain existing/null defaults
+    }
+
+    return { homeOdds, awayOdds, spread, overUnder };
+}
+
+/**
  * Fetches game schedules and boxscores week-by-week.
- * Uses Promise.all to fetch boxscores concurrently for maximum speedup.
+ * Skips boxscore fetches for games that already have final scores in liveScoring.json.
  */
 async function updateGames() {
     let gameList = [];
     let statList = [];
     let boxscorePromises = [];
+
+    const liveScoringPath = './NCAAFB/data/liveScoring.json';
+    const boxScoresPath = './NCAAFB/data/boxScores.json';
+
+    // Load existing games if available so non-null odds and final scores can be checked
+    let existingGamesById = new Map();
+    if (fs.existsSync(liveScoringPath)) {
+        try {
+            const existingGames = JSON.parse(fs.readFileSync(liveScoringPath, 'utf-8'));
+            for (const g of existingGames) {
+                if (g && g["Game ID"]) {
+                    existingGamesById.set(g["Game ID"], g);
+                }
+            }
+        } catch (err) {
+            console.error("Error reading existing liveScoring.json:", err);
+        }
+    }
+
+    // Load existing boxscore rows so skipped final games retain their player stats
+    let existingBoxScores = [];
+    if (fs.existsSync(boxScoresPath)) {
+        try {
+            existingBoxScores = JSON.parse(fs.readFileSync(boxScoresPath, 'utf-8'));
+        } catch (err) {
+            console.error("Error reading existing boxScores.json:", err);
+        }
+    }
 
     // Iterate through each week of the regular season
     for (let week = 1; week <= NUM_WEEKS; week++) {
@@ -77,7 +156,7 @@ async function updateGames() {
                 let gameID = currentGame.id;
                 let gameDate = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(currentGame.date));
                 let gameTime = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).format(new Date(currentGame.date));
-                
+
                 let competition = currentGame.competitions[0];
                 let homeCompetitor = competition.competitors[0];
                 let awayCompetitor = competition.competitors[1];
@@ -90,17 +169,11 @@ async function updateGames() {
                 let awayScore = awayCompetitor.score;
                 let gameStatus = currentGame.status.type.description;
 
-                // Safely extract betting odds if available
-                let homeOdds = null, awayOdds = null, spread = null, overUnder = null;
-                try {
-                    let odds = competition.odds[0];
-                    homeOdds = odds.moneyline.home.close.odds;
-                    awayOdds = odds.moneyline.away.close.odds;
-                    spread = odds.details;
-                    overUnder = odds.overUnder;
-                } catch (error) {
-                    // Odds unavailable for this game
-                }
+                const existingGame = existingGamesById.get(gameID) || null;
+                const alreadyFinal = hasFinalScores(existingGame);
+
+                // Resolve betting odds, only updating when fetched values are not null/undefined
+                const { homeOdds, awayOdds, spread, overUnder } = resolveGameOdds(competition, existingGame);
 
                 // Determine game outcome/winner
                 let winningTeam = null;
@@ -113,35 +186,42 @@ async function updateGames() {
                 }
 
                 gameList.push({
-                    "Week": weekName, 
-                    "Game ID": gameID, 
-                    "Game Date": gameDate, 
-                    "Game Time": gameTime, 
-                    "Home Team": homeTeamName, 
-                    "Home ID": homeTeam, 
-                    "Away Team": awayTeamName, 
-                    "Away ID": awayTeam, 
-                    "Status": gameStatus, 
-                    "Home Score": homeScore, 
+                    "Week": weekName,
+                    "Game ID": gameID,
+                    "Game Date": gameDate,
+                    "Game Time": gameTime,
+                    "Home Team": homeTeamName,
+                    "Home ID": homeTeam,
+                    "Away Team": awayTeamName,
+                    "Away ID": awayTeam,
+                    "Status": gameStatus,
+                    "Home Score": homeScore,
                     "Away Score": awayScore,
-                    "Winner": winningTeam, 
-                    "Home ML": homeOdds, 
-                    "Away ML": awayOdds, 
-                    "Spread": spread, 
+                    "Winner": winningTeam,
+                    "Home ML": homeOdds,
+                    "Away ML": awayOdds,
+                    "Spread": spread,
                     "Over/Under": overUnder
                 });
 
-                // If the game falls within the valid statistical range, queue its boxscore fetch
+                // If the game falls within the valid statistical range, either reuse saved stats or fetch boxscore
                 if (week <= STAT_END_WEEK) {
-                    let boxscoreURL = `${BOXSCORE_BASE_URL}${gameID}`;
-                    boxscorePromises.push(
-                        fetch(boxscoreURL)
-                            .then(res => res.json())
-                            .then(boxscoreData => {
-                                processBoxscore(boxscoreData, statList);
-                            })
-                            .catch(err => console.error(`Error fetching boxscore for game ${gameID}:`, err))
-                    );
+                    if (alreadyFinal && existingBoxScores.length > 0) {
+                        const cachedGameStats = existingBoxScores.filter(
+                            (row) => String(row.gameID) === String(gameID)
+                        );
+                        statList.push(...cachedGameStats);
+                    } else {
+                        let boxscoreURL = `${BOXSCORE_BASE_URL}${gameID}`;
+                        boxscorePromises.push(
+                            fetch(boxscoreURL)
+                                .then(res => res.json())
+                                .then(boxscoreData => {
+                                    processBoxscore(boxscoreData, statList, gameID);
+                                })
+                                .catch(err => console.error(`Error fetching boxscore for game ${gameID}:`, err))
+                        );
+                    }
                 }
             }
         } catch (error) {
@@ -152,11 +232,11 @@ async function updateGames() {
     // Await all queued boxscore requests to run and complete concurrently
     await Promise.all(boxscorePromises);
 
-    fs.writeFileSync('./NCAAFB/data/liveScoring.json', JSON.stringify(gameList, null, 2));
+    fs.writeFileSync(liveScoringPath, JSON.stringify(gameList, null, 2));
 
     // Sort stats by player ID before writing
     statList.sort((a, b) => a.playerID - b.playerID);
-    fs.writeFileSync('./NCAAFB/data/boxScores.json', JSON.stringify(statList, null, 2));
+    fs.writeFileSync(boxScoresPath, JSON.stringify(statList, null, 2));
 
     // Aggregate statistics downstream
     updatePlayerStats(statList);
@@ -167,13 +247,14 @@ async function updateGames() {
 /**
  * Helper function to parse individual player performance lines from a game's boxscore summary.
  */
-function processBoxscore(boxscoreData, statList) {
+function processBoxscore(boxscoreData, statList, gameID = null) {
     if (!boxscoreData || !boxscoreData.boxscore || !boxscoreData.boxscore.players) return;
     let boxScoreTeams = boxscoreData.boxscore.players;
 
     for (let boxScoreTeam = 0; boxScoreTeam < boxScoreTeams.length; boxScoreTeam++) {
         let currentBoxScoreTeam = boxScoreTeams[boxScoreTeam];
         let boxScorePlayerList = [];
+        let playerNames = {};
         let teamID = currentBoxScoreTeam.team.id;
         let oppID = boxScoreTeams[1 - boxScoreTeam].team.id;
 
@@ -182,8 +263,14 @@ function processBoxscore(boxscoreData, statList) {
             let currentStat = currentBoxScoreTeam.statistics[stat];
             for (let boxScorePlayer = 0; boxScorePlayer < currentStat.athletes.length; boxScorePlayer++) {
                 let currentPlayer = currentStat.athletes[boxScorePlayer];
-                if (!boxScorePlayerList.includes(currentPlayer.athlete.id)) {
-                    boxScorePlayerList.push(currentPlayer.athlete.id);
+                let playerId = currentPlayer.athlete.id;
+                let playerName = currentPlayer.athlete.displayName;
+
+                if (!boxScorePlayerList.includes(playerId)) {
+                    boxScorePlayerList.push(playerId);
+                }
+                if (playerName && !playerNames[playerId]) {
+                    playerNames[playerId] = playerName;
                 }
             }
         }
@@ -191,7 +278,7 @@ function processBoxscore(boxscoreData, statList) {
         // Map and extract statistical categories for each player
         for (let boxScorePlayer = 0; boxScorePlayer < boxScorePlayerList.length; boxScorePlayer++) {
             let passCompletions = 0, passAttempts = 0, passYards = 0, passYardsPerAttempt = 0;
-            let passTouchdowns = 0, passInterceptions = 0, passSacks = 0, passSackYards = 0;
+            let passTouchdowns = 0, passInterceptions = 0;
             let adjustedQBR = 0, passerRating = 0, rushAttempts = 0, rushYards = 0;
             let rushYardsPerAttempt = 0, rushTouchdowns = 0, longestRush = 0;
             let receptions = 0, receivingYards = 0, receivingYardsPerReception = 0;
@@ -210,6 +297,7 @@ function processBoxscore(boxscoreData, statList) {
             let puntsInside20 = 0, longestPunt = 0;
 
             let currentPlayerID = boxScorePlayerList[boxScorePlayer];
+            let currentPlayerName = playerNames[currentPlayerID] || null;
             let splitString;
 
             for (let stat = 0; stat < currentBoxScoreTeam.statistics.length; stat++) {
@@ -227,11 +315,7 @@ function processBoxscore(boxscoreData, statList) {
                                 passYardsPerAttempt = parseFloat(currentPlayer.stats[2]);
                                 passTouchdowns = parseInt(currentPlayer.stats[3]);
                                 passInterceptions = parseInt(currentPlayer.stats[4]);
-                                splitString = currentPlayer.stats[5].split("-");
-                                passSacks = parseInt(splitString[0]);
-                                passSackYards = parseInt(splitString[1]);
-                                adjustedQBR = parseFloat(currentPlayer.stats[6]);
-                                passerRating = parseFloat(currentPlayer.stats[7]);
+                                adjustedQBR = parseFloat(currentPlayer.stats[5]);
                                 break;
                             case 1: // Rushing stats
                                 rushAttempts = parseInt(currentPlayer.stats[0]);
@@ -305,12 +389,16 @@ function processBoxscore(boxscoreData, statList) {
                 }
             }
 
+            passerRating = calculatePasserRating(passCompletions, passAttempts, passYards, passTouchdowns, passInterceptions);
+
             statList.push({
+                gameID,
                 playerID: currentPlayerID,
+                playerName: currentPlayerName,
                 teamID,
                 oppID, 
                 passCompletions, passAttempts, passYards, passYardsPerAttempt,
-                passTouchdowns, passInterceptions, passSacks, passSackYards,
+                passTouchdowns, passInterceptions,
                 adjustedQBR, passerRating, rushAttempts, rushYards,
                 rushYardsPerAttempt, rushTouchdowns, longestRush,
                 receptions, receivingYards, receivingYardsPerReception,

@@ -2708,10 +2708,10 @@
     "Home ID": "34",
     "Away Team": "Indianapolis Colts",
     "Away ID": "11",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
+    "Status": "Final",
+    "Home Score": "26",
+    "Away Score": "3",
+    "Winner": "34",
     "Home ML": "-700",
     "Away ML": "+500",
     "Spread": "HOU -12.5",
@@ -2730,10 +2730,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-1200",
-    "Away ML": "+750",
+    "Home ML": "-1640",
+    "Away ML": "+920",
     "Spread": "BUF -16.5",
-    "Over/Under": 45.5
+    "Over/Under": 44.5
   },
   {
     "Week": "Week 11",
@@ -2748,8 +2748,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-675",
-    "Away ML": "+490",
+    "Home ML": "-610",
+    "Away ML": "+450",
     "Spread": "CHI -11.5",
     "Over/Under": 48.5
   },
@@ -2766,9 +2766,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-425",
-    "Away ML": "+330",
-    "Spread": "DAL -8.5",
+    "Home ML": "-378",
+    "Away ML": "+301",
+    "Spread": "DAL -7.5",
     "Over/Under": 54.5
   },
   {
@@ -2784,10 +2784,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-270",
-    "Away ML": "+220",
-    "Spread": "DET -6.5",
-    "Over/Under": 46.5
+    "Home ML": "-237",
+    "Away ML": "+196",
+    "Spread": "DET -5.5",
+    "Over/Under": 45.5
   },
   {
     "Week": "Week 11",
@@ -2802,10 +2802,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-1450",
-    "Away ML": "+850",
+    "Home ML": "-1660",
+    "Away ML": "+930",
     "Spread": "KC -16.5",
-    "Over/Under": 41.5
+    "Over/Under": 40.5
   },
   {
     "Week": "Week 11",
@@ -2820,10 +2820,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+180",
-    "Away ML": "-218",
-    "Spread": "PIT -4.5",
-    "Over/Under": 38.5
+    "Home ML": "+165",
+    "Away ML": "-197",
+    "Spread": "PIT -3.5",
+    "Over/Under": 37.5
   },
   {
     "Week": "Week 11",
@@ -2838,9 +2838,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-148",
-    "Away ML": "+124",
-    "Spread": "CAR -2.5",
+    "Home ML": "-149",
+    "Away ML": "+126",
+    "Spread": "CAR -3",
     "Over/Under": 43.5
   },
   {
@@ -2856,10 +2856,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-162",
-    "Away ML": "+136",
+    "Home ML": "-171",
+    "Away ML": "+144",
     "Spread": "LAC -3",
-    "Over/Under": 40.5
+    "Over/Under": 42.5
   },
   {
     "Week": "Week 11",
@@ -2874,9 +2874,9 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-550",
-    "Away ML": "+410",
-    "Spread": "DEN -10",
+    "Home ML": "-620",
+    "Away ML": "+454",
+    "Spread": "DEN -10.5",
     "Over/Under": 40.5
   },
   {
@@ -2892,8 +2892,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+215",
-    "Away ML": "-265",
+    "Home ML": "+209",
+    "Away ML": "-253",
     "Spread": "JAX -6",
     "Over/Under": 46.5
   },
@@ -2910,8 +2910,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-162",
-    "Away ML": "+136",
+    "Home ML": "-172",
+    "Away ML": "+145",
     "Spread": "SF -3",
     "Over/Under": 46.5
   },
@@ -2928,10 +2928,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+235",
-    "Away ML": "-290",
-    "Spread": "CIN -6.5",
-    "Over/Under": 52.5
+    "Home ML": "+243",
+    "Away ML": "-298",
+    "Spread": "CIN -6",
+    "Over/Under": 53.5
   },
   {
     "Week": "Week 12",
@@ -2946,10 +2946,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-179",
+    "Away ML": "+150",
+    "Spread": "LAR -3.5",
+    "Over/Under": 45.5
   },
   {
     "Week": "Week 12",
@@ -2964,10 +2964,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+126",
+    "Away ML": "-149",
+    "Spread": "CHI -2.5",
+    "Over/Under": 55.5
   },
   {
     "Week": "Week 12",
@@ -2982,10 +2982,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-404",
+    "Away ML": "+319",
+    "Spread": "DAL -8.5",
+    "Over/Under": 47.5
   },
   {
     "Week": "Week 12",
@@ -3000,10 +3000,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-161",
+    "Away ML": "+136",
+    "Spread": "BUF -3",
+    "Over/Under": 50.5
   },
   {
     "Week": "Week 12",
@@ -3018,10 +3018,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+109",
+    "Away ML": "-129",
+    "Spread": "DEN -1.5",
+    "Over/Under": 40.5
   },
   {
     "Week": "Week 12",
@@ -3036,28 +3036,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
-  },
-  {
-    "Week": "Week 12",
-    "Game ID": "401873086",
-    "Game Date": "November 29, 2026",
-    "Game Time": "1:00 PM",
-    "Home Team": "Cleveland Browns",
-    "Home ID": "5",
-    "Away Team": "Las Vegas Raiders",
-    "Away ID": "13",
-    "Status": "Scheduled",
-    "Home Score": "0",
-    "Away Score": "0",
-    "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-540",
+    "Away ML": "+409",
+    "Spread": "CIN -10",
+    "Over/Under": 52.5
   },
   {
     "Week": "Week 12",
@@ -3072,10 +3054,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+238",
+    "Away ML": "-292",
+    "Spread": "NYG -6.5",
+    "Over/Under": 43.5
   },
   {
     "Week": "Week 12",
@@ -3090,10 +3072,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+137",
+    "Away ML": "-163",
+    "Spread": "NYJ -3",
+    "Over/Under": 41.5
   },
   {
     "Week": "Week 12",
@@ -3108,10 +3090,28 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-341",
+    "Away ML": "+274",
+    "Spread": "MIN -7",
+    "Over/Under": 42.5
+  },
+  {
+    "Week": "Week 12",
+    "Game ID": "401873090",
+    "Game Date": "November 29, 2026",
+    "Game Time": "1:00 PM",
+    "Home Team": "Jacksonville Jaguars",
+    "Home ID": "30",
+    "Away Team": "Tennessee Titans",
+    "Away ID": "10",
+    "Status": "Scheduled",
+    "Home Score": "0",
+    "Away Score": "0",
+    "Winner": null,
+    "Home ML": "-1240",
+    "Away ML": "+770",
+    "Spread": "JAX -14.5",
+    "Over/Under": 47.5
   },
   {
     "Week": "Week 12",
@@ -3126,28 +3126,28 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-277",
+    "Away ML": "+227",
+    "Spread": "HOU -6.5",
+    "Over/Under": 44.5
   },
   {
     "Week": "Week 12",
-    "Game ID": "401873090",
+    "Game ID": "401873093",
     "Game Date": "November 29, 2026",
     "Game Time": "4:05 PM",
-    "Home Team": "Jacksonville Jaguars",
-    "Home ID": "30",
-    "Away Team": "Tennessee Titans",
-    "Away ID": "10",
+    "Home Team": "Los Angeles Chargers",
+    "Home ID": "24",
+    "Away Team": "New England Patriots",
+    "Away ID": "17",
     "Status": "Scheduled",
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-229",
+    "Away ML": "+190",
+    "Spread": "LAC -4.5",
+    "Over/Under": 39.5
   },
   {
     "Week": "Week 12",
@@ -3162,10 +3162,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "+243",
+    "Away ML": "-299",
+    "Spread": "WSH -6.5",
+    "Over/Under": 41.5
   },
   {
     "Week": "Week 12",
@@ -3180,28 +3180,28 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-141",
+    "Away ML": "+119",
+    "Spread": "SF -2.5",
+    "Over/Under": 46.5
   },
   {
     "Week": "Week 12",
-    "Game ID": "401873093",
+    "Game ID": "401873086",
     "Game Date": "November 29, 2026",
     "Game Time": "8:20 PM",
-    "Home Team": "Los Angeles Chargers",
-    "Home ID": "24",
-    "Away Team": "New England Patriots",
-    "Away ID": "17",
+    "Home Team": "Cleveland Browns",
+    "Home ID": "5",
+    "Away Team": "Las Vegas Raiders",
+    "Away ID": "13",
     "Status": "Scheduled",
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-199",
+    "Away ML": "+167",
+    "Spread": "CLE -4.5",
+    "Over/Under": 40.5
   },
   {
     "Week": "Week 12",
@@ -3216,10 +3216,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": null,
-    "Away ML": null,
-    "Spread": null,
-    "Over/Under": null
+    "Home ML": "-136",
+    "Away ML": "+115",
+    "Spread": "TB -2.5",
+    "Over/Under": 43.5
   },
   {
     "Week": "Week 13",

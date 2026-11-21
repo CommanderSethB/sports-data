@@ -1,182 +1,182 @@
 [
   {
     "Team": "Indianapolis Colts",
-    "Win%": "0.4421",
-    "FinalScore": null,
-    "Winner": null,
+    "Win%": "0.4424",
+    "FinalScore": 3,
+    "Winner": "Houston Texans",
     "ML": "+500",
     "Spread": "IND +12.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Houston Texans",
-    "Win%": "0.5579",
-    "FinalScore": null,
-    "Winner": null,
+    "Win%": "0.5576",
+    "FinalScore": 26,
+    "Winner": "WIN",
     "ML": "-700",
     "Spread": "HOU -12.5",
     "Over/Under": 44.5
   },
   {
     "Team": "Miami Dolphins",
-    "Win%": "0.4434",
+    "Win%": "0.4441",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+750",
+    "ML": "+920",
     "Spread": "MIA +16.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Buffalo Bills",
-    "Win%": "0.5566",
+    "Win%": "0.5559",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-1200",
+    "ML": "-1640",
     "Spread": "BUF -16.5",
-    "Over/Under": 45.5
+    "Over/Under": 44.5
   },
   {
     "Team": "New Orleans Saints",
-    "Win%": "0.4530",
+    "Win%": "0.4522",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+490",
+    "ML": "+450",
     "Spread": "NO +11.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Chicago Bears",
-    "Win%": "0.5470",
+    "Win%": "0.5478",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-675",
+    "ML": "-610",
     "Spread": "CHI -11.5",
     "Over/Under": 48.5
   },
   {
     "Team": "Tennessee Titans",
-    "Win%": "0.4887",
+    "Win%": "0.4884",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+330",
-    "Spread": "TEN +8.5",
+    "ML": "+301",
+    "Spread": "TEN +7.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Dallas Cowboys",
-    "Win%": "0.5113",
+    "Win%": "0.5116",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-425",
-    "Spread": "DAL -8.5",
+    "ML": "-378",
+    "Spread": "DAL -7.5",
     "Over/Under": 54.5
   },
   {
     "Team": "Tampa Bay Buccaneers",
-    "Win%": "0.4839",
+    "Win%": "0.4834",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+220",
-    "Spread": "TB +6.5",
+    "ML": "+196",
+    "Spread": "TB +5.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Detroit Lions",
-    "Win%": "0.5161",
+    "Win%": "0.5166",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-270",
-    "Spread": "DET -6.5",
-    "Over/Under": 46.5
+    "ML": "-237",
+    "Spread": "DET -5.5",
+    "Over/Under": 45.5
   },
   {
     "Team": "Arizona Cardinals",
-    "Win%": "0.4119",
+    "Win%": "0.4123",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+850",
+    "ML": "+930",
     "Spread": "ARI +16.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Kansas City Chiefs",
-    "Win%": "0.5881",
+    "Win%": "0.5877",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-1450",
+    "ML": "-1660",
     "Spread": "KC -16.5",
-    "Over/Under": 41.5
+    "Over/Under": 40.5
   },
   {
     "Team": "Pittsburgh Steelers",
-    "Win%": "0.5888",
+    "Win%": "0.5868",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-218",
-    "Spread": "PIT -4.5",
+    "ML": "-197",
+    "Spread": "PIT -3.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Philadelphia Eagles",
-    "Win%": "0.4112",
+    "Win%": "0.4132",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+180",
-    "Spread": "PHI +4.5",
-    "Over/Under": 38.5
+    "ML": "+165",
+    "Spread": "PHI +3.5",
+    "Over/Under": 37.5
   },
   {
     "Team": "Baltimore Ravens",
-    "Win%": "0.4654",
+    "Win%": "0.4661",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+124",
-    "Spread": "BAL +2.5",
+    "ML": "+126",
+    "Spread": "BAL +3",
     "Over/Under": "O/U"
   },
   {
     "Team": "Carolina Panthers",
-    "Win%": "0.5346",
+    "Win%": "0.5339",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-148",
-    "Spread": "CAR -2.5",
+    "ML": "-149",
+    "Spread": "CAR -3",
     "Over/Under": 43.5
   },
   {
     "Team": "New York Jets",
-    "Win%": "0.5055",
+    "Win%": "0.5053",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+136",
+    "ML": "+144",
     "Spread": "NYJ +3",
     "Over/Under": "O/U"
   },
   {
     "Team": "Los Angeles Chargers",
-    "Win%": "0.4945",
+    "Win%": "0.4947",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-162",
+    "ML": "-171",
     "Spread": "LAC -3",
-    "Over/Under": 40.5
+    "Over/Under": 42.5
   },
   {
     "Team": "Las Vegas Raiders",
-    "Win%": "0.4695",
+    "Win%": "0.4678",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+410",
-    "Spread": "LV +10",
+    "ML": "+454",
+    "Spread": "LV +10.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Denver Broncos",
-    "Win%": "0.5305",
+    "Win%": "0.5322",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-550",
-    "Spread": "DEN -10",
+    "ML": "-620",
+    "Spread": "DEN -10.5",
     "Over/Under": 40.5
   },
   {
@@ -184,7 +184,7 @@
     "Win%": "0.5747",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-265",
+    "ML": "-253",
     "Spread": "JAX -6",
     "Over/Under": "O/U"
   },
@@ -193,44 +193,44 @@
     "Win%": "0.4253",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+215",
+    "ML": "+209",
     "Spread": "NYG +6",
     "Over/Under": 46.5
   },
   {
     "Team": "Minnesota Vikings",
-    "Win%": "0.4883",
+    "Win%": "0.4910",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+136",
+    "ML": "+145",
     "Spread": "MIN +3",
     "Over/Under": "O/U"
   },
   {
     "Team": "San Francisco 49ers",
-    "Win%": "0.5117",
+    "Win%": "0.5090",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-162",
+    "ML": "-172",
     "Spread": "SF -3",
     "Over/Under": 46.5
   },
   {
     "Team": "Cincinnati Bengals",
-    "Win%": "0.5178",
+    "Win%": "0.5185",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-290",
-    "Spread": "CIN -6.5",
+    "ML": "-298",
+    "Spread": "CIN -6",
     "Over/Under": "O/U"
   },
   {
     "Team": "Washington Commanders",
-    "Win%": "0.4822",
+    "Win%": "0.4815",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+235",
-    "Spread": "WSH +6.5",
-    "Over/Under": 52.5
+    "ML": "+243",
+    "Spread": "WSH +6",
+    "Over/Under": 53.5
   }
 ]
