@@ -18,42 +18,6 @@
     "Over/Under": 46.5
   },
   {
-    "Team": "Wake Forest Demon Deacons",
-    "Win%": "0.4509",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-2100",
-    "Spread": "WAKE -22.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Georgia Tech Yellow Jackets",
-    "Win%": "0.5491",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+1100",
-    "Spread": "GT +22.5",
-    "Over/Under": 55.5
-  },
-  {
-    "Team": "Ohio State Buckeyes",
-    "Win%": "0.3787",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "-185",
-    "Spread": "OSU -3.5",
-    "Over/Under": "O/U"
-  },
-  {
-    "Team": "Nebraska Cornhuskers",
-    "Win%": "0.6213",
-    "FinalScore": null,
-    "Winner": null,
-    "ML": "+154",
-    "Spread": "NEB +3.5",
-    "Over/Under": 42.5
-  },
-  {
     "Team": "Vanderbilt Commodores",
     "Win%": "0.3907",
     "FinalScore": null,
@@ -73,7 +37,7 @@
   },
   {
     "Team": "Wofford Terriers",
-    "Win%": "0.4290",
+    "Win%": "0.4318",
     "FinalScore": null,
     "Winner": null,
     "ML": "OFF",
@@ -82,7 +46,7 @@
   },
   {
     "Team": "Ole Miss Rebels",
-    "Win%": "0.5710",
+    "Win%": "0.5682",
     "FinalScore": null,
     "Winner": null,
     "ML": "OFF",
@@ -216,6 +180,42 @@
     "Over/Under": 56.5
   },
   {
+    "Team": "Wake Forest Demon Deacons",
+    "Win%": "0.4509",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "-2100",
+    "Spread": "WAKE -22.5",
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Georgia Tech Yellow Jackets",
+    "Win%": "0.5491",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "+1100",
+    "Spread": "GT +22.5",
+    "Over/Under": 55.5
+  },
+  {
+    "Team": "Ohio State Buckeyes",
+    "Win%": "0.3787",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "-185",
+    "Spread": "OSU -3.5",
+    "Over/Under": "O/U"
+  },
+  {
+    "Team": "Nebraska Cornhuskers",
+    "Win%": "0.6213",
+    "FinalScore": null,
+    "Winner": null,
+    "ML": "+154",
+    "Spread": "NEB +3.5",
+    "Over/Under": 42.5
+  },
+  {
     "Team": "North Carolina Tar Heels",
     "Win%": "0.4013",
     "FinalScore": null,
@@ -238,8 +238,8 @@
     "Win%": "0.4069",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-270",
-    "Spread": "HOU -7",
+    "ML": "-250",
+    "Spread": "HOU -6.5",
     "Over/Under": "O/U"
   },
   {
@@ -247,16 +247,16 @@
     "Win%": "0.5931",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+220",
-    "Spread": "WVU +7",
-    "Over/Under": 72.5
+    "ML": "+205",
+    "Spread": "WVU +6.5",
+    "Over/Under": 71.5
   },
   {
     "Team": "Tennessee Tech Golden Eagles",
     "Win%": "0.5000",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+1200",
+    "ML": "+1300",
     "Spread": "TNTC +29.5",
     "Over/Under": "O/U"
   },
@@ -265,9 +265,9 @@
     "Win%": "0.5000",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-2400",
+    "ML": "-2800",
     "Spread": "MSST -29.5",
-    "Over/Under": 59.5
+    "Over/Under": 58.5
   },
   {
     "Team": "Western Kentucky Hilltoppers",
@@ -303,7 +303,7 @@
     "Winner": null,
     "ML": "OFF",
     "Spread": "ALA -48.5",
-    "Over/Under": 57.5
+    "Over/Under": 56.5
   },
   {
     "Team": "Charlotte 49ers",
@@ -347,7 +347,7 @@
     "FinalScore": null,
     "Winner": null,
     "ML": "-230",
-    "Spread": "MTSU -6.5",
+    "Spread": "MTSU -6",
     "Over/Under": "O/U"
   },
   {
@@ -356,8 +356,8 @@
     "FinalScore": null,
     "Winner": null,
     "ML": "+190",
-    "Spread": "SHSU +6.5",
-    "Over/Under": 48.5
+    "Spread": "SHSU +6",
+    "Over/Under": 47.5
   },
   {
     "Team": "Iowa Hawkeyes",
@@ -382,7 +382,7 @@
     "Win%": "0.4529",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-115",
+    "ML": "-118",
     "Spread": "USF -1.5",
     "Over/Under": "O/U"
   },
@@ -391,7 +391,7 @@
     "Win%": "0.5471",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-105",
+    "ML": "-102",
     "Spread": "FAU +1.5",
     "Over/Under": 63.5
   },
@@ -454,7 +454,7 @@
     "Win%": "0.3926",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+105",
+    "ML": "+102",
     "Spread": "FIU +2.5",
     "Over/Under": "O/U"
   },
@@ -463,7 +463,7 @@
     "Win%": "0.6074",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-125",
+    "ML": "-122",
     "Spread": "KENN -2.5",
     "Over/Under": 44.5
   },
@@ -508,7 +508,7 @@
     "Win%": "0.1259",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-340",
+    "ML": "-355",
     "Spread": "IU -9.5",
     "Over/Under": "O/U"
   },
@@ -517,9 +517,9 @@
     "Win%": "0.8741",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+270",
+    "ML": "+280",
     "Spread": "WASH +9.5",
-    "Over/Under": 43.5
+    "Over/Under": 44.5
   },
   {
     "Team": "LSU Tigers",
@@ -631,7 +631,7 @@
   },
   {
     "Team": "Texas A&M Aggies",
-    "Win%": "0.3862",
+    "Win%": "0.3829",
     "FinalScore": null,
     "Winner": null,
     "ML": "+235",
@@ -640,7 +640,7 @@
   },
   {
     "Team": "Oklahoma Sooners",
-    "Win%": "0.6138",
+    "Win%": "0.6171",
     "FinalScore": null,
     "Winner": null,
     "ML": "-290",
@@ -689,7 +689,7 @@
     "FinalScore": null,
     "Winner": null,
     "ML": "+120",
-    "Spread": "GAST +2.5",
+    "Spread": "GAST +3",
     "Over/Under": "O/U"
   },
   {
@@ -698,7 +698,7 @@
     "FinalScore": null,
     "Winner": null,
     "ML": "-142",
-    "Spread": "MRSH -2.5",
+    "Spread": "MRSH -3",
     "Over/Under": 56.5
   },
   {
@@ -724,7 +724,7 @@
     "Win%": "0.4502",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+400",
+    "ML": "+425",
     "Spread": "WSU +13.5",
     "Over/Under": "O/U"
   },
@@ -733,7 +733,7 @@
     "Win%": "0.5498",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-535",
+    "ML": "-575",
     "Spread": "TXST -13.5",
     "Over/Under": 61.5
   },
@@ -753,7 +753,7 @@
     "Winner": null,
     "ML": "-950",
     "Spread": "USC -17.5",
-    "Over/Under": 57.5
+    "Over/Under": 56.5
   },
   {
     "Team": "Virginia Tech Hokies",
@@ -771,7 +771,7 @@
     "Winner": null,
     "ML": "-1650",
     "Spread": "MIA -20.5",
-    "Over/Under": 60.5
+    "Over/Under": 61.5
   },
   {
     "Team": "Arizona Wildcats",
@@ -850,7 +850,7 @@
     "Win%": "0.2367",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+950",
+    "ML": "+900",
     "Spread": "SMU +20.5",
     "Over/Under": "O/U"
   },
@@ -859,7 +859,7 @@
     "Win%": "0.7633",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-1650",
+    "ML": "-1600",
     "Spread": "ND -20.5",
     "Over/Under": 55.5
   },
