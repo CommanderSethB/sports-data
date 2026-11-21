@@ -1,0 +1,55 @@
+name: Update Sports Data
+
+on:
+  schedule:
+    # Runs daily at 06:00 UTC — adjust the cron expression to your preferred schedule
+    - cron: "0 6 * * 3"
+  workflow_dispatch: # Allows manual runs from the Actions tab
+
+permissions:
+  contents: write # Required so GITHUB_TOKEN can push commits
+
+jobs:
+  run-main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history if needed, or keep default shallow clone for fast runs
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
+          fi
+
+      - name: Run main.js
+        run: node main.js
+        # If your script uses API keys or secrets, pass them from GitHub Actions Secrets:
+        # env:
+        #   SPORTS_API_KEY: ${{ secrets.SPORTS_API_KEY }}
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update sports data [skip ci]"
+            git push
+          fi
