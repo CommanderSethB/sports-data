@@ -5,7 +5,7 @@
 
 const SEASON = 2026;
 const NUM_WEEKS = 18;
-const STAT_END_WEEK = 10;
+const STAT_END_WEEK = 11;
 const PE_POWER = 2.37;
 const TOF_POWER = 2.37;
 const HOME_FIELD = 3;
