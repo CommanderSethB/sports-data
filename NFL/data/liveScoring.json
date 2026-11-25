@@ -2964,8 +2964,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+105",
-    "Away ML": "-124",
+    "Home ML": "+103",
+    "Away ML": "-122",
     "Spread": "CHI -1.5",
     "Over/Under": 55.5
   },
@@ -2982,10 +2982,10 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-472",
-    "Away ML": "+365",
+    "Home ML": "-474",
+    "Away ML": "+366",
     "Spread": "DAL -8.5",
-    "Over/Under": 48.5
+    "Over/Under": 47.5
   },
   {
     "Week": "Week 12",
@@ -3000,8 +3000,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-150",
-    "Away ML": "+127",
+    "Home ML": "-151",
+    "Away ML": "+128",
     "Spread": "BUF -3",
     "Over/Under": 46.5
   },
@@ -3018,8 +3018,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+173",
-    "Away ML": "-207",
+    "Home ML": "+170",
+    "Away ML": "-203",
     "Spread": "DEN -3.5",
     "Over/Under": 36.5
   },
@@ -3037,7 +3037,7 @@
     "Away Score": "0",
     "Winner": null,
     "Home ML": "-620",
-    "Away ML": "+453",
+    "Away ML": "+456",
     "Spread": "CIN -10",
     "Over/Under": 50.5
   },
@@ -3054,8 +3054,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+247",
-    "Away ML": "-303",
+    "Home ML": "+269",
+    "Away ML": "-335",
     "Spread": "NYG -6.5",
     "Over/Under": 41.5
   },
@@ -3072,8 +3072,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+164",
-    "Away ML": "-195",
+    "Home ML": "+169",
+    "Away ML": "-202",
     "Spread": "NYJ -3.5",
     "Over/Under": 40.5
   },
@@ -3090,8 +3090,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-324",
-    "Away ML": "+262",
+    "Home ML": "-315",
+    "Away ML": "+256",
     "Spread": "MIN -7",
     "Over/Under": 41.5
   },
@@ -3109,7 +3109,7 @@
     "Away Score": "0",
     "Winner": null,
     "Home ML": "-1120",
-    "Away ML": "+710",
+    "Away ML": "+720",
     "Spread": "JAX -14.5",
     "Over/Under": 48.5
   },
@@ -3126,8 +3126,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-326",
-    "Away ML": "+262",
+    "Home ML": "-322",
+    "Away ML": "+260",
     "Spread": "HOU -7",
     "Over/Under": 47.5
   },
@@ -3144,8 +3144,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-113",
-    "Away ML": "-104",
+    "Home ML": "-112",
+    "Away ML": "-106",
     "Spread": "LAC -1.5",
     "Over/Under": 35.5
   },
@@ -3162,8 +3162,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "+271",
-    "Away ML": "-337",
+    "Home ML": "+263",
+    "Away ML": "-326",
     "Spread": "WSH -7",
     "Over/Under": 41.5
   },
@@ -3180,8 +3180,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-177",
-    "Away ML": "+149",
+    "Home ML": "-170",
+    "Away ML": "+143",
     "Spread": "SF -3",
     "Over/Under": 45.5
   },
@@ -3198,8 +3198,8 @@
     "Home Score": "0",
     "Away Score": "0",
     "Winner": null,
-    "Home ML": "-219",
-    "Away ML": "+182",
+    "Home ML": "-225",
+    "Away ML": "+187",
     "Spread": "CLE -4.5",
     "Over/Under": 40.5
   },
@@ -3217,7 +3217,7 @@
     "Away Score": "0",
     "Winner": null,
     "Home ML": "-155",
-    "Away ML": "+130",
+    "Away ML": "+131",
     "Spread": "TB -3",
     "Over/Under": 43.5
   },

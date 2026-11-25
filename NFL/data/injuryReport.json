@@ -2276,6 +2276,13 @@
   },
   {
     "teamID": "11",
+    "playerID": "4242335",
+    "playerName": "Jonathan Taylor",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "11",
     "playerID": "4685324",
     "playerName": "Caden Curry",
     "injuryStatus": "IR",
@@ -2439,13 +2446,6 @@
     "teamID": "11",
     "playerID": "4429084",
     "playerName": "Anthony Richardson Sr.",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "11",
-    "playerID": "3051889",
-    "playerName": "Laquon Treadwell",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4026,6 +4026,13 @@
   },
   {
     "teamID": "19",
+    "playerID": "2531358",
+    "playerName": "Chris Manhertz",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "19",
     "playerID": "4725996",
     "playerName": "Abdul Carter",
     "injuryStatus": "Active",
@@ -4193,9 +4200,16 @@
     "playerScore": -0.5
   },
   {
-    "teamID": "19",
-    "playerID": "2969939",
-    "playerName": "Jameis Winston",
+    "teamID": "20",
+    "playerID": "4361372",
+    "playerName": "Jeremy Ruckert",
+    "injuryStatus": "Active",
+    "playerScore": 1
+  },
+  {
+    "teamID": "20",
+    "playerID": "3125107",
+    "playerName": "Andrew Beck",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4357,20 +4371,6 @@
     "teamID": "20",
     "playerID": "4362094",
     "playerName": "Joseph Ossai",
-    "injuryStatus": "Active",
-    "playerScore": 1
-  },
-  {
-    "teamID": "20",
-    "playerID": "4002046",
-    "playerName": "David Onyemata",
-    "injuryStatus": "IR",
-    "playerScore": -0.5
-  },
-  {
-    "teamID": "20",
-    "playerID": "3134353",
-    "playerName": "Tim Patrick",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -4551,15 +4551,15 @@
   },
   {
     "teamID": "23",
-    "playerID": "3116407",
-    "playerName": "Mason Rudolph",
+    "playerID": "8439",
+    "playerName": "Aaron Rodgers",
     "injuryStatus": "Active",
     "playerScore": 1
   },
   {
     "teamID": "23",
-    "playerID": "8439",
-    "playerName": "Aaron Rodgers",
+    "playerID": "3116407",
+    "playerName": "Mason Rudolph",
     "injuryStatus": "Active",
     "playerScore": 1
   },
@@ -5076,6 +5076,13 @@
   },
   {
     "teamID": "27",
+    "playerID": "4430834",
+    "playerName": "Jalen McMillan",
+    "injuryStatus": "IR",
+    "playerScore": -0.5
+  },
+  {
+    "teamID": "27",
     "playerID": "4428522",
     "playerName": "Tykee Smith",
     "injuryStatus": "Active",
@@ -5241,13 +5248,6 @@
     "playerName": "Josh Hayes",
     "injuryStatus": "IR",
     "playerScore": -0.5
-  },
-  {
-    "teamID": "27",
-    "playerID": "4250392",
-    "playerName": "Zyon McCollum",
-    "injuryStatus": "Active",
-    "playerScore": 1
   },
   {
     "teamID": "10",

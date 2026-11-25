@@ -22,7 +22,7 @@
     "Win%": "0.4863",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-124",
+    "ML": "-122",
     "Spread": "CHI -1.5",
     "Over/Under": "O/U"
   },
@@ -31,7 +31,7 @@
     "Win%": "0.5137",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+105",
+    "ML": "+103",
     "Spread": "DET +1.5",
     "Over/Under": 55.5
   },
@@ -40,7 +40,7 @@
     "Win%": "0.4758",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+365",
+    "ML": "+366",
     "Spread": "PHI +8.5",
     "Over/Under": "O/U"
   },
@@ -49,16 +49,16 @@
     "Win%": "0.5242",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-472",
+    "ML": "-474",
     "Spread": "DAL -8.5",
-    "Over/Under": 48.5
+    "Over/Under": 47.5
   },
   {
     "Team": "Kansas City Chiefs",
     "Win%": "0.5261",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+127",
+    "ML": "+128",
     "Spread": "KC +3",
     "Over/Under": "O/U"
   },
@@ -67,7 +67,7 @@
     "Win%": "0.4739",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-150",
+    "ML": "-151",
     "Spread": "BUF -3",
     "Over/Under": 46.5
   },
@@ -76,7 +76,7 @@
     "Win%": "0.5094",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-207",
+    "ML": "-203",
     "Spread": "DEN -3.5",
     "Over/Under": "O/U"
   },
@@ -85,7 +85,7 @@
     "Win%": "0.4906",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+173",
+    "ML": "+170",
     "Spread": "PIT +3.5",
     "Over/Under": 36.5
   },
@@ -94,7 +94,7 @@
     "Win%": "0.4506",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+453",
+    "ML": "+456",
     "Spread": "NO +10",
     "Over/Under": "O/U"
   },
@@ -112,7 +112,7 @@
     "Win%": "0.5485",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-303",
+    "ML": "-335",
     "Spread": "NYG -6.5",
     "Over/Under": "O/U"
   },
@@ -121,25 +121,25 @@
     "Win%": "0.4515",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+247",
+    "ML": "+269",
     "Spread": "IND +6.5",
     "Over/Under": 41.5
   },
   {
     "Team": "New York Jets",
-    "Win%": "0.5330",
+    "Win%": "0.5333",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-195",
+    "ML": "-202",
     "Spread": "NYJ -3.5",
     "Over/Under": "O/U"
   },
   {
     "Team": "Miami Dolphins",
-    "Win%": "0.4670",
+    "Win%": "0.4667",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+164",
+    "ML": "+169",
     "Spread": "MIA +3.5",
     "Over/Under": 40.5
   },
@@ -148,7 +148,7 @@
     "Win%": "0.4460",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+262",
+    "ML": "+256",
     "Spread": "ATL +7",
     "Over/Under": "O/U"
   },
@@ -157,7 +157,7 @@
     "Win%": "0.5540",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-324",
+    "ML": "-315",
     "Spread": "MIN -7",
     "Over/Under": 41.5
   },
@@ -166,7 +166,7 @@
     "Win%": "0.4256",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+710",
+    "ML": "+720",
     "Spread": "TEN +14.5",
     "Over/Under": "O/U"
   },
@@ -184,7 +184,7 @@
     "Win%": "0.4332",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+262",
+    "ML": "+260",
     "Spread": "BAL +7",
     "Over/Under": "O/U"
   },
@@ -193,7 +193,7 @@
     "Win%": "0.5668",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-326",
+    "ML": "-322",
     "Spread": "HOU -7",
     "Over/Under": 47.5
   },
@@ -202,7 +202,7 @@
     "Win%": "0.5111",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-104",
+    "ML": "-106",
     "Spread": "NE +1.5",
     "Over/Under": "O/U"
   },
@@ -211,7 +211,7 @@
     "Win%": "0.4889",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-113",
+    "ML": "-112",
     "Spread": "LAC -1.5",
     "Over/Under": 35.5
   },
@@ -220,7 +220,7 @@
     "Win%": "0.5653",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-337",
+    "ML": "-326",
     "Spread": "WSH -7",
     "Over/Under": "O/U"
   },
@@ -229,7 +229,7 @@
     "Win%": "0.4347",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+271",
+    "ML": "+263",
     "Spread": "ARI +7",
     "Over/Under": 41.5
   },
@@ -238,7 +238,7 @@
     "Win%": "0.4569",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+149",
+    "ML": "+143",
     "Spread": "SEA +3",
     "Over/Under": "O/U"
   },
@@ -247,7 +247,7 @@
     "Win%": "0.5431",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-177",
+    "ML": "-170",
     "Spread": "SF -3",
     "Over/Under": 45.5
   },
@@ -256,7 +256,7 @@
     "Win%": "0.4992",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+182",
+    "ML": "+187",
     "Spread": "LV +4.5",
     "Over/Under": "O/U"
   },
@@ -265,7 +265,7 @@
     "Win%": "0.5008",
     "FinalScore": null,
     "Winner": null,
-    "ML": "-219",
+    "ML": "-225",
     "Spread": "CLE -4.5",
     "Over/Under": 40.5
   },
@@ -274,7 +274,7 @@
     "Win%": "0.4942",
     "FinalScore": null,
     "Winner": null,
-    "ML": "+130",
+    "ML": "+131",
     "Spread": "CAR +3",
     "Over/Under": "O/U"
   },
