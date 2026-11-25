@@ -5,6 +5,7 @@
     "8": 3,
     "9": 11,
     "10": 9,
+    "11": 10,
     "Team Name": "Minnesota Vikings"
   },
   {
@@ -13,6 +14,7 @@
     "8": 10,
     "9": 7,
     "10": 5,
+    "11": 3,
     "Team Name": "Kansas City Chiefs"
   },
   {
@@ -21,6 +23,7 @@
     "8": 5,
     "9": 1,
     "10": 1,
+    "11": 1,
     "Team Name": "San Francisco 49ers"
   },
   {
@@ -29,6 +32,7 @@
     "8": 2,
     "9": 2,
     "10": 2,
+    "11": 2,
     "Team Name": "Buffalo Bills"
   },
   {
@@ -37,6 +41,7 @@
     "8": 4,
     "9": 5,
     "10": 11,
+    "11": 13,
     "Team Name": "Pittsburgh Steelers"
   },
   {
@@ -45,6 +50,7 @@
     "8": 7,
     "9": 4,
     "10": 4,
+    "11": 8,
     "Team Name": "Cincinnati Bengals"
   },
   {
@@ -53,6 +59,7 @@
     "8": 6,
     "9": 6,
     "10": 7,
+    "11": 5,
     "Team Name": "Denver Broncos"
   },
   {
@@ -61,6 +68,7 @@
     "8": 8,
     "9": 8,
     "10": 6,
+    "11": 4,
     "Team Name": "Detroit Lions"
   },
   {
@@ -69,6 +77,7 @@
     "8": 9,
     "9": 9,
     "10": 8,
+    "11": 6,
     "Team Name": "Chicago Bears"
   },
   {
@@ -77,6 +86,7 @@
     "8": 1,
     "9": 3,
     "10": 3,
+    "11": 7,
     "Team Name": "Jacksonville Jaguars"
   },
   {
@@ -85,6 +95,7 @@
     "8": 16,
     "9": 16,
     "10": 14,
+    "11": 15,
     "Team Name": "Cleveland Browns"
   },
   {
@@ -93,6 +104,7 @@
     "8": 18,
     "9": 14,
     "10": 12,
+    "11": 11,
     "Team Name": "Seattle Seahawks"
   },
   {
@@ -101,6 +113,7 @@
     "8": 13,
     "9": 12,
     "10": 15,
+    "11": 12,
     "Team Name": "New York Giants"
   },
   {
@@ -109,6 +122,7 @@
     "8": 11,
     "9": 10,
     "10": 13,
+    "11": 14,
     "Team Name": "Green Bay Packers"
   },
   {
@@ -117,6 +131,7 @@
     "8": 12,
     "9": 15,
     "10": 18,
+    "11": 20,
     "Team Name": "New England Patriots"
   },
   {
@@ -125,6 +140,7 @@
     "8": 20,
     "9": 23,
     "10": 24,
+    "11": 25,
     "Team Name": "Baltimore Ravens"
   },
   {
@@ -133,6 +149,7 @@
     "8": 15,
     "9": 13,
     "10": 10,
+    "11": 9,
     "Team Name": "Los Angeles Rams"
   },
   {
@@ -141,6 +158,7 @@
     "8": 25,
     "9": 25,
     "10": 25,
+    "11": 27,
     "Team Name": "Atlanta Falcons"
   },
   {
@@ -149,6 +167,7 @@
     "8": 21,
     "9": 18,
     "10": 22,
+    "11": 19,
     "Team Name": "Dallas Cowboys"
   },
   {
@@ -157,6 +176,7 @@
     "8": 22,
     "9": 24,
     "10": 17,
+    "11": 16,
     "Team Name": "Carolina Panthers"
   },
   {
@@ -165,6 +185,7 @@
     "8": 17,
     "9": 20,
     "10": 21,
+    "11": 21,
     "Team Name": "Tampa Bay Buccaneers"
   },
   {
@@ -173,6 +194,7 @@
     "8": 14,
     "9": 19,
     "10": 20,
+    "11": 22,
     "Team Name": "Las Vegas Raiders"
   },
   {
@@ -181,6 +203,7 @@
     "8": 23,
     "9": 17,
     "10": 19,
+    "11": 18,
     "Team Name": "Houston Texans"
   },
   {
@@ -189,6 +212,7 @@
     "8": 27,
     "9": 27,
     "10": 28,
+    "11": 23,
     "Team Name": "New York Jets"
   },
   {
@@ -197,6 +221,7 @@
     "8": 19,
     "9": 21,
     "10": 16,
+    "11": 17,
     "Team Name": "Washington Commanders"
   },
   {
@@ -205,6 +230,7 @@
     "8": 26,
     "9": 22,
     "10": 23,
+    "11": 26,
     "Team Name": "New Orleans Saints"
   },
   {
@@ -213,6 +239,7 @@
     "8": 24,
     "9": 26,
     "10": 27,
+    "11": 28,
     "Team Name": "Arizona Cardinals"
   },
   {
@@ -221,6 +248,7 @@
     "8": 29,
     "9": 30,
     "10": 32,
+    "11": 32,
     "Team Name": "Miami Dolphins"
   },
   {
@@ -229,6 +257,7 @@
     "8": 30,
     "9": 31,
     "10": 26,
+    "11": 29,
     "Team Name": "Indianapolis Colts"
   },
   {
@@ -237,6 +266,7 @@
     "8": 28,
     "9": 29,
     "10": 29,
+    "11": 24,
     "Team Name": "Philadelphia Eagles"
   },
   {
@@ -245,6 +275,7 @@
     "8": 31,
     "9": 28,
     "10": 30,
+    "11": 30,
     "Team Name": "Tennessee Titans"
   },
   {
@@ -253,6 +284,7 @@
     "8": 32,
     "9": 32,
     "10": 31,
+    "11": 31,
     "Team Name": "Los Angeles Chargers"
   }
 ]
